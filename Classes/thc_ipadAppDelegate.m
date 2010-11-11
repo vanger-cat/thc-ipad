@@ -23,6 +23,8 @@
 
     [self.window makeKeyAndVisible];
 
+	// TEST
+	
     return YES;
 }
 

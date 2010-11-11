@@ -1,5 +1,12 @@
 // !$*UTF8*$!
 {
+	1D3623250D0F684500981E51 /* thc_ipadAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2244, 3572}}";
+			sepNavSelRange = "{523, 0}";
+			sepNavVisRange = "{45, 855}";
+		};
+	};
 	1D6058900D05DD3D006BFB54 /* thc-ipad */ = {
 		activeExec = 0;
 		executables = (
@@ -22,7 +29,7 @@
 					20,
 					868,
 					20,
-					48.16259765625,
+					48,
 					43,
 					43,
 					20,
@@ -37,8 +44,12 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 311193859;
-			PBXWorkspaceStateSaveDate = 311193859;
+			PBXPerProjectTemplateStateSaveDate = 311200003;
+			PBXWorkspaceStateSaveDate = 311200003;
+		};
+		perUserProjectItems = {
+			92CFB1E2128C890F005CB1ED /* PBXBookmark */ = 92CFB1E2128C890F005CB1ED /* PBXBookmark */;
+			92CFB1E3128C890F005CB1ED /* PBXTextBookmark */ = 92CFB1E3128C890F005CB1ED /* PBXTextBookmark */;
 		};
 		sourceControlManager = 92CFB1D6128C7107005CB1ED /* Source Control */;
 		userBuildSettings = {
@@ -84,5 +95,19 @@
 	92CFB1D7128C7107005CB1ED /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
+	};
+	92CFB1E2128C890F005CB1ED /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 1D3623250D0F684500981E51 /* thc_ipadAppDelegate.m */;
+	};
+	92CFB1E3128C890F005CB1ED /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* thc_ipadAppDelegate.m */;
+		name = "thc_ipadAppDelegate.m: 26";
+		rLen = 0;
+		rLoc = 523;
+		rType = 0;
+		vrLen = 855;
+		vrLoc = 45;
 	};
 }
