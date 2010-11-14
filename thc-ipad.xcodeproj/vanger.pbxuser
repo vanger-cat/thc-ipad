@@ -1,0 +1,126 @@
+// !$*UTF8*$!
+{
+	1D3623240D0F684500981E51 /* ThcAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {960, 645}}";
+			sepNavSelRange = "{497, 0}";
+			sepNavVisRange = "{0, 997}";
+		};
+	};
+	1D3623250D0F684500981E51 /* ThcAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2371, 2262}}";
+			sepNavSelRange = "{5979, 0}";
+			sepNavVisRange = "{4934, 1699}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* thc-ipad */ = {
+		activeExec = 0;
+		executables = (
+			40BE066B12903B99005C77B1 /* thc-ipad */,
+		);
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 40BE066B12903B99005C77B1 /* thc-ipad */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* thc-ipad */;
+		breakpoints = (
+		);
+		codeSenseManager = 40BE067912903BB8005C77B1 /* Code sense */;
+		executables = (
+			40BE066B12903B99005C77B1 /* thc-ipad */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					10,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 311444908;
+			PBXWorkspaceStateSaveDate = 311444908;
+		};
+		sourceControlManager = 40BE067812903BB8005C77B1 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	40BE066B12903B99005C77B1 /* thc-ipad */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "thc-ipad";
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	40BE067812903BB8005C77B1 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	40BE067912903BB8005C77B1 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	9286582E12901AD90082DB64 /* THCColors.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {960, 645}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 259}";
+		};
+	};
+	92CFB278128D9DFB005CB1ED /* RootViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {917, 645}}";
+			sepNavSelRange = "{541, 0}";
+			sepNavVisRange = "{0, 548}";
+		};
+	};
+	92CFB279128D9DFB005CB1ED /* RootViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {922, 1976}}";
+			sepNavSelRange = "{3022, 55}";
+			sepNavVisRange = "{2825, 1527}";
+		};
+	};
+}

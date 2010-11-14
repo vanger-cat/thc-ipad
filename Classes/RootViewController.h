@@ -17,4 +17,7 @@
 @property (nonatomic, retain) NSMutableArray *textNotes;
 @property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
 
+- (UITapGestureRecognizer *)newDoubleTapGestureForLabel;
+- (UITapGestureRecognizer *)newDoubleTapGestureForSpace;
+
 @end
