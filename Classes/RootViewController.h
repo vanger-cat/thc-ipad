@@ -9,8 +9,12 @@
 #import <UIKit/UIKit.h>
 
 
-@interface RootViewController : UIViewController {
-
+@interface RootViewController : UIViewController <UITextViewDelegate> {
+	NSMutableArray *textNotes;
+	UIScrollView *scrollView;
 }
+
+@property (nonatomic, retain) NSMutableArray *textNotes;
+@property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
 
 @end
