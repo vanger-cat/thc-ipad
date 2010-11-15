@@ -19,7 +19,8 @@
 + (void)initSharedInstanceWithContext:(NSManagedObjectContext *)context;
 + (ElementManager *) sharedInstance;
 
-- (Element *)newEmptyAbstractLabel;
+- (Element *)newEmptyElement;
+- (Element *)newElementWithText:(NSString *)text atPoint:(CGPoint)point;
 - (NSMutableArray *)copyElementsArray;
 
 @end

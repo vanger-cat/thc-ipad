@@ -22,9 +22,9 @@ static ElementManager *sharedInstance;
     return sharedInstance;
 }
 
-- (Element *)newEmptyAbstractLabel {
+- (Element *)newEmptyElement {
 	Element * element = (Element *) [NSEntityDescription 
-													 insertNewObjectForEntityForName:kAbstractElemntEntityName 
+													 insertNewObjectForEntityForName:kElemntEntityName 
 													 inManagedObjectContext:self.managedObjectContext];
 	[element retain];
 	return element;
@@ -33,7 +33,7 @@ static ElementManager *sharedInstance;
 - (NSMutableArray *)copyElementsArray {
 	// Fetch
 	NSFetchRequest *request = [[NSFetchRequest alloc] init];
-	NSEntityDescription *entity = [NSEntityDescription entityForName:kAbstractElemntEntityName 
+	NSEntityDescription *entity = [NSEntityDescription entityForName:kElemntEntityName 
 											  inManagedObjectContext:self.managedObjectContext];
 	[request setEntity:entity];
 	
@@ -45,6 +45,14 @@ static ElementManager *sharedInstance;
 	[request release];
 	
 	return mutableFetchResults;
+}
+
+- (Element *)newElementWithText:(NSString *)text atPoint:(CGPoint)point {
+	Element *element = [self newEmptyElement];
+	element.text = text;
+	element.x = [NSNumber numberWithInt:(int)point.x];
+	element.y = [NSNumber numberWithInt:(int)point.y];
+	return element;
 }
 
 @end

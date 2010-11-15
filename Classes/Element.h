@@ -8,7 +8,7 @@
 
 #import <CoreData/CoreData.h>
 
-extern NSString * const kAbstractElemntEntityName;
+extern NSString * const kElemntEntityName;
 
 @interface Element :  NSManagedObject  
 {
