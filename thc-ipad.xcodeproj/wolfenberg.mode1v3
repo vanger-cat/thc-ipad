@@ -331,7 +331,7 @@
 										<key>_historyCapacity</key>
 										<integer>10</integer>
 										<key>bookmark</key>
-										<string>9285C74E1291DFA4003F98D3</string>
+										<string>9285C79D1291E66C003F98D3</string>
 										<key>history</key>
 										<array>
 											<string>927B74BA129163D70083088C</string>
@@ -342,8 +342,8 @@
 											<string>927B762A12919B610083088C</string>
 											<string>9285C6B41291D3E8003F98D3</string>
 											<string>9285C7441291DCA1003F98D3</string>
-											<string>9285C74C1291DFA4003F98D3</string>
-											<string>9285C74D1291DFA4003F98D3</string>
+											<string>9285C7871291E5B1003F98D3</string>
+											<string>9285C7881291E5B1003F98D3</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -382,7 +382,7 @@
 										<key>_historyCapacity</key>
 										<integer>10</integer>
 										<key>bookmark</key>
-										<string>9285C74F1291DFA4003F98D3</string>
+										<string>9285C79E1291E66C003F98D3</string>
 										<key>history</key>
 										<array>
 											<string>927B763C12919BC00083088C</string>
@@ -592,12 +592,13 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>9285C79F1291E66C003F98D3</string>
 		<string>9285C6BD1291D3E8003F98D3</string>
 		<string>9285C6AE1291D28D003F98D3</string>
 		<string>92CFB1D4128C7106005CB1ED</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/wolfenberg/Desktop/thc-ipad/thc-ipad.xcodeproj</string>
+		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>96 55 1589 1123 0 0 1920 1178 </string>
@@ -621,21 +622,21 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>RootViewController.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {867, 501}}</string>
+								<string>{{0, 0}, {1727, 676}}</string>
 								<key>RubberWindowFrame</key>
-								<string>571 372 867 783 0 0 1920 1178 </string>
+								<string>113 220 1727 958 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>501pt</string>
+							<string>676pt</string>
 						</dict>
 						<dict>
 							<key>BecomeActive</key>
@@ -654,9 +655,9 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 506}, {867, 236}}</string>
+								<string>{{0, 681}, {1727, 236}}</string>
 								<key>RubberWindowFrame</key>
-								<string>571 372 867 783 0 0 1920 1178 </string>
+								<string>113 220 1727 958 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXBuildResultsModule</string>
@@ -665,7 +666,7 @@
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>742pt</string>
+					<string>917pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -686,11 +687,11 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.buildV3</string>
 			<key>WindowString</key>
-			<string>571 372 867 783 0 0 1920 1178 </string>
+			<string>113 220 1727 958 0 0 1920 1178 </string>
 			<key>WindowToolGUID</key>
 			<string>92CFB1D4128C7106005CB1ED</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

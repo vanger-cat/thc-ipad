@@ -10,17 +10,14 @@
 #import "THCScrollView.h"
 
 @interface RootViewController : UIViewController <UITextViewDelegate> {
-	NSMutableArray *textNotes;
 	THCScrollView *scrollView;
 }
 
-@property (nonatomic, retain) NSMutableArray *textNotes;
 @property (nonatomic, retain) IBOutlet THCScrollView *scrollView;
 
 - (UITapGestureRecognizer *)newDoubleTapGestureForLabel;
 - (UITapGestureRecognizer *)newDoubleTapGestureForSpace;
-- (UILabel *)addTextNoteLabelAtPoint:(CGPoint)point 
-							withText:(NSString *)text 
-							  toView:(UIView *)aView;
+- (UILabel *)newTextNoteLabelAtPoint:(CGPoint)point 
+							withText:(NSString *)text;
 
 @end
