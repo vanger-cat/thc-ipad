@@ -7,7 +7,7 @@
 //
 
 #import "ThcAppDelegate.h"
-
+#import "RootViewController.h"
 
 @implementation ThcAppDelegate
 
@@ -18,7 +18,7 @@
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	
+	[self.window addSubview:rootViewController.view];
     [self.window makeKeyAndVisible];
 
     return YES;
