@@ -1,0 +1,105 @@
+<project name="iDecideTasks" default="dist.local">
+	<property name="project.name" value="thc-ipad"/>
+	<property name="executable.name" value="thc-ipad"/>
+    <property name="product.name" value="ThoughtCase"/>
+    <property name="test.executable.name" value="thc-ipad"/>
+    <property name="build.configuration" value="Release"/>
+	<property name="test.build.configuration" value="Debug"/>
+	<property name="platform" value="iphoneos"/>
+
+    <property name="project.dir" value="."/>
+    <property name="build.dir" value="${project.dir}/build"/>
+<!--    <condition property="build.dir"
+               value="${project.dir}/build"
+               else="${project.dir}/../${project.name}.build">-->
+            <!-- Value 'continuous.integration.server' defined in the Hudson project configuration -->
+<!--               <equals arg1="${continuous.integration.server}" arg2="true" trim="true"/>
+    </condition> -->
+    <property name="production.dir" value="${build.dir}/production"/>
+    <property name="production.tmp.dir" value="${build.dir}/tmp"/>
+
+    <property name="build.result.dir" value="${build.dir}/${build.configuration}-${platform}"/>
+    
+    <property environment="env"/>
+
+    <target name="clean">
+        <delete dir="${production.dir}"/>
+        <delete dir="${build.dir}"/>
+	</target>
+	
+	<target name="make.production.dirs">
+		<mkdir dir="${production.dir}"/>
+	</target>
+
+	<target name="build" depends="clean">
+		<exec executable="xcodebuild" dir="${project.dir}" failonerror="true">
+			<arg line="-target ${executable.name} -configuration ${build.configuration}"/>
+		</exec>
+	</target>
+
+    <target name="test.build" depends="clean">
+		<exec executable="xcodebuild" dir="${project.dir}" failonerror="true">
+			<arg line="-target ${test.executable.name} -configuration ${test.build.configuration}"/>
+		</exec>
+	</target>
+
+    <target name="prepare.archive.content" depends="build, make.production.dirs">
+        <mkdir dir="${production.tmp.dir}/Payload"/>
+        <copy todir="${production.tmp.dir}/Payload">
+            <fileset dir="${build.result.dir}"
+                     includes="${product.name}.app/**"/>
+        </copy>
+    </target>
+
+    <target name="copy.dsym" depends="build, make.production.dirs">
+        <copy todir="${production.dir}">
+            <fileset dir="${build.result.dir}"
+                     includes="${product.name}.app.dSYM/**"/>
+        </copy>   
+    </target>
+
+    <target name="dist.local" depends="prepare.archive.content, copy.dsym">
+        <tstamp>
+                <format property="cur.local.time" pattern="yyyy-MM-dd.HH-mm"/>
+        </tstamp>
+        <property name="production.file.name" value="${project.name}.${env.USER}.${cur.local.time}.ipa"/>
+        <zip destfile="${production.dir}/${production.file.name}"
+			basedir="${production.tmp.dir}"
+		/>
+	</target>
+
+    <target name="install.to.mac.itunes" depends="dist.local">
+        <exec executable="open" dir="${production.dir}" failonerror="true">
+            <arg line="${production.file.name}"/>
+        </exec>
+    </target>
+    
+    <!-- Below some targets only for Hudson server -->
+
+    <!-- Value 'idecide.releases.dir' defined in the Hudson project configuration -->
+    <property name="release.dir" value="${idecide.releases.dir}"/>
+
+    <!-- Value 'idecide.build.postfix' defined in the Hudson project configuration -->
+    <property name="build.postfix" value="${idecide.build.postfix}"/>
+
+    <!-- Value SVN_REVISION defined by the Hudson -->
+    <property name="svn.revision" value="${env.SVN_REVISION}"/>
+
+    <!-- Value BUILD_ID defined by the Hudson -->
+    <property name="cur.time" value="${env.BUILD_ID}"/>
+    
+    <target name="hudson.dist" depends="prepare.archive.content, copy.dsym">
+        <zip destfile="${production.dir}/${project.name}.${build.postfix}-${svn.revision}.${cur.time}.ipa"
+			basedir="${production.tmp.dir}"
+		/>
+    </target>
+
+    <target name="hudson.publish" depends="hudson.dist">
+        <property name="current.release.dir"
+                  value="${release.dir}/${project.name}.${build.postfix}-${svn.revision}.${cur.time}"/>
+        <mkdir dir="${current.release.dir}"/>
+        <copy todir="${current.release.dir}">
+            <fileset dir="${production.dir}" includes="*/**"/>
+        </copy>
+    </target>
+</project>
