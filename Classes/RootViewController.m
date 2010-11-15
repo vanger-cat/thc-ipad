@@ -9,11 +9,16 @@
 #import "RootViewController.h"
 #import "THCColors.h"
 #import "THCFonts.h"
+#import "THCElementLabel.h"
 #import "Utils.h"
 
 @interface RootViewController (PrivateMethods)
 
-- (UILabel *)addTextNoteLabelAtPoint:(CGPoint)point withText:(NSString *)text toView:(UIView *)aView andToArray:(NSMutableArray *)anArray;
+- (UILabel *)addTextNoteLabelAtPoint:(CGPoint)point 
+							withText:(NSString *)text 
+							  toView:(UIView *)aView
+						  andToArray:(NSMutableArray *)anArray 
+						 withElement:(Element *)element;
 
 @end
 
@@ -38,7 +43,8 @@ const CGFloat kTextNoteHeightMax = 9999;
 		[self addTextNoteLabelAtPoint:CGPointMake([element.x floatValue], [element.y floatValue]) 
 							 withText:element.text 
 							   toView:view 
-						   andToArray:array];
+						   andToArray:array 
+						  withElement:element];
 	}
 }
 
@@ -50,7 +56,8 @@ const CGFloat kTextNoteHeightMax = 9999;
 		UILabel *label = [self addTextNoteLabelAtPoint:pointForLabel
 											  withText:@"Поддержать большое количество записей."
 												toView:self.scrollView 
-											andToArray:self.textNotes];
+											andToArray:self.textNotes 
+										   withElement:NULL];
 		
 		UITapGestureRecognizer *doubleTap = [self newDoubleTapGestureForLabel];
 		[label addGestureRecognizer:doubleTap];
@@ -127,9 +134,9 @@ const CGFloat kTextNoteHeightMax = 9999;
 	return textView;
 }
 
-- (UILabel *)addTextNoteLabelAtPoint:(CGPoint)point withText:(NSString *)text toView:(UIView *)aView andToArray:(NSMutableArray *)anArray {
+- (UILabel *)addTextNoteLabelAtPoint:(CGPoint)point withText:(NSString *)text toView:(UIView *)aView andToArray:(NSMutableArray *)anArray withElement:(Element *)element {
 	CGSize size = [text sizeWithFont:[UIFont fontForTextNote] constrainedToSize:CGSizeMake(kTextNoteWidth, kTextNoteHeightMax)];
-	UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(point.x, point.y, kTextNoteWidth, size.height)];
+	THCElementLabel *label = [[THCElementLabel alloc] initWithFrame:CGRectMake(point.x, point.y, kTextNoteWidth, size.height)];
 	label.userInteractionEnabled = YES;
 	label.numberOfLines = 0;
 	label.text = text;
@@ -156,14 +163,17 @@ const CGFloat kTextNoteHeightMax = 9999;
 	// Create new UILabel
 	CGPoint pointForLabel = CGPointMake(textView.frame.origin.x + kTextAndLabelXDifference,
 								textView.frame.origin.y + kTextAndLabelYDifference);
+	
+	Element *element = [[ElementManager sharedInstance] newElementWithText:textView.text atPoint:textView.frame.origin];
+
 	UILabel *label = [self addTextNoteLabelAtPoint:pointForLabel
 										  withText:textView.text
 											toView:self.scrollView 
-										andToArray:textNotes];
+										andToArray:textNotes 
+										withElement:element];
 	
-	Element *element = [[ElementManager sharedInstance] newElementWithText:textView.text atPoint:textView.frame.origin];
 	[element release];
-
+	
 	UITapGestureRecognizer *doubleTap = [self newDoubleTapGestureForLabel];
 	[label addGestureRecognizer:doubleTap];
 	[doubleTap release];

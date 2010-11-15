@@ -323,6 +323,14 @@
 			40A9187C1291A28600BFCA83 /* PBXTextBookmark */ = 40A9187C1291A28600BFCA83 /* PBXTextBookmark */;
 			40A9187D1291A28600BFCA83 /* XCBuildMessageTextBookmark */ = 40A9187D1291A28600BFCA83 /* XCBuildMessageTextBookmark */;
 			40A9187E1291A28600BFCA83 /* PBXTextBookmark */ = 40A9187E1291A28600BFCA83 /* PBXTextBookmark */;
+			40A918981291A4D300BFCA83 /* PBXTextBookmark */ = 40A918981291A4D300BFCA83 /* PBXTextBookmark */;
+			40A918991291A4D300BFCA83 /* PBXTextBookmark */ = 40A918991291A4D300BFCA83 /* PBXTextBookmark */;
+			40A9189A1291A4D300BFCA83 /* PBXTextBookmark */ = 40A9189A1291A4D300BFCA83 /* PBXTextBookmark */;
+			40A9189B1291A4D300BFCA83 /* PBXTextBookmark */ = 40A9189B1291A4D300BFCA83 /* PBXTextBookmark */;
+			40A9189C1291A4D300BFCA83 /* PBXTextBookmark */ = 40A9189C1291A4D300BFCA83 /* PBXTextBookmark */;
+			40A9189D1291A4D300BFCA83 /* PBXTextBookmark */ = 40A9189D1291A4D300BFCA83 /* PBXTextBookmark */;
+			40A9189E1291A4D300BFCA83 /* XCBuildMessageTextBookmark */ = 40A9189E1291A4D300BFCA83 /* XCBuildMessageTextBookmark */;
+			40A9189F1291A4D300BFCA83 /* PBXTextBookmark */ = 40A9189F1291A4D300BFCA83 /* PBXTextBookmark */;
 			40BE071612905BF2005C77B1 = 40BE071612905BF2005C77B1 /* PBXTextBookmark */;
 			40BE071812905BF2005C77B1 = 40BE071812905BF2005C77B1 /* PBXTextBookmark */;
 			40BE071A12905BF2005C77B1 = 40BE071A12905BF2005C77B1 /* PBXTextBookmark */;
@@ -353,7 +361,7 @@
 		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
 		name = "RootViewController.m: 96";
 		rLen = 27;
-		rLoc = 2780;
+		rLoc = 2933;
 		rType = 0;
 		vrLen = 341;
 		vrLoc = 2482;
@@ -363,7 +371,7 @@
 		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
 		name = "RootViewController.m: 96";
 		rLen = 27;
-		rLoc = 2780;
+		rLoc = 2933;
 		rType = 0;
 		vrLen = 577;
 		vrLoc = 2332;
@@ -373,7 +381,7 @@
 		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
 		name = "RootViewController.m: 71";
 		rLen = 10;
-		rLoc = 2009;
+		rLoc = 2162;
 		rType = 0;
 		vrLen = 720;
 		vrLoc = 2484;
@@ -383,7 +391,7 @@
 		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
 		name = "RootViewController.m: 71";
 		rLen = 10;
-		rLoc = 2009;
+		rLoc = 2162;
 		rType = 0;
 		vrLen = 720;
 		vrLoc = 2484;
@@ -408,7 +416,7 @@
 		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
 		name = "RootViewController.m: 71";
 		rLen = 10;
-		rLoc = 2009;
+		rLoc = 2162;
 		rType = 0;
 		vrLen = 341;
 		vrLoc = 2484;
@@ -418,7 +426,7 @@
 		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
 		name = "RootViewController.m: 82";
 		rLen = 38;
-		rLoc = 2452;
+		rLoc = 2605;
 		rType = 0;
 		vrLen = 545;
 		vrLoc = 2367;
@@ -474,7 +482,7 @@
 		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
 		name = "RootViewController.m: 77";
 		rLen = 0;
-		rLoc = 2348;
+		rLoc = 2501;
 		rType = 0;
 		vrLen = 909;
 		vrLoc = 412;
@@ -484,7 +492,7 @@
 		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
 		name = "RootViewController.m: 77";
 		rLen = 0;
-		rLoc = 2348;
+		rLoc = 2501;
 		rType = 0;
 		vrLen = 1008;
 		vrLoc = 440;
@@ -494,7 +502,7 @@
 		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
 		name = "RootViewController.m: 77";
 		rLen = 0;
-		rLoc = 2348;
+		rLoc = 2501;
 		rType = 0;
 		vrLen = 1008;
 		vrLoc = 440;
@@ -519,7 +527,7 @@
 		isa = PBXTextBookmark;
 		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
 		rLen = 0;
-		rLoc = 130;
+		rLoc = 137;
 		rType = 1;
 	};
 	40A9184C12919FB700BFCA83 /* PBXTextBookmark */ = {
@@ -527,7 +535,7 @@
 		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
 		name = "RootViewController.m: 137";
 		rLen = 0;
-		rLoc = 3761;
+		rLoc = 3945;
 		rType = 0;
 		vrLen = 698;
 		vrLoc = 3782;
@@ -537,7 +545,7 @@
 		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
 		name = "RootViewController.m: 79";
 		rLen = 0;
-		rLoc = 2412;
+		rLoc = 2565;
 		rType = 0;
 		vrLen = 1429;
 		vrLoc = 233;
@@ -562,7 +570,7 @@
 		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
 		name = "RootViewController.m: 79";
 		rLen = 0;
-		rLoc = 2412;
+		rLoc = 2565;
 		rType = 0;
 		vrLen = 566;
 		vrLoc = 1095;
@@ -572,7 +580,7 @@
 		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
 		name = "RootViewController.m: 79";
 		rLen = 0;
-		rLoc = 2412;
+		rLoc = 2565;
 		rType = 0;
 		vrLen = 873;
 		vrLoc = 1604;
@@ -582,7 +590,7 @@
 		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
 		name = "RootViewController.m: 79";
 		rLen = 0;
-		rLoc = 2412;
+		rLoc = 2565;
 		rType = 0;
 		vrLen = 299;
 		vrLoc = 1604;
@@ -603,7 +611,7 @@
 		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 52;
+		rLoc = 59;
 		rType = 1;
 	};
 	40A918641291A0E700BFCA83 /* PBXTextBookmark */ = {
@@ -611,7 +619,7 @@
 		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
 		name = "RootViewController.m: 173";
 		rLen = 0;
-		rLoc = 5263;
+		rLoc = 5498;
 		rType = 0;
 		vrLen = 966;
 		vrLoc = 4553;
@@ -621,7 +629,7 @@
 		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
 		name = "RootViewController.m: 170";
 		rLen = 0;
-		rLoc = 5263;
+		rLoc = 5498;
 		rType = 0;
 		vrLen = 1094;
 		vrLoc = 4553;
@@ -672,7 +680,7 @@
 		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 163;
+		rLoc = 176;
 		rType = 1;
 	};
 	40A9187E1291A28600BFCA83 /* PBXTextBookmark */ = {
@@ -680,10 +688,103 @@
 		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
 		name = "RootViewController.m: 220";
 		rLen = 0;
-		rLoc = 6782;
+		rLoc = 7017;
 		rType = 0;
 		vrLen = 921;
 		vrLoc = 5855;
+	};
+	40A9187F1291A2BF00BFCA83 /* THCElementLabel.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {917, 375}}";
+			sepNavSelRange = "{291, 0}";
+			sepNavVisRange = "{0, 291}";
+		};
+	};
+	40A918801291A2BF00BFCA83 /* THCElementLabel.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {917, 375}}";
+			sepNavSelRange = "{271, 0}";
+			sepNavVisRange = "{0, 280}";
+		};
+	};
+	40A918981291A4D300BFCA83 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9286587112901F420082DB64 /* THCFonts.m */;
+		name = "THCFonts.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 264;
+		vrLoc = 0;
+	};
+	40A918991291A4D300BFCA83 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 927B7524129177EA0083088C /* THCScrollView.m */;
+		name = "THCScrollView.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 750;
+		vrLoc = 0;
+	};
+	40A9189A1291A4D300BFCA83 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9286582E12901AD90082DB64 /* THCColors.h */;
+		name = "THCColors.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 259;
+		vrLoc = 0;
+	};
+	40A9189B1291A4D300BFCA83 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40A9187F1291A2BF00BFCA83 /* THCElementLabel.h */;
+		name = "THCElementLabel.h: 19";
+		rLen = 0;
+		rLoc = 291;
+		rType = 0;
+		vrLen = 291;
+		vrLoc = 0;
+	};
+	40A9189C1291A4D300BFCA83 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40A918801291A2BF00BFCA83 /* THCElementLabel.m */;
+		name = "THCElementLabel.m: 18";
+		rLen = 0;
+		rLoc = 271;
+		rType = 0;
+		vrLen = 280;
+		vrLoc = 0;
+	};
+	40A9189D1291A4D300BFCA83 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 92CFB278128D9DFB005CB1ED /* RootViewController.h */;
+		name = "RootViewController.h: 24";
+		rLen = 0;
+		rLoc = 590;
+		rType = 0;
+		vrLen = 595;
+		vrLoc = 0;
+	};
+	40A9189E1291A4D300BFCA83 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "'RootViewController' may not respond to '-addTextNoteLabelAtPoint:withText:toView:andToArray:andElement:'";
+		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 172;
+		rType = 1;
+	};
+	40A9189F1291A4D300BFCA83 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
+		name = "RootViewController.m: 173";
+		rLen = 0;
+		rLoc = 5290;
+		rType = 0;
+		vrLen = 834;
+		vrLoc = 4696;
 	};
 	40BE066B12903B99005C77B1 /* thc-ipad */ = {
 		isa = PBXExecutable;
@@ -895,7 +996,7 @@
 		fRef = 92CFB278128D9DFB005CB1ED /* RootViewController.h */;
 		name = "RootViewController.h: 25";
 		rLen = 0;
-		rLoc = 707;
+		rLoc = 590;
 		rType = 0;
 		vrLen = 741;
 		vrLoc = 0;
@@ -990,7 +1091,7 @@
 		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
 		name = "RootViewController.m: 96";
 		rLen = 27;
-		rLoc = 2780;
+		rLoc = 2933;
 		rType = 0;
 		vrLen = 405;
 		vrLoc = 2273;
@@ -1000,7 +1101,7 @@
 		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
 		name = "RootViewController.m: 96";
 		rLen = 27;
-		rLoc = 2780;
+		rLoc = 2933;
 		rType = 0;
 		vrLen = 923;
 		vrLoc = 1901;
@@ -1027,9 +1128,16 @@
 			sepNavVisRange = "{0, 274}";
 		};
 	};
+	927B7524129177EA0083088C /* THCScrollView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {917, 533}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 750}";
+		};
+	};
 	9286582E12901AD90082DB64 /* THCColors.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {917, 416}}";
+			sepNavIntBoundsRect = "{{0, 0}, {917, 375}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 259}";
 		};
@@ -1048,18 +1156,25 @@
 			sepNavVisRange = "{0, 197}";
 		};
 	};
+	9286587112901F420082DB64 /* THCFonts.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {917, 375}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 264}";
+		};
+	};
 	92CFB278128D9DFB005CB1ED /* RootViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {917, 622}}";
-			sepNavSelRange = "{707, 0}";
-			sepNavVisRange = "{0, 741}";
+			sepNavIntBoundsRect = "{{0, 0}, {917, 375}}";
+			sepNavSelRange = "{590, 0}";
+			sepNavVisRange = "{0, 595}";
 		};
 	};
 	92CFB279128D9DFB005CB1ED /* RootViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {922, 2834}}";
-			sepNavSelRange = "{6782, 0}";
-			sepNavVisRange = "{5855, 921}";
+			sepNavIntBoundsRect = "{{0, 0}, {1202, 2860}}";
+			sepNavSelRange = "{5290, 0}";
+			sepNavVisRange = "{4696, 834}";
 			sepNavWindowFrame = "{{15, 0}, {1173, 778}}";
 		};
 	};

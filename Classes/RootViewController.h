@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "THCScrollView.h"
+#import "Element.h"
 
 @interface RootViewController : UIViewController <UITextViewDelegate> {
 	NSMutableArray *textNotes;
@@ -19,9 +20,5 @@
 
 - (UITapGestureRecognizer *)newDoubleTapGestureForLabel;
 - (UITapGestureRecognizer *)newDoubleTapGestureForSpace;
-- (UILabel *)addTextNoteLabelAtPoint:(CGPoint)point 
-							withText:(NSString *)text 
-							  toView:(UIView *)aView 
-						  andToArray:(NSMutableArray *)anArray;
 
 @end
