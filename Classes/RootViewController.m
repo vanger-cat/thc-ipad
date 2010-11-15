@@ -30,9 +30,14 @@ const CGFloat kTextNoteHeightMax = 9999;
 	[self.scrollView addGestureRecognizer:doubleTap];
 	[doubleTap release];
 	
-	UIPanGestureRecognizer *panGesture = [self newPanGestureRecognizerForSpace];
-	[self.scrollView addGestureRecognizer:panGesture];
-	[panGesture release];
+	self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * 2, self.scrollView.frame.size.height * 2);
+	
+	CGRect center = CGRectMake(self.scrollView.frame.size.width + 10, self.scrollView.frame.size.height + 10, 1, 1);
+	[self.scrollView scrollRectToVisible:center animated:NO];
+	
+	//UIPanGestureRecognizer *panGesture = [self newPanGestureRecognizerForSpace];
+//	[self.scrollView addGestureRecognizer:panGesture];
+//	[panGesture release];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -162,11 +167,11 @@ const CGFloat kTextNoteHeightMax = 9999;
 	}
 }
 
-- (UIPanGestureRecognizer *)newPanGestureRecognizerForSpace {
-	UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self 
-																				 action:@selector(spaceDraggedAndMoveLabels:)];
-	return panGesture;
-}
+//- (UIPanGestureRecognizer *)newPanGestureRecognizerForSpace {
+//	UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self 
+//																				 action:@selector(spaceDraggedAndMoveLabels:)];
+//	return panGesture;
+//}
 
 /*
 - (void)spaceDragged:(UIPanGestureRecognizer *)panGesture {
@@ -186,18 +191,18 @@ const CGFloat kTextNoteHeightMax = 9999;
 */
 
 
-- (void)spaceDraggedAndMoveLabels:(UIPanGestureRecognizer *)panGesture {
-	CGPoint diff = [panGesture velocityInView:self.view];//[panGesture translationInView:self.view];
-	for (UILabel *label in textNotes) {
-		CGPoint oldPoint = label.frame.origin;
-		
-		CGRect labelPosition = label.frame;
-		labelPosition.origin.x = oldPoint.x + diff.x;
-		labelPosition.origin.y = oldPoint.y + diff.y;
-		
-		label.frame = labelPosition;
-	}
-}
+//- (void)spaceDraggedAndMoveLabels:(UIPanGestureRecognizer *)panGesture {
+//	CGPoint diff = [panGesture velocityInView:self.view];//[panGesture translationInView:self.view];
+//	for (UILabel *label in textNotes) {
+//		CGPoint oldPoint = label.frame.origin;
+//		
+//		CGRect labelPosition = label.frame;
+//		labelPosition.origin.x = oldPoint.x + diff.x;
+//		labelPosition.origin.y = oldPoint.y + diff.y;
+//		
+//		label.frame = labelPosition;
+//	}
+//}
 
 #pragma mark scrolling view
 
