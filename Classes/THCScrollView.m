@@ -27,7 +27,7 @@
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
 	if (objectToDrag) {
 		UITouch *touch = [touches anyObject];
-		CGPoint point = [touch locationInView:self];
+		CGPoint point = [touch locationInView:self.spaceView];
 		objectToDrag.frame = CGRectMake(point.x - touchPointInObject.x,
 										point.y - touchPointInObject.y,
 										objectToDrag.frame.size.width,

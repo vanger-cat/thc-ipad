@@ -301,7 +301,7 @@
 							<real>241</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>96 55 1589 1123 0 0 1920 1178 </string>
+						<string>95 55 1589 1123 0 0 1920 1178 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -331,7 +331,7 @@
 										<key>_historyCapacity</key>
 										<integer>10</integer>
 										<key>bookmark</key>
-										<string>9285C79D1291E66C003F98D3</string>
+										<string>9285C7C41291EBD5003F98D3</string>
 										<key>history</key>
 										<array>
 											<string>927B74BA129163D70083088C</string>
@@ -355,14 +355,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1326, 789}}</string>
+								<string>{{0, 0}, {1326, 689}}</string>
 								<key>RubberWindowFrame</key>
-								<string>96 55 1589 1123 0 0 1920 1178 </string>
+								<string>95 55 1589 1123 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>789pt</string>
+							<string>689pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -382,7 +382,7 @@
 										<key>_historyCapacity</key>
 										<integer>10</integer>
 										<key>bookmark</key>
-										<string>9285C79E1291E66C003F98D3</string>
+										<string>9285C7C51291EBD5003F98D3</string>
 										<key>history</key>
 										<array>
 											<string>927B763C12919BC00083088C</string>
@@ -394,7 +394,7 @@
 											<string>9285C6C11291D455003F98D3</string>
 											<string>9285C70A1291D987003F98D3</string>
 											<string>9285C7121291D9AE003F98D3</string>
-											<string>9285C7141291D9AE003F98D3</string>
+											<string>9285C7B61291EB0E003F98D3</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -406,14 +406,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 794}, {1326, 283}}</string>
+								<string>{{0, 694}, {1326, 383}}</string>
 								<key>RubberWindowFrame</key>
-								<string>96 55 1589 1123 0 0 1920 1178 </string>
+								<string>95 55 1589 1123 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>283pt</string>
+							<string>383pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -428,7 +428,7 @@
 								<key>Frame</key>
 								<string>{{0, 1082}, {1326, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>96 55 1589 1123 0 0 1920 1178 </string>
+								<string>95 55 1589 1123 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -592,16 +592,16 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>9285C79F1291E66C003F98D3</string>
+		<string>9285C7C61291EBD5003F98D3</string>
 		<string>9285C6BD1291D3E8003F98D3</string>
 		<string>9285C6AE1291D28D003F98D3</string>
 		<string>92CFB1D4128C7106005CB1ED</string>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>/Users/wolfenberg/Desktop/thc-ipad/thc-ipad.xcodeproj</string>
+		<string>1CD10A99069EF8BA00B06720</string>
 		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
-	<string>96 55 1589 1123 0 0 1920 1178 </string>
+	<string>95 55 1589 1123 0 0 1920 1178 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

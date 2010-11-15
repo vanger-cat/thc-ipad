@@ -68,11 +68,12 @@ const CGFloat kTextNoteHeightMax = 9999;
 	
 	self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * 2, self.scrollView.frame.size.height * 2);
 	self.scrollView.delegate = self.scrollView;
+	self.scrollView.canCancelContentTouches = YES;
 	
 	CGRect center = CGRectMake(self.scrollView.contentSize.width / 2, self.scrollView.contentSize.height / 2, 1, 1);
 	[self.scrollView scrollRectToVisible:center animated:NO];
 	
-	//[self addRandomLabels:1000];
+	//[self addRandomLabels:500];
 
 	[self showElements:[[ElementManager sharedInstance] copyElementsArray] 
 				inView:self.scrollView.spaceView];
