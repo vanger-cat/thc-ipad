@@ -15,8 +15,13 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D801B30F44B63D00FB423F /* CoreData.framework */; };
+		40C219921291796900559770 /* Element.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C219911291796900559770 /* Element.m */; };
+		40C219951291797F00559770 /* ElementManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C219941291797F00559770 /* ElementManager.m */; };
+		40C219A112917CFB00559770 /* AbstractManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C219A012917CFB00559770 /* AbstractManager.m */; };
 		927B74B9129163260083088C /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 927B74B8129163260083088C /* Utils.m */; };
 		927B7525129177EA0083088C /* THCScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 927B7524129177EA0083088C /* THCScrollView.m */; };
+		927B761C1291917E0083088C /* thc_ipad.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 28C3AD890F43EF2300507BA6 /* thc_ipad.xcdatamodel */; };
+		927B761D129191800083088C /* thc_ipad-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D1107310486CEB800E47090 /* thc_ipad-Info.plist */; };
 		9286583012901AD90082DB64 /* THCColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 9286582F12901AD90082DB64 /* THCColors.m */; };
 		9286587212901F420082DB64 /* THCFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 9286587112901F420082DB64 /* THCFonts.m */; };
 		92CFB27B128D9DFB005CB1ED /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */; };
@@ -35,6 +40,12 @@
 		28D801B30F44B63D00FB423F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* thc_ipad_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thc_ipad_Prefix.pch; sourceTree = "<group>"; };
+		40C219901291796900559770 /* Element.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Element.h; sourceTree = "<group>"; };
+		40C219911291796900559770 /* Element.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Element.m; sourceTree = "<group>"; };
+		40C219931291797F00559770 /* ElementManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElementManager.h; sourceTree = "<group>"; };
+		40C219941291797F00559770 /* ElementManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElementManager.m; sourceTree = "<group>"; };
+		40C2199F12917CFB00559770 /* AbstractManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractManager.h; sourceTree = "<group>"; };
+		40C219A012917CFB00559770 /* AbstractManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractManager.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* thc_ipad-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "thc_ipad-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		927B74B7129163260083088C /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		927B74B8129163260083088C /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
@@ -67,6 +78,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				40C2198A1291779D00559770 /* Model */,
+				9285C6AF1291D2D0003F98D3 /* Utils */,
 				1D3623240D0F684500981E51 /* ThcAppDelegate.h */,
 				1D3623250D0F684500981E51 /* ThcAppDelegate.m */,
 				92CFB278128D9DFB005CB1ED /* RootViewController.h */,
@@ -74,12 +87,6 @@
 				92CFB27A128D9DFB005CB1ED /* RootViewController.xib */,
 				927B7523129177EA0083088C /* THCScrollView.h */,
 				927B7524129177EA0083088C /* THCScrollView.m */,
-				9286582E12901AD90082DB64 /* THCColors.h */,
-				9286582F12901AD90082DB64 /* THCColors.m */,
-				9286587012901F420082DB64 /* THCFonts.h */,
-				9286587112901F420082DB64 /* THCFonts.m */,
-				927B74B7129163260083088C /* Utils.h */,
-				927B74B8129163260083088C /* Utils.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -132,6 +139,40 @@
 				28D801B30F44B63D00FB423F /* CoreData.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		40C2198A1291779D00559770 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				40C219E61291853800559770 /* Elements */,
+				40C2199F12917CFB00559770 /* AbstractManager.h */,
+				40C219A012917CFB00559770 /* AbstractManager.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		40C219E61291853800559770 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				40C219901291796900559770 /* Element.h */,
+				40C219911291796900559770 /* Element.m */,
+				40C219931291797F00559770 /* ElementManager.h */,
+				40C219941291797F00559770 /* ElementManager.m */,
+			);
+			name = Elements;
+			sourceTree = "<group>";
+		};
+		9285C6AF1291D2D0003F98D3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9286582E12901AD90082DB64 /* THCColors.h */,
+				9286582F12901AD90082DB64 /* THCColors.m */,
+				9286587012901F420082DB64 /* THCFonts.h */,
+				9286587112901F420082DB64 /* THCFonts.m */,
+				927B74B7129163260083088C /* Utils.h */,
+				927B74B8129163260083088C /* Utils.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +229,7 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				92CFB27C128D9DFB005CB1ED /* RootViewController.xib in Resources */,
+				927B761D129191800083088C /* thc_ipad-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +248,10 @@
 				9286587212901F420082DB64 /* THCFonts.m in Sources */,
 				927B74B9129163260083088C /* Utils.m in Sources */,
 				927B7525129177EA0083088C /* THCScrollView.m in Sources */,
+				40C219921291796900559770 /* Element.m in Sources */,
+				40C219951291797F00559770 /* ElementManager.m in Sources */,
+				40C219A112917CFB00559770 /* AbstractManager.m in Sources */,
+				927B761C1291917E0083088C /* thc_ipad.xcdatamodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +262,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -223,6 +270,7 @@
 				GCC_PREFIX_HEADER = thc_ipad_Prefix.pch;
 				INFOPLIST_FILE = "thc_ipad-Info.plist";
 				PRODUCT_NAME = "ThoughtCase-Debug";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 			};
 			name = Debug;
 		};
@@ -230,11 +278,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = thc_ipad_Prefix.pch;
 				INFOPLIST_FILE = "thc_ipad-Info.plist";
 				PRODUCT_NAME = ThoughtCase;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -259,7 +309,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -267,6 +317,7 @@
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
 				PRODUCT_NAME = ThoughtCase;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};

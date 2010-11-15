@@ -11,6 +11,19 @@
 
 @implementation THCScrollView
 
+@synthesize spaceView;
+
+- (UIView *)spaceView {
+	if (!spaceView) {
+		spaceView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.contentSize.width, self.contentSize.height)];
+		spaceView.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
+		[self addSubview:spaceView];
+		[spaceView release];
+	}
+	return spaceView;
+}
+
+#pragma mark Touches
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
 	if (objectToDrag) {
 		UITouch *touch = [touches anyObject];
@@ -30,23 +43,31 @@
 - (BOOL)touchesShouldBegin:(NSSet *)touches withEvent:(UIEvent *)event inContentView:(UIView *)view {
 	UITouch *touch = [touches anyObject];
 	touchPointInObject = [touch locationInView:view];
-	
 	return YES;
 }
 
 - (BOOL)touchesShouldCancelInContentView:(UIView *)view {
-	objectToDrag = view;
-	objectToDrag.backgroundColor = [UIColor colorForEditedTextNoteBackground];
-	return NO;
+	if (view != spaceView) {
+		objectToDrag = view;
+		objectToDrag.backgroundColor = [UIColor colorForEditedTextNoteBackground];
+		return NO;
+	} else {
+		return YES;
+	}
 }
 
 #pragma mark -
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
-	return nil;
+	return self.spaceView;
 }
 
 - (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(float)scale {
-	
+	NSLog(@"scale %f", scale);
+}
+
+- (void)dealloc {
+	[spaceView release];
+	[super dealloc];
 }
 
 @end

@@ -9,6 +9,8 @@
 #import "ThcAppDelegate.h"
 #import "RootViewController.h"
 
+#import "ElementManager.h"
+
 @implementation ThcAppDelegate
 
 @synthesize window;
@@ -17,7 +19,12 @@
 #pragma mark -
 #pragma mark Application lifecycle
 
+- (void)initElementManagerWithContext:(NSManagedObjectContext *)context {
+	[ElementManager initSharedInstanceWithContext:context];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	[self initElementManagerWithContext:[self managedObjectContext]];
 	[self.window addSubview:rootViewController.view];
     [self.window makeKeyAndVisible];
 

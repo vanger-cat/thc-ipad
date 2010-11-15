@@ -3,7 +3,7 @@
 //  thc-ipad
 //
 //  Created by Dmitry Volkov on 12.11.10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Copyright 2010 Magik Ink. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -19,6 +19,8 @@
 
 - (UITapGestureRecognizer *)newDoubleTapGestureForLabel;
 - (UITapGestureRecognizer *)newDoubleTapGestureForSpace;
-//- (UIPanGestureRecognizer *)newPanGestureRecognizerForSpace;
+- (UILabel *)addTextNoteLabelAtPoint:(CGPoint)point 
+							withText:(NSString *)text 
+							  toView:(UIView *)aView;
 
 @end

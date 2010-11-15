@@ -10,13 +10,12 @@
 #import "THCColors.h"
 #import "THCFonts.h"
 #import "Utils.h"
+#import "Element.h"
+#import "ElementManager.h"
 
 @interface RootViewController (PrivateMethods)
 
-- (UILabel *)addTextNoteLabelAtPoint:(CGPoint)point withText:(NSString *)text toView:(UIView *)aView;
-
 @end
-
 
 @implementation RootViewController
 
@@ -46,6 +45,20 @@ const CGFloat kTextNoteHeightMax = 9999;
 
 #pragma mark View lifecycle
 
+- (void)showElements:(NSArray *)elements inView:(UIView *)aView andAddToArray:(NSMutableArray *)array{
+	Element *element;
+	for (element in elements) {
+		UILabel *label = [self addTextNoteLabelAtPoint:CGPointMake([element.x floatValue], [element.y floatValue]) 
+							 withText:element.text 
+							   toView:aView];
+		[array addObject:label];
+		
+		UITapGestureRecognizer *doubleTap = [self newDoubleTapGestureForLabel];
+		[label addGestureRecognizer:doubleTap];
+		[doubleTap release];
+	}
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -55,13 +68,18 @@ const CGFloat kTextNoteHeightMax = 9999;
 	[self.scrollView addGestureRecognizer:doubleTap];
 	[doubleTap release];
 	
-	self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * 5, self.scrollView.frame.size.height * 5);
+	self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * 2, self.scrollView.frame.size.height * 2);
 	self.scrollView.delegate = self.scrollView;
 	
 	CGRect center = CGRectMake(self.scrollView.contentSize.width / 2, self.scrollView.contentSize.height / 2, 1, 1);
 	[self.scrollView scrollRectToVisible:center animated:NO];
 	
-	[self addRandomLabels:1000];
+	//[self addRandomLabels:1000];
+
+	[self showElements:[[ElementManager sharedInstance] copyElementsArray] 
+				inView:self.scrollView.spaceView
+		 andAddToArray:self.textNotes];
+	[self.scrollView scrollRectToVisible:center animated:NO];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -90,7 +108,7 @@ const CGFloat kTextNoteHeightMax = 9999;
     [super dealloc];
 }
 
-#pragma mark Сreation of text boxes and labels
+#pragma mark Creation of text boxes and labels
 
 - (UITextView *)addTextViewWithRect:(CGRect)rect withText:(NSString *)text toView:(UIView *)aView {
 	UITextView *textView = [[UITextView alloc] init];
@@ -136,19 +154,28 @@ const CGFloat kTextNoteHeightMax = 9999;
 }
 
 - (void)textViewDidEndEditing:(UITextView *)textView {
-	// Create new UILabel
-	CGPoint pointForLabel = CGPointMake(textView.frame.origin.x + kTextAndLabelXDifference,
-								textView.frame.origin.y + kTextAndLabelYDifference);
-	UILabel *label = [self addTextNoteLabelAtPoint:pointForLabel
-										  withText:textView.text
-											toView:self.scrollView];
-	[textNotes addObject:label];
-	[label release];
-	
-	UITapGestureRecognizer *doubleTap = [self newDoubleTapGestureForLabel];
-	[label addGestureRecognizer:doubleTap];
-	[doubleTap release];
-	
+	if ([textView hasText]) {
+		// Create new UILabel
+		CGPoint pointForLabel = CGPointMake(textView.frame.origin.x + kTextAndLabelXDifference,
+											textView.frame.origin.y + kTextAndLabelYDifference);
+		UILabel *label = [self addTextNoteLabelAtPoint:pointForLabel
+											  withText:textView.text
+												toView:self.scrollView.spaceView];
+		[textNotes addObject:label];
+		[label release];
+		
+		UITapGestureRecognizer *doubleTap = [self newDoubleTapGestureForLabel];
+		[label addGestureRecognizer:doubleTap];
+		[doubleTap release];
+		
+		// Save new element
+		Element *element = [[ElementManager sharedInstance] newEmptyAbstractLabel];
+		element.x = [NSNumber numberWithInt:pointForLabel.x];
+		element.y = [NSNumber numberWithInt:pointForLabel.y];
+		element.text = textView.text;
+		[[ElementManager sharedInstance] save];
+		[element release];
+	}
 	[textView removeFromSuperview];
 }
 
@@ -170,7 +197,7 @@ const CGFloat kTextNoteHeightMax = 9999;
 										 kTextNoteWidth,
 										 kTextNoteHeight);
 
-		[self addTextViewWithRect:textViewRect withText:label.text toView:self.scrollView];
+		[self addTextViewWithRect:textViewRect withText:label.text toView:self.scrollView.spaceView];
 	}
 }
 
@@ -185,15 +212,13 @@ const CGFloat kTextNoteHeightMax = 9999;
 
 - (void)spaceDoubleTapped:(UITapGestureRecognizer *)gesture {
 	if (gesture.state == UIGestureRecognizerStateRecognized) {
-		CGPoint location = [gesture locationInView:self.scrollView];
+		CGPoint location = [gesture locationInView:self.scrollView.spaceView];
 		CGRect textViewRect = CGRectMake(location.x,
 										 location.y,
 										 kTextNoteWidth,
 										 kTextNoteHeight);
-		[self addTextViewWithRect:textViewRect withText:@"" toView:self.scrollView];
+		[self addTextViewWithRect:textViewRect withText:@"" toView:self.scrollView.spaceView];
 	}
 }
-
-#pragma mark Touches
 
 @end
