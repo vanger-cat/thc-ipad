@@ -56,6 +56,7 @@ const CGFloat kTextNoteHeightMax = 9999;
 	[doubleTap release];
 	
 	self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * 5, self.scrollView.frame.size.height * 5);
+	self.scrollView.delegate = self.scrollView;
 	
 	CGRect center = CGRectMake(self.scrollView.contentSize.width / 2, self.scrollView.contentSize.height / 2, 1, 1);
 	[self.scrollView scrollRectToVisible:center animated:NO];

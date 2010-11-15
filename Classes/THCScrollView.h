@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface THCScrollView : UIScrollView {
+@interface THCScrollView : UIScrollView <UIScrollViewDelegate> {
 	UIView *objectToDrag;
 	CGPoint touchPointInObject;
 }

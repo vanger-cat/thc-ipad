@@ -4446,6 +4446,8 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+						<float key="IBUIMinimumZoomScale">0.5</float>
+						<float key="IBUIMaximumZoomScale">2</float>
 					</object>
 				</object>
 				<string key="NSFrameSize">{768, 1004}</string>

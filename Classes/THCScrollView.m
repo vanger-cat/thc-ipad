@@ -40,4 +40,13 @@
 	return NO;
 }
 
+#pragma mark -
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+	return nil;
+}
+
+- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(float)scale {
+	
+}
+
 @end
