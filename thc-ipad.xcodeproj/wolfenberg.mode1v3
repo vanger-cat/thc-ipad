@@ -272,7 +272,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>5</integer>
+									<integer>6</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -315,6 +315,56 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
+								<string>THCScrollView.m</string>
+								<key>PBXSplitModuleInNavigatorKey</key>
+								<dict>
+									<key>Split0</key>
+									<dict>
+										<key>PBXProjectModuleGUID</key>
+										<string>1CE0B20406471E060097A5F4</string>
+										<key>PBXProjectModuleLabel</key>
+										<string>THCScrollView.m</string>
+										<key>_historyCapacity</key>
+										<integer>10</integer>
+										<key>bookmark</key>
+										<string>927B7591129180070083088C</string>
+										<key>history</key>
+										<array>
+											<string>92CFB287128D9E64005CB1ED</string>
+											<string>928657F7129018850082DB64</string>
+											<string>92865921129032150082DB64</string>
+											<string>927B74BA129163D70083088C</string>
+											<string>927B751E129177BC0083088C</string>
+											<string>927B75271291780C0083088C</string>
+											<string>927B755F12917BE00083088C</string>
+											<string>927B757712917F4F0083088C</string>
+											<string>927B757E12917F5B0083088C</string>
+										</array>
+									</dict>
+									<key>SplitCount</key>
+									<string>1</string>
+								</dict>
+								<key>StatusBarVisibility</key>
+								<true/>
+							</dict>
+							<key>GeometryConfiguration</key>
+							<dict>
+								<key>Frame</key>
+								<string>{{0, 0}, {1326, 763}}</string>
+								<key>RubberWindowFrame</key>
+								<string>87 55 1589 1123 0 0 1920 1178 </string>
+							</dict>
+							<key>Module</key>
+							<string>PBXNavigatorGroup</string>
+							<key>Proportion</key>
+							<string>763pt</string>
+						</dict>
+						<dict>
+							<key>ContentConfiguration</key>
+							<dict>
+								<key>PBXProjectModuleGUID</key>
+								<string>1CE0B20306471E060097A5F4</string>
+								<key>PBXProjectModuleLabel</key>
 								<string>RootViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
@@ -327,55 +377,7 @@
 										<key>_historyCapacity</key>
 										<integer>10</integer>
 										<key>bookmark</key>
-										<string>927B751512916E610083088C</string>
-										<key>history</key>
-										<array>
-											<string>92CFB287128D9E64005CB1ED</string>
-											<string>928657F7129018850082DB64</string>
-											<string>92865878129020100082DB64</string>
-											<string>92865921129032150082DB64</string>
-											<string>927B74BA129163D70083088C</string>
-											<string>927B750F12916D740083088C</string>
-											<string>927B751412916E610083088C</string>
-										</array>
-									</dict>
-									<key>SplitCount</key>
-									<string>1</string>
-								</dict>
-								<key>StatusBarVisibility</key>
-								<true/>
-							</dict>
-							<key>GeometryConfiguration</key>
-							<dict>
-								<key>Frame</key>
-								<string>{{0, 0}, {1326, 789}}</string>
-								<key>RubberWindowFrame</key>
-								<string>87 55 1589 1123 0 0 1920 1178 </string>
-							</dict>
-							<key>Module</key>
-							<string>PBXNavigatorGroup</string>
-							<key>Proportion</key>
-							<string>789pt</string>
-						</dict>
-						<dict>
-							<key>ContentConfiguration</key>
-							<dict>
-								<key>PBXProjectModuleGUID</key>
-								<string>1CE0B20306471E060097A5F4</string>
-								<key>PBXProjectModuleLabel</key>
-								<string>Utils.h</string>
-								<key>PBXSplitModuleInNavigatorKey</key>
-								<dict>
-									<key>Split0</key>
-									<dict>
-										<key>PBXProjectModuleGUID</key>
-										<string>1CE0B20406471E060097A5F4</string>
-										<key>PBXProjectModuleLabel</key>
-										<string>Utils.h</string>
-										<key>_historyCapacity</key>
-										<integer>10</integer>
-										<key>bookmark</key>
-										<string>927B751612916E610083088C</string>
+										<string>927B7592129180070083088C</string>
 										<key>history</key>
 										<array>
 											<string>9286583412901B2E0082DB64</string>
@@ -383,11 +385,11 @@
 											<string>9286587C129020100082DB64</string>
 											<string>927B747012913AFB0083088C</string>
 											<string>927B747112913AFB0083088C</string>
-											<string>927B748B12913C970083088C</string>
-											<string>927B74BD129163D70083088C</string>
 											<string>927B74BE129163D70083088C</string>
 											<string>927B74BF129163D70083088C</string>
-											<string>927B74C0129163D70083088C</string>
+											<string>927B752A1291780C0083088C</string>
+											<string>927B7536129178980083088C</string>
+											<string>927B74BD129163D70083088C</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -399,14 +401,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 794}, {1326, 283}}</string>
+								<string>{{0, 768}, {1326, 309}}</string>
 								<key>RubberWindowFrame</key>
 								<string>87 55 1589 1123 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>283pt</string>
+							<string>309pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -585,13 +587,13 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>927B751312916D740083088C</string>
+		<string>927B7593129180070083088C</string>
 		<string>927B746312913A230083088C</string>
 		<string>927B7441129134EA0083088C</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>92CFB1D4128C7106005CB1ED</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/wolfenberg/Desktop/thc-ipad/thc-ipad.xcodeproj</string>
+		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>87 55 1589 1123 0 0 1920 1178 </string>

@@ -1,15 +1,22 @@
-    //
+//
 //  RootViewController.m
 //  thc-ipad
 //
 //  Created by Dmitry Volkov on 12.11.10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Copyright 2010 Magik Ink. All rights reserved.
 //
 
 #import "RootViewController.h"
 #import "THCColors.h"
 #import "THCFonts.h"
 #import "Utils.h"
+
+@interface RootViewController (PrivateMethods)
+
+- (UILabel *)addTextNoteLabelAtPoint:(CGPoint)point withText:(NSString *)text toView:(UIView *)aView;
+
+@end
+
 
 @implementation RootViewController
 
@@ -185,5 +192,7 @@ const CGFloat kTextNoteHeightMax = 9999;
 		[self addTextViewWithRect:textViewRect withText:@"" toView:self.scrollView];
 	}
 }
+
+#pragma mark Touches
 
 @end
