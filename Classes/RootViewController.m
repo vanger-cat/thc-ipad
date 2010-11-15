@@ -52,7 +52,7 @@ const CGFloat kTextNoteHeightMax = 9999;
 												toView:self.scrollView];
 		
 		UITapGestureRecognizer *doubleTap = [self newDoubleTapGestureForLabel];
-		[label addGestureRecognizer:[self newDoubleTapGestureForLabel]];
+		[label addGestureRecognizer:doubleTap];
 		[doubleTap release];
 	}
 }
@@ -76,7 +76,7 @@ const CGFloat kTextNoteHeightMax = 9999;
 		 andAddToArray:self.textNotes];
 	[self.scrollView scrollRectToVisible:center animated:NO];
 	
-	[self addRandomLabels:1000];
+//	[self addRandomLabels:1000];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -166,7 +166,6 @@ const CGFloat kTextNoteHeightMax = 9999;
 										  withText:textView.text
 											toView:self.scrollView 
 										andToArray:textNotes];
-	[label release];
 	
 	UITapGestureRecognizer *doubleTap = [self newDoubleTapGestureForLabel];
 	[label addGestureRecognizer:doubleTap];

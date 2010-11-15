@@ -97,7 +97,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* ThoughtCase.app */,
+				1D6058910D05DD3D006BFB54 /* ThoughtCase-Debug.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -182,7 +182,7 @@
 			);
 			name = "thc-ipad";
 			productName = "thc-ipad";
-			productReference = 1D6058910D05DD3D006BFB54 /* ThoughtCase.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* ThoughtCase-Debug.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
