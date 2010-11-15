@@ -29,6 +29,10 @@ const CGFloat kTextNoteHeightMax = 9999;
 	UITapGestureRecognizer *doubleTap = [self newDoubleTapGestureForSpace];
 	[self.scrollView addGestureRecognizer:doubleTap];
 	[doubleTap release];
+	
+	UIPanGestureRecognizer *panGesture = [self newPanGestureRecognizerForSpace];
+	[self.scrollView addGestureRecognizer:panGesture];
+	[panGesture release];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -78,7 +82,7 @@ const CGFloat kTextNoteHeightMax = 9999;
 	return textView;
 }
 
-- (UILabel *)addTextNoteLabelAtPoint:(CGPoint)point withText:(NSString *)text toView:(UIView *)aView {
+- (UILabel *)addTextNoteLabelAtPoint:(CGPoint)point withText:(NSString *)text toView:(UIView *)aView andToArray:(NSMutableArray *)anArray{
 	CGSize size = [text sizeWithFont:[UIFont fontForTextNote] constrainedToSize:CGSizeMake(kTextNoteWidth, kTextNoteHeightMax)];
 	UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(point.x, point.y, kTextNoteWidth, size.height)];
 	label.userInteractionEnabled = YES;
@@ -88,8 +92,14 @@ const CGFloat kTextNoteHeightMax = 9999;
 	label.textColor = [UIColor whiteColor];
 	label.font = [UIFont fontForTextNote];
 	[aView addSubview:label];
+	[anArray addObject:label];
 	[label release];
 	return label;
+}
+
+- (void)removeFromSuperviewLabel:(UILabel *)label andFromArray:(NSMutableArray *)array {
+	[label removeFromSuperview];
+	[array removeObject:label];
 }
 
 #pragma mark TextViewDelegate
@@ -103,22 +113,17 @@ const CGFloat kTextNoteHeightMax = 9999;
 								textView.frame.origin.y + kTextAndLabelYDifference);
 	UILabel *label = [self addTextNoteLabelAtPoint:pointForLabel
 										  withText:textView.text
-											toView:self.scrollView];
+											toView:self.scrollView 
+										andToArray:textNotes];
 
 	UITapGestureRecognizer *doubleTap = [self newDoubleTapGestureForLabel];
 	[label addGestureRecognizer:doubleTap];
 	[doubleTap release];
-
+	
 	[textView removeFromSuperview];
 }
 
-#pragma mark Gestures
-
-- (UITapGestureRecognizer *)newDoubleTapGestureForSpace {
-	UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(spaceDoubleTapped:)];
-	doubleTap.numberOfTapsRequired = 2;
-	return doubleTap;
-}
+#pragma mark Label gestures
 
 - (UITapGestureRecognizer *)newDoubleTapGestureForLabel {
 	UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelDoubleTapped:)];
@@ -129,7 +134,7 @@ const CGFloat kTextNoteHeightMax = 9999;
 - (void)labelDoubleTapped:(UITapGestureRecognizer *)gesture {
 	if (gesture.state == UIGestureRecognizerStateRecognized) {
 		UILabel *label = (UILabel *)gesture.view;
-		[label removeFromSuperview];
+		[self removeFromSuperviewLabel:(UILabel *)gesture.view andFromArray:textNotes];
 
 		CGRect textViewRect = CGRectMake(label.frame.origin.x - kTextAndLabelXDifference,
 										 label.frame.origin.y - kTextAndLabelYDifference,
@@ -140,11 +145,57 @@ const CGFloat kTextNoteHeightMax = 9999;
 	}
 }
 
+#pragma mark Space gestures
+
+- (UITapGestureRecognizer *)newDoubleTapGestureForSpace {
+	UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self 
+																				action:@selector(spaceDoubleTapped:)];
+	doubleTap.numberOfTapsRequired = 2;
+	return doubleTap;
+}
+
 - (void)spaceDoubleTapped:(UITapGestureRecognizer *)gesture {
 	if (gesture.state == UIGestureRecognizerStateRecognized) {
 		CGPoint location = [gesture locationInView:self.view];
 		CGRect textViewRect = CGRectMake(location.x, location.y, kTextNoteWidth, kTextNoteHeight);
 		[self addTextViewWithRect:textViewRect withText:@"" toView:self.scrollView];
+	}
+}
+
+- (UIPanGestureRecognizer *)newPanGestureRecognizerForSpace {
+	UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self 
+																				 action:@selector(spaceDraggedAndMoveLabels:)];
+	return panGesture;
+}
+
+/*
+- (void)spaceDragged:(UIPanGestureRecognizer *)panGesture {
+	if (panGesture.state != UIGestureRecognizerStateEnded)
+		return;
+	
+	CGPoint diff = [panGesture velocityInView:self.view];
+	
+	CGPoint offset = self.scrollView.contentOffset;
+
+	offset.x = offset.x - diff.x;
+	offset.y = offset.y - diff.y;
+	
+		
+	[self.scrollView setContentOffset:offset animated:YES];
+}
+*/
+
+
+- (void)spaceDraggedAndMoveLabels:(UIPanGestureRecognizer *)panGesture {
+	CGPoint diff = [panGesture velocityInView:self.view];//[panGesture translationInView:self.view];
+	for (UILabel *label in textNotes) {
+		CGPoint oldPoint = label.frame.origin;
+		
+		CGRect labelPosition = label.frame;
+		labelPosition.origin.x = oldPoint.x + diff.x;
+		labelPosition.origin.y = oldPoint.y + diff.y;
+		
+		label.frame = labelPosition;
 	}
 }
 

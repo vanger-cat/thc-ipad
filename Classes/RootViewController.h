@@ -19,5 +19,6 @@
 
 - (UITapGestureRecognizer *)newDoubleTapGestureForLabel;
 - (UITapGestureRecognizer *)newDoubleTapGestureForSpace;
+- (UIPanGestureRecognizer *)newPanGestureRecognizerForSpace;
 
 @end
