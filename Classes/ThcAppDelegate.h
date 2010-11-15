@@ -31,6 +31,7 @@
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 - (NSURL *)applicationDocumentsDirectory;
+- (void)initElementManagerWithContext:(NSManagedObjectContext *)context;
 
 @end
 

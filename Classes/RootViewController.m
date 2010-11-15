@@ -10,6 +10,9 @@
 #import "THCColors.h"
 #import "THCFonts.h"
 
+#import "Element.h"
+#import "ElementManager.h"
+
 @implementation RootViewController
 
 @synthesize textNotes;
@@ -20,6 +23,16 @@ const CGFloat kTextAndLabelYDifference = 8;
 const CGFloat kTextNoteWidth = 150;
 const CGFloat kTextNoteHeight = 100;
 const CGFloat kTextNoteHeightMax = 9999;
+
+- (void)showElements:(NSArray *)elements inView:(UIView *)view andAddToArray:(NSMutableArray *)array{
+	Element *element;
+	for (element in elements) {
+		[self addTextNoteLabelAtPoint:CGPointMake([element.x floatValue], [element.y floatValue]) 
+							 withText:element.text 
+							   toView:view 
+						   andToArray:array];
+	}
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,11 +46,10 @@ const CGFloat kTextNoteHeightMax = 9999;
 	self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * 2, self.scrollView.frame.size.height * 2);
 	
 	CGRect center = CGRectMake(self.scrollView.frame.size.width + 10, self.scrollView.frame.size.height + 10, 1, 1);
+	[self showElements:[[ElementManager sharedInstance] copyElementsArray] 
+				inView:self.scrollView
+		 andAddToArray:self.textNotes];
 	[self.scrollView scrollRectToVisible:center animated:NO];
-	
-	//UIPanGestureRecognizer *panGesture = [self newPanGestureRecognizerForSpace];
-//	[self.scrollView addGestureRecognizer:panGesture];
-//	[panGesture release];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -83,6 +95,13 @@ const CGFloat kTextNoteHeightMax = 9999;
 	[textView release];
 
 	[textView becomeFirstResponder];
+	
+	Element *element = [[ElementManager sharedInstance] newEmptyAbstractLabel];
+	element.x = [NSNumber numberWithInt:(int)rect.origin.x];
+	element.y = [NSNumber numberWithInt:(int)rect.origin.y];
+	element.text = text;
+	[[ElementManager sharedInstance] save];
+	[element release];
 
 	return textView;
 }
@@ -166,43 +185,6 @@ const CGFloat kTextNoteHeightMax = 9999;
 		[self addTextViewWithRect:textViewRect withText:@"" toView:self.scrollView];
 	}
 }
-
-//- (UIPanGestureRecognizer *)newPanGestureRecognizerForSpace {
-//	UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self 
-//																				 action:@selector(spaceDraggedAndMoveLabels:)];
-//	return panGesture;
-//}
-
-/*
-- (void)spaceDragged:(UIPanGestureRecognizer *)panGesture {
-	if (panGesture.state != UIGestureRecognizerStateEnded)
-		return;
-	
-	CGPoint diff = [panGesture velocityInView:self.view];
-	
-	CGPoint offset = self.scrollView.contentOffset;
-
-	offset.x = offset.x - diff.x;
-	offset.y = offset.y - diff.y;
-	
-		
-	[self.scrollView setContentOffset:offset animated:YES];
-}
-*/
-
-
-//- (void)spaceDraggedAndMoveLabels:(UIPanGestureRecognizer *)panGesture {
-//	CGPoint diff = [panGesture velocityInView:self.view];//[panGesture translationInView:self.view];
-//	for (UILabel *label in textNotes) {
-//		CGPoint oldPoint = label.frame.origin;
-//		
-//		CGRect labelPosition = label.frame;
-//		labelPosition.origin.x = oldPoint.x + diff.x;
-//		labelPosition.origin.y = oldPoint.y + diff.y;
-//		
-//		label.frame = labelPosition;
-//	}
-//}
 
 #pragma mark scrolling view
 

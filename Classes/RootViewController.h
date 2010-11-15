@@ -19,6 +19,9 @@
 
 - (UITapGestureRecognizer *)newDoubleTapGestureForLabel;
 - (UITapGestureRecognizer *)newDoubleTapGestureForSpace;
-//- (UIPanGestureRecognizer *)newPanGestureRecognizerForSpace;
+- (UILabel *)addTextNoteLabelAtPoint:(CGPoint)point 
+							withText:(NSString *)text 
+							  toView:(UIView *)aView 
+						  andToArray:(NSMutableArray *)anArray;
 
 @end
