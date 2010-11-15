@@ -15,6 +15,7 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D801B30F44B63D00FB423F /* CoreData.framework */; };
+		927B74B9129163260083088C /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 927B74B8129163260083088C /* Utils.m */; };
 		9286583012901AD90082DB64 /* THCColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 9286582F12901AD90082DB64 /* THCColors.m */; };
 		9286587212901F420082DB64 /* THCFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 9286587112901F420082DB64 /* THCFonts.m */; };
 		92CFB27B128D9DFB005CB1ED /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */; };
@@ -34,6 +35,8 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* thc_ipad_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thc_ipad_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* thc_ipad-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "thc_ipad-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		927B74B7129163260083088C /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		927B74B8129163260083088C /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		9286582E12901AD90082DB64 /* THCColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THCColors.h; sourceTree = "<group>"; };
 		9286582F12901AD90082DB64 /* THCColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCColors.m; sourceTree = "<group>"; };
 		9286587012901F420082DB64 /* THCFonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THCFonts.h; sourceTree = "<group>"; };
@@ -70,6 +73,8 @@
 				9286582F12901AD90082DB64 /* THCColors.m */,
 				9286587012901F420082DB64 /* THCFonts.h */,
 				9286587112901F420082DB64 /* THCFonts.m */,
+				927B74B7129163260083088C /* Utils.h */,
+				927B74B8129163260083088C /* Utils.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 				92CFB27B128D9DFB005CB1ED /* RootViewController.m in Sources */,
 				9286583012901AD90082DB64 /* THCColors.m in Sources */,
 				9286587212901F420082DB64 /* THCFonts.m in Sources */,
+				927B74B9129163260083088C /* Utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
