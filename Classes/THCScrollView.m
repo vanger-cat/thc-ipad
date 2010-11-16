@@ -65,7 +65,6 @@
 }
 
 - (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(float)scale {
-	NSLog(@"scale %f", scale);
 }
 
 - (void)dealloc {
