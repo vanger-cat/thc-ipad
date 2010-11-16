@@ -17,10 +17,9 @@
 
 @interface RootViewController (PrivateMethods)
 
-- (void)addTextNoteLabelAtPoint:(CGPoint)point 
+- (UILabel *)addTextNoteLabelAtPoint:(CGPoint)point 
 							withText:(NSString *)text 
 							  toView:(UIView *)aView
-						  andToArray:(NSMutableArray *)anArray 
 						 withElement:(Element *)element;
 
 @end
@@ -35,13 +34,12 @@ const CGFloat kTextNoteWidth = 150;
 const CGFloat kTextNoteHeight = 100;
 const CGFloat kTextNoteHeightMax = 9999;
 
-- (void)showElements:(NSArray *)elements inView:(UIView *)view andAddToArray:(NSMutableArray *)array{
+- (void)showElements:(NSArray *)elements inView:(UIView *)view {
 	Element *element;
 	for (element in elements) {
 		[self addTextNoteLabelAtPoint:CGPointMake([element.x floatValue], [element.y floatValue]) 
 							 withText:element.text 
 							   toView:view 
-						   andToArray:array 
 						  withElement:element];
 	}
 }
@@ -53,8 +51,7 @@ const CGFloat kTextNoteHeightMax = 9999;
 											randomIntValueFrom(0, self.scrollView.contentSize.height));
 		[self addTextNoteLabelAtPoint:pointForLabel
 							 withText:@"Поддержать большое количество записей."
-							   toView:self.scrollView 
-						   andToArray:self.textNotes 
+							   toView:self.scrollView.spaceView
 						  withElement:NULL];
 	}
 }
@@ -70,6 +67,7 @@ const CGFloat kTextNoteHeightMax = 9999;
 	
 	self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * 2, self.scrollView.frame.size.height * 2);
 	self.scrollView.delegate = self.scrollView;
+	self.scrollView.thcDelegate = self;
 	self.scrollView.canCancelContentTouches = YES;
 	
 	CGRect center = CGRectMake(self.scrollView.contentSize.width / 2, self.scrollView.contentSize.height / 2, 1, 1);
@@ -124,7 +122,7 @@ const CGFloat kTextNoteHeightMax = 9999;
 	return textView;
 }
 
-- (UILabel *)addTextNoteLabelAtPoint:(CGPoint)point withText:(NSString *)text toView:(UIView *)aView andToArray:(NSMutableArray *)anArray withElement:(Element *)element {
+- (UILabel *)addTextNoteLabelAtPoint:(CGPoint)point withText:(NSString *)text toView:(UIView *)aView withElement:(Element *)element {
 	CGSize size = [text sizeWithFont:[UIFont fontForTextNote] constrainedToSize:CGSizeMake(kTextNoteWidth, kTextNoteHeightMax)];
 	THCLabelWithElement *label = [[THCLabelWithElement alloc] initWithFrame:CGRectMake(point.x, point.y, kTextNoteWidth, size.height)];
 	label.element = element;
@@ -137,47 +135,41 @@ const CGFloat kTextNoteHeightMax = 9999;
 	label.font = [UIFont fontForTextNote];
 	
 	[aView addSubview:label];
-	[anArray addObject:label];
 	
 	UITapGestureRecognizer *doubleTap = [self newDoubleTapGestureForLabel];
 	[label addGestureRecognizer:doubleTap];
 	[doubleTap release];
 	
 	[label release];
-	[return label];
-}
-
-- (void)removeFromSuperviewLabel:(UILabel *)label {
-	[label removeFromSuperview];
+	return label;
 }
 
 #pragma mark TextViewDelegate
 
 - (void)textViewDidEndEditing:(UITextView *)textView {
-	if (![textView hasText]) {
-	// Create new UILabel
-	CGPoint pointForLabel = CGPointMake(textView.frame.origin.x + kTextAndLabelXDifference,
-								textView.frame.origin.y + kTextAndLabelYDifference);
-	
-	THCTextViewWithElement *textViewWithElement = (THCTextViewWithElement *) textView;
-	Element *element;
-	if (textViewWithElement.element){
-		element = textViewWithElement.element;
-		[[ElementManager sharedInstance] saveElement:element 
-											withText:textViewWithElement.text 
-											 atPoint:textViewWithElement.frame.origin];
-	} else {
-		element = [[ElementManager sharedInstance] newSavedElementWithText:textView.text 
-																			atPoint:textView.frame.origin];
-	}
+	if ([textView hasText]) {
+		// Create new UILabel
+		CGPoint pointForLabel = CGPointMake(textView.frame.origin.x + kTextAndLabelXDifference,
+									textView.frame.origin.y + kTextAndLabelYDifference);
+		
+		THCTextViewWithElement *textViewWithElement = (THCTextViewWithElement *) textView;
+		Element *element;
+		if (textViewWithElement.element){
+			element = textViewWithElement.element;
+			[[ElementManager sharedInstance] saveElement:element 
+												withText:textViewWithElement.text 
+												 atPoint:textViewWithElement.frame.origin];
+		} else {
+			element = [[ElementManager sharedInstance] newSavedElementWithText:textView.text 
+																				atPoint:textView.frame.origin];
+		}
 
-	[self addTextNoteLabelAtPoint:pointForLabel 
-						 withText:textView.text
-						   toView:self.scrollView 
-					   andToArray:textNotes 
-					  withElement:element];
-	
-	[element release];
+		[self addTextNoteLabelAtPoint:pointForLabel 
+							 withText:textView.text
+							   toView:self.scrollView.spaceView
+						  withElement:element];
+		
+		[element release];
 	}
 	
 	[textView removeFromSuperview];
@@ -194,13 +186,13 @@ const CGFloat kTextNoteHeightMax = 9999;
 - (void)labelDoubleTapped:(UITapGestureRecognizer *)gesture {
 	if (gesture.state == UIGestureRecognizerStateRecognized) {
 		THCLabelWithElement *labelWithElement = (THCLabelWithElement *)gesture.view;
-		[self removeFromSuperviewLabel:labelWithElement andFromArray:textNotes];
+		[labelWithElement removeFromSuperview];
 
 		CGRect textViewRect = CGRectMake(labelWithElement.frame.origin.x - kTextAndLabelXDifference,
 										 labelWithElement.frame.origin.y - kTextAndLabelYDifference,
 										 kTextNoteWidth,
 										 kTextNoteHeight);
-		[self addTextViewWithRect:textViewRect withText:labelWithElement.text toView:self.scrollView withElement:labelWithElement.element];
+		[self addTextViewWithRect:textViewRect withText:labelWithElement.text toView:self.scrollView.spaceView withElement:labelWithElement.element];
 	}
 }
 
@@ -220,7 +212,7 @@ const CGFloat kTextNoteHeightMax = 9999;
 										 location.y,
 										 kTextNoteWidth,
 										 kTextNoteHeight);
-		[self addTextViewWithRect:textViewRect withText:@"" toView:self.scrollView withElement:NULL];
+		[self addTextViewWithRect:textViewRect withText:@"" toView:self.scrollView.spaceView withElement:NULL];
 	}
 }
 
@@ -231,6 +223,6 @@ const CGFloat kTextNoteHeightMax = 9999;
 	[[ElementManager sharedInstance] saveElement:labelWithElement.element
 										withText:labelWithElement.text 
 										 atPoint:labelWithElement.frame.origin];
-}
+	}
 
 @end

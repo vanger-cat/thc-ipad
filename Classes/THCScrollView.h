@@ -21,7 +21,7 @@
 	UIView *objectToDrag;
 	CGPoint touchPointInObject;
 	UIView *spaceView;
-	id<THCScrollViewDelegate> delegate;
+	id<THCScrollViewDelegate> thcDelegate;
 }
 
 @property (nonatomic, retain) id<THCScrollViewDelegate> thcDelegate;
