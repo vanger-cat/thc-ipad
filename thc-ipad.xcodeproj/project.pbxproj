@@ -295,7 +295,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = thc_ipad_Prefix.pch;
 				INFOPLIST_FILE = "thc_ipad-Info.plist";
-				PRODUCT_NAME = "ThoughtCase-Debug";
+				PRODUCT_NAME = "thc-Debug";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 			};
 			name = Debug;
@@ -325,7 +325,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				PREBINDING = NO;
-				PRODUCT_NAME = "ThoughtCase-Debug";
+				PRODUCT_NAME = "thc-Debug";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
