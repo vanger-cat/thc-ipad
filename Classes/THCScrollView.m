@@ -11,6 +11,8 @@
 
 @implementation THCScrollView
 
+@synthesize thcDelegate;
+
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
 	if (objectToDrag) {
 		UITouch *touch = [touches anyObject];
@@ -24,6 +26,7 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
 	objectToDrag.backgroundColor = [UIColor colorForTextNoteBackground];
+	[self.thcDelegate scrollView:self touchEnded:objectToDrag];
 	objectToDrag = nil;
 }
 

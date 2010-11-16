@@ -15,7 +15,8 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D801B30F44B63D00FB423F /* CoreData.framework */; };
-		40A918811291A2BF00BFCA83 /* THCElementLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A918801291A2BF00BFCA83 /* THCElementLabel.m */; };
+		40A918811291A2BF00BFCA83 /* THCLabelWithElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A918801291A2BF00BFCA83 /* THCLabelWithElement.m */; };
+		40A918A41291A52C00BFCA83 /* THCTextViewWithElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A918A31291A52C00BFCA83 /* THCTextViewWithElement.m */; };
 		40C219921291796900559770 /* Element.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C219911291796900559770 /* Element.m */; };
 		40C219951291797F00559770 /* ElementManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C219941291797F00559770 /* ElementManager.m */; };
 		40C219A112917CFB00559770 /* AbstractManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C219A012917CFB00559770 /* AbstractManager.m */; };
@@ -31,7 +32,7 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* ThcAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThcAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* ThcAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThcAppDelegate.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* ThoughtCase-Debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ThoughtCase-Debug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* ThoughtCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThoughtCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
@@ -39,8 +40,10 @@
 		28D801B30F44B63D00FB423F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* thc_ipad_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thc_ipad_Prefix.pch; sourceTree = "<group>"; };
-		40A9187F1291A2BF00BFCA83 /* THCElementLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THCElementLabel.h; sourceTree = "<group>"; };
-		40A918801291A2BF00BFCA83 /* THCElementLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCElementLabel.m; sourceTree = "<group>"; };
+		40A9187F1291A2BF00BFCA83 /* THCLabelWithElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THCLabelWithElement.h; sourceTree = "<group>"; };
+		40A918801291A2BF00BFCA83 /* THCLabelWithElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCLabelWithElement.m; sourceTree = "<group>"; };
+		40A918A21291A52C00BFCA83 /* THCTextViewWithElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THCTextViewWithElement.h; sourceTree = "<group>"; };
+		40A918A31291A52C00BFCA83 /* THCTextViewWithElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCTextViewWithElement.m; sourceTree = "<group>"; };
 		40C219901291796900559770 /* Element.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Element.h; sourceTree = "<group>"; };
 		40C219911291796900559770 /* Element.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Element.m; sourceTree = "<group>"; };
 		40C219931291797F00559770 /* ElementManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElementManager.h; sourceTree = "<group>"; };
@@ -79,6 +82,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				40A918B61291A59300BFCA83 /* UI components with Element */,
 				40C2198A1291779D00559770 /* Model */,
 				1D3623240D0F684500981E51 /* ThcAppDelegate.h */,
 				1D3623250D0F684500981E51 /* ThcAppDelegate.m */,
@@ -87,8 +91,6 @@
 				92CFB27A128D9DFB005CB1ED /* RootViewController.xib */,
 				9286582E12901AD90082DB64 /* THCColors.h */,
 				9286582F12901AD90082DB64 /* THCColors.m */,
-				40A9187F1291A2BF00BFCA83 /* THCElementLabel.h */,
-				40A918801291A2BF00BFCA83 /* THCElementLabel.m */,
 				9286587012901F420082DB64 /* THCFonts.h */,
 				9286587112901F420082DB64 /* THCFonts.m */,
 				927B7523129177EA0083088C /* THCScrollView.h */,
@@ -102,7 +104,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* ThoughtCase-Debug.app */,
+				1D6058910D05DD3D006BFB54 /* ThoughtCase.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -149,6 +151,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		40A918B61291A59300BFCA83 /* UI components with Element */ = {
+			isa = PBXGroup;
+			children = (
+				40A9187F1291A2BF00BFCA83 /* THCLabelWithElement.h */,
+				40A918801291A2BF00BFCA83 /* THCLabelWithElement.m */,
+				40A918A21291A52C00BFCA83 /* THCTextViewWithElement.h */,
+				40A918A31291A52C00BFCA83 /* THCTextViewWithElement.m */,
+			);
+			name = "UI components with Element";
+			sourceTree = "<group>";
+		};
 		40C2198A1291779D00559770 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,7 +200,7 @@
 			);
 			name = "thc-ipad";
 			productName = "thc-ipad";
-			productReference = 1D6058910D05DD3D006BFB54 /* ThoughtCase-Debug.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* ThoughtCase.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -245,7 +258,8 @@
 				40C219A112917CFB00559770 /* AbstractManager.m in Sources */,
 				927B74B9129163260083088C /* Utils.m in Sources */,
 				927B7525129177EA0083088C /* THCScrollView.m in Sources */,
-				40A918811291A2BF00BFCA83 /* THCElementLabel.m in Sources */,
+				40A918811291A2BF00BFCA83 /* THCLabelWithElement.m in Sources */,
+				40A918A41291A52C00BFCA83 /* THCTextViewWithElement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,10 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
+@class THCScrollView;
+
+@protocol THCScrollViewDelegate
+
+- (void)scrollView:(THCScrollView *)scrollView touchEnded:(UIView *)draggedObject;
+
+@end
+
 
 @interface THCScrollView : UIScrollView {
 	UIView *objectToDrag;
 	CGPoint touchPointInObject;
+	id<THCScrollViewDelegate> delegate;
 }
+
+@property (nonatomic, retain) id<THCScrollViewDelegate> thcDelegate;
 
 @end

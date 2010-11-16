@@ -1,15 +1,15 @@
 //
-//  THCElementLabel.h
+//  THCTextViewWithElement.h
 //  thc-ipad
 //
 //  Created by Vanger on 15.11.10.
 //  Copyright 2010 Magic Ink. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 #import "Element.h"
 
-@interface THCElementLabel : UILabel {
+@interface THCTextViewWithElement : UITextView {
 	Element *element;
 }
 

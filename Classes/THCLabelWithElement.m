@@ -6,10 +6,10 @@
 //  Copyright 2010 Magic Ink. All rights reserved.
 //
 
-#import "THCElementLabel.h"
+#import "THCLabelWithElement.h"
 
 
-@implementation THCElementLabel
+@implementation THCLabelWithElement
 
 @synthesize element;
 

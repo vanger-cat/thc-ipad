@@ -10,7 +10,7 @@
 #import "THCScrollView.h"
 #import "Element.h"
 
-@interface RootViewController : UIViewController <UITextViewDelegate> {
+@interface RootViewController : UIViewController <UITextViewDelegate, THCScrollViewDelegate> {
 	NSMutableArray *textNotes;
 	THCScrollView *scrollView;
 }

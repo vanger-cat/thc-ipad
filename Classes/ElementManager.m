@@ -47,11 +47,17 @@ static ElementManager *sharedInstance;
 	return mutableFetchResults;
 }
 
-- (Element *)newElementWithText:(NSString *)text atPoint:(CGPoint)point {
-	Element *element = [self newEmptyElement];
+- (void)saveElement:(Element *)element withText:(NSString *)text atPoint:(CGPoint)point {
 	element.text = text;
 	element.x = [NSNumber numberWithInt:(int)point.x];
 	element.y = [NSNumber numberWithInt:(int)point.y];
+	[self save];
+	
+}
+
+- (Element *)newSavedElementWithText:(NSString *)text atPoint:(CGPoint)point {
+	Element *element = [self newEmptyElement];
+	[self saveElement:element withText:text atPoint:point];
 	return element;
 }
 
