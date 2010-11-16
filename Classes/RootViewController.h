@@ -3,7 +3,7 @@
 //  thc-ipad
 //
 //  Created by Dmitry Volkov on 12.11.10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Copyright 2010 Magik Ink. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -15,7 +15,6 @@
 	THCScrollView *scrollView;
 }
 
-@property (nonatomic, retain) NSMutableArray *textNotes;
 @property (nonatomic, retain) IBOutlet THCScrollView *scrollView;
 
 - (UITapGestureRecognizer *)newDoubleTapGestureForLabel;

@@ -17,12 +17,14 @@
 @end
 
 
-@interface THCScrollView : UIScrollView {
+@interface THCScrollView : UIScrollView <UIScrollViewDelegate> {
 	UIView *objectToDrag;
 	CGPoint touchPointInObject;
+	UIView *spaceView;
 	id<THCScrollViewDelegate> delegate;
 }
 
 @property (nonatomic, retain) id<THCScrollViewDelegate> thcDelegate;
+@property (nonatomic, retain) UIView *spaceView;
 
 @end

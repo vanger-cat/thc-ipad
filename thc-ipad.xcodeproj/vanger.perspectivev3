@@ -279,7 +279,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>18</integer>
+									<integer>7</integer>
+									<integer>2</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -320,7 +321,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>40BE067E129045AC005C77B1</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>RootViewController.m</string>
+								<string>THCUIComponentWithElementDelegate.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -328,11 +329,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>40BE067F129045AC005C77B1</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>RootViewController.m</string>
+										<string>THCUIComponentWithElementDelegate.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>40A919911292705300BFCA83</string>
+										<string>40A9199712927ECC00BFCA83</string>
 										<key>history</key>
 										<array>
 											<string>40BE071612905BF2005C77B1</string>
@@ -363,7 +364,8 @@
 											<string>40A9190F1291F06300BFCA83</string>
 											<string>40A9195A12926D0B00BFCA83</string>
 											<string>40A9196D12926E8B00BFCA83</string>
-											<string>40A9198712926FD100BFCA83</string>
+											<string>40A9199512927ECC00BFCA83</string>
+											<string>40A9199612927ECC00BFCA83</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -680,7 +682,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>40A919901292704000BFCA83</string>
 		<string>40A9194E12926C3E00BFCA83</string>
 		<string>40A9194F12926C3E00BFCA83</string>
 		<string>/Users/vanger/programming/thc-ipad/thc-ipad.xcodeproj</string>

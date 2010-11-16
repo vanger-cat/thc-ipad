@@ -24,7 +24,7 @@ static ElementManager *sharedInstance;
 
 - (Element *)newEmptyElement {
 	Element * element = (Element *) [NSEntityDescription 
-													 insertNewObjectForEntityForName:kElemntEntityName 
+													 insertNewObjectForEntityForName:kElementEntityName 
 													 inManagedObjectContext:self.managedObjectContext];
 	[element retain];
 	return element;
@@ -33,14 +33,14 @@ static ElementManager *sharedInstance;
 - (NSMutableArray *)copyElementsArray {
 	// Fetch
 	NSFetchRequest *request = [[NSFetchRequest alloc] init];
-	NSEntityDescription *entity = [NSEntityDescription entityForName:kElemntEntityName 
+	NSEntityDescription *entity = [NSEntityDescription entityForName:kElementEntityName 
 											  inManagedObjectContext:self.managedObjectContext];
 	[request setEntity:entity];
 	
 	NSError *error;
 	NSMutableArray *mutableFetchResults = [[managedObjectContext executeFetchRequest:request error:&error] mutableCopy];
 	if (mutableFetchResults == nil) {
-			// Handle the error.
+		NSLog(@"%@", [error localizedDescription]);
 	}
 	[request release];
 	

@@ -8,7 +8,7 @@
 
 #import "Element.h"
 
-NSString * const kElemntEntityName = @"Element";
+NSString * const kElementEntityName = @"Element";
 
 @implementation Element 
 
