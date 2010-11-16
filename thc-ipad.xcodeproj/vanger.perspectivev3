@@ -332,7 +332,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>40A919191291F0EA00BFCA83</string>
+										<string>40A919911292705300BFCA83</string>
 										<key>history</key>
 										<array>
 											<string>40BE071612905BF2005C77B1</string>
@@ -353,17 +353,17 @@
 											<string>40A918BD1291A6C600BFCA83</string>
 											<string>40A918C41291A6C600BFCA83</string>
 											<string>40A918DF1291AA2D00BFCA83</string>
-											<string>40A918E01291AA2D00BFCA83</string>
 											<string>40A918E11291AA2D00BFCA83</string>
 											<string>40A918E21291AA2D00BFCA83</string>
 											<string>40A918E51291AA2D00BFCA83</string>
-											<string>40A918FE1291ED9B00BFCA83</string>
 											<string>40A918FF1291ED9B00BFCA83</string>
 											<string>40A919001291ED9B00BFCA83</string>
 											<string>40A919021291ED9B00BFCA83</string>
 											<string>40A919031291ED9B00BFCA83</string>
 											<string>40A9190F1291F06300BFCA83</string>
-											<string>40A919181291F0EA00BFCA83</string>
+											<string>40A9195A12926D0B00BFCA83</string>
+											<string>40A9196D12926E8B00BFCA83</string>
+											<string>40A9198712926FD100BFCA83</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -377,18 +377,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {978, 677}}</string>
+								<string>{{0, 0}, {978, 474}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 55 1228 723 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>677pt</string>
+							<string>474pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>0pt</string>
+							<string>203pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -402,7 +402,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {978, 243}}</string>
+										<string>{{10, 27}, {978, -27}}</string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -456,7 +456,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {978, -27}}</string>
+										<string>{{10, 27}, {978, 176}}</string>
 										<key>RubberWindowFrame</key>
 										<string>0 55 1228 723 0 0 1280 778 </string>
 									</dict>
@@ -486,11 +486,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>40A9181312919C1600BFCA83</string>
+				<string>40A9194412926C3E00BFCA83</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>40A9181412919C1600BFCA83</string>
+				<string>40A9194512926C3E00BFCA83</string>
 				<string>40BE067E129045AC005C77B1</string>
-				<string>40A9181512919C1600BFCA83</string>
+				<string>40A9194612926C3E00BFCA83</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -608,11 +608,11 @@
 							<key>DebugVariablesTableConfiguration</key>
 							<array>
 								<string>Name</string>
-								<real>120</real>
+								<real>274</real>
 								<string>Value</string>
-								<real>85</real>
+								<real>124</real>
 								<string>Summary</string>
-								<real>399</real>
+								<real>206</real>
 							</array>
 							<key>Frame</key>
 							<string>{{599, 0}, {629, 211}}</string>
@@ -639,14 +639,14 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>40A9181612919C1600BFCA83</string>
+				<string>40A9194712926C3E00BFCA83</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>40A9181712919C1600BFCA83</string>
-				<string>40A9181812919C1600BFCA83</string>
-				<string>40A9181912919C1600BFCA83</string>
-				<string>40A9181A12919C1600BFCA83</string>
-				<string>40BE067E129045AC005C77B1</string>
+				<string>40A9194812926C3E00BFCA83</string>
+				<string>40A9194912926C3E00BFCA83</string>
+				<string>40A9194A12926C3E00BFCA83</string>
+				<string>40A9194B12926C3E00BFCA83</string>
+				<string>40A9194C12926C3E00BFCA83</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
 			<string>2</string>
@@ -680,10 +680,9 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>40A9191A1291F0EA00BFCA83</string>
-		<string>40A9186A1291A18600BFCA83</string>
-		<string>40A9182712919D8400BFCA83</string>
-		<string>40A9181C12919C1600BFCA83</string>
+		<string>40A919901292704000BFCA83</string>
+		<string>40A9194E12926C3E00BFCA83</string>
+		<string>40A9194F12926C3E00BFCA83</string>
 		<string>/Users/vanger/programming/thc-ipad/thc-ipad.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

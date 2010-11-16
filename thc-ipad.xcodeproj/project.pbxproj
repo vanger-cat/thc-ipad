@@ -44,6 +44,7 @@
 		40A918801291A2BF00BFCA83 /* THCLabelWithElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCLabelWithElement.m; sourceTree = "<group>"; };
 		40A918A21291A52C00BFCA83 /* THCTextViewWithElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THCTextViewWithElement.h; sourceTree = "<group>"; };
 		40A918A31291A52C00BFCA83 /* THCTextViewWithElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCTextViewWithElement.m; sourceTree = "<group>"; };
+		40A91992129270D600BFCA83 /* THCUIComponentWithElementDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THCUIComponentWithElementDelegate.h; sourceTree = "<group>"; };
 		40C219901291796900559770 /* Element.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Element.h; sourceTree = "<group>"; };
 		40C219911291796900559770 /* Element.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Element.m; sourceTree = "<group>"; };
 		40C219931291797F00559770 /* ElementManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElementManager.h; sourceTree = "<group>"; };
@@ -158,6 +159,7 @@
 				40A918801291A2BF00BFCA83 /* THCLabelWithElement.m */,
 				40A918A21291A52C00BFCA83 /* THCTextViewWithElement.h */,
 				40A918A31291A52C00BFCA83 /* THCTextViewWithElement.m */,
+				40A91992129270D600BFCA83 /* THCUIComponentWithElementDelegate.h */,
 			);
 			name = "UI components with Element";
 			sourceTree = "<group>";

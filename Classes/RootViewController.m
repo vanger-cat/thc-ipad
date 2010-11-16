@@ -15,7 +15,7 @@
 
 @interface RootViewController (PrivateMethods)
 
-- (UILabel *)addTextNoteLabelAtPoint:(CGPoint)point 
+- (void)addTextNoteLabelAtPoint:(CGPoint)point 
 							withText:(NSString *)text 
 							  toView:(UIView *)aView
 						  andToArray:(NSMutableArray *)anArray 
@@ -54,15 +54,11 @@ const CGFloat kTextNoteHeightMax = 9999;
 	for (int i = 0; i < count; i++) {
 		CGPoint pointForLabel = CGPointMake(randomIntValueFrom(0, self.scrollView.contentSize.width),
 											randomIntValueFrom(0, self.scrollView.contentSize.height));
-		UILabel *label = [self addTextNoteLabelAtPoint:pointForLabel
-											  withText:@"Поддержать большое количество записей."
-												toView:self.scrollView 
-											andToArray:self.textNotes 
-										   withElement:NULL];
-		
-		UITapGestureRecognizer *doubleTap = [self newDoubleTapGestureForLabel];
-		[label addGestureRecognizer:doubleTap];
-		[doubleTap release];
+		[self addTextNoteLabelAtPoint:pointForLabel
+							 withText:@"Поддержать большое количество записей."
+							   toView:self.scrollView 
+						   andToArray:self.textNotes 
+						  withElement:NULL];
 	}
 }
 
@@ -93,7 +89,6 @@ const CGFloat kTextNoteHeightMax = 9999;
     return YES;
 }
 
-
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
@@ -101,13 +96,11 @@ const CGFloat kTextNoteHeightMax = 9999;
     // Release any cached data, images, etc. that aren't in use.
 }
 
-
 - (void)viewDidUnload {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
-
 
 - (void)dealloc {
 	[textNotes release];
@@ -138,20 +131,27 @@ const CGFloat kTextNoteHeightMax = 9999;
 	return textView;
 }
 
-- (UILabel *)addTextNoteLabelAtPoint:(CGPoint)point withText:(NSString *)text toView:(UIView *)aView andToArray:(NSMutableArray *)anArray withElement:(Element *)element {
+- (void)addTextNoteLabelAtPoint:(CGPoint)point withText:(NSString *)text toView:(UIView *)aView andToArray:(NSMutableArray *)anArray withElement:(Element *)element {
 	CGSize size = [text sizeWithFont:[UIFont fontForTextNote] constrainedToSize:CGSizeMake(kTextNoteWidth, kTextNoteHeightMax)];
 	THCLabelWithElement *label = [[THCLabelWithElement alloc] initWithFrame:CGRectMake(point.x, point.y, kTextNoteWidth, size.height)];
+	label.element = element;
+	
 	label.userInteractionEnabled = YES;
 	label.numberOfLines = 0;
 	label.text = text;
 	label.backgroundColor = [UIColor colorForTextNoteBackground];
 	label.textColor = [UIColor whiteColor];
 	label.font = [UIFont fontForTextNote];
+	
 	[aView addSubview:label];
 	[anArray addObject:label];
+	
+	UITapGestureRecognizer *doubleTap = [self newDoubleTapGestureForLabel];
+	[label addGestureRecognizer:doubleTap];
+	[doubleTap release];
+	
 	[label release];
-	return label;
-}
+}	
 
 - (void)removeFromSuperviewLabel:(UILabel *)label andFromArray:(NSMutableArray *)array {
 	[label removeFromSuperview];
@@ -172,25 +172,23 @@ const CGFloat kTextNoteHeightMax = 9999;
 	Element *element;
 	if (textViewWithElement.element){
 		element = textViewWithElement.element;
+		[[ElementManager sharedInstance] saveElement:element 
+											withText:textViewWithElement.text 
+											 atPoint:textViewWithElement.frame.origin];
 	} else {
 		element = [[ElementManager sharedInstance] newSavedElementWithText:textView.text 
 																			atPoint:textView.frame.origin];
 	}
 
-	UILabel *label = [self addTextNoteLabelAtPoint:pointForLabel
-										  withText:textView.text
-											toView:self.scrollView 
-										andToArray:textNotes 
-										withElement:element];
+	[self addTextNoteLabelAtPoint:pointForLabel 
+						 withText:textView.text
+						   toView:self.scrollView 
+					   andToArray:textNotes 
+					  withElement:element];
 	
 	[element release];
 	
-	UITapGestureRecognizer *doubleTap = [self newDoubleTapGestureForLabel];
-	[label addGestureRecognizer:doubleTap];
-	[doubleTap release];
-	
 	[textView removeFromSuperview];
-	
 }
 
 #pragma mark Label gestures
@@ -210,7 +208,7 @@ const CGFloat kTextNoteHeightMax = 9999;
 										 labelWithElement.frame.origin.y - kTextAndLabelYDifference,
 										 kTextNoteWidth,
 										 kTextNoteHeight);
-
+		
 		[self addTextViewWithRect:textViewRect withText:labelWithElement.text toView:self.scrollView withElement:labelWithElement.element];
 	}
 }
@@ -242,7 +240,6 @@ const CGFloat kTextNoteHeightMax = 9999;
 	[[ElementManager sharedInstance] saveElement:labelWithElement.element
 										withText:labelWithElement.text 
 										 atPoint:labelWithElement.frame.origin];
-	
 }
 
 @end
