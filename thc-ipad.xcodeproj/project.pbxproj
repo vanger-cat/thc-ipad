@@ -24,6 +24,31 @@
 		927B7525129177EA0083088C /* THCScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 927B7524129177EA0083088C /* THCScrollView.m */; };
 		9286583012901AD90082DB64 /* THCColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 9286582F12901AD90082DB64 /* THCColors.m */; };
 		9286587212901F420082DB64 /* THCFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 9286587112901F420082DB64 /* THCFonts.m */; };
+		92B548531296ECE100072C8D /* GTMIPhoneUnitTestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B548481296ECE100072C8D /* GTMIPhoneUnitTestDelegate.m */; };
+		92B548541296ECE100072C8D /* GTMIPhoneUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B548491296ECE100072C8D /* GTMIPhoneUnitTestMain.m */; };
+		92B548551296ECE100072C8D /* GTMObjC2Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B5484B1296ECE100072C8D /* GTMObjC2Runtime.m */; };
+		92B548561296ECE100072C8D /* GTMRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B5484D1296ECE100072C8D /* GTMRegex.m */; };
+		92B548571296ECE100072C8D /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B5484F1296ECE100072C8D /* GTMSenTestCase.m */; };
+		92B548581296ECE100072C8D /* GTMUnitTestDevLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B548511296ECE100072C8D /* GTMUnitTestDevLog.m */; };
+		92B548591296ECE100072C8D /* RunIPhoneUnitTest.sh in Resources */ = {isa = PBXBuildFile; fileRef = 92B548521296ECE100072C8D /* RunIPhoneUnitTest.sh */; };
+		92B5487E1296F01A00072C8D /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		92B5489A1296F0F200072C8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		92B5489D1296F10900072C8D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		92B5494B1296F13F00072C8D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		92B5494C1296F13F00072C8D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D801B30F44B63D00FB423F /* CoreData.framework */; };
+		92B5494F1296F16400072C8D /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92CFB27A128D9DFB005CB1ED /* RootViewController.xib */; };
+		92B549521296F17300072C8D /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */; };
+		92B549571296F1B500072C8D /* ElementManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C219941291797F00559770 /* ElementManager.m */; };
+		92B5495E1296F1CC00072C8D /* Element.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C219911291796900559770 /* Element.m */; };
+		92B5495F1296F1CD00072C8D /* AbstractManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C219A012917CFB00559770 /* AbstractManager.m */; };
+		92B549641296F1E400072C8D /* ThcAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* ThcAppDelegate.m */; };
+		92B5496B1296F21800072C8D /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 927B74B8129163260083088C /* Utils.m */; };
+		92B5496C1296F21A00072C8D /* THCFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 9286587112901F420082DB64 /* THCFonts.m */; };
+		92B5496D1296F21A00072C8D /* THCColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 9286582F12901AD90082DB64 /* THCColors.m */; };
+		92B549701296F22C00072C8D /* THCLabelWithElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A918801291A2BF00BFCA83 /* THCLabelWithElement.m */; };
+		92B549711296F22C00072C8D /* THCTextViewWithElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A918A31291A52C00BFCA83 /* THCTextViewWithElement.m */; };
+		92B549741296F25200072C8D /* THCScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 927B7524129177EA0083088C /* THCScrollView.m */; };
+		92B549771296F26E00072C8D /* thc_ipad.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 28C3AD890F43EF2300507BA6 /* thc_ipad.xcdatamodel */; };
 		92CFB27B128D9DFB005CB1ED /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */; };
 		92CFB27C128D9DFB005CB1ED /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92CFB27A128D9DFB005CB1ED /* RootViewController.xib */; };
 /* End PBXBuildFile section */
@@ -32,7 +57,7 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* ThcAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThcAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* ThcAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThcAppDelegate.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* ThoughtCase-Debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ThoughtCase-Debug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* thc-Debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "thc-Debug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
@@ -60,6 +85,21 @@
 		9286582F12901AD90082DB64 /* THCColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCColors.m; sourceTree = "<group>"; };
 		9286587012901F420082DB64 /* THCFonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THCFonts.h; sourceTree = "<group>"; };
 		9286587112901F420082DB64 /* THCFonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCFonts.m; sourceTree = "<group>"; };
+		92B5482A1296ECB200072C8D /* thc-ipad-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "thc-ipad-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92B5482C1296ECB200072C8D /* thc-ipad-test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "thc-ipad-test-Info.plist"; sourceTree = "<group>"; };
+		92B548471296ECE100072C8D /* GTMIPhoneUnitTestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMIPhoneUnitTestDelegate.h; path = Libraries/GTM/GTMIPhoneUnitTestDelegate.h; sourceTree = "<group>"; };
+		92B548481296ECE100072C8D /* GTMIPhoneUnitTestDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMIPhoneUnitTestDelegate.m; path = Libraries/GTM/GTMIPhoneUnitTestDelegate.m; sourceTree = "<group>"; };
+		92B548491296ECE100072C8D /* GTMIPhoneUnitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMIPhoneUnitTestMain.m; path = Libraries/GTM/GTMIPhoneUnitTestMain.m; sourceTree = "<group>"; };
+		92B5484A1296ECE100072C8D /* GTMObjC2Runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMObjC2Runtime.h; path = Libraries/GTM/GTMObjC2Runtime.h; sourceTree = "<group>"; };
+		92B5484B1296ECE100072C8D /* GTMObjC2Runtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMObjC2Runtime.m; path = Libraries/GTM/GTMObjC2Runtime.m; sourceTree = "<group>"; };
+		92B5484C1296ECE100072C8D /* GTMRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMRegex.h; path = Libraries/GTM/GTMRegex.h; sourceTree = "<group>"; };
+		92B5484D1296ECE100072C8D /* GTMRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMRegex.m; path = Libraries/GTM/GTMRegex.m; sourceTree = "<group>"; };
+		92B5484E1296ECE100072C8D /* GTMSenTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMSenTestCase.h; path = Libraries/GTM/GTMSenTestCase.h; sourceTree = "<group>"; };
+		92B5484F1296ECE100072C8D /* GTMSenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMSenTestCase.m; path = Libraries/GTM/GTMSenTestCase.m; sourceTree = "<group>"; };
+		92B548501296ECE100072C8D /* GTMUnitTestDevLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMUnitTestDevLog.h; path = Libraries/GTM/GTMUnitTestDevLog.h; sourceTree = "<group>"; };
+		92B548511296ECE100072C8D /* GTMUnitTestDevLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMUnitTestDevLog.m; path = Libraries/GTM/GTMUnitTestDevLog.m; sourceTree = "<group>"; };
+		92B548521296ECE100072C8D /* RunIPhoneUnitTest.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = RunIPhoneUnitTest.sh; path = Libraries/GTM/RunIPhoneUnitTest.sh; sourceTree = "<group>"; };
+		92B5485A1296ECFE00072C8D /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = Libraries/GTM/GTMDefines.h; sourceTree = "<group>"; };
 		92CFB278128D9DFB005CB1ED /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		92CFB279128D9DFB005CB1ED /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		92CFB27A128D9DFB005CB1ED /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
@@ -74,6 +114,17 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
 				28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92B548281296ECB200072C8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92B5489A1296F0F200072C8D /* Foundation.framework in Frameworks */,
+				92B5489D1296F10900072C8D /* UIKit.framework in Frameworks */,
+				92B5494B1296F13F00072C8D /* CoreGraphics.framework in Frameworks */,
+				92B5494C1296F13F00072C8D /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +159,8 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* ThoughtCase-Debug.app */,
+				1D6058910D05DD3D006BFB54 /* thc-Debug.app */,
+				92B5482A1296ECB200072C8D /* thc-ipad-test.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,7 +172,9 @@
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				92B548441296ECD500072C8D /* GTM */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				92B5482C1296ECB200072C8D /* thc-ipad-test-Info.plist */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -201,6 +255,26 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
+		92B548441296ECD500072C8D /* GTM */ = {
+			isa = PBXGroup;
+			children = (
+				92B5485A1296ECFE00072C8D /* GTMDefines.h */,
+				92B548471296ECE100072C8D /* GTMIPhoneUnitTestDelegate.h */,
+				92B548481296ECE100072C8D /* GTMIPhoneUnitTestDelegate.m */,
+				92B548491296ECE100072C8D /* GTMIPhoneUnitTestMain.m */,
+				92B5484A1296ECE100072C8D /* GTMObjC2Runtime.h */,
+				92B5484B1296ECE100072C8D /* GTMObjC2Runtime.m */,
+				92B5484C1296ECE100072C8D /* GTMRegex.h */,
+				92B5484D1296ECE100072C8D /* GTMRegex.m */,
+				92B5484E1296ECE100072C8D /* GTMSenTestCase.h */,
+				92B5484F1296ECE100072C8D /* GTMSenTestCase.m */,
+				92B548501296ECE100072C8D /* GTMUnitTestDevLog.h */,
+				92B548511296ECE100072C8D /* GTMUnitTestDevLog.m */,
+				92B548521296ECE100072C8D /* RunIPhoneUnitTest.sh */,
+			);
+			name = GTM;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -218,7 +292,25 @@
 			);
 			name = "thc-ipad";
 			productName = "thc-ipad";
-			productReference = 1D6058910D05DD3D006BFB54 /* ThoughtCase-Debug.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* thc-Debug.app */;
+			productType = "com.apple.product-type.application";
+		};
+		92B548291296ECB200072C8D /* thc-ipad-test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92B5482F1296ECB300072C8D /* Build configuration list for PBXNativeTarget "thc-ipad-test" */;
+			buildPhases = (
+				92B548261296ECB200072C8D /* Resources */,
+				92B548271296ECB200072C8D /* Sources */,
+				92B548281296ECB200072C8D /* Frameworks */,
+				92B548671296EE1500072C8D /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "thc-ipad-test";
+			productName = "thc-ipad-test";
+			productReference = 92B5482A1296ECB200072C8D /* thc-ipad-test.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -244,6 +336,7 @@
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* thc-ipad */,
+				92B548291296ECB200072C8D /* thc-ipad-test */,
 			);
 		};
 /* End PBXProject section */
@@ -258,7 +351,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		92B548261296ECB200072C8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92B548591296ECE100072C8D /* RunIPhoneUnitTest.sh in Resources */,
+				92B5487E1296F01A00072C8D /* MainWindow.xib in Resources */,
+				92B5494F1296F16400072C8D /* RootViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		92B548671296EE1500072C8D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ./Libraries/GTM/RunIPhoneUnitTest.sh;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1D60588E0D05DD3D006BFB54 /* Sources */ = {
@@ -281,6 +400,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		92B548271296ECB200072C8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92B548531296ECE100072C8D /* GTMIPhoneUnitTestDelegate.m in Sources */,
+				92B548541296ECE100072C8D /* GTMIPhoneUnitTestMain.m in Sources */,
+				92B548551296ECE100072C8D /* GTMObjC2Runtime.m in Sources */,
+				92B548561296ECE100072C8D /* GTMRegex.m in Sources */,
+				92B548571296ECE100072C8D /* GTMSenTestCase.m in Sources */,
+				92B548581296ECE100072C8D /* GTMUnitTestDevLog.m in Sources */,
+				92B549521296F17300072C8D /* RootViewController.m in Sources */,
+				92B549571296F1B500072C8D /* ElementManager.m in Sources */,
+				92B5495E1296F1CC00072C8D /* Element.m in Sources */,
+				92B5495F1296F1CD00072C8D /* AbstractManager.m in Sources */,
+				92B549641296F1E400072C8D /* ThcAppDelegate.m in Sources */,
+				92B5496B1296F21800072C8D /* Utils.m in Sources */,
+				92B5496C1296F21A00072C8D /* THCFonts.m in Sources */,
+				92B5496D1296F21A00072C8D /* THCColors.m in Sources */,
+				92B549701296F22C00072C8D /* THCLabelWithElement.m in Sources */,
+				92B549711296F22C00072C8D /* THCTextViewWithElement.m in Sources */,
+				92B549741296F25200072C8D /* THCScrollView.m in Sources */,
+				92B549771296F26E00072C8D /* thc_ipad.xcdatamodel in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
@@ -295,7 +439,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = thc_ipad_Prefix.pch;
 				INFOPLIST_FILE = "thc_ipad-Info.plist";
-				PRODUCT_NAME = "ThoughtCase-Debug";
+				PRODUCT_NAME = "thc-Debug";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 			};
 			name = Debug;
@@ -315,6 +459,55 @@
 			};
 			name = Release;
 		};
+		92B5482D1296ECB300072C8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "thc-ipad-test-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "thc-ipad-test";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		92B5482E1296ECB300072C8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "thc-ipad-test-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "thc-ipad-test";
+				SDKROOT = iphoneos;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -325,7 +518,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				PREBINDING = NO;
-				PRODUCT_NAME = "ThoughtCase-Debug";
+				PRODUCT_NAME = "thc-Debug";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -357,6 +550,15 @@
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
 				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92B5482F1296ECB300072C8D /* Build configuration list for PBXNativeTarget "thc-ipad-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92B5482D1296ECB300072C8D /* Debug */,
+				92B5482E1296ECB300072C8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

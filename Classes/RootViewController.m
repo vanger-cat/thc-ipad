@@ -65,7 +65,8 @@ const CGFloat kTextNoteHeightMax = 9999;
 	[self.scrollView addGestureRecognizer:doubleTap];
 	[doubleTap release];
 	
-	self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * 3 + 1, self.scrollView.frame.size.height * 3 + 1);
+	CGFloat widthOfContentViewSquare = MAX(self.scrollView.frame.size.width, self.scrollView.frame.size.height) * 2;
+	self.scrollView.contentSize = CGSizeMake(widthOfContentViewSquare, widthOfContentViewSquare);
 	self.scrollView.delegate = self.scrollView;
 	self.scrollView.thcDelegate = self;
 	self.scrollView.canCancelContentTouches = YES;
