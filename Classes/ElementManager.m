@@ -30,8 +30,23 @@ static ElementManager *sharedInstance;
 	return element;
 }
 
+- (Element *)saveElement:(Element *)element withText:(NSString *)text atPoint:(CGPoint)point {
+	element.text = text;
+	element.x = [NSNumber numberWithInt:(int)point.x];
+	element.y = [NSNumber numberWithInt:(int)point.y];
+	[self save];
+		
+	return element;
+}
+
+- (Element *)newSavedElementWithText:(NSString *)text atPoint:(CGPoint)point {
+	Element *element = [self newEmptyElement];
+	[self saveElement:element withText:text atPoint:point];
+	return element;
+}
+
 - (NSMutableArray *)copyElementsArray {
-	// Fetch
+		// Fetch
 	NSFetchRequest *request = [[NSFetchRequest alloc] init];
 	NSEntityDescription *entity = [NSEntityDescription entityForName:kElementEntityName 
 											  inManagedObjectContext:self.managedObjectContext];
@@ -45,20 +60,6 @@ static ElementManager *sharedInstance;
 	[request release];
 	
 	return mutableFetchResults;
-}
-
-- (void)saveElement:(Element *)element withText:(NSString *)text atPoint:(CGPoint)point {
-	element.text = text;
-	element.x = [NSNumber numberWithInt:(int)point.x];
-	element.y = [NSNumber numberWithInt:(int)point.y];
-	[self save];
-	
-}
-
-- (Element *)newSavedElementWithText:(NSString *)text atPoint:(CGPoint)point {
-	Element *element = [self newEmptyElement];
-	[self saveElement:element withText:text atPoint:point];
-	return element;
 }
 
 @end

@@ -15,32 +15,18 @@
 #import "Element.h"
 #import "ElementManager.h"
 
-@interface RootViewController (PrivateMethods)
-
-- (UILabel *)addTextNoteLabelAtPoint:(CGPoint)point 
-							withText:(NSString *)text 
-							  toView:(UIView *)aView
-						 withElement:(Element *)element;
-
-@end
-
 @implementation RootViewController
 
 @synthesize scrollView;
 
-const CGFloat kTextAndLabelXDifference = 8;
-const CGFloat kTextAndLabelYDifference = 8;
-const CGFloat kTextNoteWidth = 150;
-const CGFloat kTextNoteHeight = 100;
-const CGFloat kTextNoteHeightMax = 9999;
-
 - (void)showElements:(NSArray *)elements inView:(UIView *)view {
 	Element *element;
 	for (element in elements) {
-		[self addTextNoteLabelAtPoint:CGPointMake([element.x floatValue], [element.y floatValue]) 
-							 withText:element.text 
-							   toView:view 
-						  withElement:element];
+		[THCLabelWithElement addLabelAtPoint:CGPointMake([element.x floatValue], [element.y floatValue]) 
+										withText:element.text 
+										  toView:view 
+									 withElement:element 
+								withDelegate:self];
 	}
 }
 
@@ -49,10 +35,11 @@ const CGFloat kTextNoteHeightMax = 9999;
 	for (int i = 0; i < count; i++) {
 		CGPoint pointForLabel = CGPointMake(randomIntValueFrom(0, self.scrollView.contentSize.width),
 											randomIntValueFrom(0, self.scrollView.contentSize.height));
-		[self addTextNoteLabelAtPoint:pointForLabel
-							 withText:@"Поддержать большое количество записей."
-							   toView:self.scrollView.spaceView
-						  withElement:NULL];
+		[THCLabelWithElement addLabelAtPoint:pointForLabel
+									withText:@"Поддержать большое количество записей."
+									  toView:self.scrollView.spaceView
+								 withElement:NULL 
+								withDelegate:self];
 	}
 }
 
@@ -101,102 +88,6 @@ const CGFloat kTextNoteHeightMax = 9999;
     [super dealloc];
 }
 
-#pragma mark Creation of text boxes and labels
-
-- (UITextView *)addTextViewWithRect:(CGRect)rect withText:(NSString *)text toView:(UIView *)aView withElement:(Element *)element {
-	THCTextViewWithElement *textView = [[THCTextViewWithElement alloc] init];
-	textView.element = element;
-	
-	textView.contentInset = UIEdgeInsetsZero;
-	textView.text = text;
-	textView.delegate = self;
-	textView.backgroundColor = [UIColor colorForTextNoteBackground];
-	textView.textColor = [UIColor whiteColor];
-	textView.font = [UIFont fontForTextNote];
-	textView.editable = YES;
-	textView.scrollEnabled = YES;
-	[aView addSubview:textView];
-	textView.frame = rect;
-	[textView release];
-
-	[textView becomeFirstResponder];
-	return textView;
-}
-
-- (UILabel *)addTextNoteLabelAtPoint:(CGPoint)point withText:(NSString *)text toView:(UIView *)aView withElement:(Element *)element {
-	CGSize size = [text sizeWithFont:[UIFont fontForTextNote] constrainedToSize:CGSizeMake(kTextNoteWidth, kTextNoteHeightMax)];
-	THCLabelWithElement *label = [[THCLabelWithElement alloc] initWithFrame:CGRectMake(point.x, point.y, kTextNoteWidth, size.height)];
-	label.element = element;
-	
-	label.userInteractionEnabled = YES;
-	label.numberOfLines = 0;
-	label.text = text;
-	label.backgroundColor = [UIColor colorForTextNoteBackground];
-	label.textColor = [UIColor whiteColor];
-	label.font = [UIFont fontForTextNote];
-	
-	[aView addSubview:label];
-	
-	UITapGestureRecognizer *doubleTap = [self newDoubleTapGestureForLabel];
-	[label addGestureRecognizer:doubleTap];
-	[doubleTap release];
-	
-	[label release];
-	return label;
-}
-
-#pragma mark TextViewDelegate
-
-- (void)textViewDidEndEditing:(UITextView *)textView {
-	if ([textView hasText]) {
-		// Create new UILabel
-		CGPoint pointForLabel = CGPointMake(textView.frame.origin.x + kTextAndLabelXDifference,
-									textView.frame.origin.y + kTextAndLabelYDifference);
-		
-		THCTextViewWithElement *textViewWithElement = (THCTextViewWithElement *) textView;
-		Element *element;
-		if (textViewWithElement.element){
-			element = textViewWithElement.element;
-			[[ElementManager sharedInstance] saveElement:element 
-												withText:textViewWithElement.text 
-												 atPoint:textViewWithElement.frame.origin];
-		} else {
-			element = [[ElementManager sharedInstance] newSavedElementWithText:textView.text 
-																				atPoint:textView.frame.origin];
-		}
-
-		[self addTextNoteLabelAtPoint:pointForLabel 
-							 withText:textView.text
-							   toView:self.scrollView.spaceView
-						  withElement:element];
-		
-		[element release];
-	}
-	
-	[textView removeFromSuperview];
-}
-
-#pragma mark Label gestures
-
-- (UITapGestureRecognizer *)newDoubleTapGestureForLabel {
-	UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelDoubleTapped:)];
-	doubleTap.numberOfTapsRequired = 2;
-	return doubleTap;
-}
-
-- (void)labelDoubleTapped:(UITapGestureRecognizer *)gesture {
-	if (gesture.state == UIGestureRecognizerStateRecognized) {
-		THCLabelWithElement *labelWithElement = (THCLabelWithElement *)gesture.view;
-		[labelWithElement removeFromSuperview];
-
-		CGRect textViewRect = CGRectMake(labelWithElement.frame.origin.x - kTextAndLabelXDifference,
-										 labelWithElement.frame.origin.y - kTextAndLabelYDifference,
-										 kTextNoteWidth,
-										 kTextNoteHeight);
-		[self addTextViewWithRect:textViewRect withText:labelWithElement.text toView:self.scrollView.spaceView withElement:labelWithElement.element];
-	}
-}
-
 #pragma mark Space gestures
 
 - (UITapGestureRecognizer *)newDoubleTapGestureForSpace {
@@ -213,8 +104,43 @@ const CGFloat kTextNoteHeightMax = 9999;
 										 location.y,
 										 kTextNoteWidth,
 										 kTextNoteHeight);
-		[self addTextViewWithRect:textViewRect withText:@"" toView:self.scrollView.spaceView withElement:NULL];
+		[THCTextViewWithElement addTextViewWithRect:textViewRect 
+										   withText:@"" 
+											 toView:self.scrollView.spaceView 
+										withElement:NULL 
+									   withDelegate:self];
 	}
+}
+
+#pragma mark TextViewDelegate
+
+- (void)textViewDidEndEditing:(UITextView *)textView {
+	if ([textView hasText]) {
+			// Create new UILabel
+		CGPoint pointForLabel = CGPointMake(textView.frame.origin.x + kTextAndLabelXDifference,
+											textView.frame.origin.y + kTextAndLabelYDifference);
+		
+		THCTextViewWithElement *textViewWithElement = (THCTextViewWithElement *) textView;
+		[textViewWithElement saveComponentStateToElement];
+		Element *element;
+		if (textViewWithElement.element){
+			element = textViewWithElement.element;
+			[[ElementManager sharedInstance] save];
+		} else {
+			element = [[ElementManager sharedInstance] newSavedElementWithText:textView.text 
+																	   atPoint:textView.frame.origin];
+		}
+		
+		[THCLabelWithElement addLabelAtPoint:pointForLabel 
+									withText:textView.text
+									  toView:textView.superview
+								 withElement:element 
+								withDelegate:self];
+		
+		[element release];
+	}
+	
+	[textView removeFromSuperview];
 }
 
 #pragma mark THCScrollViewDelegate

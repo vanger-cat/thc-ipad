@@ -17,7 +17,6 @@
 
 @property (nonatomic, retain) IBOutlet THCScrollView *scrollView;
 
-- (UITapGestureRecognizer *)newDoubleTapGestureForLabel;
 - (UITapGestureRecognizer *)newDoubleTapGestureForSpace;
 
 @end

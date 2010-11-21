@@ -8,11 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "Element.h"
+#import "THCUIComponentWithElementDelegate.h"
+#import "THCLabelWithElement.h"
 
-@interface THCTextViewWithElement : UITextView {
+
+@interface THCTextViewWithElement : UITextView <THCUIComponentWithElementDelegate> {
 	Element *element;
 }
 
-@property (nonatomic, retain) Element *element;
++ (UITextView *)addTextViewWithRect:(CGRect)rect withText:(NSString *)text toView:(UIView *)aView withElement:(Element *)element withDelegate:(id<UITextViewDelegate>)delegate;
 
 @end

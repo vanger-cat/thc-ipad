@@ -83,7 +83,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				40A918B61291A59300BFCA83 /* UI components with Element */,
+				40A918B61291A59300BFCA83 /* UIControllers with Element */,
 				40C2198A1291779D00559770 /* Model */,
 				9285C6AF1291D2D0003F98D3 /* Utils */,
 				1D3623240D0F684500981E51 /* ThcAppDelegate.h */,
@@ -155,7 +155,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		40A918B61291A59300BFCA83 /* UI components with Element */ = {
+		40A918B61291A59300BFCA83 /* UIControllers with Element */ = {
 			isa = PBXGroup;
 			children = (
 				40A9187F1291A2BF00BFCA83 /* THCLabelWithElement.h */,
@@ -164,7 +164,7 @@
 				40A918A31291A52C00BFCA83 /* THCTextViewWithElement.m */,
 				40A91992129270D600BFCA83 /* THCUIComponentWithElementDelegate.h */,
 			);
-			name = "UI components with Element";
+			name = "UIControllers with Element";
 			sourceTree = "<group>";
 		};
 		40C2198A1291779D00559770 /* Model */ = {

@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 
-	//TODO: implement
 @protocol THCUIComponentWithElementDelegate
+
+@property (nonatomic, retain) Element *element;
+
+- (Element *)saveComponentStateToElement;
 
 @end
