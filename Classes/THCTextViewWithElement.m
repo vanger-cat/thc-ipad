@@ -34,17 +34,30 @@
 	textView.contentInset = UIEdgeInsetsZero;
 	textView.text = text;
 	textView.delegate = delegate;
-	textView.backgroundColor = [UIColor colorForTextNoteBackground];
+	textView.backgroundColor = [UIColor colorForEditedTextNoteBackground];
 	textView.textColor = [UIColor whiteColor];
 	textView.font = [UIFont fontForTextNote];
 	textView.editable = YES;
 	textView.scrollEnabled = YES;
-	[aView addSubview:textView];
 	textView.frame = rect;
+	textView.scrollEnabled = NO;
+	[aView addSubview:textView];
+	[self resizeTextView:textView];
 	[textView release];
 	
 	[textView becomeFirstResponder];
 	return textView;
 }
+
++ (void) resizeTextView:(UITextView *)textView {
+	CGRect rect = textView.frame;
+		// the string "\n\n\nA" necessary to have some additional space in TextView
+	NSString *text = [NSString stringWithFormat:@"%@\n\n\nA", textView.text];
+	CGSize newTextSize = [text sizeWithFont:[UIFont fontForTextNote] 
+						  constrainedToSize:CGSizeMake(rect.size.width, kTextNoteHeightMax)];
+	rect.size.height = MAX(kTextNoteHeight, newTextSize.height);
+	textView.frame = rect;
+}
+
 
 @end

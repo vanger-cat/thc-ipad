@@ -17,5 +17,5 @@
 }
 
 + (UITextView *)addTextViewWithRect:(CGRect)rect withText:(NSString *)text toView:(UIView *)aView withElement:(Element *)element withDelegate:(id<UITextViewDelegate>)delegate;
-
++ (void)resizeTextView:(UITextView *)textView;
 @end

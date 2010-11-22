@@ -54,7 +54,6 @@
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<bool key="IBUIBounces">NO</bool>
 						<float key="IBUIMinimumZoomScale">0.5</float>
 						<float key="IBUIMaximumZoomScale">2</float>
 					</object>

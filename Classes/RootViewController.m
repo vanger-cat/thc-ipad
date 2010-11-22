@@ -143,6 +143,10 @@
 	[textView removeFromSuperview];
 }
 
+- (void)textViewDidChange:(UITextView *)textView {
+	[THCTextViewWithElement resizeTextView:textView];
+}
+
 #pragma mark THCScrollViewDelegate
 
 - (void)scrollView:(THCScrollView *)scrollView touchEnded:(UIView *)draggedObject {
