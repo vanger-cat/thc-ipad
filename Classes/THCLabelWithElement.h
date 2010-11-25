@@ -26,7 +26,7 @@ extern const CGFloat kTextNoteHeightMax;
 
 @property (nonatomic, retain) id<UITextViewDelegate> textViewDelegate;
 
-+ (UILabel *)addLabelAtPoint:(CGPoint)point withText:(NSString *)text toView:(UIView *)aView withElement:(Element *)newElement withDelegate:(id<UITextViewDelegate>)delegate;
++ (UILabel *)addLabelAtPoint:(CGPoint)point toView:(UIView *)aView withElement:(Element *)newElement withDelegate:(id<UITextViewDelegate>)delegate;
 
 + (UITapGestureRecognizer *)newDoubleTapGestureForLabel;
 

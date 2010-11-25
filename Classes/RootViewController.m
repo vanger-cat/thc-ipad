@@ -23,22 +23,8 @@
 	Element *element;
 	for (element in elements) {
 		[THCLabelWithElement addLabelAtPoint:CGPointMake([element.x floatValue], [element.y floatValue]) 
-										withText:element.text 
 										  toView:view 
 									 withElement:element 
-								withDelegate:self];
-	}
-}
-
-- (void)addRandomLabels:(int)count {
-	// Add test text notes
-	for (int i = 0; i < count; i++) {
-		CGPoint pointForLabel = CGPointMake(randomIntValueFrom(0, self.scrollView.contentSize.width),
-											randomIntValueFrom(0, self.scrollView.contentSize.height));
-		[THCLabelWithElement addLabelAtPoint:pointForLabel
-									withText:@"Поддержать большое количество записей."
-									  toView:self.scrollView.spaceView
-								 withElement:NULL 
 								withDelegate:self];
 	}
 }
@@ -105,7 +91,6 @@
 										 kTextNoteWidth,
 										 kTextNoteHeight);
 		[THCTextViewWithElement addTextViewWithRect:textViewRect 
-										   withText:@"" 
 											 toView:self.scrollView.spaceView 
 										withElement:NULL 
 									   withDelegate:self];
@@ -132,7 +117,6 @@
 		}
 		
 		[THCLabelWithElement addLabelAtPoint:pointForLabel 
-									withText:textView.text
 									  toView:textView.superview
 								 withElement:element 
 								withDelegate:self];

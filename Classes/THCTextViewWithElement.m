@@ -27,12 +27,12 @@
 	[super dealloc];
 }
 
-+ (UITextView *)addTextViewWithRect:(CGRect)rect withText:(NSString *)text toView:(UIView *)aView withElement:(Element *)element withDelegate:(id<UITextViewDelegate>)delegate{
++ (UITextView *)addTextViewWithRect:(CGRect)rect toView:(UIView *)aView withElement:(Element *)element withDelegate:(id<UITextViewDelegate>)delegate{
 	THCTextViewWithElement *textView = [[THCTextViewWithElement alloc] init];
 	textView.element = element;
 	
 	textView.contentInset = UIEdgeInsetsZero;
-	textView.text = text;
+	textView.text = element.text;
 	textView.delegate = delegate;
 	textView.backgroundColor = [UIColor colorForEditedTextNoteBackground];
 	textView.textColor = [UIColor whiteColor];

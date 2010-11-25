@@ -35,14 +35,15 @@ const CGFloat kTextNoteHeightMax = 9999;
 	[super dealloc];
 }
 
-+ (UILabel *)addLabelAtPoint:(CGPoint)point withText:(NSString *)text toView:(UIView *)aView withElement:(Element *)newElement withDelegate:(id<UITextViewDelegate>)delegate{
-	CGSize size = [text sizeWithFont:[UIFont fontForTextNote] constrainedToSize:CGSizeMake(kTextNoteWidth, kTextNoteHeightMax)];
++ (UILabel *)addLabelAtPoint:(CGPoint)point toView:(UIView *)aView withElement:(Element *)newElement withDelegate:(id<UITextViewDelegate>)delegate{
+	CGSize size = [newElement.text sizeWithFont:[UIFont fontForTextNote] 
+						   constrainedToSize:CGSizeMake(kTextNoteWidth, kTextNoteHeightMax)];
 	THCLabelWithElement *label = [[THCLabelWithElement alloc] initWithFrame:CGRectMake(point.x, point.y, kTextNoteWidth, size.height)];
 	label.element = newElement;
 	
 	label.userInteractionEnabled = YES;
 	label.numberOfLines = 0;
-	label.text = text;
+	label.text = newElement.text;
 	label.backgroundColor = [UIColor colorForTextNoteBackground];
 	label.textColor = [UIColor whiteColor];
 	label.font = [UIFont fontForTextNote];
@@ -73,7 +74,6 @@ const CGFloat kTextNoteHeightMax = 9999;
 										 kTextNoteWidth,
 										 kTextNoteHeight);
 		[THCTextViewWithElement addTextViewWithRect:textViewRect 
-										   withText:labelWithElement.text 
 											 toView:labelWithElement.superview 
 										withElement:labelWithElement.element 
 									   withDelegate:labelWithElement.textViewDelegate];
