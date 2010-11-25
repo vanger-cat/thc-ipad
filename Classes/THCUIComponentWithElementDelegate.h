@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Element.h"
 
 
 @protocol THCUIComponentWithElementDelegate

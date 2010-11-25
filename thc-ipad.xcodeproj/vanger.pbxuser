@@ -711,16 +711,16 @@
 	};
 	40A9187F1291A2BF00BFCA83 /* THCLabelWithElement.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1223, 442}}";
-			sepNavSelRange = "{858, 0}";
-			sepNavVisRange = "{0, 918}";
+			sepNavIntBoundsRect = "{{0, 0}, {1223, 640}}";
+			sepNavSelRange = "{140, 5}";
+			sepNavVisRange = "{0, 924}";
 		};
 	};
 	40A918801291A2BF00BFCA83 /* THCLabelWithElement.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1223, 1118}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1223, 1144}}";
 			sepNavSelRange = "{346, 15}";
-			sepNavVisRange = "{0, 1460}";
+			sepNavVisRange = "{0, 1498}";
 		};
 	};
 	40A9189A1291A4D300BFCA83 /* PBXTextBookmark */ = {
@@ -735,17 +735,17 @@
 	};
 	40A918A21291A52C00BFCA83 /* THCTextViewWithElement.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1237, 286}}";
-			sepNavSelRange = "{563, 14}";
-			sepNavVisRange = "{83, 524}";
+			sepNavIntBoundsRect = "{{0, 0}, {1237, 640}}";
+			sepNavSelRange = "{553, 0}";
+			sepNavVisRange = "{0, 607}";
 		};
 	};
 	40A918A31291A52C00BFCA83 /* THCTextViewWithElement.m */ = {
 		uiCtxt = {
 			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{321, 165}\";\n            s = 0;\n        },\n                {\n            r = \"{506, 39}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 1809}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1237, 637}}";
-			sepNavSelRange = "{1293, 0}";
-			sepNavVisRange = "{0, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1237, 715}}";
+			sepNavSelRange = "{560, 22}";
+			sepNavVisRange = "{0, 1598}";
 		};
 	};
 	40A918BD1291A6C600BFCA83 /* PBXTextBookmark */ = {
@@ -1006,8 +1006,8 @@
 	40C219901291796900559770 /* Element.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {917, 640}}";
-			sepNavSelRange = "{409, 0}";
-			sepNavVisRange = "{0, 419}";
+			sepNavSelRange = "{284, 0}";
+			sepNavVisRange = "{0, 396}";
 			sepNavWindowFrame = "{{15, 0}, {1173, 778}}";
 		};
 	};
@@ -1102,8 +1102,15 @@
 	40D01BA9129C7BCC0027E31D /* THCTodoView.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {917, 640}}";
-			sepNavSelRange = "{219, 0}";
-			sepNavVisRange = "{0, 228}";
+			sepNavSelRange = "{233, 0}";
+			sepNavVisRange = "{0, 324}";
+		};
+	};
+	40D01BAA129C7BCC0027E31D /* THCTodoView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {917, 640}}";
+			sepNavSelRange = "{181, 0}";
+			sepNavVisRange = "{0, 187}";
 		};
 	};
 	40D01BBB129CEF210027E31D /* PBXTextBookmark */ = {
@@ -1181,7 +1188,7 @@
 		fRef = 40D01BA9129C7BCC0027E31D /* THCTodoView.h */;
 		name = "THCTodoView.h: 14";
 		rLen = 0;
-		rLoc = 219;
+		rLoc = 337;
 		rType = 0;
 		vrLen = 228;
 		vrLoc = 0;
