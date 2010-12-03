@@ -7,6 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "THCUIComponentAbstract.h"
+
+extern const CGFloat kSizeOfCell;
 
 @class THCScrollView;
 
@@ -26,5 +29,7 @@
 
 @property (nonatomic, retain) id<THCScrollViewDelegate> thcDelegate;
 @property (nonatomic, retain) UIView *spaceView;
+
++ (void)changePositionWithAdjustmentByGridOfComponent:(THCUIComponentAbstract *)view toPoint:(CGPoint)point;
 
 @end

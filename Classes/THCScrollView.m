@@ -8,10 +8,9 @@
 
 #import "THCScrollView.h"
 #import "THCColors.h"
-#import "THCUIComponentAbstract.h"
 #import "THCUIComponentsUtils.h"
 
-const int kSizeOfCell = 20;
+const CGFloat kSizeOfCell = 20;
 
 @implementation THCScrollView
 
@@ -28,6 +27,19 @@ const int kSizeOfCell = 20;
 	return spaceView;
 }
 
++ (void)changePositionWithAdjustmentByGridOfComponent:(THCUIComponentAbstract *)component toPoint:(CGPoint)point {
+	[UIView beginAnimations:@"Move" context:nil];
+	[UIView setAnimationDuration:0.2];
+	[UIView setAnimationBeginsFromCurrentState:YES];
+	
+	component.frame = CGRectMake(round((point.x + kBorderWidth) / kSizeOfCell) * kSizeOfCell - kBorderWidth,
+								 round((point.y + kBorderWidth) / kSizeOfCell) * kSizeOfCell - kBorderWidth,
+								 component.frame.size.width,
+								 component.frame.size.height);
+	[UIView commitAnimations];
+	[component saveComponentStateToElement];
+}
+
 #pragma mark Touches
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -42,20 +54,16 @@ const int kSizeOfCell = 20;
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-	[UIView beginAnimations:@"Move" context:nil];
-	[UIView setAnimationDuration:1];
-	[UIView setAnimationBeginsFromCurrentState:YES];
-	
 	UITouch *touch = [touches anyObject];
 	CGPoint point = [touch locationInView:self.spaceView];
-	objectToDrag.frame = CGRectMake((int)(point.x - touchPointInObject.x) / kSizeOfCell * kSizeOfCell,
-									(int)(point.y - touchPointInObject.y) / kSizeOfCell * kSizeOfCell,
-									objectToDrag.frame.size.width,
-									objectToDrag.frame.size.height);
+
 	
 	THCUIComponentAbstract *component = (THCUIComponentAbstract *)objectToDrag;
+	CGPoint newPoint = CGPointMake(point.x - touchPointInObject.x, point.y - touchPointInObject.y);
+	[THCScrollView changePositionWithAdjustmentByGridOfComponent:component 
+														 toPoint:newPoint];
+	
 	component.selected = NO;
-	[UIView commitAnimations];
 	[self.thcDelegate scrollView:self touchEnded:objectToDrag];
 	objectToDrag = nil;
 }
@@ -69,7 +77,6 @@ const int kSizeOfCell = 20;
 
 - (BOOL)touchesShouldCancelInContentView:(UIView *)view {
 	if (view != spaceView) {
-		
 		THCUIComponentAbstract *component = [THCUIComponentsUtils getBasicComponentOf:view];
 		objectToDrag = component;
 		component.selected = YES;

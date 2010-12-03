@@ -24,8 +24,8 @@
 	Element *element;
 	for (element in elements) {
 		[THCLabelWithElement addLabelAtPoint:CGPointMake([element.x floatValue], [element.y floatValue]) 
-										  toView:view 
-									 withElement:element 
+									  toView:view 
+								 withElement:element 
 								withDelegate:self];
 	}
 }
@@ -35,7 +35,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-	UITapGestureRecognizer *doubleTap = [self newDoubleTapGestureForSpace];
+	UITapGestureRecognizer *doubleTap = [self newGestureToCreateTextView];
 	[self.scrollView addGestureRecognizer:doubleTap];
 	[doubleTap release];
 	
@@ -77,22 +77,24 @@
 
 #pragma mark Space gestures
 
-- (UITapGestureRecognizer *)newDoubleTapGestureForSpace {
+- (UITapGestureRecognizer *)newGestureToCreateTextView {
 	UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self 
-																				action:@selector(spaceDoubleTapped:)];
+																				action:@selector(createTextView:)];
 	doubleTap.numberOfTapsRequired = 2;
 	return doubleTap;
 }
 
-- (void)spaceDoubleTapped:(UITapGestureRecognizer *)gesture {
+- (void)createTextView:(UITapGestureRecognizer *)gesture {
 	if (gesture.state == UIGestureRecognizerStateRecognized) {
 		CGPoint location = [gesture locationInView:self.scrollView.spaceView];
-		CGPoint point = CGPointMake(location.x,
-									location.y);
-		[THCTextViewWithElement addTextViewAtPoint:point 
-											toView:self.scrollView.spaceView 
-									   withElement:NULL 
-									  withDelegate:self];
+		CGPoint point = CGPointMake(location.x, location.y);
+		THCTextViewWithElement *textViewWithElement = [THCTextViewWithElement addTextViewAtPoint:point 
+																						  toView:self.scrollView.spaceView 
+																					 withElement:NULL 
+																					withDelegate:self];
+		
+		[THCScrollView changePositionWithAdjustmentByGridOfComponent:textViewWithElement 
+															 toPoint:CGPointMake(point.x, point.y)];	
 	}
 }
 
