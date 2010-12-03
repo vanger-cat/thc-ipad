@@ -10,24 +10,21 @@
 #import "Element.h"
 #import "THCUIComponentWithElementDelegate.h"
 #import "THCTextViewWithElement.h"
+#import "THCUIComponentAbstract.h"
 
-extern const CGFloat kTextAndLabelXDifference;
-extern const CGFloat kTextAndLabelYDifference;
+extern const CGFloat kMinimalLabelHeight;
 
-extern const CGFloat kTextNoteWidth;
-extern const CGFloat kTextNoteHeight;
-extern const CGFloat kTextNoteHeightMax;
-
-@interface THCLabelWithElement : UILabel <THCUIComponentWithElementDelegate> {
-	Element *element;
-	
+@interface THCLabelWithElement : THCUIComponentAbstract {
 	id<UITextViewDelegate> textViewDelegate;
+	UILabel *label;
 }
 
 @property (nonatomic, retain) id<UITextViewDelegate> textViewDelegate;
+@property (nonatomic, retain) UILabel *label;
 
-+ (UILabel *)addLabelAtPoint:(CGPoint)point toView:(UIView *)aView withElement:(Element *)newElement withDelegate:(id<UITextViewDelegate>)delegate;
++ (THCLabelWithElement *)addLabelAtPoint:(CGPoint)newPoint toView:(UIView *)aView withElement:(Element *)newElement withDelegate:(id<UITextViewDelegate>)delegate;
 
-+ (UITapGestureRecognizer *)newDoubleTapGestureForLabel;
++ (UITapGestureRecognizer *)newGestureForConvertingToTextEdit;
++ (UITapGestureRecognizer *)newGestureForConvertingToTODO;
 
 @end

@@ -39,9 +39,10 @@ static ElementManager *sharedInstance;
 	return element;
 }
 
-- (Element *)newSavedElementWithText:(NSString *)text atPoint:(CGPoint)point {
+- (Element *)savedElementWithText:(NSString *)text atPoint:(CGPoint)point {
 	Element *element = [self newEmptyElement];
 	[self saveElement:element withText:text atPoint:point];
+	[element release];
 	return element;
 }
 

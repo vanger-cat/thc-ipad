@@ -8,6 +8,10 @@
 
 #import "THCScrollView.h"
 #import "THCColors.h"
+#import "THCUIComponentAbstract.h"
+#import "THCUIComponentsUtils.h"
+
+const int kSizeOfCell = 20;
 
 @implementation THCScrollView
 
@@ -38,21 +42,37 @@
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-	objectToDrag.backgroundColor = [UIColor colorForTextNoteBackground];
+	[UIView beginAnimations:@"Move" context:nil];
+	[UIView setAnimationDuration:1];
+	[UIView setAnimationBeginsFromCurrentState:YES];
+	
+	UITouch *touch = [touches anyObject];
+	CGPoint point = [touch locationInView:self.spaceView];
+	objectToDrag.frame = CGRectMake((int)(point.x - touchPointInObject.x) / kSizeOfCell * kSizeOfCell,
+									(int)(point.y - touchPointInObject.y) / kSizeOfCell * kSizeOfCell,
+									objectToDrag.frame.size.width,
+									objectToDrag.frame.size.height);
+	
+	THCUIComponentAbstract *component = (THCUIComponentAbstract *)objectToDrag;
+	component.selected = NO;
+	[UIView commitAnimations];
 	[self.thcDelegate scrollView:self touchEnded:objectToDrag];
 	objectToDrag = nil;
 }
 
 - (BOOL)touchesShouldBegin:(NSSet *)touches withEvent:(UIEvent *)event inContentView:(UIView *)view {
 	UITouch *touch = [touches anyObject];
-	touchPointInObject = [touch locationInView:view];
+	
+	touchPointInObject = [touch locationInView:[THCUIComponentsUtils getBasicComponentOf:view]];
 	return YES;
 }
 
 - (BOOL)touchesShouldCancelInContentView:(UIView *)view {
 	if (view != spaceView) {
-		objectToDrag = view;
-		objectToDrag.backgroundColor = [UIColor colorForEditedTextNoteBackground];
+		
+		THCUIComponentAbstract *component = [THCUIComponentsUtils getBasicComponentOf:view];
+		objectToDrag = component;
+		component.selected = YES;
 		return NO;
 	} else {
 		return YES;

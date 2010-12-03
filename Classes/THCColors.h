@@ -12,4 +12,7 @@
 + (UIColor *)colorForTextNoteBackground;
 
 
+	//for test purposes
++ (UIColor *)colorForMarker;
+
 @end
