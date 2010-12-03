@@ -9,13 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "THCScrollView.h"
 #import "Element.h"
+#import "THCTextViewWithElement.h"
 
 @interface RootViewController : UIViewController <UITextViewDelegate, THCScrollViewDelegate> {
 	NSMutableArray *textNotes;
 	THCScrollView *scrollView;
+	
+	THCTextViewWithElement *currentTextViewWithElement;
 }
 
 @property (nonatomic, retain) IBOutlet THCScrollView *scrollView;
+@property (nonatomic, retain) THCTextViewWithElement *currentTextViewWithElement;
 
 - (UITapGestureRecognizer *)newGestureToCreateTextView;
 

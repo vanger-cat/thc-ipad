@@ -7,18 +7,18 @@
 //
 
 #import "RootViewController.h"
+#import "Element.h"
+#import "ElementManager.h"
 #import "THCColors.h"
 #import "THCFonts.h"
 #import "THCLabelWithElement.h"
-#import "THCTextViewWithElement.h"
-#import "Utils.h"
-#import "Element.h"
-#import "ElementManager.h"
 #import "THCUIComponentsUtils.h"
+#import "Utils.h"
 
 @implementation RootViewController
 
 @synthesize scrollView;
+@synthesize currentTextViewWithElement;
 
 - (void)showElements:(NSArray *)elements inView:(UIView *)view {
 	Element *element;
@@ -35,9 +35,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-	UITapGestureRecognizer *doubleTap = [self newGestureToCreateTextView];
-	[self.scrollView addGestureRecognizer:doubleTap];
-	[doubleTap release];
+	UIGestureRecognizer *gestureToCreateTextView = [self newGestureToCreateTextView];
+	[self.scrollView addGestureRecognizer:gestureToCreateTextView];
+	[gestureToCreateTextView release];
 	
 	CGFloat widthOfContentViewSquare = MAX(self.scrollView.frame.size.width, self.scrollView.frame.size.height) * 2;
 	self.scrollView.contentSize = CGSizeMake(widthOfContentViewSquare, widthOfContentViewSquare);
@@ -77,14 +77,14 @@
 
 #pragma mark Space gestures
 
-- (UITapGestureRecognizer *)newGestureToCreateTextView {
-	UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self 
-																				action:@selector(createTextView:)];
-	doubleTap.numberOfTapsRequired = 2;
-	return doubleTap;
+- (UIGestureRecognizer *)newGestureToCreateTextView {
+	UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self 
+																		  action:@selector(createTextView:)];
+	tap.numberOfTapsRequired = 2;
+	return tap;
 }
 
-- (void)createTextView:(UITapGestureRecognizer *)gesture {
+- (void)createTextView:(UIGestureRecognizer *)gesture {
 	if (gesture.state == UIGestureRecognizerStateRecognized) {
 		CGPoint location = [gesture locationInView:self.scrollView.spaceView];
 		CGPoint point = CGPointMake(location.x, location.y);
@@ -98,7 +98,31 @@
 	}
 }
 
+- (UITapGestureRecognizer *)newGestureToCancelEditing {
+	UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self 
+																		  action:@selector(cancelEditing:)];
+	tap.numberOfTapsRequired = 1;
+	return tap;
+}
+
+- (void)cancelEditing:(UIGestureRecognizer *)gesture {
+	[self.scrollView removeGestureRecognizer:gesture];
+	[self.currentTextViewWithElement completeEditing];
+	self.currentTextViewWithElement = NULL;
+}
+
+
+
 #pragma mark TextViewDelegate
+
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView {
+	self.currentTextViewWithElement = (THCTextViewWithElement *) [THCUIComponentsUtils getBasicComponentOf:textView];
+	UIGestureRecognizer *gestureToCancelEditing = [self newGestureToCancelEditing];
+	[self.scrollView addGestureRecognizer:gestureToCancelEditing];
+	[gestureToCancelEditing release];
+	
+	return YES; 
+}
 
 - (void)textViewDidEndEditing:(UITextView *)textView {
 	THCTextViewWithElement *textViewWithElement = (THCTextViewWithElement *) textView.superview;
