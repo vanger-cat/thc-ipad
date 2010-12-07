@@ -8,7 +8,7 @@
 
 #import "ThcAppDelegate.h"
 #import "RootViewController.h"
-
+#import "DropboxSDK.h"
 #import "ElementManager.h"
 
 @implementation ThcAppDelegate
@@ -24,6 +24,11 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	// Create dropbox session
+	DBSession* dbSession = [[[DBSession alloc] initWithConsumerKey:@"vnn0ga73pr9twmu"
+													consumerSecret:@"j4283nn8geip623"] autorelease];
+    [DBSession setSharedSession:dbSession];
+	
 	[self initElementManagerWithContext:[self managedObjectContext]];
 	[self.window addSubview:rootViewController.view];
     [self.window makeKeyAndVisible];

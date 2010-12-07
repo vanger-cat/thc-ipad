@@ -18,5 +18,6 @@
 @property (nonatomic, retain) IBOutlet THCScrollView *scrollView;
 
 - (UITapGestureRecognizer *)newDoubleTapGestureForSpace;
+- (IBAction)showDropboxLoginController:(id)sender;
 
 @end

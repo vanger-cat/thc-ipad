@@ -15,6 +15,7 @@
 #import "Element.h"
 #import "ElementManager.h"
 #import "THCUIComponentsUtils.h"
+#import "DropboxSDK.h"
 
 @implementation RootViewController
 
@@ -142,6 +143,12 @@
 //										 atPoint:componentWithElement.frame.origin];
 
 	NSLog(@"Component dragged to %f, %f", componentWithElement.x, componentWithElement.y);
+}
+
+#pragma mark Dropbox
+- (IBAction)showDropboxLoginController:(id)sender {
+	DBLoginController* controller = [[DBLoginController new] autorelease];
+	[controller presentFromController:self];
 }
 
 @end
