@@ -8,14 +8,18 @@
 
 #import <Foundation/Foundation.h>
 #import "Element.h"
-#import "THCUIComponentWithElementDelegate.h"
-#import "THCLabelWithElement.h"
+#import "THCUIComponentAbstract.h"
 
+extern const CGFloat kMinimalTextViewHeight;
+extern const CGFloat kTextAndLabelXDifference;
+extern const CGFloat kTextAndLabelYDifference;
 
-@interface THCTextViewWithElement : UITextView <THCUIComponentWithElementDelegate> {
-	Element *element;
+@interface THCTextViewWithElement : THCUIComponentAbstract {
+	UITextView *textView;
 }
 
-+ (UITextView *)addTextViewWithRect:(CGRect)rect toView:(UIView *)aView withElement:(Element *)element withDelegate:(id<UITextViewDelegate>)delegate;
-+ (void)resizeTextView:(UITextView *)textView;
+@property (nonatomic,retain) UITextView *textView;
+
++ (THCTextViewWithElement *)addTextViewAtPoint:(CGPoint)newPoint toView:(UIView *)aView withElement:(Element *)newElement withDelegate:(id<UITextViewDelegate>)delegate;
+
 @end

@@ -9,77 +9,147 @@
 #import "THCLabelWithElement.h"
 #import "THCFonts.h"
 #import "THCColors.h"
+#import "THCUIComponentsUtils.h"
+#import "THCUITodoView.h"
 
-const CGFloat kTextAndLabelXDifference = 8;
-const CGFloat kTextAndLabelYDifference = 8;
-
-const CGFloat kTextNoteWidth = 150;
-const CGFloat kTextNoteHeight = 100;
-const CGFloat kTextNoteHeightMax = 9999;
+const CGFloat kMinimalLabelHeight = 18;
 
 @implementation THCLabelWithElement
 
-@synthesize element;
 @synthesize textViewDelegate;
+@synthesize label;
 
-- (Element *)saveComponentStateToElement {
-	element.x = [NSNumber numberWithInt:self.frame.origin.x];
-	element.y = [NSNumber numberWithInt:self.frame.origin.y];
-	element.text = self.text;
+- (id)initWithFrame:(CGRect)frame {
+	CGRect viewFrame = [THCUIComponentsUtils frameAroundRect:frame withBorder:kBorderWidth];
 	
-	return element;
+	[super initWithFrame:viewFrame];
+	
+	CGRect labelFrame = CGRectMake(kBorderWidth, 
+								   kBorderWidth, 
+								   frame.size.width, 
+								   frame.size.height);
+	self.label = [[UILabel alloc] initWithFrame:labelFrame];
+	[self addSubview:self.label];
+	
+	return self;
 }
 
-- (void)dealloc {
-	[element release];
-	[super dealloc];
++ (THCLabelWithElement *)addLabelAtPoint:(CGPoint)newPoint toView:(UIView *)aView withElement:(Element *)newElement withDelegate:(id<UITextViewDelegate>)delegate {
+	THCLabelWithElement *thcLabel = [[THCLabelWithElement alloc] initWithFrame:CGRectMake(newPoint.x, newPoint.y, kTextComponentWidth, 0)];
+	[THCUIComponentsUtils setupLabel:thcLabel.label];
+	
+	thcLabel.element = newElement;
+	
+	UITapGestureRecognizer *convertToTextEditGesture = [self newGestureForConvertingToTextEdit];
+	[thcLabel addGestureRecognizer:convertToTextEditGesture];
+	[convertToTextEditGesture release];
+	
+	UITapGestureRecognizer *convertToTODOGesture = [self newGestureForConvertingToTODO];
+	[thcLabel addGestureRecognizer:convertToTODOGesture];
+	[convertToTODOGesture release];
+	
+	[aView addSubview:thcLabel];
+	
+	thcLabel.textViewDelegate = delegate;
+	
+	[thcLabel release];
+	
+	NSLog(@"Created new THCLabelWithElement with coordinates %f, %f", thcLabel.frame.origin.x, thcLabel.frame.origin.y);
+	return thcLabel;
 }
 
-+ (UILabel *)addLabelAtPoint:(CGPoint)point toView:(UIView *)aView withElement:(Element *)newElement withDelegate:(id<UITextViewDelegate>)delegate{
-	CGSize size = [newElement.text sizeWithFont:[UIFont fontForTextNote] 
-						   constrainedToSize:CGSizeMake(kTextNoteWidth, kTextNoteHeightMax)];
-	THCLabelWithElement *label = [[THCLabelWithElement alloc] initWithFrame:CGRectMake(point.x, point.y, kTextNoteWidth, size.height)];
-	label.element = newElement;
-	
-	label.userInteractionEnabled = YES;
-	label.numberOfLines = 0;
-	label.text = newElement.text;
-	label.backgroundColor = [UIColor colorForTextNoteBackground];
-	label.textColor = [UIColor whiteColor];
-	label.font = [UIFont fontForTextNote];
-	label.textViewDelegate = delegate;
-	
-	UITapGestureRecognizer *doubleTap = [self newDoubleTapGestureForLabel];
-	[label addGestureRecognizer:doubleTap];
-	[doubleTap release];
-	
-	[aView addSubview:label];
-	
-	[label release];
-	return label;
++ (UIGestureRecognizer *)newGestureForConvertingToTextEdit {
+	UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(convertToTextEdit:)];
+	tap.numberOfTapsRequired = 2;
+	return tap;
 }
 
-+ (UITapGestureRecognizer *)newDoubleTapGestureForLabel {
-	UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelDoubleTapped:)];
-	doubleTap.numberOfTapsRequired = 2;
-	return doubleTap;
-}
-
-+ (void)labelDoubleTapped:(UITapGestureRecognizer *)gesture {
++ (void)convertToTextEdit:(UITapGestureRecognizer *)gesture {
 	if (gesture.state == UIGestureRecognizerStateRecognized) {
 		THCLabelWithElement *labelWithElement = (THCLabelWithElement *)gesture.view;
 
-		CGRect textViewRect = CGRectMake(labelWithElement.frame.origin.x - kTextAndLabelXDifference,
-										 labelWithElement.frame.origin.y - kTextAndLabelYDifference,
-										 kTextNoteWidth,
-										 kTextNoteHeight);
-		[THCTextViewWithElement addTextViewWithRect:textViewRect 
-											 toView:labelWithElement.superview 
-										withElement:labelWithElement.element 
-									   withDelegate:labelWithElement.textViewDelegate];
+		CGRect rectOfLabelInSpace = [THCUIComponentsUtils getRectInSuperSuperViewOfView:gesture.view];
+
+		[THCTextViewWithElement addTextViewAtPoint:rectOfLabelInSpace.origin 
+											toView:labelWithElement.superview 
+									   withElement:labelWithElement.element 
+									  withDelegate:labelWithElement.textViewDelegate];
 
 		[labelWithElement removeFromSuperview];
 	}
+}
+
++ (UIGestureRecognizer *)newGestureForConvertingToTODO {
+	UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(convertToTODO:)];
+	tap.numberOfTapsRequired = 1;
+	tap.numberOfTouchesRequired = 2;
+	return tap;
+}
+
++ (void)convertToTODO:(UITapGestureRecognizer *)gesture {
+	if (gesture.state == UIGestureRecognizerStateRecognized) {
+		THCLabelWithElement *labelWithElement = (THCLabelWithElement *)gesture.view;
+		
+		CGPoint point = CGPointMake(labelWithElement.frame.origin.x, 
+									labelWithElement.frame.origin.y);
+		
+		[THCUITodoView addTodo:point 
+						toView:labelWithElement.superview 
+				   withElement:labelWithElement.element 
+				  withDelegate:labelWithElement.textViewDelegate];
+		
+		[labelWithElement removeFromSuperview];
+	}
+}
+
+- (CGFloat)x {
+	return [THCUIComponentsUtils xOriginInSuperViewOfView:self.label];
+}
+
+- (void)setX:(CGFloat)newX {
+	[THCUIComponentsUtils changeXOriginOfView:self withNewX:newX ofSubview:self.label];
+}
+
+- (CGFloat)y {
+	return [THCUIComponentsUtils yOriginInSuperViewOfView:self.label];
+}
+
+- (void)setY:(CGFloat)newY {
+	[THCUIComponentsUtils changeYOriginOfView:self withNewY:newY ofSubview:self.label];
+}
+
+- (NSString *)text {
+	return self.label.text;
+}	
+
+- (void)setText:(NSString *)newText {
+	if ([self.label.text isEqualToString:newText]) {
+		return;
+	}
+	
+	self.label.text = newText;
+	[THCUIComponentsUtils resizeLabel:self.label 
+					withMinimalHeight:kMinimalLabelHeight
+					 andMaximalHeight:kTextComponentHeightMax];
+	
+	self.frame = [THCUIComponentsUtils frameAroundRect:[THCUIComponentsUtils getRectInSuperSuperViewOfView:self.label] 
+											withBorder:kBorderWidth]; 
+}
+
+- (void)setSelected:(BOOL)isSelected {
+	[super setSelected:isSelected];
+	if (isSelected) {
+		self.label.backgroundColor = [UIColor colorForEditedTextNoteBackground];
+	}
+	else {
+		self.label.backgroundColor = [UIColor colorForTextNoteBackground];
+	}
+}
+
+- (void)dealloc {
+	[self.textViewDelegate release];
+	[self.label release];
+	[super dealloc];
 }
 
 @end

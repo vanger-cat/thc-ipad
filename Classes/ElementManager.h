@@ -20,7 +20,7 @@
 + (ElementManager *) sharedInstance;
 
 - (Element *)newEmptyElement;
-- (Element *)newSavedElementWithText:(NSString *)text atPoint:(CGPoint)point;
+- (Element *)savedElementWithText:(NSString *)text atPoint:(CGPoint)point;
 - (Element *)saveElement:(Element *)element withText:(NSString *)text atPoint:(CGPoint)point;
 - (NSMutableArray *)copyElementsArray;
 

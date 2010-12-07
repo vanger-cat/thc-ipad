@@ -14,6 +14,7 @@
 #import "Utils.h"
 #import "Element.h"
 #import "ElementManager.h"
+#import "THCUIComponentsUtils.h"
 
 @implementation RootViewController
 
@@ -86,58 +87,61 @@
 - (void)spaceDoubleTapped:(UITapGestureRecognizer *)gesture {
 	if (gesture.state == UIGestureRecognizerStateRecognized) {
 		CGPoint location = [gesture locationInView:self.scrollView.spaceView];
-		CGRect textViewRect = CGRectMake(location.x,
-										 location.y,
-										 kTextNoteWidth,
-										 kTextNoteHeight);
-		[THCTextViewWithElement addTextViewWithRect:textViewRect 
-											 toView:self.scrollView.spaceView 
-										withElement:NULL 
-									   withDelegate:self];
+		CGPoint point = CGPointMake(location.x,
+									location.y);
+		[THCTextViewWithElement addTextViewAtPoint:point 
+											toView:self.scrollView.spaceView 
+									   withElement:NULL 
+									  withDelegate:self];
 	}
 }
 
 #pragma mark TextViewDelegate
 
 - (void)textViewDidEndEditing:(UITextView *)textView {
+	THCTextViewWithElement *textViewWithElement = (THCTextViewWithElement *) textView.superview;
+	
 	if ([textView hasText]) {
-			// Create new UILabel
-		CGPoint pointForLabel = CGPointMake(textView.frame.origin.x + kTextAndLabelXDifference,
-											textView.frame.origin.y + kTextAndLabelYDifference);
-		
-		THCTextViewWithElement *textViewWithElement = (THCTextViewWithElement *) textView;
+		CGRect rectOfTextViewInSpace = [THCUIComponentsUtils getRectInSuperSuperViewOfView:textView];
+		CGPoint pointForLabel = CGPointMake(rectOfTextViewInSpace.origin.x, 
+											rectOfTextViewInSpace.origin.y);
+
 		[textViewWithElement saveComponentStateToElement];
 		Element *element;
 		if (textViewWithElement.element){
 			element = textViewWithElement.element;
 			[[ElementManager sharedInstance] save];
 		} else {
-			element = [[ElementManager sharedInstance] newSavedElementWithText:textView.text 
-																	   atPoint:textView.frame.origin];
+			element = [[ElementManager sharedInstance] savedElementWithText:textViewWithElement.text 
+																	atPoint:pointForLabel];
 		}
 		
 		[THCLabelWithElement addLabelAtPoint:pointForLabel 
-									  toView:textView.superview
+									  toView:textViewWithElement.superview
 								 withElement:element 
 								withDelegate:self];
 		
-		[element release];
 	}
 	
-	[textView removeFromSuperview];
+	[textViewWithElement removeFromSuperview];
 }
 
 - (void)textViewDidChange:(UITextView *)textView {
-	[THCTextViewWithElement resizeTextView:textView];
+	THCTextViewWithElement *textViewWithElement = (THCTextViewWithElement *) textView.superview;
+	textViewWithElement.text = textView.text;
 }
 
 #pragma mark THCScrollViewDelegate
 
 - (void)scrollView:(THCScrollView *)scrollView touchEnded:(UIView *)draggedObject {
-	THCLabelWithElement *labelWithElement = (THCLabelWithElement *)draggedObject;
-	[[ElementManager sharedInstance] saveElement:labelWithElement.element
-										withText:labelWithElement.text 
-										 atPoint:labelWithElement.frame.origin];
-	}
+	THCUIComponentAbstract *componentWithElement = (THCUIComponentAbstract *)draggedObject;
+	[componentWithElement saveComponentStateToElement];
+	[[ElementManager sharedInstance] save];
+	 //Element:componentWithElement.element
+//										withText:componentWithElement.text 
+//										 atPoint:componentWithElement.frame.origin];
+
+	NSLog(@"Component dragged to %f, %f", componentWithElement.x, componentWithElement.y);
+}
 
 @end
