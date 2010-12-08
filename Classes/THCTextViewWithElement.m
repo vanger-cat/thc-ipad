@@ -88,7 +88,7 @@ const CGFloat kTextAndLabelYDifference = 8;
 					   withMinimalHeight:kMinimalTextViewHeight 
 						andMaximalHeight:kTextComponentHeightMax];
 	
-	self.frame = [THCUIComponentsUtils frameAroundRect:[THCUIComponentsUtils getRectInSuperSuperViewOfView:self.textView] 
+	self.frame = [THCUIComponentsUtils frameAroundRect:[THCUIComponentsUtils rectInSuperSuperViewOfView:self.textView] 
 											withBorder:kBorderWidth]; 
 }
 

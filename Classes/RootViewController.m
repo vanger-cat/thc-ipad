@@ -94,7 +94,8 @@
 																					withDelegate:self];
 		
 		[THCScrollView changePositionWithAdjustmentByGridOfComponent:textViewWithElement 
-															 toPoint:CGPointMake(point.x, point.y)];	
+															 toPoint:CGPointMake(point.x, point.y) 
+															animated:YES];	
 	}
 }
 
@@ -128,9 +129,9 @@
 	THCTextViewWithElement *textViewWithElement = (THCTextViewWithElement *) textView.superview;
 	
 	if ([textView hasText]) {
-		CGRect rectOfTextViewInSpace = [THCUIComponentsUtils getRectInSuperSuperViewOfView:textView];
-		CGPoint pointForLabel = CGPointMake(rectOfTextViewInSpace.origin.x, 
-											rectOfTextViewInSpace.origin.y);
+			//???: why i need "- kBorderWidth" here???
+		CGPoint pointForLabel = CGPointMake(textViewWithElement.x - kBorderWidth, 
+											textViewWithElement.y - kBorderWidth);
 
 		[textViewWithElement saveComponentStateToElement];
 		Element *element;
@@ -142,11 +143,14 @@
 																	atPoint:pointForLabel];
 		}
 		
-		[THCLabelWithElement addLabelAtPoint:pointForLabel 
-									  toView:textViewWithElement.superview
-								 withElement:element 
-								withDelegate:self];
+		THCLabelWithElement *labelWithElement = [THCLabelWithElement addLabelAtPoint:pointForLabel 
+																			  toView:textViewWithElement.superview
+																		 withElement:element 
+																		withDelegate:self];
 		
+		[THCScrollView changePositionWithAdjustmentByGridOfComponent:labelWithElement 
+															 toPoint:pointForLabel  
+															animated:YES];
 	}
 	
 	[textViewWithElement removeFromSuperview];

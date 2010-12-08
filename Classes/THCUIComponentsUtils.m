@@ -14,13 +14,13 @@
 
 + (void)changeXOriginOfView:(UIView *)superView withNewX:(CGFloat)newX ofSubview:(UIView *)view {
 	CGRect frame  = superView.frame;
-	frame.origin.x = newX - view.frame.origin.x;
+	frame.origin.x = newX;
 	superView.frame = frame;
 }
 
 + (void)changeYOriginOfView:(UIView *)superView withNewY:(CGFloat)newY ofSubview:(UIView *)view {
 	CGRect frame  = superView.frame;
-	frame.origin.y =  newY - view.frame.origin.y;
+	frame.origin.y =  newY;
 	superView.frame = frame;
 }
 
@@ -75,14 +75,14 @@
 }
 
 + (CGFloat) xOriginInSuperViewOfView:(UIView *)view {
-	return view.frame.origin.x + view.superview.frame.origin.x;
+	return view.superview.frame.origin.x + view.frame.origin.x;
 }
 
 + (CGFloat) yOriginInSuperViewOfView:(UIView *)view {
-	return view.frame.origin.y + view.superview.frame.origin.y;
+	return view.superview.frame.origin.y +  view.frame.origin.y;
 }
 
-+ (CGRect)getRectInSuperSuperViewOfView:(UIView *)view {
++ (CGRect)rectInSuperSuperViewOfView:(UIView *)view {
 	return CGRectMake([self xOriginInSuperViewOfView:view], 
 					  [self yOriginInSuperViewOfView:view], 
 					  view.frame.size.width,

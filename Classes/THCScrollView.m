@@ -27,16 +27,23 @@ const CGFloat kSizeOfCell = 20;
 	return spaceView;
 }
 
-+ (void)changePositionWithAdjustmentByGridOfComponent:(THCUIComponentAbstract *)component toPoint:(CGPoint)point {
-	[UIView beginAnimations:@"Move" context:nil];
-	[UIView setAnimationDuration:0.2];
-	[UIView setAnimationBeginsFromCurrentState:YES];
++ (void)changePositionWithAdjustmentByGridOfComponent:(THCUIComponentAbstract *)component toPoint:(CGPoint)point animated:(BOOL)animated {
+		//TODO: uncomment
+	if (animated) {
+		[UIView beginAnimations:@"Move" context:nil];
+		[UIView setAnimationDuration:0.2];
+		[UIView setAnimationBeginsFromCurrentState:YES];
+	}	
+		
+	component.x = round((point.x) / kSizeOfCell) * kSizeOfCell - kBorderWidth;
+	component.y = round((point.y) / kSizeOfCell) * kSizeOfCell - kBorderWidth;
 	
-	component.frame = CGRectMake(round((point.x + kBorderWidth) / kSizeOfCell) * kSizeOfCell - kBorderWidth,
-								 round((point.y + kBorderWidth) / kSizeOfCell) * kSizeOfCell - kBorderWidth,
-								 component.frame.size.width,
-								 component.frame.size.height);
-	[UIView commitAnimations];
+	component.x = point.x;
+	component.y = point.y;
+	
+	if (animated) {	
+		[UIView commitAnimations];
+	}
 	[component saveComponentStateToElement];
 }
 
@@ -59,9 +66,11 @@ const CGFloat kSizeOfCell = 20;
 
 	
 	THCUIComponentAbstract *component = (THCUIComponentAbstract *)objectToDrag;
-	CGPoint newPoint = CGPointMake(point.x - touchPointInObject.x, point.y - touchPointInObject.y);
+	CGPoint newPoint = CGPointMake(point.x - touchPointInObject.x + kBorderWidth, 
+								   point.y - touchPointInObject.y + kBorderWidth);
 	[THCScrollView changePositionWithAdjustmentByGridOfComponent:component 
-														 toPoint:newPoint];
+														 toPoint:newPoint 
+														animated:YES];
 	
 	component.selected = NO;
 	[self.thcDelegate scrollView:self touchEnded:objectToDrag];

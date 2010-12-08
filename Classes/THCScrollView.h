@@ -30,6 +30,6 @@ extern const CGFloat kSizeOfCell;
 @property (nonatomic, retain) id<THCScrollViewDelegate> thcDelegate;
 @property (nonatomic, retain) UIView *spaceView;
 
-+ (void)changePositionWithAdjustmentByGridOfComponent:(THCUIComponentAbstract *)view toPoint:(CGPoint)point;
++ (void)changePositionWithAdjustmentByGridOfComponent:(THCUIComponentAbstract *)view toPoint:(CGPoint)point  animated:(BOOL)animated;
 
 @end
