@@ -233,6 +233,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		400BED5A12AFAEC000B4DE0C /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Elements;
+			sourceTree = "<group>";
+		};
 		402D36F412ABAC8200010C4A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +251,7 @@
 		402D36F512ABAC8E00010C4A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				400BED5A12AFAEC000B4DE0C /* Elements */,
 				402D370212ABAE1100010C4A /* AbstractManagerTest.m */,
 			);
 			name = Model;
