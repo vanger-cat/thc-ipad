@@ -27,7 +27,7 @@
 
 + (CGFloat) xOriginInSuperViewOfView:(UIView *)view;
 + (CGFloat) yOriginInSuperViewOfView:(UIView *)view;
-+ (CGRect)getRectInSuperSuperViewOfView:(UIView *)view;
++ (CGRect)rectInSuperSuperViewOfView:(UIView *)view;
 
 + (THCUIComponentAbstract *)getBasicComponentOf:(UIView *)view;
 @end

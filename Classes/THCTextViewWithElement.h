@@ -22,4 +22,6 @@ extern const CGFloat kTextAndLabelYDifference;
 
 + (THCTextViewWithElement *)addTextViewAtPoint:(CGPoint)newPoint toView:(UIView *)aView withElement:(Element *)newElement withDelegate:(id<UITextViewDelegate>)delegate;
 
+- (void)completeEditing;
+
 @end

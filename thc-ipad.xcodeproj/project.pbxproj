@@ -15,6 +15,18 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D801B30F44B63D00FB423F /* CoreData.framework */; };
+		402D370312ABAE1100010C4A /* AbstractManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 402D370212ABAE1100010C4A /* AbstractManagerTest.m */; };
+		402D371512ABAFD700010C4A /* THCUIComponentAbstract.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BB26B9129EB31700E0C916 /* THCUIComponentAbstract.m */; };
+		402D371612ABAFD900010C4A /* THCUIComponentsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 403107C812A8504500BECD2E /* THCUIComponentsUtils.m */; };
+		402D371712ABAFDC00010C4A /* THCUITodoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D01BAA129C7BCC0027E31D /* THCUITodoView.m */; };
+		402D37E912ABB58E00010C4A /* GTMIPhoneUnitTestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 402D37D312ABB58E00010C4A /* GTMIPhoneUnitTestDelegate.m */; };
+		402D37EA12ABB58E00010C4A /* GTMIPhoneUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 402D37D412ABB58E00010C4A /* GTMIPhoneUnitTestMain.m */; };
+		402D37EB12ABB58E00010C4A /* GTMObjC2Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = 402D37D612ABB58E00010C4A /* GTMObjC2Runtime.m */; };
+		402D37EC12ABB58E00010C4A /* GTMRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 402D37D812ABB58E00010C4A /* GTMRegex.m */; };
+		402D37ED12ABB58E00010C4A /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 402D37DA12ABB58E00010C4A /* GTMSenTestCase.m */; };
+		402D37EE12ABB58E00010C4A /* GTMUnitTestDevLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 402D37DC12ABB58E00010C4A /* GTMUnitTestDevLog.m */; };
+		402D37EF12ABB58E00010C4A /* RunIPhoneUnitTest.sh in Resources */ = {isa = PBXBuildFile; fileRef = 402D37DD12ABB58E00010C4A /* RunIPhoneUnitTest.sh */; };
+		402D37F012ABB58E00010C4A /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 402D37E612ABB58E00010C4A /* libOCMock.a */; };
 		403107C912A8504500BECD2E /* THCUIComponentsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 403107C812A8504500BECD2E /* THCUIComponentsUtils.m */; };
 		40A918811291A2BF00BFCA83 /* THCLabelWithElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A918801291A2BF00BFCA83 /* THCLabelWithElement.m */; };
 		40A918A41291A52C00BFCA83 /* THCTextViewWithElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A918A31291A52C00BFCA83 /* THCTextViewWithElement.m */; };
@@ -161,6 +173,27 @@
 		28D801B30F44B63D00FB423F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* thc_ipad_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thc_ipad_Prefix.pch; sourceTree = "<group>"; };
+		402D370212ABAE1100010C4A /* AbstractManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbstractManagerTest.m; path = Classes/AbstractManagerTest.m; sourceTree = "<group>"; };
+		402D37D112ABB58E00010C4A /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		402D37D212ABB58E00010C4A /* GTMIPhoneUnitTestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMIPhoneUnitTestDelegate.h; sourceTree = "<group>"; };
+		402D37D312ABB58E00010C4A /* GTMIPhoneUnitTestDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMIPhoneUnitTestDelegate.m; sourceTree = "<group>"; };
+		402D37D412ABB58E00010C4A /* GTMIPhoneUnitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMIPhoneUnitTestMain.m; sourceTree = "<group>"; };
+		402D37D512ABB58E00010C4A /* GTMObjC2Runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMObjC2Runtime.h; sourceTree = "<group>"; };
+		402D37D612ABB58E00010C4A /* GTMObjC2Runtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMObjC2Runtime.m; sourceTree = "<group>"; };
+		402D37D712ABB58E00010C4A /* GTMRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMRegex.h; sourceTree = "<group>"; };
+		402D37D812ABB58E00010C4A /* GTMRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMRegex.m; sourceTree = "<group>"; };
+		402D37D912ABB58E00010C4A /* GTMSenTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMSenTestCase.h; sourceTree = "<group>"; };
+		402D37DA12ABB58E00010C4A /* GTMSenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMSenTestCase.m; sourceTree = "<group>"; };
+		402D37DB12ABB58E00010C4A /* GTMUnitTestDevLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMUnitTestDevLog.h; sourceTree = "<group>"; };
+		402D37DC12ABB58E00010C4A /* GTMUnitTestDevLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMUnitTestDevLog.m; sourceTree = "<group>"; };
+		402D37DD12ABB58E00010C4A /* RunIPhoneUnitTest.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = RunIPhoneUnitTest.sh; sourceTree = "<group>"; };
+		402D37E012ABB58E00010C4A /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
+		402D37E112ABB58E00010C4A /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
+		402D37E212ABB58E00010C4A /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
+		402D37E312ABB58E00010C4A /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
+		402D37E412ABB58E00010C4A /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
+		402D37E512ABB58E00010C4A /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockRecorder.h; sourceTree = "<group>"; };
+		402D37E612ABB58E00010C4A /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
 		403107C712A8504500BECD2E /* THCUIComponentsUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THCUIComponentsUtils.h; sourceTree = "<group>"; };
 		403107C812A8504500BECD2E /* THCUIComponentsUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCUIComponentsUtils.m; sourceTree = "<group>"; };
 		40A9187F1291A2BF00BFCA83 /* THCLabelWithElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THCLabelWithElement.h; sourceTree = "<group>"; };
@@ -314,6 +347,7 @@
 				92B5489D1296F10900072C8D /* UIKit.framework in Frameworks */,
 				92B5494B1296F13F00072C8D /* CoreGraphics.framework in Frameworks */,
 				92B5494C1296F13F00072C8D /* CoreData.framework in Frameworks */,
+				402D37F012ABB58E00010C4A /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,7 +393,9 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				402D36F412ABAC8200010C4A /* Tests */,
 				080E96DDFE201D6D7F000001 /* Classes */,
+				402D37CD12ABB58E00010C4A /* Libraries */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -387,6 +423,7 @@
 				28193054112F811F00ECF9B4 /* thc_ipad.xcdatamodeld */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* thc_ipad-Info.plist */,
+				92B5482C1296ECB200072C8D /* thc-ipad-test-Info.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -401,6 +438,81 @@
 				28D801B30F44B63D00FB423F /* CoreData.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		400BED5A12AFAEC000B4DE0C /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Elements;
+			sourceTree = "<group>";
+		};
+		402D36F412ABAC8200010C4A /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				402D36F512ABAC8E00010C4A /* Model */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		402D36F512ABAC8E00010C4A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				400BED5A12AFAEC000B4DE0C /* Elements */,
+				402D370212ABAE1100010C4A /* AbstractManagerTest.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		402D37CD12ABB58E00010C4A /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				402D37CF12ABB58E00010C4A /* GTM */,
+				402D37DE12ABB58E00010C4A /* Headers */,
+				402D37E612ABB58E00010C4A /* libOCMock.a */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		402D37CF12ABB58E00010C4A /* GTM */ = {
+			isa = PBXGroup;
+			children = (
+				402D37D112ABB58E00010C4A /* GTMDefines.h */,
+				402D37D212ABB58E00010C4A /* GTMIPhoneUnitTestDelegate.h */,
+				402D37D312ABB58E00010C4A /* GTMIPhoneUnitTestDelegate.m */,
+				402D37D412ABB58E00010C4A /* GTMIPhoneUnitTestMain.m */,
+				402D37D512ABB58E00010C4A /* GTMObjC2Runtime.h */,
+				402D37D612ABB58E00010C4A /* GTMObjC2Runtime.m */,
+				402D37D712ABB58E00010C4A /* GTMRegex.h */,
+				402D37D812ABB58E00010C4A /* GTMRegex.m */,
+				402D37D912ABB58E00010C4A /* GTMSenTestCase.h */,
+				402D37DA12ABB58E00010C4A /* GTMSenTestCase.m */,
+				402D37DB12ABB58E00010C4A /* GTMUnitTestDevLog.h */,
+				402D37DC12ABB58E00010C4A /* GTMUnitTestDevLog.m */,
+				402D37DD12ABB58E00010C4A /* RunIPhoneUnitTest.sh */,
+			);
+			path = GTM;
+			sourceTree = "<group>";
+		};
+		402D37DE12ABB58E00010C4A /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				402D37DF12ABB58E00010C4A /* OCMock */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		402D37DF12ABB58E00010C4A /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				402D37E012ABB58E00010C4A /* NSNotificationCenter+OCMAdditions.h */,
+				402D37E112ABB58E00010C4A /* OCMArg.h */,
+				402D37E212ABB58E00010C4A /* OCMConstraint.h */,
+				402D37E312ABB58E00010C4A /* OCMock.h */,
+				402D37E412ABB58E00010C4A /* OCMockObject.h */,
+				402D37E512ABB58E00010C4A /* OCMockRecorder.h */,
+			);
+			path = OCMock;
 			sourceTree = "<group>";
 		};
 		40A918B61291A59300BFCA83 /* UIControllers with Element */ = {
@@ -689,9 +801,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92B548591296ECE100072C8D /* RunIPhoneUnitTest.sh in Resources */,
 				92B5487E1296F01A00072C8D /* MainWindow.xib in Resources */,
 				92B5494F1296F16400072C8D /* RootViewController.xib in Resources */,
+				402D37EF12ABB58E00010C4A /* RunIPhoneUnitTest.sh in Resources */,
 				9294B47112AEEDBE00C6F2D5 /* db_background.png in Resources */,
 				9294B47212AEEDBE00C6F2D5 /* db_create_account.png in Resources */,
 				9294B47312AEEDBE00C6F2D5 /* db_create_account@2x.png in Resources */,
@@ -712,7 +824,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		92B548671296EE1500072C8D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -787,12 +899,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92B548531296ECE100072C8D /* GTMIPhoneUnitTestDelegate.m in Sources */,
-				92B548541296ECE100072C8D /* GTMIPhoneUnitTestMain.m in Sources */,
-				92B548551296ECE100072C8D /* GTMObjC2Runtime.m in Sources */,
-				92B548561296ECE100072C8D /* GTMRegex.m in Sources */,
-				92B548571296ECE100072C8D /* GTMSenTestCase.m in Sources */,
-				92B548581296ECE100072C8D /* GTMUnitTestDevLog.m in Sources */,
 				92B549521296F17300072C8D /* RootViewController.m in Sources */,
 				92B549571296F1B500072C8D /* ElementManager.m in Sources */,
 				92B5495E1296F1CC00072C8D /* Element.m in Sources */,
@@ -805,6 +911,16 @@
 				92B549711296F22C00072C8D /* THCTextViewWithElement.m in Sources */,
 				92B549741296F25200072C8D /* THCScrollView.m in Sources */,
 				92B549771296F26E00072C8D /* thc_ipad.xcdatamodel in Sources */,
+				402D370312ABAE1100010C4A /* AbstractManagerTest.m in Sources */,
+				402D371512ABAFD700010C4A /* THCUIComponentAbstract.m in Sources */,
+				402D371612ABAFD900010C4A /* THCUIComponentsUtils.m in Sources */,
+				402D371712ABAFDC00010C4A /* THCUITodoView.m in Sources */,
+				402D37E912ABB58E00010C4A /* GTMIPhoneUnitTestDelegate.m in Sources */,
+				402D37EA12ABB58E00010C4A /* GTMIPhoneUnitTestMain.m in Sources */,
+				402D37EB12ABB58E00010C4A /* GTMObjC2Runtime.m in Sources */,
+				402D37EC12ABB58E00010C4A /* GTMRegex.m in Sources */,
+				402D37ED12ABB58E00010C4A /* GTMSenTestCase.m in Sources */,
+				402D37EE12ABB58E00010C4A /* GTMUnitTestDevLog.m in Sources */,
 				9294B45012AEEDBE00C6F2D5 /* DBAccountInfo.m in Sources */,
 				9294B45112AEEDBE00C6F2D5 /* DBCreateAccountController.m in Sources */,
 				9294B45212AEEDBE00C6F2D5 /* DBError.m in Sources */,
@@ -886,8 +1002,13 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Libraries/Headers";
 				INFOPLIST_FILE = "thc-ipad-test-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Libraries\"",
+				);
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
@@ -912,6 +1033,10 @@
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
 				INFOPLIST_FILE = "thc-ipad-test-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Libraries\"",
+				);
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,

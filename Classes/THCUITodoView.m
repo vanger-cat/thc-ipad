@@ -127,7 +127,7 @@
 										self.bottomLayer.frame.origin.x, 
 										self.bottomLayer.frame.size.width, 
 										self.label.frame.size.height + self.checkbox.frame.size.height);
-	self.frame = [THCUIComponentsUtils frameAroundRect:[THCUIComponentsUtils getRectInSuperSuperViewOfView:self.bottomLayer] 
+	self.frame = [THCUIComponentsUtils frameAroundRect:[THCUIComponentsUtils rectInSuperSuperViewOfView:self.bottomLayer] 
 											withBorder:kBorderWidth]; 
 }
 

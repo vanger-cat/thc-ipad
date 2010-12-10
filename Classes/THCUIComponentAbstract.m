@@ -10,7 +10,7 @@
 #import "THCColors.h"
 
 const CGFloat kBorderWidth = 20;
-const CGFloat kTextComponentWidth = 180;
+const CGFloat kTextComponentWidth = 60 * 4;
 const CGFloat kTextComponentHeightMax = 9999;
 
 @implementation THCUIComponentAbstract

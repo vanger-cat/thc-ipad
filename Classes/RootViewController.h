@@ -9,18 +9,21 @@
 #import <UIKit/UIKit.h>
 #import "THCScrollView.h"
 #import "Element.h"
+#import "THCTextViewWithElement.h"
 #import "DropboxController.h"
 
 @interface RootViewController : UIViewController <UITextViewDelegate, THCScrollViewDelegate> {
 	NSMutableArray *textNotes;
 	THCScrollView *scrollView;
 	DropboxController *dropboxController;
+	THCTextViewWithElement *currentTextViewWithElement;
 }
 
 @property (nonatomic, retain) IBOutlet THCScrollView *scrollView;
+@property (nonatomic, retain) THCTextViewWithElement *currentTextViewWithElement;
 @property (nonatomic, retain) DropboxController *dropboxController;
 
-- (UITapGestureRecognizer *)newDoubleTapGestureForSpace;
+- (UITapGestureRecognizer *)newGestureToCreateTextView;
 - (IBAction)showDropboxLoginController:(id)sender;
 
 @end

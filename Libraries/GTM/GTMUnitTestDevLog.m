@@ -68,8 +68,8 @@ static inline void GTMUninstallDebugAssertOutputHandler(void) {};
   
   // You need a format that will be useful in logs, but won't trip up Xcode or
   // any other build systems parsing of the output.
-  NSString *outLog
-    = [NSString stringWithFormat:@"RecordedNSAssert in %@ - %@ (%@:%ld)",
+//  NSString *outLog =
+      [NSString stringWithFormat:@"RecordedNSAssert in %@ - %@ (%@:%ld)",
                                  NSStringFromSelector(selector),
                                  descStr,
                                  fileName, (long)line];
@@ -90,8 +90,8 @@ static inline void GTMUninstallDebugAssertOutputHandler(void) {};
   
   // You need a format that will be useful in logs, but won't trip up Xcode or
   // any other build systems parsing of the output.
-  NSString *outLog
-    = [NSString stringWithFormat:@"RecordedNSAssert in %@ - %@ (%@:%ld)",
+//  NSString *outLog =
+      [NSString stringWithFormat:@"RecordedNSAssert in %@ - %@ (%@:%ld)",
                                  functionName,
                                  descStr,
                                  fileName, (long)line];

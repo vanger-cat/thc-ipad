@@ -54,6 +54,10 @@ const CGFloat kTextAndLabelYDifference = 8;
 	return textViewWithElement;
 }
 
+- (void)completeEditing {
+	[self.textView resignFirstResponder];
+}
+
 - (CGFloat)x {
 	return [THCUIComponentsUtils xOriginInSuperViewOfView:self.textView] + kTextAndLabelXDifference;
 }
@@ -84,7 +88,7 @@ const CGFloat kTextAndLabelYDifference = 8;
 					   withMinimalHeight:kMinimalTextViewHeight 
 						andMaximalHeight:kTextComponentHeightMax];
 	
-	self.frame = [THCUIComponentsUtils frameAroundRect:[THCUIComponentsUtils getRectInSuperSuperViewOfView:self.textView] 
+	self.frame = [THCUIComponentsUtils frameAroundRect:[THCUIComponentsUtils rectInSuperSuperViewOfView:self.textView] 
 											withBorder:kBorderWidth]; 
 }
 

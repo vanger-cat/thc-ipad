@@ -7,27 +7,27 @@
 //
 
 #import "RootViewController.h"
+#import "Element.h"
+#import "ElementManager.h"
 #import "THCColors.h"
 #import "THCFonts.h"
 #import "THCLabelWithElement.h"
-#import "THCTextViewWithElement.h"
-#import "Utils.h"
-#import "Element.h"
-#import "ElementManager.h"
 #import "THCUIComponentsUtils.h"
+#import "Utils.h"
 #import "DropboxSDK.h"
 
 @implementation RootViewController
 
 @synthesize scrollView;
+@synthesize currentTextViewWithElement;
 @synthesize dropboxController;
 
 - (void)showElements:(NSArray *)elements inView:(UIView *)view {
 	Element *element;
 	for (element in elements) {
 		[THCLabelWithElement addLabelAtPoint:CGPointMake([element.x floatValue], [element.y floatValue]) 
-										  toView:view 
-									 withElement:element 
+									  toView:view 
+								 withElement:element 
 								withDelegate:self];
 	}
 }
@@ -37,9 +37,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-	UITapGestureRecognizer *doubleTap = [self newDoubleTapGestureForSpace];
-	[self.scrollView addGestureRecognizer:doubleTap];
-	[doubleTap release];
+	UIGestureRecognizer *gestureToCreateTextView = [self newGestureToCreateTextView];
+	[self.scrollView addGestureRecognizer:gestureToCreateTextView];
+	[gestureToCreateTextView release];
 	
 	CGFloat widthOfContentViewSquare = MAX(self.scrollView.frame.size.width, self.scrollView.frame.size.height) * 2;
 	self.scrollView.contentSize = CGSizeMake(widthOfContentViewSquare, widthOfContentViewSquare);
@@ -82,34 +82,61 @@
 
 #pragma mark Space gestures
 
-- (UITapGestureRecognizer *)newDoubleTapGestureForSpace {
-	UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self 
-																				action:@selector(spaceDoubleTapped:)];
-	doubleTap.numberOfTapsRequired = 2;
-	return doubleTap;
+- (UIGestureRecognizer *)newGestureToCreateTextView {
+	UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self 
+																		  action:@selector(createTextView:)];
+	tap.numberOfTapsRequired = 2;
+	return tap;
 }
 
-- (void)spaceDoubleTapped:(UITapGestureRecognizer *)gesture {
+- (void)createTextView:(UIGestureRecognizer *)gesture {
 	if (gesture.state == UIGestureRecognizerStateRecognized) {
 		CGPoint location = [gesture locationInView:self.scrollView.spaceView];
-		CGPoint point = CGPointMake(location.x,
-									location.y);
-		[THCTextViewWithElement addTextViewAtPoint:point 
-											toView:self.scrollView.spaceView 
-									   withElement:NULL 
-									  withDelegate:self];
+		CGPoint point = CGPointMake(location.x, location.y);
+		THCTextViewWithElement *textViewWithElement = [THCTextViewWithElement addTextViewAtPoint:point 
+																						  toView:self.scrollView.spaceView 
+																					 withElement:NULL 
+																					withDelegate:self];
+		
+		[THCScrollView changePositionWithAdjustmentByGridOfComponent:textViewWithElement 
+															 toPoint:CGPointMake(point.x, point.y) 
+															animated:YES];	
 	}
 }
 
+- (UITapGestureRecognizer *)newGestureToCancelEditing {
+	UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self 
+																		  action:@selector(cancelEditing:)];
+	tap.numberOfTapsRequired = 1;
+	return tap;
+}
+
+- (void)cancelEditing:(UIGestureRecognizer *)gesture {
+	[self.scrollView removeGestureRecognizer:gesture];
+	[self.currentTextViewWithElement completeEditing];
+	self.currentTextViewWithElement = NULL;
+}
+
+
+
 #pragma mark TextViewDelegate
+
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView {
+	self.currentTextViewWithElement = (THCTextViewWithElement *) [THCUIComponentsUtils getBasicComponentOf:textView];
+	UIGestureRecognizer *gestureToCancelEditing = [self newGestureToCancelEditing];
+	[self.scrollView addGestureRecognizer:gestureToCancelEditing];
+	[gestureToCancelEditing release];
+	
+	return YES; 
+}
 
 - (void)textViewDidEndEditing:(UITextView *)textView {
 	THCTextViewWithElement *textViewWithElement = (THCTextViewWithElement *) textView.superview;
 	
 	if ([textView hasText]) {
-		CGRect rectOfTextViewInSpace = [THCUIComponentsUtils getRectInSuperSuperViewOfView:textView];
-		CGPoint pointForLabel = CGPointMake(rectOfTextViewInSpace.origin.x, 
-											rectOfTextViewInSpace.origin.y);
+			//???: why i need "- kBorderWidth" here???
+		CGPoint pointForLabel = CGPointMake(textViewWithElement.x - kBorderWidth, 
+											textViewWithElement.y - kBorderWidth);
 
 		[textViewWithElement saveComponentStateToElement];
 		Element *element;
@@ -121,11 +148,14 @@
 																	atPoint:pointForLabel];
 		}
 		
-		[THCLabelWithElement addLabelAtPoint:pointForLabel 
-									  toView:textViewWithElement.superview
-								 withElement:element 
-								withDelegate:self];
+		THCLabelWithElement *labelWithElement = [THCLabelWithElement addLabelAtPoint:pointForLabel 
+																			  toView:textViewWithElement.superview
+																		 withElement:element 
+																		withDelegate:self];
 		
+		[THCScrollView changePositionWithAdjustmentByGridOfComponent:labelWithElement 
+															 toPoint:pointForLabel  
+															animated:YES];
 	}
 	
 	[textViewWithElement removeFromSuperview];
