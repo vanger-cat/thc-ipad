@@ -20,6 +20,7 @@
 @implementation RootViewController
 
 @synthesize scrollView;
+@synthesize dropboxController;
 
 - (void)showElements:(NSArray *)elements inView:(UIView *)view {
 	Element *element;
@@ -52,6 +53,8 @@
 	[self.scrollView scrollRectToVisible:center animated:NO];
 	
 	//[self addRandomLabels:1000];
+	if (!dropboxController)
+		dropboxController = [[DropboxController alloc] init];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -73,6 +76,7 @@
 
 - (void)dealloc {
 	[scrollView release];
+	[dropboxController release];
     [super dealloc];
 }
 
