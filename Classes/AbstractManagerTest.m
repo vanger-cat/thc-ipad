@@ -16,7 +16,7 @@
 
 @interface AbstractManagerTest : GTMTestCase {
 }
-- (void)someMethod:(NSError *)err;
+//- (void)someMethod:(NSError *)err;
 @end
 
 @implementation AbstractManagerTest
@@ -37,18 +37,17 @@
 //	[err release];
 //}
 
-// ???: why this test fails???
 - (void)testSaveMethodCallsSaveOfManagedObjectContext {
 	AbstractManager *abstractManager = [AbstractManager alloc];
 	id managedObjectContextMock = [OCMockObject mockForClass:[NSManagedObjectContext class]];
 	
 	BOOL value = NO;
-	[[[managedObjectContextMock expect] andReturnValue:OCMOCK_VALUE(value)] save:[OCMArg any]];
+	[[[managedObjectContextMock expect] andReturnValue:OCMOCK_VALUE(value)] save:[OCMArg anyPointer]];
 	abstractManager.managedObjectContext = managedObjectContextMock;
 	
-	NSError *error;
-	[managedObjectContextMock save:&error];
-	//[abstractManager save];
+	//NSError *error;
+	//[managedObjectContextMock save:&error];
+	[abstractManager save];
 	
 	[managedObjectContextMock verify];
 		

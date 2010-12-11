@@ -11,6 +11,25 @@
 
 @implementation DropboxController
 
+- (void)setWorking:(BOOL)isWorking {
+    if (working == isWorking) return;
+    working = isWorking;
+    
+    if (working) {
+        //[activityIndicator startAnimating];
+    } else { 
+        //[activityIndicator stopAnimating];
+    }
+    //nextButton.enabled = !working;
+}
+
+- (void)loadFiles {
+    [self setWorking:YES];
+    [self.restClient loadMetadata:@"/thc-iPad-test" withHash:filesHash];
+}
+
+#pragma mark -
+
 - (DBRestClient*)restClient {
 	if (!restClient) {
 		restClient = [[DBRestClient alloc] initWithSession:[DBSession sharedSession]];
@@ -42,25 +61,6 @@
 - (void)restClient:(DBRestClient*)client loadMetadataFailedWithError:(NSError*)error {
 	
 	NSLog(@"Error loading metadata: %@", error);
-}
-
-#pragma mark -
-
-- (void)setWorking:(BOOL)isWorking {
-    if (working == isWorking) return;
-    working = isWorking;
-    
-    if (working) {
-        //[activityIndicator startAnimating];
-    } else { 
-        //[activityIndicator stopAnimating];
-    }
-    //nextButton.enabled = !working;
-}
-
-- (void)loadFiles {
-    [self setWorking:YES];
-    [self.restClient loadMetadata:@"/thc-iPad-test" withHash:filesHash];
 }
 
 @end

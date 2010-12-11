@@ -289,12 +289,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 313686010;
-			PBXWorkspaceStateSaveDate = 313686010;
+			PBXPerProjectTemplateStateSaveDate = 313788865;
+			PBXWorkspaceStateSaveDate = 313788865;
 		};
 		perUserProjectItems = {
-			9252680A12B277FC003E62C9 /* PBXTextBookmark */ = 9252680A12B277FC003E62C9 /* PBXTextBookmark */;
-			9252680B12B277FC003E62C9 /* PBXTextBookmark */ = 9252680B12B277FC003E62C9 /* PBXTextBookmark */;
+			9252680A12B277FC003E62C9 = 9252680A12B277FC003E62C9 /* PBXTextBookmark */;
+			9252680B12B277FC003E62C9 = 9252680B12B277FC003E62C9 /* PBXTextBookmark */;
 			927B74BA129163D70083088C = 927B74BA129163D70083088C /* PBXTextBookmark */;
 			927B755F12917BE00083088C = 927B755F12917BE00083088C /* PBXTextBookmark */;
 			927B759F129182680083088C = 927B759F129182680083088C /* PBXTextBookmark */;
@@ -424,9 +424,22 @@
 			92D08EDB12929B7B00980E4C = 92D08EDB12929B7B00980E4C /* PBXTextBookmark */;
 			92D08EE012929C1900980E4C = 92D08EE012929C1900980E4C /* PBXTextBookmark */;
 			92D08EE112929C1900980E4C = 92D08EE112929C1900980E4C /* PBXTextBookmark */;
+			92D8C1E112B40A9600731B1C /* XCBuildMessageTextBookmark */ = 92D8C1E112B40A9600731B1C /* XCBuildMessageTextBookmark */;
+			92D8C1E212B40A9600731B1C /* PBXTextBookmark */ = 92D8C1E212B40A9600731B1C /* PBXTextBookmark */;
+			92D8C1EF12B40B3600731B1C /* PBXTextBookmark */ = 92D8C1EF12B40B3600731B1C /* PBXTextBookmark */;
+			92D8C1F112B40B3D00731B1C /* PBXTextBookmark */ = 92D8C1F112B40B3D00731B1C /* PBXTextBookmark */;
+			92D8C1F212B40B3D00731B1C /* PBXTextBookmark */ = 92D8C1F212B40B3D00731B1C /* PBXTextBookmark */;
+			92D8C1F312B40B3D00731B1C /* PBXTextBookmark */ = 92D8C1F312B40B3D00731B1C /* PBXTextBookmark */;
 		};
 		sourceControlManager = 92CFB1D6128C7107005CB1ED /* Source Control */;
 		userBuildSettings = {
+		};
+	};
+	402D370212ABAE1100010C4A /* AbstractManagerTest.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1265, 1159}}";
+			sepNavSelRange = "{298, 0}";
+			sepNavVisRange = "{0, 930}";
 		};
 	};
 	40C219901291796900559770 /* Element.h */ = {
@@ -491,7 +504,7 @@
 		fRef = 9294B4FB12AEF4F300C6F2D5 /* DropboxController.m */;
 		name = "DropboxController.m: 61";
 		rLen = 0;
-		rLoc = 1216;
+		rLoc = 1318;
 		rType = 0;
 		vrLen = 793;
 		vrLoc = 532;
@@ -521,17 +534,29 @@
 		vrLoc = 0;
 	};
 	927B7523129177EA0083088C /* THCScrollView.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = THCScrollView.h;
+		path = "/Users/wolfenberg/Desktop/thc-ipad/Classes/THCScrollView.h";
+		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1265, 596}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1265, 734}}";
 			sepNavSelRange = "{316, 0}";
-			sepNavVisRange = "{0, 622}";
+			sepNavVisRange = "{0, 827}";
 		};
 	};
 	927B7524129177EA0083088C /* THCScrollView.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = THCScrollView.m;
+		path = "/Users/wolfenberg/Desktop/thc-ipad/Classes/THCScrollView.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1265, 1672}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1265, 2071}}";
 			sepNavSelRange = "{1352, 0}";
-			sepNavVisRange = "{693, 1151}";
+			sepNavVisRange = "{640, 1265}";
 		};
 	};
 	927B755F12917BE00083088C /* PBXTextBookmark */ = {
@@ -735,9 +760,9 @@
 	};
 	9286582E12901AD90082DB64 /* THCColors.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1265, 382}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1265, 734}}";
 			sepNavSelRange = "{253, 0}";
-			sepNavVisRange = "{0, 259}";
+			sepNavVisRange = "{0, 310}";
 		};
 	};
 	9286582F12901AD90082DB64 /* THCColors.m */ = {
@@ -881,9 +906,9 @@
 	};
 	9294B4FB12AEF4F300C6F2D5 /* DropboxController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1265, 1273}}";
-			sepNavSelRange = "{1216, 0}";
-			sepNavVisRange = "{532, 793}";
+			sepNavIntBoundsRect = "{{0, 0}, {1265, 1254}}";
+			sepNavSelRange = "{784, 0}";
+			sepNavVisRange = "{331, 848}";
 		};
 	};
 	9294B4FE12AEF51600C6F2D5 /* PBXTextBookmark */ = {
@@ -1042,7 +1067,7 @@
 		fRef = 9294B4FB12AEF4F300C6F2D5 /* DropboxController.m */;
 		name = "DropboxController.m: 18";
 		rLen = 0;
-		rLoc = 370;
+		rLoc = 784;
 		rType = 0;
 		vrLen = 399;
 		vrLoc = 0;
@@ -1052,7 +1077,7 @@
 		fRef = 9294B4FB12AEF4F300C6F2D5 /* DropboxController.m */;
 		name = "DropboxController.m: 18";
 		rLen = 0;
-		rLoc = 370;
+		rLoc = 784;
 		rType = 0;
 		vrLen = 399;
 		vrLoc = 0;
@@ -1072,7 +1097,7 @@
 		fRef = 9294B4FB12AEF4F300C6F2D5 /* DropboxController.m */;
 		name = "DropboxController.m: 25";
 		rLen = 0;
-		rLoc = 459;
+		rLoc = 873;
 		rType = 0;
 		vrLen = 439;
 		vrLoc = 85;
@@ -1092,7 +1117,7 @@
 		fRef = 9294B4FB12AEF4F300C6F2D5 /* DropboxController.m */;
 		name = "DropboxController.m: 42";
 		rLen = 0;
-		rLoc = 800;
+		rLoc = 1214;
 		rType = 0;
 		vrLen = 504;
 		vrLoc = 409;
@@ -1122,7 +1147,7 @@
 		fRef = 9294B4FB12AEF4F300C6F2D5 /* DropboxController.m */;
 		name = "DropboxController.m: 30";
 		rLen = 0;
-		rLoc = 531;
+		rLoc = 945;
 		rType = 0;
 		vrLen = 528;
 		vrLoc = 140;
@@ -1132,7 +1157,7 @@
 		fRef = 9294B4FB12AEF4F300C6F2D5 /* DropboxController.m */;
 		name = "DropboxController.m: 22";
 		rLen = 0;
-		rLoc = 399;
+		rLoc = 813;
 		rType = 0;
 		vrLen = 496;
 		vrLoc = 170;
@@ -1162,7 +1187,7 @@
 		fRef = 9294B4FB12AEF4F300C6F2D5 /* DropboxController.m */;
 		name = "DropboxController.m: 29";
 		rLen = 0;
-		rLoc = 497;
+		rLoc = 911;
 		rType = 0;
 		vrLen = 536;
 		vrLoc = 338;
@@ -1172,7 +1197,7 @@
 		fRef = 9294B4FB12AEF4F300C6F2D5 /* DropboxController.m */;
 		name = "DropboxController.m: 29";
 		rLen = 0;
-		rLoc = 497;
+		rLoc = 911;
 		rType = 0;
 		vrLen = 449;
 		vrLoc = 338;
@@ -1202,7 +1227,7 @@
 		fRef = 9294B4FB12AEF4F300C6F2D5 /* DropboxController.m */;
 		name = "DropboxController.m: 44";
 		rLen = 0;
-		rLoc = 878;
+		rLoc = 1292;
 		rType = 0;
 		vrLen = 572;
 		vrLoc = 491;
@@ -1212,7 +1237,7 @@
 		fRef = 9294B4FB12AEF4F300C6F2D5 /* DropboxController.m */;
 		name = "DropboxController.m: 51";
 		rLen = 0;
-		rLoc = 1314;
+		rLoc = 1318;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 491;
@@ -1242,7 +1267,7 @@
 		fRef = 9294B4FB12AEF4F300C6F2D5 /* DropboxController.m */;
 		name = "DropboxController.m: 51";
 		rLen = 0;
-		rLoc = 1294;
+		rLoc = 1318;
 		rType = 0;
 		vrLen = 578;
 		vrLoc = 491;
@@ -1252,7 +1277,7 @@
 		fRef = 9294B4FB12AEF4F300C6F2D5 /* DropboxController.m */;
 		name = "DropboxController.m: 58";
 		rLen = 0;
-		rLoc = 1163;
+		rLoc = 1318;
 		rType = 0;
 		vrLen = 575;
 		vrLoc = 750;
@@ -1272,7 +1297,7 @@
 		fRef = 9294B4FB12AEF4F300C6F2D5 /* DropboxController.m */;
 		name = "DropboxController.m: 25";
 		rLen = 0;
-		rLoc = 459;
+		rLoc = 873;
 		rType = 0;
 		vrLen = 592;
 		vrLoc = 733;
@@ -1292,7 +1317,7 @@
 		fRef = 9294B4FB12AEF4F300C6F2D5 /* DropboxController.m */;
 		name = "DropboxController.m: 61";
 		rLen = 0;
-		rLoc = 1216;
+		rLoc = 1318;
 		rType = 0;
 		vrLen = 711;
 		vrLoc = 614;
@@ -1412,6 +1437,12 @@
 		vrLoc = 1904;
 	};
 	92B548511296ECE100072C8D /* GTMUnitTestDevLog.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = GTMUnitTestDevLog.m;
+		path = "/Users/wolfenberg/Desktop/thc-ipad/Libraries/GTM/GTMUnitTestDevLog.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1666, 5111}}";
 			sepNavSelRange = "{2752, 0}";
@@ -1419,6 +1450,12 @@
 		};
 	};
 	92B5485A1296ECFE00072C8D /* GTMDefines.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = GTMDefines.h;
+		path = "/Users/wolfenberg/Desktop/thc-ipad/Libraries/GTM/GTMDefines.h";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1265, 7106}}";
 			sepNavSelRange = "{0, 0}";
@@ -1971,5 +2008,64 @@
 		rType = 0;
 		vrLen = 1089;
 		vrLoc = 1430;
+	};
+	92D8C1E112B40A9600731B1C /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "'DropboxController' may not respond to '-loadFiles'";
+		fRef = 9294B4FB12AEF4F300C6F2D5 /* DropboxController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 43;
+		rType = 1;
+	};
+	92D8C1E212B40A9600731B1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9294B4FB12AEF4F300C6F2D5 /* DropboxController.m */;
+		name = "DropboxController.m: 25";
+		rLen = 0;
+		rLoc = 859;
+		rType = 0;
+		vrLen = 407;
+		vrLoc = 207;
+	};
+	92D8C1EF12B40B3600731B1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9294B4FB12AEF4F300C6F2D5 /* DropboxController.m */;
+		name = "DropboxController.m: 44";
+		rLen = 0;
+		rLoc = 859;
+		rType = 0;
+		vrLen = 377;
+		vrLoc = 244;
+	};
+	92D8C1F112B40B3D00731B1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 402D370212ABAE1100010C4A /* AbstractManagerTest.m */;
+		name = "AbstractManagerTest.m: 18";
+		rLen = 0;
+		rLoc = 298;
+		rType = 0;
+		vrLen = 930;
+		vrLoc = 0;
+	};
+	92D8C1F212B40B3D00731B1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9294B4FB12AEF4F300C6F2D5 /* DropboxController.m */;
+		name = "DropboxController.m: 33";
+		rLen = 0;
+		rLoc = 642;
+		rType = 0;
+		vrLen = 802;
+		vrLoc = 377;
+	};
+	92D8C1F312B40B3D00731B1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9294B4FB12AEF4F300C6F2D5 /* DropboxController.m */;
+		name = "DropboxController.m: 37";
+		rLen = 0;
+		rLoc = 784;
+		rType = 0;
+		vrLen = 848;
+		vrLoc = 331;
 	};
 }
