@@ -20,7 +20,7 @@ extern const BOOL defaultIsSelectedState;
 
 }
 
-+ (id<ElementInterface>)createMockElement;
++ (id<ElementInterface>)newMockElement;
 
 - (void)assertUIComponent:(id<THCUIComponentWithElementProtocol>)component 
 					 hasX:(CGFloat)x 

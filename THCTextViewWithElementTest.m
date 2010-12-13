@@ -20,10 +20,13 @@
 @implementation THCTextViewWithElementTest
 
 - (void)setUp {
-	mockElement = [THCUIComponentsTestUtils createMockElement];
-	textView = [THCTextViewWithElement addTextViewToView:[UIView alloc] 
+	mockElement = [THCUIComponentsTestUtils newMockElement];
+	UIView *view = [UIView alloc];
+	textView = [THCTextViewWithElement addTextViewToView:view
 											 withElement:mockElement 
 											withDelegate:NULL];
+	[view release];
+	[mockElement release];
 }
 
 - (void)testLabelCreation{
@@ -33,6 +36,10 @@
 					hasText:fakeText 
 				 isSelected:defaultIsSelectedState 
 				   contains:mockElement];
+}
+
+- (void)tearDown {
+	[textView release];
 }
 
 @end

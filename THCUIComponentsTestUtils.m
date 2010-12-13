@@ -16,7 +16,7 @@ const BOOL defaultIsSelectedState = NO;
 
 @implementation THCUIComponentsTestUtils
 
-+ (id<ElementInterface>)createMockElement {
++ (id<ElementInterface>)newMockElement {
 	ElementMock *mockElement = [ElementMock alloc];
 	mockElement.x = [NSNumber numberWithInt:fakeX];
 	mockElement.y = [NSNumber numberWithInt:fakeY];

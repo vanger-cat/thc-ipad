@@ -24,6 +24,9 @@
 @property (nonatomic, retain) DropboxController *dropboxController;
 
 - (UITapGestureRecognizer *)newGestureToCreateTextView;
+- (void)createTextViewAtPoint:(CGPoint)pointForTextView atView:(UIView *)view withElement:(id<ElementInterface>)element;
 - (IBAction)showDropboxLoginController:(id)sender;
+
+- (void)createLabelInPlaceOfTextView:(THCTextViewWithElement *)textViewWithElement;
 
 @end

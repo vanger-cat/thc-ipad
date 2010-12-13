@@ -83,23 +83,29 @@
 
 - (UIGestureRecognizer *)newGestureToCreateTextView {
 	UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self 
-																		  action:@selector(createTextView:)];
+																		  action:@selector(createNewTextViewGesureRecognized:)];
 	tap.numberOfTapsRequired = 2;
 	return tap;
 }
 
-- (void)createTextView:(UIGestureRecognizer *)gesture {
+- (void)createNewTextViewGesureRecognized:(UIGestureRecognizer *)gesture {
 	if (gesture.state == UIGestureRecognizerStateRecognized) {
-		CGPoint location = [gesture locationInView:self.scrollView.spaceView];
-		CGPoint point = CGPointMake(location.x, location.y);
-		THCTextViewWithElement *textViewWithElement = [THCTextViewWithElement addTextViewToView:self.scrollView.spaceView 
-																					withElement:NULL 
-																				   withDelegate:self];
+		CGPoint pointForTextView = [gesture locationInView:self.scrollView.spaceView];
+		id<ElementInterface> element = [[ElementManager sharedInstance] savedElementWithText:@"" 
+																					 atPoint:pointForTextView];
 		
-		[THCScrollView changePositionWithAdjustmentByGridOfComponent:textViewWithElement 
-															 toPoint:CGPointMake(point.x, point.y) 
-															animated:YES];	
+		[self createTextViewAtPoint:pointForTextView atView:self.scrollView.spaceView withElement:element];
 	}
+}
+	
+- (void)createTextViewAtPoint:(CGPoint)pointForTextView atView:(UIView *)view withElement:(id<ElementInterface>)element {
+	THCTextViewWithElement *textViewWithElement = [THCTextViewWithElement addTextViewToView:view
+																				withElement:element 
+																			   withDelegate:self];
+	
+	[THCScrollView changePositionWithAdjustmentByGridOfComponent:textViewWithElement 
+														 toPoint:pointForTextView 
+														animated:YES];
 }
 
 - (UITapGestureRecognizer *)newGestureToCancelEditing {
@@ -132,30 +138,26 @@
 	THCTextViewWithElement *textViewWithElement = (THCTextViewWithElement *) textView.superview;
 	
 	if ([textView hasText]) {
-			//???: why i need "- kBorderWidth" here???
-		CGPoint pointForLabel = CGPointMake(textViewWithElement.x - kBorderWidth, 
-											textViewWithElement.y - kBorderWidth);
-
-		[textViewWithElement saveComponentStateToElement];
-		id<ElementInterface> element;
-		if (textViewWithElement.element){
-			element = textViewWithElement.element;
-			[[ElementManager sharedInstance] save];
-		} else {
-			element = [[ElementManager sharedInstance] savedElementWithText:textViewWithElement.text 
-																	atPoint:pointForLabel];
-		}
-		
-		THCLabelWithElement *labelWithElement = [THCLabelWithElement addLabelToView:textViewWithElement.superview
-																		withElement:element 
-																	   withDelegate:self];
-		
-		[THCScrollView changePositionWithAdjustmentByGridOfComponent:labelWithElement 
-															 toPoint:pointForLabel  
-															animated:YES];
+		[self createLabelInPlaceOfTextView:textViewWithElement];
 	}
 	
 	[textViewWithElement removeFromSuperview];
+}
+
+- (void)createLabelInPlaceOfTextView:(THCTextViewWithElement *)textViewWithElement {
+	CGPoint pointForLabel = CGPointMake(textViewWithElement.x, textViewWithElement.y);
+	
+	[textViewWithElement saveComponentStateToElement];
+	id<ElementInterface> element = textViewWithElement.element;
+	[[ElementManager sharedInstance] save];
+	
+	THCLabelWithElement *labelWithElement = [THCLabelWithElement addLabelToView:textViewWithElement.superview
+																	withElement:element 
+																   withDelegate:self];
+	
+	[THCScrollView changePositionWithAdjustmentByGridOfComponent:labelWithElement 
+														 toPoint:pointForLabel  
+														animated:YES];
 }
 
 - (void)textViewDidChange:(UITextView *)textView {
