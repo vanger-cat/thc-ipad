@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Element.h"
-#import "THCUIComponentWithElementDelegate.h"
+#import "ElementInterface.h"
+#import "THCUIComponentWithElementProtocol.h"
 #import "THCTextViewWithElement.h"
 #import "THCUIComponentAbstract.h"
 

@@ -1,5 +1,5 @@
 //
-//  THCLabelWithElementTest
+//  THCTextViewWithElementTest.m
 //  thc-ipad
 //
 //  Created by Vanger on 13.12.10.
@@ -7,31 +7,31 @@
 //
 
 #import "GTMSenTestCase.h"
-#import "THCLabelWithElement.h"
 #import "ElementMock.h"
+#import "THCTextViewWithElement.h"
 #import "THCUIComponentsTestUtils.h"
 
-@interface THCLabelWithElementTest : THCUIComponentsTestUtils {
+@interface THCTextViewWithElementTest : THCUIComponentsTestUtils {
 	ElementMock *mockElement;
-	THCLabelWithElement *label;
+	THCTextViewWithElement *textView;
 }
 @end
 
-@implementation THCLabelWithElementTest
+@implementation THCTextViewWithElementTest
 
 - (void)setUp {
 	mockElement = [THCUIComponentsTestUtils createMockElement];
-	label = [THCLabelWithElement addLabelToView:[UIView alloc] 
-									withElement:mockElement
-								   withDelegate:NULL];
+	textView = [THCTextViewWithElement addTextViewToView:[UIView alloc] 
+											 withElement:mockElement 
+											withDelegate:NULL];
 }
 
 - (void)testLabelCreation{
-	[self assertUIComponent:label 
+	[self assertUIComponent:textView 
 					   hasX:fakeX 
 					   hasY:fakeY 
 					hasText:fakeText 
-				 isSelected:FALSE 
+				 isSelected:NO 
 				   contains:mockElement];
 }
 

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Element.h"
+#import "ElementInterface.h"
 #import "THCUIComponentAbstract.h"
 
 extern const CGFloat kMinimalTextViewHeight;
@@ -20,7 +20,7 @@ extern const CGFloat kTextAndLabelYDifference;
 
 @property (nonatomic,retain) UITextView *textView;
 
-+ (THCTextViewWithElement *)addTextViewAtPoint:(CGPoint)newPoint toView:(UIView *)aView withElement:(Element *)newElement withDelegate:(id<UITextViewDelegate>)delegate;
++ (THCTextViewWithElement *)addTextViewToView:(UIView *)aView withElement:(id<ElementInterface>)element withDelegate:(id<UITextViewDelegate>)delegate;
 
 - (void)completeEditing;
 

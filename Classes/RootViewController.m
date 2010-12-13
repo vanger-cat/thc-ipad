@@ -92,10 +92,9 @@
 	if (gesture.state == UIGestureRecognizerStateRecognized) {
 		CGPoint location = [gesture locationInView:self.scrollView.spaceView];
 		CGPoint point = CGPointMake(location.x, location.y);
-		THCTextViewWithElement *textViewWithElement = [THCTextViewWithElement addTextViewAtPoint:point 
-																						  toView:self.scrollView.spaceView 
-																					 withElement:NULL 
-																					withDelegate:self];
+		THCTextViewWithElement *textViewWithElement = [THCTextViewWithElement addTextViewToView:self.scrollView.spaceView 
+																					withElement:NULL 
+																				   withDelegate:self];
 		
 		[THCScrollView changePositionWithAdjustmentByGridOfComponent:textViewWithElement 
 															 toPoint:CGPointMake(point.x, point.y) 

@@ -35,12 +35,12 @@ const CGFloat kTextAndLabelYDifference = 8;
 	return self;
 }
 
-+ (THCTextViewWithElement *)addTextViewAtPoint:(CGPoint)newPoint toView:(UIView *)aView withElement:(Element *)newElement withDelegate:(id<UITextViewDelegate>)delegate {
-	THCTextViewWithElement *textViewWithElement = [[THCTextViewWithElement alloc] initWithFrame:CGRectMake(newPoint.x, newPoint.y, kTextComponentWidth, 0)];
-	textViewWithElement.element = newElement;
++ (THCTextViewWithElement *)addTextViewToView:(UIView *)aView withElement:(id<ElementInterface>)element withDelegate:(id<UITextViewDelegate>)delegate {
+	THCTextViewWithElement *textViewWithElement = [[THCTextViewWithElement alloc] initWithFrame:CGRectMake([element.x intValue], [element.y intValue], kTextComponentWidth, 0)];
+	textViewWithElement.element = element;
 	
 	[THCUIComponentsUtils setupTextView:textViewWithElement.textView andDelegate:delegate];
-	textViewWithElement.text = newElement.text;
+	textViewWithElement.text = element.text;
 
 	[aView addSubview:textViewWithElement];
 	

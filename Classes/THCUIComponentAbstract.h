@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "THCUIComponentWithElementDelegate.h"
+#import "THCUIComponentWithElementProtocol.h"
 
 extern const CGFloat kBorderWidth;
 extern const CGFloat kTextComponentWidth;
 extern const CGFloat kTextComponentHeightMax;
 
-@interface THCUIComponentAbstract : UIView <THCUIComponentWithElementDelegate> {
+@interface THCUIComponentAbstract : UIView <THCUIComponentWithElementProtocol> {
 	id<ElementInterface> element;
 	BOOL selected;
 }

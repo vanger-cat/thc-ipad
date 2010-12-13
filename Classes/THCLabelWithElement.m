@@ -68,12 +68,9 @@ const CGFloat kMinimalLabelHeight = 18;
 	if (gesture.state == UIGestureRecognizerStateRecognized) {
 		THCLabelWithElement *labelWithElement = (THCLabelWithElement *)gesture.view;
 
-		CGRect rectOfLabelInSpace = [THCUIComponentsUtils rectInSuperSuperViewOfView:gesture.view];
-
-		[THCTextViewWithElement addTextViewAtPoint:rectOfLabelInSpace.origin 
-											toView:labelWithElement.superview 
-									   withElement:labelWithElement.element 
-									  withDelegate:labelWithElement.textViewDelegate];
+		[THCTextViewWithElement addTextViewToView:labelWithElement.superview 
+									  withElement:labelWithElement.element 
+									 withDelegate:labelWithElement.textViewDelegate];
 
 		[labelWithElement removeFromSuperview];
 	}
