@@ -184,7 +184,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 40BE066B12903B99005C77B1 /* thc-ipad */;
-		activeSDKPreference = iphonesimulator4.2;
+		activeSDKPreference = iphoneos4.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* thc-ipad */;
 		addToTargets = (
 			92B548291296ECB200072C8D /* thc-ipad-test */,
@@ -585,6 +585,26 @@
 			40FE07F912B6D051007FAECC /* PBXTextBookmark */ = 40FE07F912B6D051007FAECC /* PBXTextBookmark */;
 			40FE07FA12B6D055007FAECC /* PBXTextBookmark */ = 40FE07FA12B6D055007FAECC /* PBXTextBookmark */;
 			40FE07FB12B6D055007FAECC /* PBXTextBookmark */ = 40FE07FB12B6D055007FAECC /* PBXTextBookmark */;
+			40FE07FC12B6D0F9007FAECC /* PBXTextBookmark */ = 40FE07FC12B6D0F9007FAECC /* PBXTextBookmark */;
+			40FE07FD12B6D0F9007FAECC /* PBXTextBookmark */ = 40FE07FD12B6D0F9007FAECC /* PBXTextBookmark */;
+			40FE080712B6D249007FAECC /* PBXTextBookmark */ = 40FE080712B6D249007FAECC /* PBXTextBookmark */;
+			40FE080812B6D249007FAECC /* PBXTextBookmark */ = 40FE080812B6D249007FAECC /* PBXTextBookmark */;
+			40FE080912B6D249007FAECC /* PBXTextBookmark */ = 40FE080912B6D249007FAECC /* PBXTextBookmark */;
+			40FE080A12B6D249007FAECC /* PBXTextBookmark */ = 40FE080A12B6D249007FAECC /* PBXTextBookmark */;
+			40FE080B12B6D249007FAECC /* PBXTextBookmark */ = 40FE080B12B6D249007FAECC /* PBXTextBookmark */;
+			40FE080C12B6D249007FAECC /* PBXTextBookmark */ = 40FE080C12B6D249007FAECC /* PBXTextBookmark */;
+			40FE080D12B6D249007FAECC /* PBXTextBookmark */ = 40FE080D12B6D249007FAECC /* PBXTextBookmark */;
+			40FE080E12B6D249007FAECC /* PBXTextBookmark */ = 40FE080E12B6D249007FAECC /* PBXTextBookmark */;
+			40FE080F12B6D253007FAECC /* PBXTextBookmark */ = 40FE080F12B6D253007FAECC /* PBXTextBookmark */;
+			40FE081012B6D274007FAECC /* PBXTextBookmark */ = 40FE081012B6D274007FAECC /* PBXTextBookmark */;
+			40FE081112B6D274007FAECC /* PBXTextBookmark */ = 40FE081112B6D274007FAECC /* PBXTextBookmark */;
+			40FE081312B6D29F007FAECC /* PBXTextBookmark */ = 40FE081312B6D29F007FAECC /* PBXTextBookmark */;
+			40FE081412B6D29F007FAECC /* PBXTextBookmark */ = 40FE081412B6D29F007FAECC /* PBXTextBookmark */;
+			40FE081512B6D29F007FAECC /* PBXTextBookmark */ = 40FE081512B6D29F007FAECC /* PBXTextBookmark */;
+			40FE081612B6D29F007FAECC /* PBXTextBookmark */ = 40FE081612B6D29F007FAECC /* PBXTextBookmark */;
+			40FE081712B6D29F007FAECC /* PBXTextBookmark */ = 40FE081712B6D29F007FAECC /* PBXTextBookmark */;
+			40FE081812B6D29F007FAECC /* PBXTextBookmark */ = 40FE081812B6D29F007FAECC /* PBXTextBookmark */;
+			40FE081912B6D29F007FAECC /* PBXTextBookmark */ = 40FE081912B6D29F007FAECC /* PBXTextBookmark */;
 		};
 		sourceControlManager = 40BE067812903BB8005C77B1 /* Source Control */;
 		userBuildSettings = {
@@ -929,7 +949,7 @@
 		fRef = 40D01BAA129C7BCC0027E31D /* THCUITodoView.m */;
 		name = "THCUITodoView.m: 80";
 		rLen = 0;
-		rLoc = 2423;
+		rLoc = 2313;
 		rType = 0;
 		vrLen = 977;
 		vrLoc = 2044;
@@ -939,7 +959,7 @@
 		fRef = 40BB26B9129EB31700E0C916 /* THCUIComponentAbstract.m */;
 		name = "THCUIComponentAbstract.m: 63";
 		rLen = 0;
-		rLoc = 1439;
+		rLoc = 1544;
 		rType = 0;
 		vrLen = 1595;
 		vrLoc = 552;
@@ -1307,7 +1327,7 @@
 		fRef = 40A918A31291A52C00BFCA83 /* THCTextViewWithElement.m */;
 		name = "THCTextViewWithElement.m: 91";
 		rLen = 26;
-		rLoc = 2773;
+		rLoc = 2621;
 		rType = 0;
 		vrLen = 1312;
 		vrLoc = 1614;
@@ -1542,7 +1562,7 @@
 		fRef = 40A918A31291A52C00BFCA83 /* THCTextViewWithElement.m */;
 		name = "THCTextViewWithElement.m: 89";
 		rLen = 23;
-		rLoc = 2671;
+		rLoc = 2519;
 		rType = 0;
 		vrLen = 0;
 		vrLoc = 0;
@@ -1643,7 +1663,7 @@
 		fRef = 40A918801291A2BF00BFCA83 /* THCLabelWithElement.m */;
 		name = "THCLabelWithElement.m: 91";
 		rLen = 0;
-		rLoc = 2232;
+		rLoc = 2114;
 		rType = 0;
 		vrLen = 507;
 		vrLoc = 4114;
@@ -1653,7 +1673,7 @@
 		fRef = 40D01BAA129C7BCC0027E31D /* THCUITodoView.m */;
 		name = "THCUITodoView.m: 135";
 		rLen = 0;
-		rLoc = 3940;
+		rLoc = 3830;
 		rType = 0;
 		vrLen = 476;
 		vrLoc = 0;
@@ -1745,10 +1765,10 @@
 	};
 	40A918801291A2BF00BFCA83 /* THCLabelWithElement.m */ = {
 		uiCtxt = {
-			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{429, 368}\";\n            s = 0;\n        },\n                {\n            r = \"{1862, 167}\";\n            s = 0;\n        },\n                {\n            r = \"{2519, 197}\";\n            s = 0;\n        },\n                {\n            r = \"{2776, 474}\";\n            s = 0;\n        },\n                {\n            r = \"{3267, 69}\";\n            s = 0;\n        },\n                {\n            r = \"{3470, 69}\";\n            s = 0;\n        },\n                {\n            r = \"{3570, 86}\";\n            s = 0;\n        },\n                {\n            r = \"{3679, 26}\";\n            s = 0;\n        },\n                {\n            r = \"{3746, 387}\";\n            s = 0;\n        },\n                {\n            r = \"{4174, 211}\";\n            s = 0;\n        },\n                {\n            r = \"{4405, 76}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 4489}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1167, 988}}";
-			sepNavSelRange = "{433, 149}";
-			sepNavVisRange = "{344, 1356}";
+			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{429, 368}\";\n            s = 0;\n        },\n                {\n            r = \"{1744, 167}\";\n            s = 0;\n        },\n                {\n            r = \"{2401, 197}\";\n            s = 0;\n        },\n                {\n            r = \"{2658, 474}\";\n            s = 0;\n        },\n                {\n            r = \"{3149, 69}\";\n            s = 0;\n        },\n                {\n            r = \"{3352, 69}\";\n            s = 0;\n        },\n                {\n            r = \"{3452, 86}\";\n            s = 0;\n        },\n                {\n            r = \"{3561, 26}\";\n            s = 0;\n        },\n                {\n            r = \"{3628, 387}\";\n            s = 0;\n        },\n                {\n            r = \"{4056, 211}\";\n            s = 0;\n        },\n                {\n            r = \"{4287, 76}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 4371}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {1167, 962}}";
+			sepNavSelRange = "{1296, 0}";
+			sepNavVisRange = "{374, 1208}";
 			sepNavWindowFrame = "{{15, 0}, {1173, 778}}";
 		};
 	};
@@ -1761,10 +1781,10 @@
 	};
 	40A918A31291A52C00BFCA83 /* THCTextViewWithElement.m */ = {
 		uiCtxt = {
-			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{482, 382}\";\n            s = 0;\n        },\n                {\n            r = \"{1765, 99}\";\n            s = 0;\n        },\n                {\n            r = \"{1895, 116}\";\n            s = 0;\n        },\n                {\n            r = \"{2028, 99}\";\n            s = 0;\n        },\n                {\n            r = \"{2158, 116}\";\n            s = 0;\n        },\n                {\n            r = \"{2297, 29}\";\n            s = 0;\n        },\n                {\n            r = \"{2367, 487}\";\n            s = 0;\n        },\n                {\n            r = \"{2874, 40}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 2922}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1244, 676}}";
-			sepNavSelRange = "{1000, 0}";
-			sepNavVisRange = "{0, 0}";
+			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{482, 382}\";\n            s = 0;\n        },\n                {\n            r = \"{1613, 99}\";\n            s = 0;\n        },\n                {\n            r = \"{1743, 116}\";\n            s = 0;\n        },\n                {\n            r = \"{1876, 99}\";\n            s = 0;\n        },\n                {\n            r = \"{2006, 116}\";\n            s = 0;\n        },\n                {\n            r = \"{2145, 29}\";\n            s = 0;\n        },\n                {\n            r = \"{2215, 487}\";\n            s = 0;\n        },\n                {\n            r = \"{2722, 40}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 2770}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {1244, 689}}";
+			sepNavSelRange = "{1118, 0}";
+			sepNavVisRange = "{173, 1003}";
 		};
 	};
 	40A918E21291AA2D00BFCA83 /* PBXTextBookmark */ = {
@@ -1786,7 +1806,7 @@
 	};
 	40A91992129270D600BFCA83 /* THCUIComponentWithElementProtocol.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {850, 432}}";
+			sepNavIntBoundsRect = "{{0, 0}, {850, 409}}";
 			sepNavSelRange = "{205, 33}";
 			sepNavVisRange = "{0, 523}";
 		};
@@ -1827,10 +1847,10 @@
 	};
 	40BB26B9129EB31700E0C916 /* THCUIComponentAbstract.m */ = {
 		uiCtxt = {
-			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{551, 217}\";\n            s = 0;\n        },\n                {\n            r = \"{791, 148}\";\n            s = 0;\n        },\n                {\n            r = \"{956, 145}\";\n            s = 0;\n        },\n                {\n            r = \"{1118, 145}\";\n            s = 0;\n        },\n                {\n            r = \"{1303, 134}\";\n            s = 0;\n        },\n                {\n            r = \"{1468, 134}\";\n            s = 0;\n        },\n                {\n            r = \"{1633, 134}\";\n            s = 0;\n        },\n                {\n            r = \"{2000, 19}\";\n            s = 0;\n        },\n                {\n            r = \"{2060, 25}\";\n            s = 0;\n        },\n                {\n            r = \"{2105, 39}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 2152}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {850, 715}}";
-			sepNavSelRange = "{720, 43}";
-			sepNavVisRange = "{312, 642}";
+			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{656, 217}\";\n            s = 0;\n        },\n                {\n            r = \"{896, 148}\";\n            s = 0;\n        },\n                {\n            r = \"{1061, 145}\";\n            s = 0;\n        },\n                {\n            r = \"{1223, 145}\";\n            s = 0;\n        },\n                {\n            r = \"{1408, 134}\";\n            s = 0;\n        },\n                {\n            r = \"{1573, 134}\";\n            s = 0;\n        },\n                {\n            r = \"{1738, 134}\";\n            s = 0;\n        },\n                {\n            r = \"{2105, 19}\";\n            s = 0;\n        },\n                {\n            r = \"{2165, 25}\";\n            s = 0;\n        },\n                {\n            r = \"{2210, 39}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 2257}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {850, 663}}";
+			sepNavSelRange = "{559, 0}";
+			sepNavVisRange = "{0, 0}";
 		};
 	};
 	40BB2701129EB9A900E0C916 /* PBXTextBookmark */ = {
@@ -2064,9 +2084,9 @@
 	};
 	40D01BAA129C7BCC0027E31D /* THCUITodoView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1034, 1729}}";
-			sepNavSelRange = "{2423, 0}";
-			sepNavVisRange = "{2044, 977}";
+			sepNavIntBoundsRect = "{{0, 0}, {1034, 1794}}";
+			sepNavSelRange = "{1859, 0}";
+			sepNavVisRange = "{1261, 1137}";
 		};
 	};
 	40D01BBC129CEF210027E31D /* PBXTextBookmark */ = {
@@ -2186,7 +2206,7 @@
 		fRef = 40A918801291A2BF00BFCA83 /* THCLabelWithElement.m */;
 		name = "THCLabelWithElement.m: 69";
 		rLen = 0;
-		rLoc = 2232;
+		rLoc = 2114;
 		rType = 0;
 		vrLen = 3314;
 		vrLoc = 344;
@@ -2226,7 +2246,7 @@
 		fRef = 40BB26B9129EB31700E0C916 /* THCUIComponentAbstract.m */;
 		name = "THCUIComponentAbstract.m: 63";
 		rLen = 0;
-		rLoc = 1439;
+		rLoc = 1544;
 		rType = 0;
 		vrLen = 1840;
 		vrLoc = 312;
@@ -3239,7 +3259,7 @@
 		fRef = 40BB26B9129EB31700E0C916 /* THCUIComponentAbstract.m */;
 		name = "THCUIComponentAbstract.m: 74";
 		rLen = 43;
-		rLoc = 1770;
+		rLoc = 1875;
 		rType = 0;
 		vrLen = 1710;
 		vrLoc = 312;
@@ -3464,6 +3484,203 @@
 		vrLen = 1607;
 		vrLoc = 2181;
 	};
+	40FE07FC12B6D0F9007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
+		name = "RootViewController.m: 88";
+		rLen = 0;
+		rLoc = 2556;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
+	};
+	40FE07FD12B6D0F9007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
+		name = "RootViewController.m: 94";
+		rLen = 0;
+		rLoc = 2797;
+		rType = 0;
+		vrLen = 1607;
+		vrLoc = 2181;
+	};
+	40FE080712B6D249007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
+		name = "RootViewController.m: 88";
+		rLen = 0;
+		rLoc = 2556;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
+	};
+	40FE080812B6D249007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
+		name = "RootViewController.m: 94";
+		rLen = 0;
+		rLoc = 2797;
+		rType = 0;
+		vrLen = 1552;
+		vrLoc = 2181;
+	};
+	40FE080912B6D249007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40A918801291A2BF00BFCA83 /* THCLabelWithElement.m */;
+		name = "THCLabelWithElement.m: 57";
+		rLen = 0;
+		rLoc = 1663;
+		rType = 0;
+		vrLen = 1785;
+		vrLoc = 374;
+	};
+	40FE080A12B6D249007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40A918A31291A52C00BFCA83 /* THCTextViewWithElement.m */;
+		name = "THCTextViewWithElement.m: 51";
+		rLen = 0;
+		rLoc = 1499;
+		rType = 0;
+		vrLen = 1518;
+		vrLoc = 138;
+	};
+	40FE080B12B6D249007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40A91992129270D600BFCA83 /* THCUIComponentWithElementProtocol.h */;
+		name = "THCUIComponentWithElementProtocol.h: 13";
+		rLen = 33;
+		rLoc = 205;
+		rType = 0;
+		vrLen = 523;
+		vrLoc = 0;
+	};
+	40FE080C12B6D249007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40D01BAA129C7BCC0027E31D /* THCUITodoView.m */;
+		name = "THCUITodoView.m: 24";
+		rLen = 13;
+		rLoc = 484;
+		rType = 0;
+		vrLen = 1207;
+		vrLoc = 317;
+	};
+	40FE080D12B6D249007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40BB26B9129EB31700E0C916 /* THCUIComponentAbstract.m */;
+		rLen = 1;
+		rLoc = 19;
+		rType = 1;
+	};
+	40FE080E12B6D249007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40BB26B9129EB31700E0C916 /* THCUIComponentAbstract.m */;
+		name = "THCUIComponentAbstract.m: 24";
+		rLen = 0;
+		rLoc = 559;
+		rType = 0;
+		vrLen = 1736;
+		vrLoc = 351;
+	};
+	40FE080F12B6D253007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40BB26B9129EB31700E0C916 /* THCUIComponentAbstract.m */;
+		name = "THCUIComponentAbstract.m: 24";
+		rLen = 0;
+		rLoc = 559;
+		rType = 0;
+		vrLen = 1733;
+		vrLoc = 351;
+	};
+	40FE081012B6D274007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
+		name = "RootViewController.m: 88";
+		rLen = 0;
+		rLoc = 2556;
+		rType = 0;
+		vrLen = 1802;
+		vrLoc = 2038;
+	};
+	40FE081112B6D274007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40BB26B9129EB31700E0C916 /* THCUIComponentAbstract.m */;
+		name = "THCUIComponentAbstract.m: 24";
+		rLen = 0;
+		rLoc = 559;
+		rType = 0;
+		vrLen = 1861;
+		vrLoc = 265;
+	};
+	40FE081312B6D29F007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
+		name = "RootViewController.m: 88";
+		rLen = 0;
+		rLoc = 2556;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
+	};
+	40FE081412B6D29F007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40BB26B9129EB31700E0C916 /* THCUIComponentAbstract.m */;
+		name = "THCUIComponentAbstract.m: 24";
+		rLen = 0;
+		rLoc = 559;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
+	};
+	40FE081512B6D29F007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40BB26B9129EB31700E0C916 /* THCUIComponentAbstract.m */;
+		name = "THCUIComponentAbstract.m: 24";
+		rLen = 102;
+		rLoc = 492;
+		rType = 0;
+		vrLen = 1733;
+		vrLoc = 351;
+	};
+	40FE081612B6D29F007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40A918801291A2BF00BFCA83 /* THCLabelWithElement.m */;
+		name = "THCLabelWithElement.m: 57";
+		rLen = 0;
+		rLoc = 1663;
+		rType = 0;
+		vrLen = 1741;
+		vrLoc = 374;
+	};
+	40FE081712B6D29F007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40A918A31291A52C00BFCA83 /* THCTextViewWithElement.m */;
+		name = "THCTextViewWithElement.m: 51";
+		rLen = 0;
+		rLoc = 1499;
+		rType = 0;
+		vrLen = 1384;
+		vrLoc = 173;
+	};
+	40FE081812B6D29F007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40D01BAA129C7BCC0027E31D /* THCUITodoView.m */;
+		name = "THCUITodoView.m: 24";
+		rLen = 13;
+		rLoc = 484;
+		rType = 0;
+		vrLen = 1207;
+		vrLoc = 317;
+	};
+	40FE081912B6D29F007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40D01BAA129C7BCC0027E31D /* THCUITodoView.m */;
+		name = "THCUITodoView.m: 65";
+		rLen = 0;
+		rLoc = 1859;
+		rType = 0;
+		vrLen = 1137;
+		vrLoc = 1261;
+	};
 	8D1107310486CEB800E47090 /* thc_ipad-Info.plist */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {917, 481}}";
@@ -3537,9 +3754,9 @@
 	92CFB279128D9DFB005CB1ED /* RootViewController.m */ = {
 		uiCtxt = {
 			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{565, 154}\";\n            s = 0;\n        },\n                {\n            r = \"{1822, 17}\";\n            s = 0;\n        },\n                {\n            r = \"{1875, 161}\";\n            s = 0;\n        },\n                {\n            r = \"{2062, 116}\";\n            s = 0;\n        },\n                {\n            r = \"{2198, 75}\";\n            s = 0;\n        },\n                {\n            r = \"{3546, 184}\";\n            s = 0;\n        },\n                {\n            r = \"{4028, 312}\";\n            s = 0;\n        },\n                {\n            r = \"{5346, 138}\";\n            s = 0;\n        },\n                {\n            r = \"{5606, 419}\";\n            s = 0;\n        },\n                {\n            r = \"{6100, 115}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 6223}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {908, 1807}}";
-			sepNavSelRange = "{2524, 21}";
-			sepNavVisRange = "{1737, 1350}";
+			sepNavIntBoundsRect = "{{0, 0}, {908, 1742}}";
+			sepNavSelRange = "{2038, 0}";
+			sepNavVisRange = "{0, 0}";
 			sepNavWindowFrame = "{{15, 0}, {1173, 778}}";
 		};
 	};

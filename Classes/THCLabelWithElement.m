@@ -54,7 +54,6 @@ const CGFloat kMinimalLabelHeight = 18;
 	
 	[thcLabel release];
 	
-	NSLog(@"Created new THCLabelWithElement with coordinates %f, %f", thcLabel.frame.origin.x, thcLabel.frame.origin.y);
 	return thcLabel;
 }
 

@@ -48,9 +48,6 @@ const CGFloat kTextAndLabelYDifference = 8;
 
 	[textViewWithElement release];
 	
-	NSLog(@"Created new THCTextViewWithElement with coordinates %f,%f", 
-		  textViewWithElement.frame.origin.x, 
-		  textViewWithElement.frame.origin.y);
 	return textViewWithElement;
 }
 

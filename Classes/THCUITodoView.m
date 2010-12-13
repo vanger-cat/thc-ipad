@@ -62,7 +62,6 @@
 
 	todo.textViewDelegate = delegate;
 	
-	NSLog(@"Created new THCLabelWithElement with coordinates %f, %f", todo.frame.origin.x, todo.frame.origin.y);
 	return todo;
 }
 

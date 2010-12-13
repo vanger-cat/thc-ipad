@@ -529,11 +529,11 @@
 		40A918B61291A59300BFCA83 /* UIControllers with Element */ = {
 			isa = PBXGroup;
 			children = (
+				40A91992129270D600BFCA83 /* THCUIComponentWithElementProtocol.h */,
 				40A9187F1291A2BF00BFCA83 /* THCLabelWithElement.h */,
 				40A918801291A2BF00BFCA83 /* THCLabelWithElement.m */,
 				40A918A21291A52C00BFCA83 /* THCTextViewWithElement.h */,
 				40A918A31291A52C00BFCA83 /* THCTextViewWithElement.m */,
-				40A91992129270D600BFCA83 /* THCUIComponentWithElementProtocol.h */,
 				40D01BA9129C7BCC0027E31D /* THCUITodoView.h */,
 				40D01BAA129C7BCC0027E31D /* THCUITodoView.m */,
 				40BB26B8129EB31700E0C916 /* THCUIComponentAbstract.h */,

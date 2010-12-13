@@ -20,6 +20,9 @@ const CGFloat kTextComponentHeightMax = 9999;
 - (id)initWithFrame:(CGRect)frame {
 	[super initWithFrame:frame];
 	self.backgroundColor = [UIColor colorForMarker];
+	
+	NSLog(@"Created new %@ view with coordinates %f, %f", [self class], frame.origin.x, frame.origin.y);
+
 	return self;
 	
 }
