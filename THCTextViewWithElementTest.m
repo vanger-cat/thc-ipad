@@ -31,7 +31,7 @@
 					   hasX:fakeX 
 					   hasY:fakeY 
 					hasText:fakeText 
-				 isSelected:NO 
+				 isSelected:defaultIsSelectedState 
 				   contains:mockElement];
 }
 

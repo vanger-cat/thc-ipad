@@ -12,6 +12,7 @@
 const CGFloat fakeX = 50;
 const CGFloat fakeY = 50;
 NSString * const fakeText = @"test string!";
+const BOOL defaultIsSelectedState = NO;
 
 @implementation THCUIComponentsTestUtils
 

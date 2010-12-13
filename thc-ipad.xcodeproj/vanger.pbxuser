@@ -183,9 +183,9 @@
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
-		activeExecutable = 4008D32C1298EF6600D2A10B /* thc-ipad-test */;
+		activeExecutable = 40BE066B12903B99005C77B1 /* thc-ipad */;
 		activeSDKPreference = iphonesimulator4.2;
-		activeTarget = 92B548291296ECB200072C8D /* thc-ipad-test */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* thc-ipad */;
 		addToTargets = (
 			92B548291296ECB200072C8D /* thc-ipad-test */,
 		);
@@ -495,6 +495,12 @@
 			40FE06B112B67983007FAECC /* PBXTextBookmark */ = 40FE06B112B67983007FAECC /* PBXTextBookmark */;
 			40FE06B212B67983007FAECC /* PBXTextBookmark */ = 40FE06B212B67983007FAECC /* PBXTextBookmark */;
 			40FE06B312B67983007FAECC /* PBXTextBookmark */ = 40FE06B312B67983007FAECC /* PBXTextBookmark */;
+			40FE06BC12B68B27007FAECC /* PBXTextBookmark */ = 40FE06BC12B68B27007FAECC /* PBXTextBookmark */;
+			40FE06BD12B68B27007FAECC /* PBXTextBookmark */ = 40FE06BD12B68B27007FAECC /* PBXTextBookmark */;
+			40FE06BE12B68B27007FAECC /* PBXTextBookmark */ = 40FE06BE12B68B27007FAECC /* PBXTextBookmark */;
+			40FE06BF12B68B27007FAECC /* PBXTextBookmark */ = 40FE06BF12B68B27007FAECC /* PBXTextBookmark */;
+			40FE06C012B68B27007FAECC /* PBXTextBookmark */ = 40FE06C012B68B27007FAECC /* PBXTextBookmark */;
+			40FE06C112B68B27007FAECC /* PBXTextBookmark */ = 40FE06C112B68B27007FAECC /* PBXTextBookmark */;
 		};
 		sourceControlManager = 40BE067812903BB8005C77B1 /* Source Control */;
 		userBuildSettings = {
@@ -516,9 +522,9 @@
 	};
 	40023D7312B6583C000870CD /* THCLabelWithElementTest.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {850, 507}}";
-			sepNavSelRange = "{729, 0}";
-			sepNavVisRange = "{47, 768}";
+			sepNavIntBoundsRect = "{{0, 0}, {850, 455}}";
+			sepNavSelRange = "{543, 0}";
+			sepNavVisRange = "{0, 0}";
 		};
 	};
 	40023D7F12B65C2D000870CD /* ElementMock.h */ = {
@@ -2024,22 +2030,22 @@
 	40FE062912B66BB5007FAECC /* THCTextViewWithElementTest.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {850, 494}}";
-			sepNavSelRange = "{503, 0}";
-			sepNavVisRange = "{36, 806}";
+			sepNavSelRange = "{546, 0}";
+			sepNavVisRange = "{52, 811}";
 		};
 	};
 	40FE064112B67381007FAECC /* THCUIComponentsTestUtils.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {850, 432}}";
-			sepNavSelRange = "{438, 0}";
-			sepNavVisRange = "{0, 679}";
+			sepNavSelRange = "{351, 0}";
+			sepNavVisRange = "{0, 721}";
 		};
 	};
 	40FE064212B67381007FAECC /* THCUIComponentsTestUtils.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {850, 585}}";
-			sepNavSelRange = "{892, 69}";
-			sepNavVisRange = "{202, 1018}";
+			sepNavIntBoundsRect = "{{0, 0}, {850, 598}}";
+			sepNavSelRange = "{304, 0}";
+			sepNavVisRange = "{140, 1113}";
 			sepNavWindowFrame = "{{15, 0}, {1173, 778}}";
 		};
 	};
@@ -2138,7 +2144,7 @@
 		fRef = 40FE064112B67381007FAECC /* THCUIComponentsTestUtils.h */;
 		name = "THCUIComponentsTestUtils.h: 17";
 		rLen = 233;
-		rLoc = 440;
+		rLoc = 482;
 		rType = 0;
 		vrLen = 500;
 		vrLoc = 0;
@@ -2148,7 +2154,7 @@
 		fRef = 40FE064212B67381007FAECC /* THCUIComponentsTestUtils.m */;
 		name = "THCUIComponentsTestUtils.m: 20";
 		rLen = 0;
-		rLoc = 1130;
+		rLoc = 1170;
 		rType = 0;
 		vrLen = 496;
 		vrLoc = 0;
@@ -2198,7 +2204,7 @@
 		fRef = 40023D7312B6583C000870CD /* THCLabelWithElementTest.m */;
 		name = "THCLabelWithElementTest.m: 42";
 		rLen = 0;
-		rLoc = 807;
+		rLoc = 824;
 		rType = 0;
 		vrLen = 822;
 		vrLoc = 196;
@@ -2208,7 +2214,7 @@
 		fRef = 40FE064212B67381007FAECC /* THCUIComponentsTestUtils.m */;
 		name = "THCUIComponentsTestUtils.m: 24";
 		rLen = 0;
-		rLoc = 1210;
+		rLoc = 1250;
 		rType = 0;
 		vrLen = 840;
 		vrLoc = 0;
@@ -2218,7 +2224,7 @@
 		fRef = 40FE064212B67381007FAECC /* THCUIComponentsTestUtils.m */;
 		name = "THCUIComponentsTestUtils.m: 27";
 		rLen = 0;
-		rLoc = 1211;
+		rLoc = 1251;
 		rType = 0;
 		vrLen = 842;
 		vrLoc = 0;
@@ -2278,7 +2284,7 @@
 		fRef = 40FE062912B66BB5007FAECC /* THCTextViewWithElementTest.m */;
 		name = "THCTextViewWithElementTest.m: 41";
 		rLen = 0;
-		rLoc = 839;
+		rLoc = 859;
 		rType = 0;
 		vrLen = 903;
 		vrLoc = 142;
@@ -2289,7 +2295,7 @@
 		fRef = 40FE064212B67381007FAECC /* THCUIComponentsTestUtils.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 32;
+		rLoc = 33;
 		rType = 1;
 	};
 	40FE066B12B67600007FAECC /* PBXTextBookmark */ = {
@@ -2297,7 +2303,7 @@
 		fRef = 40FE064212B67381007FAECC /* THCUIComponentsTestUtils.m */;
 		name = "THCUIComponentsTestUtils.m: 14";
 		rLen = 0;
-		rLoc = 662;
+		rLoc = 702;
 		rType = 0;
 		vrLen = 876;
 		vrLoc = 0;
@@ -2327,7 +2333,7 @@
 		fRef = 40FE064212B67381007FAECC /* THCUIComponentsTestUtils.m */;
 		name = "THCUIComponentsTestUtils.m: 12";
 		rLen = 0;
-		rLoc = 588;
+		rLoc = 628;
 		rType = 0;
 		vrLen = 851;
 		vrLoc = 0;
@@ -2337,7 +2343,7 @@
 		fRef = 40FE064112B67381007FAECC /* THCUIComponentsTestUtils.h */;
 		name = "THCUIComponentsTestUtils.h: 17";
 		rLen = 0;
-		rLoc = 439;
+		rLoc = 481;
 		rType = 0;
 		vrLen = 544;
 		vrLoc = 0;
@@ -2357,7 +2363,7 @@
 		fRef = 40FE062912B66BB5007FAECC /* THCTextViewWithElementTest.m */;
 		name = "THCTextViewWithElementTest.m: 41";
 		rLen = 0;
-		rLoc = 817;
+		rLoc = 837;
 		rType = 0;
 		vrLen = 836;
 		vrLoc = 0;
@@ -2367,7 +2373,7 @@
 		fRef = 40FE062912B66BB5007FAECC /* THCTextViewWithElementTest.m */;
 		name = "THCTextViewWithElementTest.m: 41";
 		rLen = 0;
-		rLoc = 817;
+		rLoc = 837;
 		rType = 0;
 		vrLen = 836;
 		vrLoc = 0;
@@ -2397,7 +2403,7 @@
 		fRef = 40FE064112B67381007FAECC /* THCUIComponentsTestUtils.h */;
 		name = "THCUIComponentsTestUtils.h: 22";
 		rLen = 0;
-		rLoc = 438;
+		rLoc = 480;
 		rType = 0;
 		vrLen = 679;
 		vrLoc = 0;
@@ -2417,7 +2423,7 @@
 		fRef = 40FE064212B67381007FAECC /* THCUIComponentsTestUtils.m */;
 		name = "THCUIComponentsTestUtils.m: 34";
 		rLen = 69;
-		rLoc = 892;
+		rLoc = 932;
 		rType = 0;
 		vrLen = 1018;
 		vrLoc = 202;
@@ -2441,6 +2447,66 @@
 		rType = 0;
 		vrLen = 768;
 		vrLoc = 47;
+	};
+	40FE06BC12B68B27007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40023D7312B6583C000870CD /* THCLabelWithElementTest.m */;
+		name = "THCLabelWithElementTest.m: 24";
+		rLen = 0;
+		rLoc = 543;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
+	};
+	40FE06BD12B68B27007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40FE064112B67381007FAECC /* THCUIComponentsTestUtils.h */;
+		name = "THCUIComponentsTestUtils.h: 17";
+		rLen = 0;
+		rLoc = 351;
+		rType = 0;
+		vrLen = 721;
+		vrLoc = 0;
+	};
+	40FE06BE12B68B27007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40FE064212B67381007FAECC /* THCUIComponentsTestUtils.m */;
+		name = "THCUIComponentsTestUtils.m: 15";
+		rLen = 0;
+		rLoc = 304;
+		rType = 0;
+		vrLen = 1113;
+		vrLoc = 140;
+	};
+	40FE06BF12B68B27007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40023D7312B6583C000870CD /* THCLabelWithElementTest.m */;
+		name = "THCLabelWithElementTest.m: 34";
+		rLen = 22;
+		rLoc = 770;
+		rType = 0;
+		vrLen = 785;
+		vrLoc = 47;
+	};
+	40FE06C012B68B27007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40FE062912B66BB5007FAECC /* THCTextViewWithElementTest.m */;
+		name = "THCTextViewWithElementTest.m: 23";
+		rLen = 0;
+		rLoc = 503;
+		rType = 0;
+		vrLen = 806;
+		vrLoc = 36;
+	};
+	40FE06C112B68B27007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40FE062912B66BB5007FAECC /* THCTextViewWithElementTest.m */;
+		name = "THCTextViewWithElementTest.m: 24";
+		rLen = 0;
+		rLoc = 546;
+		rType = 0;
+		vrLen = 811;
+		vrLoc = 52;
 	};
 	8D1107310486CEB800E47090 /* thc_ipad-Info.plist */ = {
 		uiCtxt = {

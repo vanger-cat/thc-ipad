@@ -14,6 +14,7 @@
 extern const CGFloat fakeX;
 extern const CGFloat fakeY;
 extern NSString * const fakeText;
+extern const BOOL defaultIsSelectedState;
 
 @interface THCUIComponentsTestUtils : GTMTestCase {
 
