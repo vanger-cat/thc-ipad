@@ -25,10 +25,9 @@
 - (void)showElements:(NSArray *)elements inView:(UIView *)view {
 	Element *element;
 	for (element in elements) {
-		[THCLabelWithElement addLabelAtPoint:CGPointMake([element.x floatValue], [element.y floatValue]) 
-									  toView:view 
-								 withElement:element 
-								withDelegate:self];
+		[THCLabelWithElement addLabelToView:view
+								withElement:element 
+							   withDelegate:self];
 	}
 }
 
@@ -139,7 +138,7 @@
 											textViewWithElement.y - kBorderWidth);
 
 		[textViewWithElement saveComponentStateToElement];
-		Element *element;
+		id<ElementInterface> element;
 		if (textViewWithElement.element){
 			element = textViewWithElement.element;
 			[[ElementManager sharedInstance] save];
@@ -148,10 +147,9 @@
 																	atPoint:pointForLabel];
 		}
 		
-		THCLabelWithElement *labelWithElement = [THCLabelWithElement addLabelAtPoint:pointForLabel 
-																			  toView:textViewWithElement.superview
-																		 withElement:element 
-																		withDelegate:self];
+		THCLabelWithElement *labelWithElement = [THCLabelWithElement addLabelToView:textViewWithElement.superview
+																		withElement:element 
+																	   withDelegate:self];
 		
 		[THCScrollView changePositionWithAdjustmentByGridOfComponent:labelWithElement 
 															 toPoint:pointForLabel  

@@ -14,13 +14,13 @@
 
 + (void)changeXOriginOfView:(UIView *)superView withNewX:(CGFloat)newX ofSubview:(UIView *)view {
 	CGRect frame  = superView.frame;
-	frame.origin.x = newX;
+	frame.origin.x = newX - view.frame.origin.x;
 	superView.frame = frame;
 }
 
 + (void)changeYOriginOfView:(UIView *)superView withNewY:(CGFloat)newY ofSubview:(UIView *)view {
 	CGRect frame  = superView.frame;
-	frame.origin.y =  newY;
+	frame.origin.y =  newY - view.frame.origin.y;
 	superView.frame = frame;
 }
 

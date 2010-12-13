@@ -34,8 +34,8 @@ const CGFloat kMinimalLabelHeight = 18;
 	return self;
 }
 
-+ (THCLabelWithElement *)addLabelAtPoint:(CGPoint)newPoint toView:(UIView *)aView withElement:(Element *)newElement withDelegate:(id<UITextViewDelegate>)delegate {
-	THCLabelWithElement *thcLabel = [[THCLabelWithElement alloc] initWithFrame:CGRectMake(newPoint.x, newPoint.y, kTextComponentWidth, 0)];
++ (THCLabelWithElement *)addLabelToView:(UIView *)aView withElement:(id<ElementInterface>)newElement withDelegate:(id<UITextViewDelegate>)delegate {
+	THCLabelWithElement *thcLabel = [[THCLabelWithElement alloc] initWithFrame:CGRectMake([newElement.x intValue], [newElement.y intValue], kTextComponentWidth, 0)];
 	[THCUIComponentsUtils setupLabel:thcLabel.label];
 	
 	thcLabel.element = newElement;

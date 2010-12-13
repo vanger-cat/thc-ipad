@@ -14,7 +14,7 @@ extern const CGFloat kTextComponentWidth;
 extern const CGFloat kTextComponentHeightMax;
 
 @interface THCUIComponentAbstract : UIView <THCUIComponentWithElementDelegate> {
-	Element *element;
+	id<ElementInterface> element;
 	BOOL selected;
 }
 

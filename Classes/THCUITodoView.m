@@ -77,13 +77,9 @@
 	if (gesture.state == UIGestureRecognizerStateRecognized) {
 		THCUITodoView *todo = (THCUITodoView *)gesture.view;
 		
-		CGPoint point = CGPointMake(todo.frame.origin.x, 
-									todo.frame.origin.y);
-		
-		[THCLabelWithElement addLabelAtPoint:point 
-									  toView:todo.superview
-								 withElement:todo.element 
-								withDelegate:todo.textViewDelegate];
+		[THCLabelWithElement addLabelToView:todo.superview
+								withElement:todo.element 
+							   withDelegate:todo.textViewDelegate];
 		
 		[todo removeFromSuperview];
 	}

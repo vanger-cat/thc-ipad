@@ -7,16 +7,12 @@
 //
 
 #import <CoreData/CoreData.h>
+#import "ElementInterface.h"
 
 extern NSString * const kElementEntityName;
 
-@interface Element :  NSManagedObject  
-{
+@interface Element :  NSManagedObject <ElementInterface> {
 }
-
-@property (nonatomic, retain) NSNumber * y;
-@property (nonatomic, retain) NSNumber * x;
-@property (nonatomic, retain) NSString * text;
 
 @end
 

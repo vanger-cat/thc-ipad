@@ -12,7 +12,7 @@
 
 @protocol THCUIComponentWithElementDelegate
 
-@property (nonatomic, retain) Element *element;
+@property (nonatomic, retain) id<ElementInterface> element;
 @property (nonatomic, assign) CGFloat x;
 @property (nonatomic, assign) CGFloat y;
 @property (nonatomic, retain) NSString *text;
