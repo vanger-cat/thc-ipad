@@ -10,7 +10,7 @@
 #import "Element.h"
 
 
-@protocol THCUIComponentWithElementProtocol
+@protocol THCUIComponentWithElementProtocol <NSObject>
 
 @property (nonatomic, retain) id<ElementInterface> element;
 @property (nonatomic, assign) CGFloat x;

@@ -11,7 +11,7 @@
 
 extern NSString * const kElementEntityName;
 
-@interface Element :  NSManagedObject <ElementInterface> {
+@interface Element : NSManagedObject <ElementInterface> {
 }
 
 @end

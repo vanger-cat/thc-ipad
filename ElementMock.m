@@ -13,5 +13,7 @@
 @synthesize y;
 @synthesize x;
 @synthesize text;
+@synthesize type;
+@synthesize isChecked;
 
 @end

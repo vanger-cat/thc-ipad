@@ -13,6 +13,9 @@
 	NSNumber *y;
 	NSNumber *x;
 	NSString *text;
+	
+	NSNumber *isChecked;
+	NSString *type;
 }
 
 @end

@@ -8,7 +8,7 @@
 
 #import "THCUITodoView.h"
 #import "THCUIComponentsUtils.h"
-#import "THCLabelWithElement.h"
+#import "THCUILabelWithElement.h"
 
 
 @implementation THCUITodoView
@@ -46,8 +46,8 @@
 	return self;
 }
 
-+ (THCUITodoView *)addTodo:(CGPoint)point toView:(UIView *)aView withElement:(Element *)newElement withDelegate:(id<UITextViewDelegate>)delegate {
-	THCUITodoView *todo = [[THCUITodoView alloc] initWithFrame:CGRectMake(point.x, point.y, kTextComponentWidth, 0)];
++ (THCUITodoView *)addTodoToView:(UIView *)aView withElement:(Element *)newElement withDelegate:(id<UITextViewDelegate>)delegate {
+	THCUITodoView *todo = [[THCUITodoView alloc] initWithFrame:CGRectMake(0, 0, kTextComponentWidth, 0)];
 	[THCUIComponentsUtils setupLabel:todo.label];
 	
 	todo.element = newElement;
@@ -76,7 +76,7 @@
 	if (gesture.state == UIGestureRecognizerStateRecognized) {
 		THCUITodoView *todo = (THCUITodoView *)gesture.view;
 		
-		[THCLabelWithElement addLabelToView:todo.superview
+		[THCUILabelWithElement addLabelToView:todo.superview
 								withElement:todo.element 
 							   withDelegate:todo.textViewDelegate];
 		

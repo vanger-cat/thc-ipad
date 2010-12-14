@@ -15,5 +15,7 @@ NSString * const kElementEntityName = @"Element";
 @dynamic y;
 @dynamic x;
 @dynamic text;
+@dynamic type;
+@dynamic isChecked;
 
 @end

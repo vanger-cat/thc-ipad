@@ -14,14 +14,14 @@
 
 NSString * const kFakeImageName = @"vanger.JPG";
 
-@interface THCImageTest : THCUIComponentsTestUtils {
+@interface THCUIImageTest : THCUIComponentsTestUtils {
 	UIView *fakeView;
 	ElementMock *elementMock;
 }
 
 @end
 
-@implementation THCImageTest
+@implementation THCUIImageTest
 
 - (void)setUp {
 	fakeView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];

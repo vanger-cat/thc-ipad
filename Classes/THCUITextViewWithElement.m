@@ -6,7 +6,7 @@
 //  Copyright 2010 Magic Ink. All rights reserved.
 //
 
-#import "THCTextViewWithElement.h"
+#import "THCUITextViewWithElement.h"
 #import "THCFonts.h"
 #import "THCColors.h"
 #import "THCUIComponentsUtils.h"
@@ -16,7 +16,7 @@ const CGFloat kMinimalTextViewHeight = 100;
 const CGFloat kTextAndLabelXDifference = 8;
 const CGFloat kTextAndLabelYDifference = 8;
 
-@implementation THCTextViewWithElement
+@implementation THCUITextViewWithElement
 
 @synthesize textView;
 
@@ -35,8 +35,8 @@ const CGFloat kTextAndLabelYDifference = 8;
 	return self;
 }
 
-+ (THCTextViewWithElement *)addTextViewToView:(UIView *)aView withElement:(id<ElementInterface>)element withDelegate:(id<UITextViewDelegate>)delegate {
-	THCTextViewWithElement *textViewWithElement = [[THCTextViewWithElement alloc] initWithFrame:CGRectMake([element.x intValue], [element.y intValue], kTextComponentWidth, 0)];
++ (THCUITextViewWithElement *)addTextViewToView:(UIView *)aView withElement:(id<ElementInterface>)element withDelegate:(id<UITextViewDelegate>)delegate {
+	THCUITextViewWithElement *textViewWithElement = [[THCUITextViewWithElement alloc] initWithFrame:CGRectMake([element.x intValue], [element.y intValue], kTextComponentWidth, 0)];
 	textViewWithElement.element = element;
 	
 	[THCUIComponentsUtils setupTextView:textViewWithElement.textView andDelegate:delegate];

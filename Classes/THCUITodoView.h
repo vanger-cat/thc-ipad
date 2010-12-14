@@ -23,7 +23,7 @@
 @property (nonatomic, retain) UILabel *label;
 @property (nonatomic, retain) UIView *bottomLayer;
 
-+ (THCUITodoView *)addTodo:(CGPoint)point toView:(UIView *)aView withElement:(Element *)newElement withDelegate:(id<UITextViewDelegate>)delegate;
++ (THCUITodoView *)addTodoToView:(UIView *)aView withElement:(Element *)newElement withDelegate:(id<UITextViewDelegate>)delegate;
 + (UIGestureRecognizer *)newGestureForConvertingToLabel;
 
 @end

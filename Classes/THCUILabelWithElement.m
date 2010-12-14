@@ -6,15 +6,16 @@
 //  Copyright 2010 Magic Ink. All rights reserved.
 //
 
-#import "THCLabelWithElement.h"
+#import "THCUILabelWithElement.h"
 #import "THCFonts.h"
 #import "THCColors.h"
 #import "THCUIComponentsUtils.h"
 #import "THCUITodoView.h"
 
+NSString * const kLabelElementTypeName = @"label";
 const CGFloat kMinimalLabelHeight = 18;
 
-@implementation THCLabelWithElement
+@implementation THCUILabelWithElement
 
 @synthesize textViewDelegate;
 @synthesize label;
@@ -34,10 +35,11 @@ const CGFloat kMinimalLabelHeight = 18;
 	return self;
 }
 
-+ (THCLabelWithElement *)addLabelToView:(UIView *)aView withElement:(id<ElementInterface>)newElement withDelegate:(id<UITextViewDelegate>)delegate {
-	THCLabelWithElement *thcLabel = [[THCLabelWithElement alloc] initWithFrame:CGRectMake([newElement.x intValue], [newElement.y intValue], kTextComponentWidth, 0)];
++ (THCUILabelWithElement *)addLabelToView:(UIView *)aView withElement:(id<ElementInterface>)newElement withDelegate:(id<UITextViewDelegate>)delegate {
+	THCUILabelWithElement *thcLabel = [[THCUILabelWithElement alloc] initWithFrame:CGRectMake([newElement.x intValue], [newElement.y intValue], kTextComponentWidth, 0)];
 	[THCUIComponentsUtils setupLabel:thcLabel.label];
 	
+	newElement.type = kLabelElementTypeName;
 	thcLabel.element = newElement;
 	
 	UITapGestureRecognizer *convertToTextEditGesture = [self newGestureForConvertingToTextEdit];
@@ -65,9 +67,9 @@ const CGFloat kMinimalLabelHeight = 18;
 
 + (void)convertToTextEdit:(UITapGestureRecognizer *)gesture {
 	if (gesture.state == UIGestureRecognizerStateRecognized) {
-		THCLabelWithElement *labelWithElement = (THCLabelWithElement *)gesture.view;
+		THCUILabelWithElement *labelWithElement = (THCUILabelWithElement *)gesture.view;
 
-		[THCTextViewWithElement addTextViewToView:labelWithElement.superview 
+		[THCUITextViewWithElement addTextViewToView:labelWithElement.superview 
 									  withElement:labelWithElement.element 
 									 withDelegate:labelWithElement.textViewDelegate];
 
@@ -84,15 +86,11 @@ const CGFloat kMinimalLabelHeight = 18;
 
 + (void)convertToTODO:(UITapGestureRecognizer *)gesture {
 	if (gesture.state == UIGestureRecognizerStateRecognized) {
-		THCLabelWithElement *labelWithElement = (THCLabelWithElement *)gesture.view;
-		
-		CGPoint point = CGPointMake(labelWithElement.frame.origin.x, 
-									labelWithElement.frame.origin.y);
-		
-		[THCUITodoView addTodo:point 
-						toView:labelWithElement.superview 
-				   withElement:labelWithElement.element 
-				  withDelegate:labelWithElement.textViewDelegate];
+		THCUILabelWithElement *labelWithElement = (THCUILabelWithElement *)gesture.view;
+				
+		[THCUITodoView addTodoToView:labelWithElement.superview
+						 withElement:labelWithElement.element 
+						withDelegate:labelWithElement.textViewDelegate];
 		
 		[labelWithElement removeFromSuperview];
 	}
