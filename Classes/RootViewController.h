@@ -11,18 +11,22 @@
 #import "Element.h"
 #import "THCUITextViewWithElement.h"
 #import "DropboxController.h"
+#import "THCUIComponentsFactory.h"
 
 @interface RootViewController : UIViewController <UITextViewDelegate, THCScrollViewDelegate> {
 	NSMutableArray *textNotes;
 	THCScrollView *scrollView;
 	DropboxController *dropboxController;
 	THCUITextViewWithElement *currentTextViewWithElement;
+	THCUIComponentsFactory *componentsFactory;
 }
 
 @property (nonatomic, retain) IBOutlet THCScrollView *scrollView;
 @property (nonatomic, retain) THCUITextViewWithElement *currentTextViewWithElement;
 @property (nonatomic, retain) DropboxController *dropboxController;
+@property (nonatomic, retain) THCUIComponentsFactory *componentsFactory;
 
+- (void)showElements:(NSArray *)elements inView:(UIView *)view;
 - (UITapGestureRecognizer *)newGestureToCreateTextView;
 - (void)createTextViewAtPoint:(CGPoint)pointForTextView atView:(UIView *)view withElement:(id<ElementInterface>)element;
 - (IBAction)showDropboxLoginController:(id)sender;

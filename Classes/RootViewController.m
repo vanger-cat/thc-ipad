@@ -22,21 +22,15 @@
 @synthesize scrollView;
 @synthesize currentTextViewWithElement;
 @synthesize dropboxController;
-
-- (void)showElements:(NSArray *)elements inView:(UIView *)view {
-	Element *element;
-	for (element in elements) {
-		[THCUILabelWithElement addLabelToView:view
-								withElement:element 
-							   withDelegate:self];
-	}
-}
+@synthesize componentsFactory;
 
 #pragma mark View lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+	componentsFactory = [THCUIComponentsFactory newFactoryWithTextViewDelegate:self];
+	
 	UIGestureRecognizer *gestureToCreateTextView = [self newGestureToCreateTextView];
 	[self.scrollView addGestureRecognizer:gestureToCreateTextView];
 	[gestureToCreateTextView release];
@@ -85,6 +79,15 @@
 	[scrollView release];
 	[dropboxController release];
     [super dealloc];
+}
+
+#pragma mark initial loading of elements
+
+- (void)showElements:(NSArray *)elements inView:(UIView *)view {
+	Element *element;
+	for (element in elements) {
+		[componentsFactory addComponentToView:view withElement:element];
+	}
 }
 
 #pragma mark Space gestures

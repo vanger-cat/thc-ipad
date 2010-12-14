@@ -38,7 +38,7 @@
 	if ([element.type isEqualToString:kTypeImage])
 		return [THCUIImage addImageToView:view withElement:element];
 	
-	
+	NSLog(@"Unknown element.type '%@'", element.type);
 	[NSException raise:@"Invalid argument" format:@"Unknown element.type '%@'", element.type];
 	return NULL;
 }
