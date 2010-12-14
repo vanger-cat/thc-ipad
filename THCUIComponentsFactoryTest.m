@@ -43,34 +43,26 @@
 
 - (void)testCreationOfLabel {
 	id<THCUIComponentWithElementProtocol> component = [factory addComponentOfType:@"label" toView:fakeView withElement:mockElement];
-	STAssertEqualStrings([component class],
-						 [THCUILabelWithElement class],
-						 @"on 'label' should return THCLabelWithElement component");
+	STAssertTrue([component isMemberOfClass:[THCUILabelWithElement class]], @"on 'label' should return THCLabelWithElement component");
 	
 	
 }
 
 - (void)testCreationOfTextView {
 	id<THCUIComponentWithElementProtocol> component = [factory addComponentOfType:@"textView" toView:fakeView withElement:mockElement];
-	STAssertEqualStrings([component class],
-						 [THCUITextViewWithElement class],
-						 @"on 'todo' should return THCTextViewWithElement component");
+	STAssertTrue([component isMemberOfClass:[THCUITextViewWithElement class]], @"on 'todo' should return THCTextViewWithElement component");
 }
 
 - (void)testCreationOfTodo {
 	id<THCUIComponentWithElementProtocol> component = [factory addComponentOfType:@"todo" toView:fakeView withElement:mockElement];
-	STAssertEqualStrings([component class],
-						 [THCUITodoView class],
-						 @"on 'todo' should return THCUITodoView component");
+	STAssertTrue([component isMemberOfClass:[THCUITodoView class]], @"on 'todo' should return THCUITodoView component");
 	
 	
 }
 
 - (void)testCreationOfImage {
 	id<THCUIComponentWithElementProtocol> component = [factory addComponentOfType:@"image" toView:fakeView withElement:mockElement];
-	STAssertEqualStrings([component class],
-						 [THCUIImage class],
-						 @"on 'todo' should return THCUIImage component");
+	STAssertTrue([component isMemberOfClass:[THCUIImage class]], @"on 'todo' should return THCUIImage component");
 }
 
 - (void)testCreationOfUnknownThrowException {
