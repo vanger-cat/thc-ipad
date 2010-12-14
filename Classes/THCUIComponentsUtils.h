@@ -30,4 +30,7 @@
 + (CGRect)rectInSuperSuperViewOfView:(UIView *)view;
 
 + (THCUIComponentAbstract *)getBasicComponentOf:(UIView *)view;
+
++ (void)changeSizeOfView:(UIView *)view toSize:(CGSize)size;
+
 @end

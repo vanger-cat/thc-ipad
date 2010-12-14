@@ -31,9 +31,9 @@
 
 - (void)testLabelCreation{
 	[self assertUIComponent:textView 
-					   hasX:fakeX 
-					   hasY:fakeY 
-					hasText:fakeText 
+					   hasX:kFakeX 
+					   hasY:kFakeY 
+					hasText:kFakeText 
 				 isSelected:defaultIsSelectedState 
 				   contains:mockElement];
 }

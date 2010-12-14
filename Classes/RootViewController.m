@@ -15,6 +15,7 @@
 #import "THCUIComponentsUtils.h"
 #import "Utils.h"
 #import "DropboxSDK.h"
+#import "THCUIImage.h"
 
 @implementation RootViewController
 
@@ -54,6 +55,13 @@
 	//[self addRandomLabels:1000];
 	if (!dropboxController)
 		dropboxController = [[DropboxController alloc] init];
+
+	//TODO: delete
+	{
+		id<ElementInterface> element = [[ElementManager sharedInstance] savedElementWithText:@"vanger.JPG" 
+																					 atPoint:CGPointMake(100, 100)];
+		[THCUIImage addImageToView:self.scrollView.spaceView withElement:element];
+	}
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

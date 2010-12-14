@@ -11,13 +11,12 @@
 #import "THCUIComponentWithElementProtocol.h"
 
 
-extern const CGFloat fakeX;
-extern const CGFloat fakeY;
-extern NSString * const fakeText;
+extern const CGFloat kFakeX;
+extern const CGFloat kFakeY;
+extern NSString * const kFakeText;
 extern const BOOL defaultIsSelectedState;
 
 @interface THCUIComponentsTestUtils : GTMTestCase {
-
 }
 
 + (id<ElementInterface>)newMockElement;

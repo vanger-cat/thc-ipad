@@ -103,4 +103,10 @@
 	}
 }
 
++ (void)changeSizeOfView:(UIView *)view toSize:(CGSize)size {
+	CGRect frame = view.frame;
+	frame.size = size;
+	view.frame = frame;
+}
+
 @end

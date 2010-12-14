@@ -47,6 +47,11 @@
 		40FE064312B67381007FAECC /* THCUIComponentsTestUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FE064212B67381007FAECC /* THCUIComponentsTestUtils.m */; };
 		40FE06C412B6AC09007FAECC /* RootViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FE06C312B6AC09007FAECC /* RootViewControllerTest.m */; };
 		40FE082812B75730007FAECC /* THCScrollViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FE082712B75730007FAECC /* THCScrollViewTest.m */; };
+		40FE094112B78C12007FAECC /* THCUIImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FE094012B78C12007FAECC /* THCUIImage.m */; };
+		40FE094512B78D4A007FAECC /* vanger.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 40FE094412B78D4A007FAECC /* vanger.JPG */; };
+		40FE094612B78D4A007FAECC /* vanger.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 40FE094412B78D4A007FAECC /* vanger.JPG */; };
+		40FE094A12B78D87007FAECC /* THCImageTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FE094812B78D87007FAECC /* THCImageTest.m */; };
+		40FE0A5512B79DF5007FAECC /* THCUIImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FE094012B78C12007FAECC /* THCUIImage.m */; };
 		9294B45012AEEDBE00C6F2D5 /* DBAccountInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9294B3FB12AEEDBE00C6F2D5 /* DBAccountInfo.m */; };
 		9294B45112AEEDBE00C6F2D5 /* DBCreateAccountController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9294B3FD12AEEDBE00C6F2D5 /* DBCreateAccountController.m */; };
 		9294B45212AEEDBE00C6F2D5 /* DBError.m in Sources */ = {isa = PBXBuildFile; fileRef = 9294B3FF12AEEDBE00C6F2D5 /* DBError.m */; };
@@ -226,6 +231,10 @@
 		40FE064212B67381007FAECC /* THCUIComponentsTestUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCUIComponentsTestUtils.m; sourceTree = "<group>"; };
 		40FE06C312B6AC09007FAECC /* RootViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewControllerTest.m; sourceTree = "<group>"; };
 		40FE082712B75730007FAECC /* THCScrollViewTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCScrollViewTest.m; sourceTree = "<group>"; };
+		40FE093F12B78C12007FAECC /* THCUIImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THCUIImage.h; sourceTree = "<group>"; };
+		40FE094012B78C12007FAECC /* THCUIImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCUIImage.m; sourceTree = "<group>"; };
+		40FE094412B78D4A007FAECC /* vanger.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vanger.JPG; sourceTree = "<group>"; };
+		40FE094812B78D87007FAECC /* THCImageTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCImageTest.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* thc_ipad-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "thc_ipad-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		927B74B7129163260083088C /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = "/Users/wolfenberg/Desktop/thc-ipad/Classes/Utils.h"; sourceTree = "<absolute>"; };
 		927B74B8129163260083088C /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utils.m; path = "/Users/wolfenberg/Desktop/thc-ipad/Classes/Utils.m"; sourceTree = "<absolute>"; };
@@ -416,6 +425,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				40FE094412B78D4A007FAECC /* vanger.JPG */,
 				9294B4E812AEF1D500C6F2D5 /* db_logo_button.png */,
 				28193054112F811F00ECF9B4 /* thc_ipad.xcdatamodeld */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
@@ -444,6 +454,7 @@
 				40FE062912B66BB5007FAECC /* THCTextViewWithElementTest.m */,
 				40FE064112B67381007FAECC /* THCUIComponentsTestUtils.h */,
 				40FE064212B67381007FAECC /* THCUIComponentsTestUtils.m */,
+				40FE094812B78D87007FAECC /* THCImageTest.m */,
 			);
 			name = "UIControllers with Element";
 			sourceTree = "<group>";
@@ -460,6 +471,7 @@
 		402D36F412ABAC8200010C4A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				40023D7212B6579F000870CD /* UIControllers with Element */,
 				402D36F512ABAC8E00010C4A /* Model */,
 				40FE06C312B6AC09007FAECC /* RootViewControllerTest.m */,
 				40FE082712B75730007FAECC /* THCScrollViewTest.m */,
@@ -470,7 +482,6 @@
 		402D36F512ABAC8E00010C4A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				40023D7212B6579F000870CD /* UIControllers with Element */,
 				400BED5A12AFAEC000B4DE0C /* Elements */,
 				402D370212ABAE1100010C4A /* AbstractManagerTest.m */,
 			);
@@ -533,6 +544,8 @@
 			isa = PBXGroup;
 			children = (
 				40A91992129270D600BFCA83 /* THCUIComponentWithElementProtocol.h */,
+				40FE093F12B78C12007FAECC /* THCUIImage.h */,
+				40FE094012B78C12007FAECC /* THCUIImage.m */,
 				40A9187F1291A2BF00BFCA83 /* THCLabelWithElement.h */,
 				40A918801291A2BF00BFCA83 /* THCLabelWithElement.m */,
 				40A918A21291A52C00BFCA83 /* THCTextViewWithElement.h */,
@@ -790,6 +803,7 @@
 				9294B4A612AEEDBE00C6F2D5 /* db_logo.png in Resources */,
 				9294B4A712AEEDBE00C6F2D5 /* db_logo@2x.png in Resources */,
 				9294B4EA12AEF1D500C6F2D5 /* db_logo_button.png in Resources */,
+				40FE094612B78D4A007FAECC /* vanger.JPG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -812,6 +826,7 @@
 				9294B47A12AEEDBE00C6F2D5 /* db_logo.png in Resources */,
 				9294B47B12AEEDBE00C6F2D5 /* db_logo@2x.png in Resources */,
 				9294B4E912AEF1D500C6F2D5 /* db_logo_button.png in Resources */,
+				40FE094512B78D4A007FAECC /* vanger.JPG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -888,6 +903,7 @@
 				40023DE512B660B9000870CD /* Utils.m in Sources */,
 				40023DE612B660BF000870CD /* THCFonts.m in Sources */,
 				40023DE712B660C2000870CD /* THCColors.m in Sources */,
+				40FE0A5512B79DF5007FAECC /* THCUIImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -957,6 +973,8 @@
 				40FE064312B67381007FAECC /* THCUIComponentsTestUtils.m in Sources */,
 				40FE06C412B6AC09007FAECC /* RootViewControllerTest.m in Sources */,
 				40FE082812B75730007FAECC /* THCScrollViewTest.m in Sources */,
+				40FE094112B78C12007FAECC /* THCUIImage.m in Sources */,
+				40FE094A12B78D87007FAECC /* THCImageTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

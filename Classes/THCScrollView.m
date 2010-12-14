@@ -41,7 +41,7 @@ const CGFloat kSizeOfCell = 20;
 		[UIView setAnimationBeginsFromCurrentState:YES];
 	}	
 		
-	NSLog(@"Animating movement from %f,%f to %f,%f", component.x, component.y);
+	NSLog(@"Animating movement from %f,%f", component.x, component.y);
 	
 	component.x = [self getCellCoordinateFromCoordinate:point.x];
 	component.y = [self getCellCoordinateFromCoordinate:point.y];

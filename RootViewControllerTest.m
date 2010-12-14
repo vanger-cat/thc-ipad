@@ -31,8 +31,8 @@
 - (void)setUp {
 	rootViewController = [[RootViewController alloc] initWithNibName:@"RootViewController" 
 															  bundle:nil];
-	fakePoint = CGPointMake(fakeX, fakeY);
-	fakeView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 1000, 1000)];
+	fakePoint = CGPointMake(kFakeX, kFakeY);
+	fakeView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
 	fakeElement = [ElementMock alloc];
 }
 
@@ -50,8 +50,8 @@
 	THCTextViewWithElement *textViewWithElement = (THCTextViewWithElement *) [fakeView.subviews objectAtIndex:0];
 	
 	[self assertUIComponent:textViewWithElement 
-					   hasX:[THCScrollView getCellCoordinateFromCoordinate:fakeX]
-					   hasY:[THCScrollView getCellCoordinateFromCoordinate:fakeY] 
+					   hasX:[THCScrollView getCellCoordinateFromCoordinate:kFakeX]
+					   hasY:[THCScrollView getCellCoordinateFromCoordinate:kFakeY] 
 					hasText:@"" 
 				 isSelected:NO 
 				   contains:fakeElement];

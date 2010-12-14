@@ -9,18 +9,18 @@
 #import "THCUIComponentsTestUtils.h"
 #import "ElementMock.h"
 
-const CGFloat fakeX = 50;
-const CGFloat fakeY = 50;
-NSString * const fakeText = @"test string!";
+const CGFloat kFakeX = 50;
+const CGFloat kFakeY = 50;
+NSString * const kFakeText = @"test string!";
 const BOOL defaultIsSelectedState = NO;
 
 @implementation THCUIComponentsTestUtils
 
 + (id<ElementInterface>)newMockElement {
 	ElementMock *mockElement = [ElementMock alloc];
-	mockElement.x = [NSNumber numberWithInt:fakeX];
-	mockElement.y = [NSNumber numberWithInt:fakeY];
-	mockElement.text = fakeText;
+	mockElement.x = [NSNumber numberWithInt:kFakeX];
+	mockElement.y = [NSNumber numberWithInt:kFakeY];
+	mockElement.text = kFakeText;
 	
 	return mockElement;
 }
