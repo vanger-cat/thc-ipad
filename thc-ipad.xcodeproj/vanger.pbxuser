@@ -831,6 +831,20 @@
 			40FE0DCC12B82930007FAECC /* PBXTextBookmark */ = 40FE0DCC12B82930007FAECC /* PBXTextBookmark */;
 			40FE0DCD12B82930007FAECC /* XCBuildMessageTextBookmark */ = 40FE0DCD12B82930007FAECC /* XCBuildMessageTextBookmark */;
 			40FE0DCE12B82930007FAECC /* PBXTextBookmark */ = 40FE0DCE12B82930007FAECC /* PBXTextBookmark */;
+			40FE0DD512B8299C007FAECC /* PBXTextBookmark */ = 40FE0DD512B8299C007FAECC /* PBXTextBookmark */;
+			40FE0DD612B8299C007FAECC /* PBXTextBookmark */ = 40FE0DD612B8299C007FAECC /* PBXTextBookmark */;
+			40FE0DD712B8299C007FAECC /* PBXTextBookmark */ = 40FE0DD712B8299C007FAECC /* PBXTextBookmark */;
+			40FE0DD812B8299C007FAECC /* PBXTextBookmark */ = 40FE0DD812B8299C007FAECC /* PBXTextBookmark */;
+			40FE0DD912B8299C007FAECC /* PBXTextBookmark */ = 40FE0DD912B8299C007FAECC /* PBXTextBookmark */;
+			40FE0DDA12B8299C007FAECC /* PBXTextBookmark */ = 40FE0DDA12B8299C007FAECC /* PBXTextBookmark */;
+			40FE0DDB12B8299C007FAECC /* PBXTextBookmark */ = 40FE0DDB12B8299C007FAECC /* PBXTextBookmark */;
+			40FE0DDC12B8299C007FAECC /* PBXTextBookmark */ = 40FE0DDC12B8299C007FAECC /* PBXTextBookmark */;
+			40FE0DEA12B829DF007FAECC /* PBXTextBookmark */ = 40FE0DEA12B829DF007FAECC /* PBXTextBookmark */;
+			40FE0DEB12B829DF007FAECC /* PBXTextBookmark */ = 40FE0DEB12B829DF007FAECC /* PBXTextBookmark */;
+			40FE0DEC12B829DF007FAECC /* PBXTextBookmark */ = 40FE0DEC12B829DF007FAECC /* PBXTextBookmark */;
+			40FE0DED12B829DF007FAECC /* PBXTextBookmark */ = 40FE0DED12B829DF007FAECC /* PBXTextBookmark */;
+			40FE0DEE12B829DF007FAECC /* PBXTextBookmark */ = 40FE0DEE12B829DF007FAECC /* PBXTextBookmark */;
+			40FE0DEF12B829DF007FAECC /* PBXTextBookmark */ = 40FE0DEF12B829DF007FAECC /* PBXTextBookmark */;
 		};
 		sourceControlManager = 40BE067812903BB8005C77B1 /* Source Control */;
 		userBuildSettings = {
@@ -853,8 +867,8 @@
 	40023D7312B6583C000870CD /* THCUILabelWithElementTest.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {850, 650}}";
-			sepNavSelRange = "{965, 0}";
-			sepNavVisRange = "{259, 812}";
+			sepNavSelRange = "{358, 0}";
+			sepNavVisRange = "{0, 748}";
 		};
 	};
 	40023D7F12B65C2D000870CD /* ElementMock.h */ = {
@@ -995,10 +1009,10 @@
 	};
 	40023E1312B66596000870CD /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabelWithElement.h */;
+		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabel.h */;
 		name = "THCLabelWithElement.h: 17";
 		rLen = 0;
-		rLoc = 396;
+		rLoc = 385;
 		rType = 0;
 		vrLen = 594;
 		vrLoc = 256;
@@ -1687,7 +1701,7 @@
 	};
 	40310C6A12A8FD8D00BECD2E /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918A21291A52C00BFCA83 /* THCUITextViewWithElement.h */;
+		fRef = 40A918A21291A52C00BFCA83 /* THCUITextView.h */;
 		name = "THCTextViewWithElement.h: 13";
 		rLen = 0;
 		rLoc = 298;
@@ -1717,7 +1731,7 @@
 	};
 	40310D6C12A9121C00BECD2E /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918801291A2BF00BFCA83 /* THCUILabelWithElement.m */;
+		fRef = 40A918801291A2BF00BFCA83 /* THCUILabel.m */;
 		name = "THCLabelWithElement.m: 91";
 		rLen = 0;
 		rLoc = 143;
@@ -1730,7 +1744,7 @@
 		fRef = 40D01BAA129C7BCC0027E31D /* THCUITodo.m */;
 		name = "THCUITodoView.m: 135";
 		rLen = 0;
-		rLoc = 3846;
+		rLoc = 3824;
 		rType = 0;
 		vrLen = 476;
 		vrLoc = 0;
@@ -1803,14 +1817,14 @@
 		path = /Developer3.2.5/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGGeometry.h;
 		sourceTree = "<absolute>";
 	};
-	40A9187F1291A2BF00BFCA83 /* THCUILabelWithElement.h */ = {
+	40A9187F1291A2BF00BFCA83 /* THCUILabel.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1055, 432}}";
-			sepNavSelRange = "{328, 0}";
-			sepNavVisRange = "{0, 901}";
+			sepNavIntBoundsRect = "{{0, 0}, {978, 432}}";
+			sepNavSelRange = "{879, 0}";
+			sepNavVisRange = "{0, 879}";
 		};
 	};
-	40A918801291A2BF00BFCA83 /* THCUILabelWithElement.m */ = {
+	40A918801291A2BF00BFCA83 /* THCUILabel.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1195, 1924}}";
 			sepNavSelRange = "{1244, 0}";
@@ -1818,18 +1832,18 @@
 			sepNavWindowFrame = "{{15, 0}, {1173, 778}}";
 		};
 	};
-	40A918A21291A52C00BFCA83 /* THCUITextViewWithElement.h */ = {
+	40A918A21291A52C00BFCA83 /* THCUITextView.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1076, 432}}";
-			sepNavSelRange = "{244, 0}";
-			sepNavVisRange = "{0, 753}";
+			sepNavIntBoundsRect = "{{0, 0}, {999, 432}}";
+			sepNavSelRange = "{433, 0}";
+			sepNavVisRange = "{0, 720}";
 		};
 	};
-	40A918A31291A52C00BFCA83 /* THCUITextViewWithElement.m */ = {
+	40A918A31291A52C00BFCA83 /* THCUITextView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1272, 1313}}";
-			sepNavSelRange = "{1278, 0}";
-			sepNavVisRange = "{497, 1188}";
+			sepNavIntBoundsRect = "{{0, 0}, {1118, 1287}}";
+			sepNavSelRange = "{421, 30}";
+			sepNavVisRange = "{32, 862}";
 		};
 	};
 	40A918E21291AA2D00BFCA83 /* PBXTextBookmark */ = {
@@ -2146,9 +2160,9 @@
 	};
 	40FE062912B66BB5007FAECC /* THCUITextViewWithElementTest.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {850, 637}}";
-			sepNavSelRange = "{1019, 13}";
-			sepNavVisRange = "{364, 751}";
+			sepNavIntBoundsRect = "{{0, 0}, {850, 624}}";
+			sepNavSelRange = "{215, 0}";
+			sepNavVisRange = "{0, 784}";
 		};
 	};
 	40FE064112B67381007FAECC /* THCUIComponentsTestUtils.h */ = {
@@ -2168,7 +2182,7 @@
 	};
 	40FE064812B674B3007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918A21291A52C00BFCA83 /* THCUITextViewWithElement.h */;
+		fRef = 40A918A21291A52C00BFCA83 /* THCUITextView.h */;
 		name = "THCTextViewWithElement.h: 10";
 		rLen = 0;
 		rLoc = 197;
@@ -2178,7 +2192,7 @@
 	};
 	40FE066612B67600007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabelWithElement.h */;
+		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabel.h */;
 		name = "THCLabelWithElement.h: 11";
 		rLen = 0;
 		rLoc = 226;
@@ -2309,7 +2323,7 @@
 		fRef = 40023D7312B6583C000870CD /* THCUILabelWithElementTest.m */;
 		name = "THCLabelWithElementTest.m: 42";
 		rLen = 0;
-		rLoc = 1079;
+		rLoc = 1046;
 		rType = 0;
 		vrLen = 0;
 		vrLoc = 0;
@@ -2339,7 +2353,7 @@
 		fRef = 40023D7312B6583C000870CD /* THCUILabelWithElementTest.m */;
 		name = "THCLabelWithElementTest.m: 42";
 		rLen = 0;
-		rLoc = 1079;
+		rLoc = 1046;
 		rType = 0;
 		vrLen = 711;
 		vrLoc = 220;
@@ -2386,10 +2400,10 @@
 	};
 	40FE07F212B6D024007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918A31291A52C00BFCA83 /* THCUITextViewWithElement.m */;
+		fRef = 40A918A31291A52C00BFCA83 /* THCUITextView.m */;
 		name = "THCTextViewWithElement.m: 45";
 		rLen = 0;
-		rLoc = 1468;
+		rLoc = 1413;
 		rType = 0;
 		vrLen = 0;
 		vrLoc = 0;
@@ -2426,7 +2440,7 @@
 	};
 	40FE081612B6D29F007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918801291A2BF00BFCA83 /* THCUILabelWithElement.m */;
+		fRef = 40A918801291A2BF00BFCA83 /* THCUILabel.m */;
 		name = "THCLabelWithElement.m: 57";
 		rLen = 0;
 		rLoc = 143;
@@ -2436,10 +2450,10 @@
 	};
 	40FE081712B6D29F007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918A31291A52C00BFCA83 /* THCUITextViewWithElement.m */;
+		fRef = 40A918A31291A52C00BFCA83 /* THCUITextView.m */;
 		name = "THCTextViewWithElement.m: 51";
 		rLen = 0;
-		rLoc = 1586;
+		rLoc = 1531;
 		rType = 0;
 		vrLen = 1384;
 		vrLoc = 173;
@@ -2456,7 +2470,7 @@
 		fRef = 40D01BAA129C7BCC0027E31D /* THCUITodo.m */;
 		name = "THCUITodoView.m: 96";
 		rLen = 0;
-		rLoc = 2762;
+		rLoc = 2740;
 		rType = 0;
 		vrLen = 1042;
 		vrLoc = 2483;
@@ -2623,10 +2637,10 @@
 	};
 	40FE094E12B78F39007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabelWithElement.h */;
+		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabel.h */;
 		name = "THCLabelWithElement.h: 25";
 		rLen = 14;
-		rLoc = 649;
+		rLoc = 616;
 		rType = 0;
 		vrLen = 559;
 		vrLoc = 300;
@@ -2780,20 +2794,20 @@
 	};
 	40FE095E12B78F39007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabelWithElement.h */;
+		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabel.h */;
 		name = "THCLabelWithElement.h: 18";
 		rLen = 0;
-		rLoc = 396;
+		rLoc = 385;
 		rType = 0;
 		vrLen = 516;
 		vrLoc = 343;
 	};
 	40FE095F12B78F39007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabelWithElement.h */;
+		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabel.h */;
 		name = "THCLabelWithElement.h: 28";
 		rLen = 0;
-		rLoc = 879;
+		rLoc = 846;
 		rType = 0;
 		vrLen = 515;
 		vrLoc = 344;
@@ -2810,10 +2824,10 @@
 	};
 	40FE097112B7902B007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabelWithElement.h */;
+		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabel.h */;
 		name = "THCLabelWithElement.h: 28";
 		rLen = 0;
-		rLoc = 879;
+		rLoc = 846;
 		rType = 0;
 		vrLen = 558;
 		vrLoc = 301;
@@ -2857,10 +2871,10 @@
 	};
 	40FE097612B7902B007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabelWithElement.h */;
+		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabel.h */;
 		name = "THCLabelWithElement.h: 28";
 		rLen = 0;
-		rLoc = 879;
+		rLoc = 846;
 		rType = 0;
 		vrLen = 515;
 		vrLoc = 344;
@@ -2897,10 +2911,10 @@
 	};
 	40FE098412B79088007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabelWithElement.h */;
+		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabel.h */;
 		name = "THCLabelWithElement.h: 28";
 		rLen = 0;
-		rLoc = 879;
+		rLoc = 846;
 		rType = 0;
 		vrLen = 515;
 		vrLoc = 344;
@@ -2970,7 +2984,7 @@
 		fRef = 40023D7312B6583C000870CD /* THCUILabelWithElementTest.m */;
 		name = "THCLabelWithElementTest.m: 24";
 		rLen = 0;
-		rLoc = 658;
+		rLoc = 625;
 		rType = 0;
 		vrLen = 279;
 		vrLoc = 655;
@@ -2987,7 +3001,7 @@
 	};
 	40FE09B012B792C5007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918A31291A52C00BFCA83 /* THCUITextViewWithElement.m */;
+		fRef = 40A918A31291A52C00BFCA83 /* THCUITextView.m */;
 		name = "THCTextViewWithElement.m: 38";
 		rLen = 0;
 		rLoc = 150;
@@ -3000,7 +3014,7 @@
 		fRef = 40FE062912B66BB5007FAECC /* THCUITextViewWithElementTest.m */;
 		name = "THCTextViewWithElementTest.m: 25";
 		rLen = 17;
-		rLoc = 638;
+		rLoc = 605;
 		rType = 0;
 		vrLen = 482;
 		vrLoc = 446;
@@ -3010,17 +3024,17 @@
 		fRef = 40FE062912B66BB5007FAECC /* THCUITextViewWithElementTest.m */;
 		name = "THCTextViewWithElementTest.m: 24";
 		rLen = 0;
-		rLoc = 588;
+		rLoc = 367;
 		rType = 0;
 		vrLen = 482;
 		vrLoc = 446;
 	};
 	40FE09B312B792C5007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabelWithElement.h */;
+		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabel.h */;
 		name = "THCLabelWithElement.h: 28";
 		rLen = 0;
-		rLoc = 879;
+		rLoc = 846;
 		rType = 0;
 		vrLen = 515;
 		vrLoc = 344;
@@ -3057,10 +3071,10 @@
 	};
 	40FE09B912B79403007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabelWithElement.h */;
+		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabel.h */;
 		name = "THCLabelWithElement.h: 21";
 		rLen = 0;
-		rLoc = 396;
+		rLoc = 385;
 		rType = 0;
 		vrLen = 515;
 		vrLoc = 344;
@@ -3168,7 +3182,7 @@
 		fRef = 40FE062912B66BB5007FAECC /* THCUITextViewWithElementTest.m */;
 		name = "THCTextViewWithElementTest.m: 33";
 		rLen = 17;
-		rLoc = 768;
+		rLoc = 735;
 		rType = 0;
 		vrLen = 446;
 		vrLoc = 403;
@@ -3278,7 +3292,7 @@
 		fRef = 40FE062912B66BB5007FAECC /* THCUITextViewWithElementTest.m */;
 		name = "THCTextViewWithElementTest.m: 33";
 		rLen = 17;
-		rLoc = 768;
+		rLoc = 735;
 		rType = 0;
 		vrLen = 446;
 		vrLoc = 403;
@@ -3308,27 +3322,27 @@
 		fRef = 40023D7312B6583C000870CD /* THCUILabelWithElementTest.m */;
 		name = "THCLabelWithElementTest.m: 46";
 		rLen = 0;
-		rLoc = 1079;
+		rLoc = 1046;
 		rType = 0;
 		vrLen = 931;
 		vrLoc = 0;
 	};
 	40FE09DF12B796E1007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabelWithElement.h */;
+		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabel.h */;
 		name = "THCLabelWithElement.h: 21";
 		rLen = 0;
-		rLoc = 396;
+		rLoc = 385;
 		rType = 0;
 		vrLen = 859;
 		vrLoc = 0;
 	};
 	40FE09E012B796E1007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918801291A2BF00BFCA83 /* THCUILabelWithElement.m */;
+		fRef = 40A918801291A2BF00BFCA83 /* THCUILabel.m */;
 		name = "THCLabelWithElement.m: 101";
 		rLen = 1231;
-		rLoc = 3095;
+		rLoc = 2985;
 		rType = 0;
 		vrLen = 2894;
 		vrLoc = 1477;
@@ -3555,20 +3569,20 @@
 	};
 	40FE0A0312B79958007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabelWithElement.h */;
+		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabel.h */;
 		name = "THCLabelWithElement.h: 21";
 		rLen = 0;
-		rLoc = 396;
+		rLoc = 385;
 		rType = 0;
 		vrLen = 859;
 		vrLoc = 0;
 	};
 	40FE0A0412B79958007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabelWithElement.h */;
+		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabel.h */;
 		name = "THCLabelWithElement.h: 21";
 		rLen = 0;
-		rLoc = 396;
+		rLoc = 385;
 		rType = 0;
 		vrLen = 859;
 		vrLoc = 0;
@@ -3585,10 +3599,10 @@
 	};
 	40FE0A0812B79999007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabelWithElement.h */;
+		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabel.h */;
 		name = "THCLabelWithElement.h: 21";
 		rLen = 0;
-		rLoc = 396;
+		rLoc = 385;
 		rType = 0;
 		vrLen = 859;
 		vrLoc = 0;
@@ -3749,7 +3763,7 @@
 		fRef = 40023D7312B6583C000870CD /* THCUILabelWithElementTest.m */;
 		name = "THCLabelWithElementTest.m: 46";
 		rLen = 0;
-		rLoc = 1079;
+		rLoc = 1046;
 		rType = 0;
 		vrLen = 0;
 		vrLoc = 0;
@@ -3769,7 +3783,7 @@
 		fRef = 40023D7312B6583C000870CD /* THCUILabelWithElementTest.m */;
 		name = "THCLabelWithElementTest.m: 46";
 		rLen = 0;
-		rLoc = 1079;
+		rLoc = 1046;
 		rType = 0;
 		vrLen = 0;
 		vrLoc = 0;
@@ -3789,7 +3803,7 @@
 		fRef = 40023D7312B6583C000870CD /* THCUILabelWithElementTest.m */;
 		name = "THCLabelWithElementTest.m: 46";
 		rLen = 0;
-		rLoc = 1079;
+		rLoc = 1046;
 		rType = 0;
 		vrLen = 0;
 		vrLoc = 0;
@@ -3806,17 +3820,17 @@
 	};
 	40FE0A5A12B79DFB007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabelWithElement.h */;
+		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabel.h */;
 		name = "THCLabelWithElement.h: 21";
 		rLen = 0;
-		rLoc = 396;
+		rLoc = 385;
 		rType = 0;
 		vrLen = 859;
 		vrLoc = 0;
 	};
 	40FE0A5B12B79DFB007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918801291A2BF00BFCA83 /* THCUILabelWithElement.m */;
+		fRef = 40A918801291A2BF00BFCA83 /* THCUILabel.m */;
 		name = "THCLabelWithElement.m: 41";
 		rLen = 0;
 		rLoc = 143;
@@ -3889,7 +3903,7 @@
 		fRef = 40023D7312B6583C000870CD /* THCUILabelWithElementTest.m */;
 		name = "THCLabelWithElementTest.m: 46";
 		rLen = 0;
-		rLoc = 1079;
+		rLoc = 1046;
 		rType = 0;
 		vrLen = 0;
 		vrLoc = 0;
@@ -3926,10 +3940,10 @@
 	};
 	40FE0A7112B79EEB007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918801291A2BF00BFCA83 /* THCUILabelWithElement.m */;
+		fRef = 40A918801291A2BF00BFCA83 /* THCUILabel.m */;
 		name = "THCLabelWithElement.m: 127";
 		rLen = 0;
-		rLoc = 3714;
+		rLoc = 3604;
 		rType = 0;
 		vrLen = 842;
 		vrLoc = 3353;
@@ -4323,9 +4337,9 @@
 	};
 	40FE0B7912B7B5CD007FAECC /* THCUIComponentsFactoryTest.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {850, 1170}}";
-			sepNavSelRange = "{0, 2}";
-			sepNavVisRange = "{0, 881}";
+			sepNavIntBoundsRect = "{{0, 0}, {850, 1209}}";
+			sepNavSelRange = "{273, 0}";
+			sepNavVisRange = "{32, 896}";
 		};
 	};
 	40FE0B7D12B7B629007FAECC /* PBXTextBookmark */ = {
@@ -4350,10 +4364,10 @@
 	};
 	40FE0B7F12B7B629007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabelWithElement.h */;
+		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabel.h */;
 		name = "THCLabelWithElement.h: 16";
 		rLen = 0;
-		rLoc = 337;
+		rLoc = 326;
 		rType = 0;
 		vrLen = 907;
 		vrLoc = 0;
@@ -4363,7 +4377,7 @@
 		fRef = 40023D7312B6583C000870CD /* THCUILabelWithElementTest.m */;
 		name = "THCLabelWithElementTest.m: 42";
 		rLen = 93;
-		rLoc = 938;
+		rLoc = 905;
 		rType = 0;
 		vrLen = 809;
 		vrLoc = 257;
@@ -4381,7 +4395,7 @@
 	};
 	40FE0B8212B7B629007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918801291A2BF00BFCA83 /* THCUILabelWithElement.m */;
+		fRef = 40A918801291A2BF00BFCA83 /* THCUILabel.m */;
 		name = "THCLabelWithElement.m: 42";
 		rLen = 0;
 		rLoc = 143;
@@ -4736,10 +4750,10 @@
 	};
 	40FE0BEE12B7C179007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918801291A2BF00BFCA83 /* THCUILabelWithElement.m */;
+		fRef = 40A918801291A2BF00BFCA83 /* THCUILabel.m */;
 		name = "THCLabelWithElement.m: 90";
 		rLen = 0;
-		rLoc = 259;
+		rLoc = 150;
 		rType = 0;
 		vrLen = 1214;
 		vrLoc = 2209;
@@ -4768,7 +4782,7 @@
 		fRef = 40FE0B8912B7B844007FAECC /* THCUIComponentsFactory.m */;
 		name = "THCUIComponentsFactory.m: 42";
 		rLen = 0;
-		rLoc = 1480;
+		rLoc = 1436;
 		rType = 0;
 		vrLen = 1192;
 		vrLoc = 138;
@@ -4785,7 +4799,7 @@
 	};
 	40FE0C0B12B7C34B007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918A31291A52C00BFCA83 /* THCUITextViewWithElement.m */;
+		fRef = 40A918A31291A52C00BFCA83 /* THCUITextView.m */;
 		name = "THCTextViewWithElement.m: 38";
 		rLen = 0;
 		rLoc = 150;
@@ -4805,10 +4819,10 @@
 	};
 	40FE0C0D12B7C34B007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918801291A2BF00BFCA83 /* THCUILabelWithElement.m */;
+		fRef = 40A918801291A2BF00BFCA83 /* THCUILabel.m */;
 		name = "THCLabelWithElement.m: 92";
 		rLen = 0;
-		rLoc = 2988;
+		rLoc = 2878;
 		rType = 0;
 		vrLen = 1214;
 		vrLoc = 2209;
@@ -4828,7 +4842,7 @@
 		fRef = 40FE0B7912B7B5CD007FAECC /* THCUIComponentsFactoryTest.m */;
 		name = "THCUIComponentsFactoryTest.m: 77";
 		rLen = 12;
-		rLoc = 2482;
+		rLoc = 2438;
 		rType = 0;
 		vrLen = 1238;
 		vrLoc = 1471;
@@ -4845,7 +4859,7 @@
 		fRef = 40FE0B8912B7B844007FAECC /* THCUIComponentsFactory.m */;
 		name = "THCUIComponentsFactory.m: 30";
 		rLen = 0;
-		rLoc = 219;
+		rLoc = 192;
 		rType = 0;
 		vrLen = 1161;
 		vrLoc = 266;
@@ -4865,7 +4879,7 @@
 		fRef = 40FE0B8912B7B844007FAECC /* THCUIComponentsFactory.m */;
 		name = "THCUIComponentsFactory.m: 30";
 		rLen = 0;
-		rLoc = 219;
+		rLoc = 192;
 		rType = 0;
 		vrLen = 1161;
 		vrLoc = 266;
@@ -4875,7 +4889,7 @@
 		fRef = 40FE0B7912B7B5CD007FAECC /* THCUIComponentsFactoryTest.m */;
 		name = "THCUIComponentsFactoryTest.m: 77";
 		rLen = 12;
-		rLoc = 2482;
+		rLoc = 2438;
 		rType = 0;
 		vrLen = 1238;
 		vrLoc = 1471;
@@ -4895,7 +4909,7 @@
 		fRef = 40FE062912B66BB5007FAECC /* THCUITextViewWithElementTest.m */;
 		name = "THCUITextViewWithElementTest.m: 45";
 		rLen = 0;
-		rLoc = 1123;
+		rLoc = 1090;
 		rType = 0;
 		vrLen = 748;
 		vrLoc = 228;
@@ -4912,17 +4926,17 @@
 	};
 	40FE0C1A12B7C3C7007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabelWithElement.h */;
+		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabel.h */;
 		name = "THCUILabelWithElement.h: 33";
 		rLen = 0;
-		rLoc = 901;
+		rLoc = 868;
 		rType = 0;
 		vrLen = 911;
 		vrLoc = 0;
 	};
 	40FE0C1B12B7C3C7007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918A31291A52C00BFCA83 /* THCUITextViewWithElement.m */;
+		fRef = 40A918A31291A52C00BFCA83 /* THCUITextView.m */;
 		name = "THCTextViewWithElement.m: 38";
 		rLen = 0;
 		rLoc = 150;
@@ -4932,7 +4946,7 @@
 	};
 	40FE0C1C12B7C3C7007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918A21291A52C00BFCA83 /* THCUITextViewWithElement.h */;
+		fRef = 40A918A21291A52C00BFCA83 /* THCUITextView.h */;
 		name = "THCTextViewWithElement.h: 10";
 		rLen = 0;
 		rLoc = 197;
@@ -4942,7 +4956,7 @@
 	};
 	40FE0C1D12B7C3C7007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918A21291A52C00BFCA83 /* THCUITextViewWithElement.h */;
+		fRef = 40A918A21291A52C00BFCA83 /* THCUITextView.h */;
 		name = "THCTextViewWithElement.h: 17";
 		rLen = 0;
 		rLoc = 430;
@@ -4962,10 +4976,10 @@
 	};
 	40FE0C2612B7C3DB007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918A21291A52C00BFCA83 /* THCUITextViewWithElement.h */;
+		fRef = 40A918A21291A52C00BFCA83 /* THCUITextView.h */;
 		name = "THCUITextViewWithElement.h: 28";
 		rLen = 0;
-		rLoc = 742;
+		rLoc = 720;
 		rType = 0;
 		vrLen = 703;
 		vrLoc = 0;
@@ -4982,10 +4996,10 @@
 	};
 	40FE0C2C12B7C51A007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918A21291A52C00BFCA83 /* THCUITextViewWithElement.h */;
+		fRef = 40A918A21291A52C00BFCA83 /* THCUITextView.h */;
 		name = "THCUITextViewWithElement.h: 23";
 		rLen = 0;
-		rLoc = 594;
+		rLoc = 572;
 		rType = 0;
 		vrLen = 703;
 		vrLoc = 0;
@@ -4995,7 +5009,7 @@
 		fRef = 40FE0B7912B7B5CD007FAECC /* THCUIComponentsFactoryTest.m */;
 		name = "THCUIComponentsFactoryTest.m: 77";
 		rLen = 12;
-		rLoc = 2482;
+		rLoc = 2438;
 		rType = 0;
 		vrLen = 1236;
 		vrLoc = 1474;
@@ -5005,7 +5019,7 @@
 		fRef = 40FE0B7912B7B5CD007FAECC /* THCUIComponentsFactoryTest.m */;
 		name = "THCUIComponentsFactoryTest.m: 46";
 		rLen = 0;
-		rLoc = 278;
+		rLoc = 293;
 		rType = 0;
 		vrLen = 1573;
 		vrLoc = 1056;
@@ -5025,7 +5039,7 @@
 		fRef = 40FE0B7912B7B5CD007FAECC /* THCUIComponentsFactoryTest.m */;
 		name = "THCUIComponentsFactoryTest.m: 57";
 		rLen = 0;
-		rLoc = 278;
+		rLoc = 293;
 		rType = 0;
 		vrLen = 1341;
 		vrLoc = 1324;
@@ -5042,7 +5056,7 @@
 		fRef = 40FE0B8912B7B844007FAECC /* THCUIComponentsFactory.m */;
 		name = "THCUIComponentsFactory.m: 29";
 		rLen = 0;
-		rLoc = 262;
+		rLoc = 192;
 		rType = 0;
 		vrLen = 1222;
 		vrLoc = 207;
@@ -5062,7 +5076,7 @@
 		fRef = 40FE0B8912B7B844007FAECC /* THCUIComponentsFactory.m */;
 		name = "THCUIComponentsFactory.m: 32";
 		rLen = 0;
-		rLoc = 262;
+		rLoc = 192;
 		rType = 0;
 		vrLen = 1297;
 		vrLoc = 270;
@@ -5082,7 +5096,7 @@
 		fRef = 40FE0B8912B7B844007FAECC /* THCUIComponentsFactory.m */;
 		name = "THCUIComponentsFactory.m: 32";
 		rLen = 0;
-		rLoc = 262;
+		rLoc = 192;
 		rType = 0;
 		vrLen = 1297;
 		vrLoc = 270;
@@ -5102,7 +5116,7 @@
 		fRef = 40FE0B8912B7B844007FAECC /* THCUIComponentsFactory.m */;
 		name = "THCUIComponentsFactory.m: 29";
 		rLen = 0;
-		rLoc = 262;
+		rLoc = 192;
 		rType = 0;
 		vrLen = 1221;
 		vrLoc = 207;
@@ -5122,7 +5136,7 @@
 		fRef = 40FE0B8912B7B844007FAECC /* THCUIComponentsFactory.m */;
 		name = "THCUIComponentsFactory.m: 29";
 		rLen = 0;
-		rLoc = 262;
+		rLoc = 192;
 		rType = 0;
 		vrLen = 1221;
 		vrLoc = 207;
@@ -5142,7 +5156,7 @@
 		fRef = 40FE0B8912B7B844007FAECC /* THCUIComponentsFactory.m */;
 		name = "THCUIComponentsFactory.m: 28";
 		rLen = 0;
-		rLoc = 262;
+		rLoc = 192;
 		rType = 0;
 		vrLen = 1221;
 		vrLoc = 207;
@@ -5152,7 +5166,7 @@
 		fRef = 40FE0B7912B7B5CD007FAECC /* THCUIComponentsFactoryTest.m */;
 		name = "THCUIComponentsFactoryTest.m: 65";
 		rLen = 0;
-		rLoc = 2335;
+		rLoc = 2291;
 		rType = 0;
 		vrLen = 1504;
 		vrLoc = 1023;
@@ -5182,27 +5196,27 @@
 		fRef = 40023D7312B6583C000870CD /* THCUILabelWithElementTest.m */;
 		name = "THCUILabelWithElementTest.m: 42";
 		rLen = 0;
-		rLoc = 965;
+		rLoc = 932;
 		rType = 0;
 		vrLen = 718;
 		vrLoc = 353;
 	};
 	40FE0C6112B7C9BC007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabelWithElement.h */;
+		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabel.h */;
 		name = "THCUILabelWithElement.h: 33";
 		rLen = 0;
-		rLoc = 901;
+		rLoc = 868;
 		rType = 0;
 		vrLen = 913;
 		vrLoc = 0;
 	};
 	40FE0C6212B7C9BC007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918801291A2BF00BFCA83 /* THCUILabelWithElement.m */;
+		fRef = 40A918801291A2BF00BFCA83 /* THCUILabel.m */;
 		name = "THCUILabelWithElement.m: 15";
 		rLen = 0;
-		rLoc = 259;
+		rLoc = 150;
 		rType = 0;
 		vrLen = 838;
 		vrLoc = 0;
@@ -5242,24 +5256,24 @@
 		fRef = 40FE062912B66BB5007FAECC /* THCUITextViewWithElementTest.m */;
 		name = "THCUITextViewWithElementTest.m: 25";
 		rLen = 17;
-		rLoc = 599;
+		rLoc = 566;
 		rType = 0;
 		vrLen = 774;
 		vrLoc = 337;
 	};
 	40FE0C6712B7C9BC007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918A31291A52C00BFCA83 /* THCUITextViewWithElement.m */;
+		fRef = 40A918A31291A52C00BFCA83 /* THCUITextView.m */;
 		rLen = 1;
 		rLoc = 38;
 		rType = 1;
 	};
 	40FE0C6812B7C9BC007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918A31291A52C00BFCA83 /* THCUITextViewWithElement.m */;
+		fRef = 40A918A31291A52C00BFCA83 /* THCUITextView.m */;
 		name = "THCUITextViewWithElement.m: 41";
 		rLen = 0;
-		rLoc = 1279;
+		rLoc = 1224;
 		rType = 0;
 		vrLen = 1130;
 		vrLoc = 481;
@@ -5276,10 +5290,10 @@
 	};
 	40FE0C6C12B7C9CA007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918A31291A52C00BFCA83 /* THCUITextViewWithElement.m */;
+		fRef = 40A918A31291A52C00BFCA83 /* THCUITextView.m */;
 		name = "THCUITextViewWithElement.m: 41";
 		rLen = 0;
-		rLoc = 1279;
+		rLoc = 1224;
 		rType = 0;
 		vrLen = 1153;
 		vrLoc = 670;
@@ -5296,17 +5310,17 @@
 	};
 	40FE0C9012B7F4DA007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918A31291A52C00BFCA83 /* THCUITextViewWithElement.m */;
+		fRef = 40A918A31291A52C00BFCA83 /* THCUITextView.m */;
 		name = "THCUITextViewWithElement.m: 14";
-		rLen = 30;
-		rLoc = 252;
+		rLen = 0;
+		rLoc = 160;
 		rType = 0;
 		vrLen = 909;
 		vrLoc = 0;
 	};
 	40FE0C9112B7F4DA007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918A21291A52C00BFCA83 /* THCUITextViewWithElement.h */;
+		fRef = 40A918A21291A52C00BFCA83 /* THCUITextView.h */;
 		name = "THCUITextViewWithElement.h: 13";
 		rLen = 0;
 		rLoc = 244;
@@ -5326,10 +5340,10 @@
 	};
 	40FE0C9312B7F4DA007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918801291A2BF00BFCA83 /* THCUILabelWithElement.m */;
+		fRef = 40A918801291A2BF00BFCA83 /* THCUILabel.m */;
 		name = "THCUILabelWithElement.m: 18";
 		rLen = 0;
-		rLoc = 259;
+		rLoc = 150;
 		rType = 0;
 		vrLen = 838;
 		vrLoc = 0;
@@ -5339,17 +5353,17 @@
 		fRef = 40FE0B8912B7B844007FAECC /* THCUIComponentsFactory.m */;
 		name = "THCUIComponentsFactory.m: 29";
 		rLen = 0;
-		rLoc = 262;
+		rLoc = 192;
 		rType = 0;
 		vrLen = 1262;
 		vrLoc = 83;
 	};
 	40FE0C9512B7F4DA007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabelWithElement.h */;
+		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabel.h */;
 		name = "THCUILabelWithElement.h: 15";
 		rLen = 0;
-		rLoc = 328;
+		rLoc = 317;
 		rType = 0;
 		vrLen = 912;
 		vrLoc = 0;
@@ -5359,7 +5373,7 @@
 		fRef = 40FE0B7912B7B5CD007FAECC /* THCUIComponentsFactoryTest.m */;
 		name = "THCUIComponentsFactoryTest.m: 65";
 		rLen = 0;
-		rLoc = 2335;
+		rLoc = 2291;
 		rType = 0;
 		vrLen = 885;
 		vrLoc = 0;
@@ -5369,7 +5383,7 @@
 		fRef = 40FE062912B66BB5007FAECC /* THCUITextViewWithElementTest.m */;
 		name = "THCUITextViewWithElementTest.m: 42";
 		rLen = 13;
-		rLoc = 1019;
+		rLoc = 986;
 		rType = 0;
 		vrLen = 751;
 		vrLoc = 364;
@@ -5468,7 +5482,7 @@
 		isa = PBXTextBookmark;
 		fRef = 40FE0B8912B7B844007FAECC /* THCUIComponentsFactory.m */;
 		name = "THCUIComponentsFactory.m: 10";
-		rLen = 21;
+		rLen = 10;
 		rLoc = 182;
 		rType = 0;
 		vrLen = 1068;
@@ -5476,17 +5490,17 @@
 	};
 	40FE0CB312B7F509007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918801291A2BF00BFCA83 /* THCUILabelWithElement.m */;
+		fRef = 40A918801291A2BF00BFCA83 /* THCUILabel.m */;
 		rLen = 1;
 		rLoc = 17;
 		rType = 1;
 	};
 	40FE0CB412B7F509007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918801291A2BF00BFCA83 /* THCUILabelWithElement.m */;
+		fRef = 40A918801291A2BF00BFCA83 /* THCUILabel.m */;
 		name = "THCUILabelWithElement.m: 15";
 		rLen = 0;
-		rLoc = 259;
+		rLoc = 150;
 		rType = 0;
 		vrLen = 838;
 		vrLoc = 0;
@@ -5503,20 +5517,20 @@
 	};
 	40FE0CBB12B7F51E007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918801291A2BF00BFCA83 /* THCUILabelWithElement.m */;
+		fRef = 40A918801291A2BF00BFCA83 /* THCUILabel.m */;
 		name = "THCUILabelWithElement.m: 15";
 		rLen = 0;
-		rLoc = 259;
+		rLoc = 150;
 		rType = 0;
 		vrLen = 827;
 		vrLoc = 0;
 	};
 	40FE0CBC12B7F51E007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabelWithElement.h */;
+		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabel.h */;
 		name = "THCUILabelWithElement.h: 15";
 		rLen = 0;
-		rLoc = 328;
+		rLoc = 317;
 		rType = 0;
 		vrLen = 901;
 		vrLoc = 0;
@@ -5583,27 +5597,27 @@
 	};
 	40FE0CC812B7F53E007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918801291A2BF00BFCA83 /* THCUILabelWithElement.m */;
+		fRef = 40A918801291A2BF00BFCA83 /* THCUILabel.m */;
 		name = "THCUILabelWithElement.m: 15";
 		rLen = 0;
-		rLoc = 259;
+		rLoc = 150;
 		rType = 0;
 		vrLen = 827;
 		vrLoc = 0;
 	};
 	40FE0CC912B7F53E007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabelWithElement.h */;
+		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabel.h */;
 		name = "THCUILabelWithElement.h: 15";
 		rLen = 0;
-		rLoc = 328;
+		rLoc = 317;
 		rType = 0;
 		vrLen = 901;
 		vrLoc = 0;
 	};
 	40FE0CCA12B7F53E007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918A21291A52C00BFCA83 /* THCUITextViewWithElement.h */;
+		fRef = 40A918A21291A52C00BFCA83 /* THCUITextView.h */;
 		name = "THCUITextViewWithElement.h: 13";
 		rLen = 0;
 		rLoc = 244;
@@ -5613,20 +5627,20 @@
 	};
 	40FE0CCB12B7F53E007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918A31291A52C00BFCA83 /* THCUITextViewWithElement.m */;
+		fRef = 40A918A31291A52C00BFCA83 /* THCUITextView.m */;
 		name = "THCUITextViewWithElement.m: 14";
 		rLen = 0;
-		rLoc = 260;
+		rLoc = 160;
 		rType = 0;
 		vrLen = 909;
 		vrLoc = 0;
 	};
 	40FE0CCC12B7F53E007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918A31291A52C00BFCA83 /* THCUITextViewWithElement.m */;
+		fRef = 40A918A31291A52C00BFCA83 /* THCUITextView.m */;
 		name = "THCUITextViewWithElement.m: 14";
 		rLen = 0;
-		rLoc = 270;
+		rLoc = 160;
 		rType = 0;
 		vrLen = 909;
 		vrLoc = 0;
@@ -5673,27 +5687,27 @@
 		fRef = 40FE0B8912B7B844007FAECC /* THCUIComponentsFactory.m */;
 		name = "THCUIComponentsFactory.m: 38";
 		rLen = 0;
-		rLoc = 1268;
+		rLoc = 1224;
 		rType = 0;
 		vrLen = 1172;
 		vrLoc = 270;
 	};
 	40FE0CE812B7F685007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918801291A2BF00BFCA83 /* THCUILabelWithElement.m */;
+		fRef = 40A918801291A2BF00BFCA83 /* THCUILabel.m */;
 		name = "THCUILabelWithElement.m: 42";
 		rLen = 0;
-		rLoc = 259;
+		rLoc = 150;
 		rType = 0;
 		vrLen = 1274;
 		vrLoc = 705;
 	};
 	40FE0CE912B7F685007FAECC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 40A918A31291A52C00BFCA83 /* THCUITextViewWithElement.m */;
+		fRef = 40A918A31291A52C00BFCA83 /* THCUITextView.m */;
 		name = "THCUITextViewWithElement.m: 41";
 		rLen = 0;
-		rLoc = 1278;
+		rLoc = 1223;
 		rType = 0;
 		vrLen = 1188;
 		vrLoc = 497;
@@ -5883,7 +5897,7 @@
 		fRef = 40023D7312B6583C000870CD /* THCUILabelWithElementTest.m */;
 		name = "THCUILabelWithElementTest.m: 42";
 		rLen = 0;
-		rLoc = 965;
+		rLoc = 932;
 		rType = 0;
 		vrLen = 812;
 		vrLoc = 259;
@@ -5920,7 +5934,7 @@
 		fRef = 40D01BAA129C7BCC0027E31D /* THCUITodo.m */;
 		name = "THCUITodo.m: 54";
 		rLen = 0;
-		rLoc = 1594;
+		rLoc = 201;
 		rType = 0;
 		vrLen = 1223;
 		vrLoc = 656;
@@ -5939,8 +5953,8 @@
 		isa = PBXTextBookmark;
 		fRef = 40D01BAA129C7BCC0027E31D /* THCUITodo.m */;
 		name = "THCUITodo.m: 27";
-		rLen = 10;
-		rLoc = 565;
+		rLen = 0;
+		rLoc = 201;
 		rType = 0;
 		vrLen = 1216;
 		vrLoc = 379;
@@ -5960,7 +5974,7 @@
 		fRef = 40D01BAA129C7BCC0027E31D /* THCUITodo.m */;
 		name = "THCUITodo.m: 28";
 		rLen = 0;
-		rLoc = 586;
+		rLoc = 201;
 		rType = 0;
 		vrLen = 1216;
 		vrLoc = 379;
@@ -5980,7 +5994,7 @@
 		fRef = 40D01BAA129C7BCC0027E31D /* THCUITodo.m */;
 		name = "THCUITodo.m: 50";
 		rLen = 0;
-		rLoc = 1318;
+		rLoc = 201;
 		rType = 0;
 		vrLen = 1218;
 		vrLoc = 625;
@@ -6019,7 +6033,7 @@
 		fRef = 40FE0B8912B7B844007FAECC /* THCUIComponentsFactory.m */;
 		name = "THCUIComponentsFactory.m: 42";
 		rLen = 0;
-		rLoc = 1480;
+		rLoc = 1436;
 		rType = 0;
 		vrLen = 1186;
 		vrLoc = 266;
@@ -6059,7 +6073,7 @@
 		fRef = 92CFB278128D9DFB005CB1ED /* RootViewController.h */;
 		name = "RootViewController.h: 15";
 		rLen = 0;
-		rLoc = 313;
+		rLoc = 233;
 		rType = 0;
 		vrLen = 1277;
 		vrLoc = 0;
@@ -6079,7 +6093,7 @@
 		fRef = 40FE0B8912B7B844007FAECC /* THCUIComponentsFactory.m */;
 		name = "THCUIComponentsFactory.m: 29";
 		rLen = 0;
-		rLoc = 751;
+		rLoc = 192;
 		rType = 0;
 		vrLen = 1289;
 		vrLoc = 207;
@@ -6088,8 +6102,8 @@
 		isa = PBXTextBookmark;
 		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
 		name = "RootViewController.m: 86";
-		rLen = 65;
-		rLoc = 2494;
+		rLen = 0;
+		rLoc = 281;
 		rType = 0;
 		vrLen = 1081;
 		vrLoc = 2357;
@@ -6099,7 +6113,7 @@
 		fRef = 40FE06C312B6AC09007FAECC /* RootViewControllerTest.m */;
 		name = "RootViewControllerTest.m: 102";
 		rLen = 0;
-		rLoc = 3270;
+		rLoc = 3182;
 		rType = 0;
 		vrLen = 1334;
 		vrLoc = 2807;
@@ -6109,7 +6123,7 @@
 		fRef = 40FE06C312B6AC09007FAECC /* RootViewControllerTest.m */;
 		name = "RootViewControllerTest.m: 105";
 		rLen = 0;
-		rLoc = 3270;
+		rLoc = 3182;
 		rType = 0;
 		vrLen = 1285;
 		vrLoc = 2807;
@@ -6129,7 +6143,7 @@
 		fRef = 40FE06C312B6AC09007FAECC /* RootViewControllerTest.m */;
 		name = "RootViewControllerTest.m: 105";
 		rLen = 0;
-		rLoc = 3270;
+		rLoc = 3182;
 		rType = 0;
 		vrLen = 1304;
 		vrLoc = 2807;
@@ -6168,10 +6182,150 @@
 		fRef = 40FE06C312B6AC09007FAECC /* RootViewControllerTest.m */;
 		name = "RootViewControllerTest.m: 154";
 		rLen = 0;
-		rLoc = 5183;
+		rLoc = 5095;
 		rType = 0;
 		vrLen = 1225;
 		vrLoc = 4390;
+	};
+	40FE0DD512B8299C007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40C219901291796900559770 /* Element.h */;
+		name = "Element.h: 14";
+		rLen = 0;
+		rLoc = 293;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
+	};
+	40FE0DD612B8299C007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40FE06C312B6AC09007FAECC /* RootViewControllerTest.m */;
+		name = "RootViewControllerTest.m: 154";
+		rLen = 0;
+		rLoc = 5095;
+		rType = 0;
+		vrLen = 1225;
+		vrLoc = 4390;
+	};
+	40FE0DD712B8299C007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40A9187F1291A2BF00BFCA83 /* THCUILabel.h */;
+		name = "THCUILabel.h: 32";
+		rLen = 0;
+		rLoc = 868;
+		rType = 0;
+		vrLen = 879;
+		vrLoc = 0;
+	};
+	40FE0DD812B8299C007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40023D7312B6583C000870CD /* THCUILabelWithElementTest.m */;
+		name = "THCUILabelWithElementTest.m: 16";
+		rLen = 0;
+		rLoc = 358;
+		rType = 0;
+		vrLen = 748;
+		vrLoc = 0;
+	};
+	40FE0DD912B8299C007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40FE0B7912B7B5CD007FAECC /* THCUIComponentsFactoryTest.m */;
+		name = "THCUIComponentsFactoryTest.m: 12";
+		rLen = 0;
+		rLoc = 245;
+		rType = 0;
+		vrLen = 870;
+		vrLoc = 0;
+	};
+	40FE0DDA12B8299C007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40A918A31291A52C00BFCA83 /* THCUITextView.m */;
+		name = "THCUITextViewWithElement.m: 41";
+		rLen = 0;
+		rLoc = 1223;
+		rType = 0;
+		vrLen = 1152;
+		vrLoc = 533;
+	};
+	40FE0DDB12B8299C007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40A918A21291A52C00BFCA83 /* THCUITextView.h */;
+		name = "THCUITextViewWithElement.h: 18";
+		rLen = 0;
+		rLoc = 435;
+		rType = 0;
+		vrLen = 742;
+		vrLoc = 0;
+	};
+	40FE0DDC12B8299C007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40A918A21291A52C00BFCA83 /* THCUITextView.h */;
+		name = "THCUITextViewWithElement.h: 18";
+		rLen = 0;
+		rLoc = 438;
+		rType = 0;
+		vrLen = 742;
+		vrLoc = 0;
+	};
+	40FE0DEA12B829DF007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40C219901291796900559770 /* Element.h */;
+		name = "Element.h: 14";
+		rLen = 0;
+		rLoc = 293;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
+	};
+	40FE0DEB12B829DF007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40A918A21291A52C00BFCA83 /* THCUITextView.h */;
+		name = "THCUITextView.h: 18";
+		rLen = 0;
+		rLoc = 433;
+		rType = 0;
+		vrLen = 720;
+		vrLoc = 0;
+	};
+	40FE0DEC12B829DF007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40FE062912B66BB5007FAECC /* THCUITextViewWithElementTest.m */;
+		name = "THCUITextViewWithElementTest.m: 11";
+		rLen = 0;
+		rLoc = 215;
+		rType = 0;
+		vrLen = 784;
+		vrLoc = 0;
+	};
+	40FE0DED12B829DF007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40A918A31291A52C00BFCA83 /* THCUITextView.m */;
+		name = "THCUITextView.m: 20";
+		rLen = 30;
+		rLoc = 421;
+		rType = 0;
+		vrLen = 862;
+		vrLoc = 32;
+	};
+	40FE0DEE12B829DF007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40FE0B7912B7B5CD007FAECC /* THCUIComponentsFactoryTest.m */;
+		name = "THCUIComponentsFactoryTest.m: 54";
+		rLen = 13;
+		rLoc = 1672;
+		rType = 0;
+		vrLen = 1242;
+		vrLoc = 1409;
+	};
+	40FE0DEF12B829DF007FAECC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 40FE0B7912B7B5CD007FAECC /* THCUIComponentsFactoryTest.m */;
+		name = "THCUIComponentsFactoryTest.m: 13";
+		rLen = 0;
+		rLoc = 273;
+		rType = 0;
+		vrLen = 896;
+		vrLoc = 32;
 	};
 	8D1107310486CEB800E47090 /* thc_ipad-Info.plist */ = {
 		uiCtxt = {

@@ -9,9 +9,9 @@
 #import <OCMock/OCMock.h>
 #import "GTMSenTestCase.h"
 #import "THCUIComponentAbstract.h"
-#import "THCUILabelWithElement.h"
+#import "THCUILabel.h"
+#import "THCUITextView.h"
 #import "THCUITodo.h"
-#import "THCUITextViewWithElement.h"
 #import "THCUIImage.h"
 #import "THCUIComponentsFactory.h"
 #import "THCUIComponentsTestUtils.h"
@@ -44,7 +44,7 @@
 - (void)testCreationOfLabel {
 	mockElement.type = kTypeLabelForTests;
 	id<THCUIComponentWithElementProtocol> component = [factory addComponentToView:fakeView withElement:mockElement];
-	STAssertTrue([component isMemberOfClass:[THCUILabelWithElement class]], @"should return THCLabelWithElement component");
+	STAssertTrue([component isMemberOfClass:[THCUILabel class]], @"should return THCLabelWithElement component");
 	
 	
 }
@@ -52,7 +52,7 @@
 - (void)testCreationOfTextView {
 	mockElement.type = kTypeTextViewForTests;
 	id<THCUIComponentWithElementProtocol> component = [factory addComponentToView:fakeView withElement:mockElement];
-	STAssertTrue([component isMemberOfClass:[THCUITextViewWithElement class]], @"should return THCTextViewWithElement component");
+	STAssertTrue([component isMemberOfClass:[THCUITextView class]], @"should return THCTextViewWithElement component");
 }
 
 - (void)testCreationOfTodo {

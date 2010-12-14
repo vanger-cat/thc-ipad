@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "THCScrollView.h"
 #import "Element.h"
-#import "THCUITextViewWithElement.h"
+#import "THCUITextView.h"
 #import "DropboxController.h"
 #import "THCUIComponentsFactory.h"
 
@@ -17,12 +17,12 @@
 	NSMutableArray *textNotes;
 	THCScrollView *scrollView;
 	DropboxController *dropboxController;
-	THCUITextViewWithElement *currentTextViewWithElement;
+	THCUITextView *currentTextViewWithElement;
 	THCUIComponentsFactory *componentsFactory;
 }
 
 @property (nonatomic, retain) IBOutlet THCScrollView *scrollView;
-@property (nonatomic, retain) THCUITextViewWithElement *currentTextViewWithElement;
+@property (nonatomic, retain) THCUITextView *currentTextViewWithElement;
 @property (nonatomic, retain) DropboxController *dropboxController;
 @property (nonatomic, retain) THCUIComponentsFactory *componentsFactory;
 
@@ -31,6 +31,6 @@
 - (void)createTextViewAtPoint:(CGPoint)pointForTextView atView:(UIView *)view withElement:(id<ElementInterface>)element;
 - (IBAction)showDropboxLoginController:(id)sender;
 
-- (void)createLabelInPlaceOfTextView:(THCUITextViewWithElement *)textViewWithElement;
+- (void)createLabelInPlaceOfTextView:(THCUITextView *)textViewWithElement;
 
 @end

@@ -9,8 +9,8 @@
 #import "GTMSenTestCase.h"
 #import "ElementMock.h"
 #import "RootViewController.h"
-#import "THCUITextViewWithElement.h"
-#import "THCUILabelWithElement.h"
+#import "THCUITextView.h"
+#import "THCUILabel.h"
 #import "THCUIImage.h"
 #import "THCUITodo.h"
 #import "THCUIComponentsTestUtils.h"
@@ -49,7 +49,7 @@
 - (void)testCreationOfTextViewForNewElement {
 	[rootViewController createTextViewAtPoint:fakePoint atView:fakeView withElement:fakeElement];
 
-	THCUITextViewWithElement *textViewWithElement = (THCUITextViewWithElement *) [fakeView.subviews objectAtIndex:0];
+	THCUITextView *textViewWithElement = (THCUITextView *) [fakeView.subviews objectAtIndex:0];
 	
 	[self assertUIComponent:textViewWithElement 
 					   hasX:[THCScrollView getCellCoordinateFromCoordinate:kFakeX]
@@ -60,12 +60,12 @@
 }
 
 - (void)testCreationOfLabelInPlaceOfTextViewWithNoElement {
-	THCUITextViewWithElement *textViewWithElement = [THCUITextViewWithElement addTextViewToView:fakeView 
+	THCUITextView *textViewWithElement = [THCUITextView addTextViewToView:fakeView 
 																				withElement:fakeElement 
 																			   withDelegate:NULL];
 	[rootViewController createLabelInPlaceOfTextView:textViewWithElement];
 	
-	THCUILabelWithElement *label = (THCUILabelWithElement *)[fakeView.subviews objectAtIndex:0];
+	THCUILabel *label = (THCUILabel *)[fakeView.subviews objectAtIndex:0];
 	[self assertUIComponent:label 
 					   hasX:textViewWithElement.x 
 					   hasY:textViewWithElement.y 

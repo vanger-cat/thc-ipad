@@ -8,7 +8,7 @@
 
 #import "THCUITodo.h"
 #import "THCUIComponentsUtils.h"
-#import "THCUILabelWithElement.h"
+#import "THCUILabel.h"
 
 NSString * const kTypeTodo = @"todo";
 
@@ -78,7 +78,7 @@ NSString * const kTypeTodo = @"todo";
 	if (gesture.state == UIGestureRecognizerStateRecognized) {
 		THCUITodo *todo = (THCUITodo *)gesture.view;
 		
-		[THCUILabelWithElement addLabelToView:todo.superview
+		[THCUILabel addLabelToView:todo.superview
 								withElement:todo.element 
 							   withDelegate:todo.textViewDelegate];
 		

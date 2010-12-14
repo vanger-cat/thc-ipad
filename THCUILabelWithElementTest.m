@@ -7,13 +7,13 @@
 //
 
 #import "GTMSenTestCase.h"
-#import "THCUILabelWithElement.h"
+#import "THCUILabel.h"
 #import "ElementMock.h"
 #import "THCUIComponentsTestUtils.h"
 
 @interface THCUILabelWithElementTest : THCUIComponentsTestUtils {
 	ElementMock *mockElement;
-	THCUILabelWithElement *label;
+	THCUILabel *label;
 }
 @end
 
@@ -22,7 +22,7 @@
 - (void)setUp {
 	mockElement = [THCUIComponentsTestUtils newMockElement];
 	UIView *view = [UIView alloc];
-	label = [THCUILabelWithElement addLabelToView:view
+	label = [THCUILabel addLabelToView:view
 									withElement:mockElement
 								   withDelegate:NULL];
 	[view release];

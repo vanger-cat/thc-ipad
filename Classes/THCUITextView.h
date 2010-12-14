@@ -15,13 +15,13 @@ extern const CGFloat kMinimalTextViewHeight;
 extern const CGFloat kTextAndLabelXDifference;
 extern const CGFloat kTextAndLabelYDifference;
 
-@interface THCUITextViewWithElement : THCUIComponentAbstract {
+@interface THCUITextView : THCUIComponentAbstract {
 	UITextView *textView;
 }
 
 @property (nonatomic,retain) UITextView *textView;
 
-+ (THCUITextViewWithElement *)addTextViewToView:(UIView *)aView withElement:(id<ElementInterface>)element withDelegate:(id<UITextViewDelegate>)delegate;
++ (THCUITextView *)addTextViewToView:(UIView *)aView withElement:(id<ElementInterface>)element withDelegate:(id<UITextViewDelegate>)delegate;
 
 - (void)completeEditing;
 

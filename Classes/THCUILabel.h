@@ -9,13 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "ElementInterface.h"
 #import "THCUIComponentWithElementProtocol.h"
-#import "THCUITextViewWithElement.h"
+#import "THCUITextView.h"
 #import "THCUIComponentAbstract.h"
 
 extern NSString * const kTypeLabel;
 extern const CGFloat kMinimalLabelHeight;
 
-@interface THCUILabelWithElement : THCUIComponentAbstract {
+@interface THCUILabel : THCUIComponentAbstract {
 	id<UITextViewDelegate> textViewDelegate;
 	UILabel *label;
 }
@@ -23,7 +23,7 @@ extern const CGFloat kMinimalLabelHeight;
 @property (nonatomic, retain) id<UITextViewDelegate> textViewDelegate;
 @property (nonatomic, retain) UILabel *label;
 
-+ (THCUILabelWithElement *)addLabelToView:(UIView *)aView withElement:(id<ElementInterface>)newElement withDelegate:(id<UITextViewDelegate>)delegate;
++ (THCUILabel *)addLabelToView:(UIView *)aView withElement:(id<ElementInterface>)newElement withDelegate:(id<UITextViewDelegate>)delegate;
 
 + (UITapGestureRecognizer *)newGestureForConvertingToTextEdit;
 + (UITapGestureRecognizer *)newGestureForConvertingToTODO;

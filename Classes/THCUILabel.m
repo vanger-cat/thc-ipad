@@ -6,7 +6,7 @@
 //  Copyright 2010 Magic Ink. All rights reserved.
 //
 
-#import "THCUILabelWithElement.h"
+#import "THCUILabel.h"
 #import "THCFonts.h"
 #import "THCColors.h"
 #import "THCUIComponentsUtils.h"
@@ -15,7 +15,7 @@
 NSString * const kTypeLabel = @"label";
 const CGFloat kMinimalLabelHeight = 18;
 
-@implementation THCUILabelWithElement
+@implementation THCUILabel
 
 @synthesize textViewDelegate;
 @synthesize label;
@@ -35,8 +35,8 @@ const CGFloat kMinimalLabelHeight = 18;
 	return self;
 }
 
-+ (THCUILabelWithElement *)addLabelToView:(UIView *)aView withElement:(id<ElementInterface>)newElement withDelegate:(id<UITextViewDelegate>)delegate {
-	THCUILabelWithElement *thcLabel = [[THCUILabelWithElement alloc] initWithFrame:CGRectMake([newElement.x intValue], [newElement.y intValue], kTextComponentWidth, 0)];
++ (THCUILabel *)addLabelToView:(UIView *)aView withElement:(id<ElementInterface>)newElement withDelegate:(id<UITextViewDelegate>)delegate {
+	THCUILabel *thcLabel = [[THCUILabel alloc] initWithFrame:CGRectMake([newElement.x intValue], [newElement.y intValue], kTextComponentWidth, 0)];
 	[THCUIComponentsUtils setupLabel:thcLabel.label];
 	
 	newElement.type = kTypeLabel;
@@ -67,9 +67,9 @@ const CGFloat kMinimalLabelHeight = 18;
 
 + (void)convertToTextEdit:(UITapGestureRecognizer *)gesture {
 	if (gesture.state == UIGestureRecognizerStateRecognized) {
-		THCUILabelWithElement *labelWithElement = (THCUILabelWithElement *)gesture.view;
+		THCUILabel *labelWithElement = (THCUILabel *)gesture.view;
 
-		[THCUITextViewWithElement addTextViewToView:labelWithElement.superview 
+		[THCUITextView addTextViewToView:labelWithElement.superview 
 									  withElement:labelWithElement.element 
 									 withDelegate:labelWithElement.textViewDelegate];
 
@@ -86,7 +86,7 @@ const CGFloat kMinimalLabelHeight = 18;
 
 + (void)convertToTODO:(UITapGestureRecognizer *)gesture {
 	if (gesture.state == UIGestureRecognizerStateRecognized) {
-		THCUILabelWithElement *labelWithElement = (THCUILabelWithElement *)gesture.view;
+		THCUILabel *labelWithElement = (THCUILabel *)gesture.view;
 				
 		[THCUITodo addTodoToView:labelWithElement.superview
 						 withElement:labelWithElement.element 

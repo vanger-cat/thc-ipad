@@ -11,7 +11,7 @@
 #import "ElementManager.h"
 #import "THCColors.h"
 #import "THCFonts.h"
-#import "THCUILabelWithElement.h"
+#import "THCUILabel.h"
 #import "THCUIComponentsUtils.h"
 #import "Utils.h"
 #import "DropboxSDK.h"
@@ -110,7 +110,7 @@
 }
 	
 - (void)createTextViewAtPoint:(CGPoint)pointForTextView atView:(UIView *)view withElement:(id<ElementInterface>)element {
-	THCUITextViewWithElement *textViewWithElement = [THCUITextViewWithElement addTextViewToView:view
+	THCUITextView *textViewWithElement = [THCUITextView addTextViewToView:view
 																				withElement:element 
 																			   withDelegate:self];
 	
@@ -135,7 +135,7 @@
 #pragma mark TextViewDelegate
 
 - (BOOL)textViewShouldBeginEditing:(UITextView *)textView {
-	self.currentTextViewWithElement = (THCUITextViewWithElement *) [THCUIComponentsUtils getBasicComponentOf:textView];
+	self.currentTextViewWithElement = (THCUITextView *) [THCUIComponentsUtils getBasicComponentOf:textView];
 	UIGestureRecognizer *gestureToCancelEditing = [self newGestureToCancelEditing];
 	[self.scrollView addGestureRecognizer:gestureToCancelEditing];
 	[gestureToCancelEditing release];
@@ -144,7 +144,7 @@
 }
 
 - (void)textViewDidEndEditing:(UITextView *)textView {
-	THCUITextViewWithElement *textViewWithElement = (THCUITextViewWithElement *) textView.superview;
+	THCUITextView *textViewWithElement = (THCUITextView *) textView.superview;
 	
 	if ([textView hasText]) {
 		[self createLabelInPlaceOfTextView:textViewWithElement];
@@ -153,14 +153,14 @@
 	[textViewWithElement removeFromSuperview];
 }
 
-- (void)createLabelInPlaceOfTextView:(THCUITextViewWithElement *)textViewWithElement {
+- (void)createLabelInPlaceOfTextView:(THCUITextView *)textViewWithElement {
 	CGPoint pointForLabel = CGPointMake(textViewWithElement.x, textViewWithElement.y);
 	
 	[textViewWithElement saveComponentStateToElement];
 	id<ElementInterface> element = textViewWithElement.element;
 	[[ElementManager sharedInstance] save];
 	
-	THCUILabelWithElement *labelWithElement = [THCUILabelWithElement addLabelToView:textViewWithElement.superview
+	THCUILabel *labelWithElement = [THCUILabel addLabelToView:textViewWithElement.superview
 																	withElement:element 
 																   withDelegate:self];
 	
@@ -170,7 +170,7 @@
 }
 
 - (void)textViewDidChange:(UITextView *)textView {
-	THCUITextViewWithElement *textViewWithElement = (THCUITextViewWithElement *) textView.superview;
+	THCUITextView *textViewWithElement = (THCUITextView *) textView.superview;
 	textViewWithElement.text = textView.text;
 }
 

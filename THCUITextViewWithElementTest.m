@@ -8,12 +8,12 @@
 
 #import "GTMSenTestCase.h"
 #import "ElementMock.h"
-#import "THCUITextViewWithElement.h"
+#import "THCUITextView.h"
 #import "THCUIComponentsTestUtils.h"
 
 @interface THCUITextViewWithElementTest : THCUIComponentsTestUtils {
 	ElementMock *mockElement;
-	THCUITextViewWithElement *textView;
+	THCUITextView *textView;
 }
 @end
 
@@ -22,7 +22,7 @@
 - (void)setUp {
 	mockElement = [THCUIComponentsTestUtils newMockElement];
 	UIView *view = [UIView alloc];
-	textView = [THCUITextViewWithElement addTextViewToView:view
+	textView = [THCUITextView addTextViewToView:view
 											 withElement:mockElement 
 											withDelegate:NULL];
 	[view release];
