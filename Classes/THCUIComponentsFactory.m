@@ -25,21 +25,21 @@
 }
 
 //TODO: reimplement this crap!
-- (id<THCUIComponentWithElementProtocol>)addComponentOfType:(NSString *)type toView:(UIView *)view withElement:(id<ElementInterface>)element {
-	if ([type isEqualToString:kTypeLabel])
+- (id<THCUIComponentWithElementProtocol>)addComponentToView:(UIView *)view withElement:(id<ElementInterface>)element {
+	if ([element.type isEqualToString:kTypeLabel])
 		return [THCUILabelWithElement addLabelToView:view withElement:element withDelegate:self.textViewDelegate];
 		 
-	if ([type isEqualToString:kTypeTextView])
+	if ([element.type isEqualToString:kTypeTextView])
 		return [THCUITextViewWithElement addTextViewToView:view withElement:element withDelegate:self.textViewDelegate];
 
-	if ([type isEqualToString:kTypeTodo])
+	if ([element.type isEqualToString:kTypeTodo])
 		return [THCUITodo addTodoToView:view withElement:element withDelegate:self.textViewDelegate];
 
-	if ([type isEqualToString:kTypeImage])
+	if ([element.type isEqualToString:kTypeImage])
 		return [THCUIImage addImageToView:view withElement:element];
 	
 	
-	[NSException raise:@"Invalid argument" format:@"Unknown element type %@", type];
+	[NSException raise:@"Invalid argument" format:@"Unknown element.type '%@'", element.type];
 	return NULL;
 }
 

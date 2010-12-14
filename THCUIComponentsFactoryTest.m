@@ -42,31 +42,36 @@
 }
 
 - (void)testCreationOfLabel {
-	id<THCUIComponentWithElementProtocol> component = [factory addComponentOfType:kTypeLabelForTests toView:fakeView withElement:mockElement];
+	mockElement.type = kTypeLabelForTests;
+	id<THCUIComponentWithElementProtocol> component = [factory addComponentToView:fakeView withElement:mockElement];
 	STAssertTrue([component isMemberOfClass:[THCUILabelWithElement class]], @"should return THCLabelWithElement component");
 	
 	
 }
 
 - (void)testCreationOfTextView {
-	id<THCUIComponentWithElementProtocol> component = [factory addComponentOfType:kTypeTextViewForTests toView:fakeView withElement:mockElement];
+	mockElement.type = kTypeTextViewForTests;
+	id<THCUIComponentWithElementProtocol> component = [factory addComponentToView:fakeView withElement:mockElement];
 	STAssertTrue([component isMemberOfClass:[THCUITextViewWithElement class]], @"should return THCTextViewWithElement component");
 }
 
 - (void)testCreationOfTodo {
-	id<THCUIComponentWithElementProtocol> component = [factory addComponentOfType:kTypeTodoForTests toView:fakeView withElement:mockElement];
+	mockElement.type = kTypeTodoForTests;
+	id<THCUIComponentWithElementProtocol> component = [factory addComponentToView:fakeView withElement:mockElement];
 	STAssertTrue([component isMemberOfClass:[THCUITodo class]], @"should return THCUITodoView component");
 	
 	
 }
 
 - (void)testCreationOfImage {
-	id<THCUIComponentWithElementProtocol> component = [factory addComponentOfType:kTypeImageForTests toView:fakeView withElement:mockElement];
+	mockElement.type = kTypeImageForTests;
+	id<THCUIComponentWithElementProtocol> component = [factory addComponentToView:fakeView withElement:mockElement];
 	STAssertTrue([component isMemberOfClass:[THCUIImage class]], @"should return THCUIImage component");
 }
 
 - (void)testCreationOfUnknownThrowException {
-	STAssertThrows([factory addComponentOfType:@"aaaaaaa!!!" toView:fakeView withElement:mockElement], @"must throw exception, if don't known such type of element");
+	mockElement.type = @"aaaaaaa!!!";
+	STAssertThrows([factory addComponentToView:fakeView withElement:mockElement], @"must throw exception, if don't known such type of element");
 }
 
 - (void)tearDown {

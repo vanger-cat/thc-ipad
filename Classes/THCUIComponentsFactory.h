@@ -19,6 +19,6 @@
 
 @property (nonatomic, retain) id<UITextViewDelegate> textViewDelegate;
 
-- (id<THCUIComponentWithElementProtocol>)addComponentOfType:(NSString *)type toView:(UIView *)view withElement:(id<ElementInterface>)element;
+- (id<THCUIComponentWithElementProtocol>)addComponentToView:(UIView *)view withElement:(id<ElementInterface>)element;
 
 @end
