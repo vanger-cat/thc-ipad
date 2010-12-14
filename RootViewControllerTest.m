@@ -7,11 +7,12 @@
 //
 
 #import "GTMSenTestCase.h"
+#import "ElementMock.h"
 #import "RootViewController.h"
 #import "THCTextViewWithElement.h"
 #import "THCLabelWithElement.h"
 #import "THCUIComponentsTestUtils.h"
-#import "ElementMock.h"
+#import "THCScrollView.h"
 
 
 #import <OCMock/OCMock.h>
@@ -49,8 +50,8 @@
 	THCTextViewWithElement *textViewWithElement = (THCTextViewWithElement *) [fakeView.subviews objectAtIndex:0];
 	
 	[self assertUIComponent:textViewWithElement 
-					   hasX:fakeX 
-					   hasY:fakeY 
+					   hasX:[THCScrollView getCellCoordinateFromCoordinate:fakeX]
+					   hasY:[THCScrollView getCellCoordinateFromCoordinate:fakeY] 
 					hasText:@"" 
 				 isSelected:NO 
 				   contains:fakeElement];

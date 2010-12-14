@@ -31,5 +31,6 @@ extern const CGFloat kSizeOfCell;
 @property (nonatomic, retain) UIView *spaceView;
 
 + (void)changePositionWithAdjustmentByGridOfComponent:(THCUIComponentAbstract *)view toPoint:(CGPoint)point  animated:(BOOL)animated;
++ (CGFloat)getCellCoordinateFromCoordinate:(CGFloat)coordinate;
 
 @end

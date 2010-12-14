@@ -27,20 +27,27 @@ const CGFloat kSizeOfCell = 20;
 	return spaceView;
 }
 
++ (CGFloat)getCellCoordinateFromCoordinate:(CGFloat)coordinate {
+	if ((int)coordinate % (int)kSizeOfCell == 0)
+		return coordinate;
+	
+	return round((coordinate) / kSizeOfCell) * kSizeOfCell;
+}
+
 + (void)changePositionWithAdjustmentByGridOfComponent:(THCUIComponentAbstract *)component toPoint:(CGPoint)point animated:(BOOL)animated {
-		//TODO: uncomment
 	if (animated) {
 		[UIView beginAnimations:@"Move" context:nil];
 		[UIView setAnimationDuration:0.2];
 		[UIView setAnimationBeginsFromCurrentState:YES];
 	}	
 		
-	component.x = round((point.x) / kSizeOfCell) * kSizeOfCell - kBorderWidth;
-	component.y = round((point.y) / kSizeOfCell) * kSizeOfCell - kBorderWidth;
+	NSLog(@"Animating movement from %f,%f to %f,%f", component.x, component.y);
 	
-	component.x = point.x;
-	component.y = point.y;
-	
+	component.x = [self getCellCoordinateFromCoordinate:point.x];
+	component.y = [self getCellCoordinateFromCoordinate:point.y];
+		
+	NSLog(@"to %f,%f", component.x, component.y);
+
 	if (animated) {	
 		[UIView commitAnimations];
 	}

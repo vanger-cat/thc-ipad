@@ -121,8 +121,6 @@
 	self.currentTextViewWithElement = NULL;
 }
 
-
-
 #pragma mark TextViewDelegate
 
 - (BOOL)textViewShouldBeginEditing:(UITextView *)textView {
@@ -157,7 +155,7 @@
 	
 	[THCScrollView changePositionWithAdjustmentByGridOfComponent:labelWithElement 
 														 toPoint:pointForLabel  
-														animated:YES];
+														animated:YES];	
 }
 
 - (void)textViewDidChange:(UITextView *)textView {
