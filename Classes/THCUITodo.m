@@ -6,12 +6,13 @@
 //  Copyright 2010 Magic Ink. All rights reserved.
 //
 
-#import "THCUITodoView.h"
+#import "THCUITodo.h"
 #import "THCUIComponentsUtils.h"
 #import "THCUILabelWithElement.h"
 
+NSString * const kTypeTodo = @"todo";
 
-@implementation THCUITodoView
+@implementation THCUITodo
 
 @synthesize checkbox;
 @synthesize label;
@@ -46,10 +47,11 @@
 	return self;
 }
 
-+ (THCUITodoView *)addTodoToView:(UIView *)aView withElement:(Element *)newElement withDelegate:(id<UITextViewDelegate>)delegate {
-	THCUITodoView *todo = [[THCUITodoView alloc] initWithFrame:CGRectMake(0, 0, kTextComponentWidth, 0)];
++ (THCUITodo *)addTodoToView:(UIView *)aView withElement:(Element *)newElement withDelegate:(id<UITextViewDelegate>)delegate {
+	THCUITodo *todo = [[THCUITodo alloc] initWithFrame:CGRectMake(0, 0, kTextComponentWidth, 0)];
 	[THCUIComponentsUtils setupLabel:todo.label];
 	
+	newElement.type = kTypeTodo;
 	todo.element = newElement;
 	
 	[aView addSubview:todo];
@@ -74,7 +76,7 @@
 
 + (void)convertToLabel:(UITapGestureRecognizer *)gesture {
 	if (gesture.state == UIGestureRecognizerStateRecognized) {
-		THCUITodoView *todo = (THCUITodoView *)gesture.view;
+		THCUITodo *todo = (THCUITodo *)gesture.view;
 		
 		[THCUILabelWithElement addLabelToView:todo.superview
 								withElement:todo.element 

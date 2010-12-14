@@ -10,7 +10,7 @@
 #import "GTMSenTestCase.h"
 #import "THCUIComponentAbstract.h"
 #import "THCUILabelWithElement.h"
-#import "THCUITodoView.h"
+#import "THCUITodo.h"
 #import "THCUITextViewWithElement.h"
 #import "THCUIImage.h"
 #import "THCUIComponentsFactory.h"
@@ -42,27 +42,27 @@
 }
 
 - (void)testCreationOfLabel {
-	id<THCUIComponentWithElementProtocol> component = [factory addComponentOfType:@"label" toView:fakeView withElement:mockElement];
-	STAssertTrue([component isMemberOfClass:[THCUILabelWithElement class]], @"on 'label' should return THCLabelWithElement component");
+	id<THCUIComponentWithElementProtocol> component = [factory addComponentOfType:kTypeLabelForTests toView:fakeView withElement:mockElement];
+	STAssertTrue([component isMemberOfClass:[THCUILabelWithElement class]], @"should return THCLabelWithElement component");
 	
 	
 }
 
 - (void)testCreationOfTextView {
-	id<THCUIComponentWithElementProtocol> component = [factory addComponentOfType:@"textView" toView:fakeView withElement:mockElement];
-	STAssertTrue([component isMemberOfClass:[THCUITextViewWithElement class]], @"on 'todo' should return THCTextViewWithElement component");
+	id<THCUIComponentWithElementProtocol> component = [factory addComponentOfType:kTypeTextViewForTests toView:fakeView withElement:mockElement];
+	STAssertTrue([component isMemberOfClass:[THCUITextViewWithElement class]], @"should return THCTextViewWithElement component");
 }
 
 - (void)testCreationOfTodo {
-	id<THCUIComponentWithElementProtocol> component = [factory addComponentOfType:@"todo" toView:fakeView withElement:mockElement];
-	STAssertTrue([component isMemberOfClass:[THCUITodoView class]], @"on 'todo' should return THCUITodoView component");
+	id<THCUIComponentWithElementProtocol> component = [factory addComponentOfType:kTypeTodoForTests toView:fakeView withElement:mockElement];
+	STAssertTrue([component isMemberOfClass:[THCUITodo class]], @"should return THCUITodoView component");
 	
 	
 }
 
 - (void)testCreationOfImage {
-	id<THCUIComponentWithElementProtocol> component = [factory addComponentOfType:@"image" toView:fakeView withElement:mockElement];
-	STAssertTrue([component isMemberOfClass:[THCUIImage class]], @"on 'todo' should return THCUIImage component");
+	id<THCUIComponentWithElementProtocol> component = [factory addComponentOfType:kTypeImageForTests toView:fakeView withElement:mockElement];
+	STAssertTrue([component isMemberOfClass:[THCUIImage class]], @"should return THCUIImage component");
 }
 
 - (void)testCreationOfUnknownThrowException {

@@ -39,7 +39,7 @@
 }
 
 - (void)testElementTypeAfterCreation {
-	STAssertEqualStrings(label.element.type, @"label", @"type of element should be set to 'label'");
+	STAssertEqualStrings(label.element.type, kTypeLabelForTests, @"type of element isn't set");
 }
 
 - (void)tearDown {

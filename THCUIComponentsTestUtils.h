@@ -15,6 +15,10 @@ extern const CGFloat kFakeX;
 extern const CGFloat kFakeY;
 extern NSString * const kFakeText;
 extern const BOOL defaultIsSelectedState;
+extern NSString * const kTypeTextViewForTests;
+extern NSString * const kTypeLabelForTests;
+extern NSString * const kTypeTodoForTests;
+extern NSString * const kTypeImageForTests;
 
 @interface THCUIComponentsTestUtils : GTMTestCase {
 }

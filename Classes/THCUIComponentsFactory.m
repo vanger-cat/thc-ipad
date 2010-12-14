@@ -9,7 +9,7 @@
 #import "THCUIComponentsFactory.h"
 #import "THCUILabelWithElement.h"
 #import "THCUITextViewWithElement.h"
-#import "THCUITodoView.h"
+#import "THCUITodo.h"
 #import "THCUIImage.h"
 
 @implementation THCUIComponentsFactory
@@ -26,16 +26,16 @@
 
 //TODO: reimplement this crap!
 - (id<THCUIComponentWithElementProtocol>)addComponentOfType:(NSString *)type toView:(UIView *)view withElement:(id<ElementInterface>)element {
-	if ([type isEqualToString:@"label"])
-		 return [THCUILabelWithElement addLabelToView:view withElement:element withDelegate:self.textViewDelegate];
+	if ([type isEqualToString:kTypeLabel])
+		return [THCUILabelWithElement addLabelToView:view withElement:element withDelegate:self.textViewDelegate];
 		 
-	if ([type isEqualToString:@"textView"])
+	if ([type isEqualToString:kTypeTextView])
 		return [THCUITextViewWithElement addTextViewToView:view withElement:element withDelegate:self.textViewDelegate];
 
-	if ([type isEqualToString:@"todo"])
-		return [THCUITodoView addTodoToView:view withElement:element withDelegate:self.textViewDelegate];
+	if ([type isEqualToString:kTypeTodo])
+		return [THCUITodo addTodoToView:view withElement:element withDelegate:self.textViewDelegate];
 
-	if ([type isEqualToString:@"image"])
+	if ([type isEqualToString:kTypeImage])
 		return [THCUIImage addImageToView:view withElement:element];
 	
 	

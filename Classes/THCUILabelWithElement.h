@@ -12,8 +12,7 @@
 #import "THCUITextViewWithElement.h"
 #import "THCUIComponentAbstract.h"
 
-
-extern NSString * const kLabelElementTypeName;
+extern NSString * const kTypeLabel;
 extern const CGFloat kMinimalLabelHeight;
 
 @interface THCUILabelWithElement : THCUIComponentAbstract {

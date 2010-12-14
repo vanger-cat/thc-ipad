@@ -38,6 +38,10 @@
 				   contains:mockElement];
 }
 
+- (void)testElementTypeAfterCreation {
+	STAssertEqualStrings(textView.element.type, kTypeTextViewForTests, @"type of element isn't set");
+}
+
 - (void)tearDown {
 	[textView release];
 }

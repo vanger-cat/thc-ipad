@@ -10,6 +10,7 @@
 #import "ElementInterface.h"
 #import "THCUIComponentAbstract.h"
 
+extern NSString * const kTypeTextView;
 extern const CGFloat kMinimalTextViewHeight;
 extern const CGFloat kTextAndLabelXDifference;
 extern const CGFloat kTextAndLabelYDifference;

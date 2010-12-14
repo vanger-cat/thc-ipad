@@ -11,7 +11,9 @@
 #import "THCUIComponentAbstract.h"
 #import "Element.h"
 
-@interface THCUITodoView : THCUIComponentAbstract {
+extern NSString * const kTypeTodo;
+
+@interface THCUITodo : THCUIComponentAbstract {
 	id<UITextViewDelegate> textViewDelegate;
 	UISwitch *checkbox;
 	UILabel *label;
@@ -23,7 +25,7 @@
 @property (nonatomic, retain) UILabel *label;
 @property (nonatomic, retain) UIView *bottomLayer;
 
-+ (THCUITodoView *)addTodoToView:(UIView *)aView withElement:(Element *)newElement withDelegate:(id<UITextViewDelegate>)delegate;
++ (THCUITodo *)addTodoToView:(UIView *)aView withElement:(Element *)newElement withDelegate:(id<UITextViewDelegate>)delegate;
 + (UIGestureRecognizer *)newGestureForConvertingToLabel;
 
 @end

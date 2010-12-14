@@ -10,6 +10,8 @@
 #import "THCUIComponentAbstract.h"
 #import "ElementInterface.h"
 
+extern NSString * const kTypeImage;
+
 @interface THCUIImage : THCUIComponentAbstract {
 	UIImageView *image;
 	NSString *imageName;

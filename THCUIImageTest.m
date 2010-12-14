@@ -67,6 +67,11 @@ NSString * const kFakeImageName = @"vanger.JPG";
 				   @"UIImageView size incorrect setted incorrectly");
 }
 
+- (void)testElementTypeAfterCreation {
+	THCUIImage *image = [THCUIImage addImageToView:fakeView withElement:elementMock];
+	STAssertEqualStrings(image.element.type, kTypeImageForTests, @"type of element isn't set");
+}
+
 - (void)tearDown {
 	[elementMock release];
 	[fakeView release];

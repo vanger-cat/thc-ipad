@@ -10,9 +10,9 @@
 #import "THCFonts.h"
 #import "THCColors.h"
 #import "THCUIComponentsUtils.h"
-#import "THCUITodoView.h"
+#import "THCUITodo.h"
 
-NSString * const kLabelElementTypeName = @"label";
+NSString * const kTypeLabel = @"label";
 const CGFloat kMinimalLabelHeight = 18;
 
 @implementation THCUILabelWithElement
@@ -39,7 +39,7 @@ const CGFloat kMinimalLabelHeight = 18;
 	THCUILabelWithElement *thcLabel = [[THCUILabelWithElement alloc] initWithFrame:CGRectMake([newElement.x intValue], [newElement.y intValue], kTextComponentWidth, 0)];
 	[THCUIComponentsUtils setupLabel:thcLabel.label];
 	
-	newElement.type = kLabelElementTypeName;
+	newElement.type = kTypeLabel;
 	thcLabel.element = newElement;
 	
 	UITapGestureRecognizer *convertToTextEditGesture = [self newGestureForConvertingToTextEdit];
@@ -88,7 +88,7 @@ const CGFloat kMinimalLabelHeight = 18;
 	if (gesture.state == UIGestureRecognizerStateRecognized) {
 		THCUILabelWithElement *labelWithElement = (THCUILabelWithElement *)gesture.view;
 				
-		[THCUITodoView addTodoToView:labelWithElement.superview
+		[THCUITodo addTodoToView:labelWithElement.superview
 						 withElement:labelWithElement.element 
 						withDelegate:labelWithElement.textViewDelegate];
 		

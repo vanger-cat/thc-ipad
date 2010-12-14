@@ -9,6 +9,8 @@
 #import "THCUIImage.h"
 #import "THCUIComponentsUtils.h"
 
+NSString * const kTypeImage = @"image";
+
 @implementation THCUIImage
 
 @synthesize image;
@@ -16,6 +18,7 @@
 
 + (THCUIImage *)addImageToView:(UIView *)view withElement:(id<ElementInterface>)element {
 	THCUIImage *thcImage = [[THCUIImage alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+	element.type = kTypeImage;
 	thcImage.element = element;
 	
 	[view addSubview:thcImage];

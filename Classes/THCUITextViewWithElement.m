@@ -11,6 +11,7 @@
 #import "THCColors.h"
 #import "THCUIComponentsUtils.h"
 
+NSString * const kTypeTextView = @"textview";
 const CGFloat kMinimalTextViewHeight = 100;
 
 const CGFloat kTextAndLabelXDifference = 8;
@@ -37,6 +38,7 @@ const CGFloat kTextAndLabelYDifference = 8;
 
 + (THCUITextViewWithElement *)addTextViewToView:(UIView *)aView withElement:(id<ElementInterface>)element withDelegate:(id<UITextViewDelegate>)delegate {
 	THCUITextViewWithElement *textViewWithElement = [[THCUITextViewWithElement alloc] initWithFrame:CGRectMake([element.x intValue], [element.y intValue], kTextComponentWidth, 0)];
+	element.type = kTypeTextView;
 	textViewWithElement.element = element;
 	
 	[THCUIComponentsUtils setupTextView:textViewWithElement.textView andDelegate:delegate];

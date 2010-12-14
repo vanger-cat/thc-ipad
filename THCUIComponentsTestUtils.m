@@ -13,6 +13,11 @@ const CGFloat kFakeX = 50;
 const CGFloat kFakeY = 50;
 NSString * const kFakeText = @"test string!";
 const BOOL defaultIsSelectedState = NO;
+NSString * const kTypeTextViewForTests = @"textview";
+NSString * const kTypeLabelForTests = @"label";
+NSString * const kTypeTodoForTests = @"todo";
+NSString * const kTypeImageForTests = @"image";
+
 
 @implementation THCUIComponentsTestUtils
 
