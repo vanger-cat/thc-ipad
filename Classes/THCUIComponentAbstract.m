@@ -8,6 +8,7 @@
 
 #import "THCUIComponentAbstract.h"
 #import "THCColors.h"
+#import "ElementManager.h"
 
 const CGFloat kBorderWidth = 20;
 const CGFloat kTextComponentWidth = 60 * 4;
@@ -78,6 +79,7 @@ const CGFloat kTextComponentHeightMax = 9999;
 	self.element.text = [self text];
 	self.element.x = [NSNumber numberWithFloat:[self x]];
 	self.element.y = [NSNumber numberWithFloat:[self y]];
+//	[[ElementManager sharedInstance] save];
 	return self.element;
 }
 

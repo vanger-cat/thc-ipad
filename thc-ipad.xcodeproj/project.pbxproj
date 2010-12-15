@@ -56,7 +56,6 @@
 		40FE0B8A12B7B844007FAECC /* THCUIComponentsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FE0B8912B7B844007FAECC /* THCUIComponentsFactory.m */; };
 		40FE0B8B12B7B844007FAECC /* THCUIComponentsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FE0B8912B7B844007FAECC /* THCUIComponentsFactory.m */; };
 		40FE0CE212B7F648007FAECC /* THCUITodoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FE0CE112B7F648007FAECC /* THCUITodoTest.m */; };
-		40FE0CE312B7F648007FAECC /* THCUITodoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FE0CE112B7F648007FAECC /* THCUITodoTest.m */; };
 		9294B45012AEEDBE00C6F2D5 /* DBAccountInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9294B3FB12AEEDBE00C6F2D5 /* DBAccountInfo.m */; };
 		9294B45112AEEDBE00C6F2D5 /* DBCreateAccountController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9294B3FD12AEEDBE00C6F2D5 /* DBCreateAccountController.m */; };
 		9294B45212AEEDBE00C6F2D5 /* DBError.m in Sources */ = {isa = PBXBuildFile; fileRef = 9294B3FF12AEEDBE00C6F2D5 /* DBError.m */; };
@@ -588,9 +587,9 @@
 		40C219E61291853800559770 /* Elements */ = {
 			isa = PBXGroup;
 			children = (
+				40023D8212B65C64000870CD /* ElementInterface.h */,
 				40C219901291796900559770 /* Element.h */,
 				40C219911291796900559770 /* Element.m */,
-				40023D8212B65C64000870CD /* ElementInterface.h */,
 				40C219931291797F00559770 /* ElementManager.h */,
 				40C219941291797F00559770 /* ElementManager.m */,
 			);
@@ -918,7 +917,6 @@
 				40023DE712B660C2000870CD /* THCColors.m in Sources */,
 				40FE0A5512B79DF5007FAECC /* THCUIImage.m in Sources */,
 				40FE0B8B12B7B844007FAECC /* THCUIComponentsFactory.m in Sources */,
-				40FE0CE312B7F648007FAECC /* THCUITodoTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

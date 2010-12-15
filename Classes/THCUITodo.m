@@ -19,34 +19,6 @@ NSString * const kTypeTodo = @"todo";
 @synthesize bottomLayer;
 @synthesize textViewDelegate;
 
-- (id)initWithFrame:(CGRect)frame {
-	CGRect viewFrame = [THCUIComponentsUtils frameAroundRect:frame withBorder:kBorderWidth];
-	
-	[super initWithFrame:viewFrame];
-	
-	CGRect labelFrame = CGRectMake(0, 
-								   0, 
-								   frame.size.width, 
-								   frame.size.height);
-	self.label = [[UILabel alloc] initWithFrame:labelFrame];
-	
-	self.checkbox = [[UISwitch alloc] initWithFrame:CGRectMake(0, 
-															   labelFrame.size.height, 
-															   frame.size.width, 
-															   0)];
-	[self.checkbox setOn:NO animated:YES];
-	
-	self.bottomLayer = [[UIView alloc] initWithFrame:CGRectMake(kBorderWidth, 
-															    kBorderWidth, 
-															    frame.size.width, 
-																labelFrame.size.height + self.checkbox.frame.size.height)];
-	[self.bottomLayer addSubview:self.label];
-	[self.bottomLayer addSubview:self.checkbox];
-	[self addSubview:self.bottomLayer];
-	
-	return self;
-}
-
 + (THCUITodo *)addTodoToView:(UIView *)aView withElement:(Element *)newElement withDelegate:(id<UITextViewDelegate>)delegate {
 	THCUITodo *todo = [[THCUITodo alloc] initWithFrame:CGRectMake(0, 0, kTextComponentWidth, 0)];
 	[THCUIComponentsUtils setupLabel:todo.label];
@@ -61,7 +33,7 @@ NSString * const kTypeTodo = @"todo";
 	[convertToLabelGesture release];
 	
 	[todo release];
-
+	
 	todo.textViewDelegate = delegate;
 	
 	return todo;
@@ -79,11 +51,43 @@ NSString * const kTypeTodo = @"todo";
 		THCUITodo *todo = (THCUITodo *)gesture.view;
 		
 		[THCUILabel addLabelToView:todo.superview
-								withElement:todo.element 
-							   withDelegate:todo.textViewDelegate];
+					   withElement:todo.element 
+					  withDelegate:todo.textViewDelegate];
 		
 		[todo removeFromSuperview];
 	}
+}
+
+- (id)initWithFrame:(CGRect)frame {
+	CGRect viewFrame = [THCUIComponentsUtils frameAroundRect:frame withBorder:kBorderWidth];
+	
+	[super initWithFrame:viewFrame];
+	
+	CGRect labelFrame = CGRectMake(0, 
+								   0, 
+								   frame.size.width, 
+								   frame.size.height);
+	self.label = [[UILabel alloc] initWithFrame:labelFrame];
+	
+	self.checkbox = [[UISwitch alloc] initWithFrame:CGRectMake(0, 
+															   labelFrame.size.height, 
+															   frame.size.width, 
+															   0)];
+	[self.checkbox setOn:NO animated:YES];
+	
+	[self.checkbox addTarget:self 
+					  action:@selector(saveComponentStateToElement) 
+			forControlEvents:UIControlEventValueChanged];
+	
+	self.bottomLayer = [[UIView alloc] initWithFrame:CGRectMake(kBorderWidth, 
+															    kBorderWidth, 
+															    frame.size.width, 
+																labelFrame.size.height + self.checkbox.frame.size.height)];
+	[self.bottomLayer addSubview:self.label];
+	[self.bottomLayer addSubview:self.checkbox];
+	[self addSubview:self.bottomLayer];
+	
+	return self;
 }
 
 - (CGFloat)x {
@@ -126,6 +130,25 @@ NSString * const kTypeTodo = @"todo";
 										self.label.frame.size.height + self.checkbox.frame.size.height);
 	self.frame = [THCUIComponentsUtils frameAroundRect:[THCUIComponentsUtils rectInSuperSuperViewOfView:self.bottomLayer] 
 											withBorder:kBorderWidth]; 
+}
+
+- (BOOL)isChecked {
+	return checkbox.on;
+} 
+
+- (void)setIsChecked:(BOOL)newState {
+	checkbox.on = newState;
+} 
+
+- (void)setElement:(Element *)newElement {
+	[super setElement:newElement];
+	self.isChecked = ([newElement.isChecked intValue] != 0);
+}
+
+- (Element *)saveComponentStateToElement {
+	[super saveComponentStateToElement];
+	self.element.isChecked = [NSNumber numberWithInt:self.isChecked];
+	return self.element;
 }
 
 - (void)dealloc {

@@ -111,12 +111,14 @@
 	
 - (void)createTextViewAtPoint:(CGPoint)pointForTextView atView:(UIView *)view withElement:(id<ElementInterface>)element {
 	THCUITextView *textViewWithElement = [THCUITextView addTextViewToView:view
-																				withElement:element 
-																			   withDelegate:self];
+															  withElement:element 
+															 withDelegate:self];
 	
 	[THCScrollView changePositionWithAdjustmentByGridOfComponent:textViewWithElement 
 														 toPoint:pointForTextView 
 														animated:YES];
+	
+//	[textViewWithElement saveComponentStateToElement];
 }
 
 - (UITapGestureRecognizer *)newGestureToCancelEditing {

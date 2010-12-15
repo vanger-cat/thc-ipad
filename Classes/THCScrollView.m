@@ -51,7 +51,7 @@ const CGFloat kSizeOfCell = 20;
 	if (animated) {	
 		[UIView commitAnimations];
 	}
-	[component saveComponentStateToElement];
+//	[component saveComponentStateToElement];
 }
 
 #pragma mark Touches
