@@ -146,8 +146,8 @@ NSString * const kTypeTodo = @"todo";
 }
 
 - (Element *)saveComponentStateToElement {
-	[super saveComponentStateToElement];
 	self.element.isChecked = [NSNumber numberWithInt:self.isChecked];
+	[super saveComponentStateToElement];
 	return self.element;
 }
 

@@ -79,7 +79,7 @@ const CGFloat kTextComponentHeightMax = 9999;
 	self.element.text = [self text];
 	self.element.x = [NSNumber numberWithFloat:[self x]];
 	self.element.y = [NSNumber numberWithFloat:[self y]];
-//	[[ElementManager sharedInstance] save];
+	[[ElementManager sharedInstance] save];
 	return self.element;
 }
 

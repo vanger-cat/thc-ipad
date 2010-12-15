@@ -118,7 +118,7 @@
 														 toPoint:pointForTextView 
 														animated:YES];
 	
-//	[textViewWithElement saveComponentStateToElement];
+	[textViewWithElement saveComponentStateToElement];
 }
 
 - (UITapGestureRecognizer *)newGestureToCancelEditing {
@@ -160,7 +160,6 @@
 	
 	[textViewWithElement saveComponentStateToElement];
 	id<ElementInterface> element = textViewWithElement.element;
-	[[ElementManager sharedInstance] save];
 	
 	THCUILabel *labelWithElement = [THCUILabel addLabelToView:textViewWithElement.superview
 																	withElement:element 
@@ -181,10 +180,6 @@
 - (void)scrollView:(THCScrollView *)scrollView touchEnded:(UIView *)draggedObject {
 	THCUIComponentAbstract *componentWithElement = (THCUIComponentAbstract *)draggedObject;
 	[componentWithElement saveComponentStateToElement];
-	[[ElementManager sharedInstance] save];
-	 //Element:componentWithElement.element
-//										withText:componentWithElement.text 
-//										 atPoint:componentWithElement.frame.origin];
 
 	NSLog(@"Component dragged to %f, %f", componentWithElement.x, componentWithElement.y);
 }

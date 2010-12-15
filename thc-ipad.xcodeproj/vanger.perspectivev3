@@ -298,14 +298,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>31</integer>
+									<integer>29</integer>
 									<integer>18</integer>
 									<integer>17</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 411}, {294, 664}}</string>
+							<string>{{0, 182}, {294, 664}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -350,7 +350,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>40FE0F2A12B8D948007FAECC</string>
+										<string>40FE0FD212B8E0CF007FAECC</string>
 										<key>history</key>
 										<array>
 											<string>40BE071612905BF2005C77B1</string>
@@ -424,9 +424,7 @@
 											<string>40FE09D912B796E1007FAECC</string>
 											<string>40FE09DB12B796E1007FAECC</string>
 											<string>40FE0A6212B79E2A007FAECC</string>
-											<string>40FE0AA512B7A298007FAECC</string>
 											<string>40FE0AA612B7A298007FAECC</string>
-											<string>40FE0AA712B7A298007FAECC</string>
 											<string>40FE0AA812B7A298007FAECC</string>
 											<string>40FE0AA912B7A298007FAECC</string>
 											<string>40FE0AAA12B7A298007FAECC</string>
@@ -442,7 +440,9 @@
 											<string>40FE0EB212B8CA1E007FAECC</string>
 											<string>40FE0EF712B8D653007FAECC</string>
 											<string>40FE0F0F12B8D6ED007FAECC</string>
-											<string>40FE0F0E12B8D6E2007FAECC</string>
+											<string>40FE0F8D12B8DE43007FAECC</string>
+											<string>40FE0FD112B8E0CF007FAECC</string>
+											<string>40FE0FCE12B8E0C9007FAECC</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -466,14 +466,12 @@
 							<string>0pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>40BE067E129045AC005C77B1</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>THCUIComponentAbstract.m</string>
+								<string>THCUITodo.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -481,11 +479,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>40BE067F129045AC005C77B1</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>THCUIComponentAbstract.m</string>
+										<string>THCUITodo.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>40FE0F2E12B8D948007FAECC</string>
+										<string>40FE0FD312B8E0CF007FAECC</string>
 										<key>history</key>
 										<array>
 											<string>40BE071812905BF2005C77B1</string>
@@ -558,21 +556,21 @@
 											<string>40FE0EAA12B8C8C3007FAECC</string>
 											<string>40FE0EB212B8CA1E007FAECC</string>
 											<string>40FE0EBC12B8CF7F007FAECC</string>
-											<string>40FE0EDD12B8D390007FAECC</string>
 											<string>40FE0EF712B8D653007FAECC</string>
 											<string>40FE0F1912B8D8E8007FAECC</string>
 											<string>40FE0F1A12B8D8E8007FAECC</string>
-											<string>40FE0F1B12B8D8E8007FAECC</string>
 											<string>40FE0F1D12B8D8E8007FAECC</string>
 											<string>40FE0F1F12B8D8E8007FAECC</string>
-											<string>40FE0F2012B8D8E8007FAECC</string>
 											<string>40FE0F2112B8D8E8007FAECC</string>
 											<string>40FE0F2212B8D8E8007FAECC</string>
 											<string>40FE0F2312B8D8E8007FAECC</string>
-											<string>40FE0F2412B8D8E8007FAECC</string>
-											<string>40FE0F2B12B8D948007FAECC</string>
-											<string>40FE0F2C12B8D948007FAECC</string>
-											<string>40FE0F2D12B8D948007FAECC</string>
+											<string>40FE0F4112B8DBA4007FAECC</string>
+											<string>40FE0F4212B8DBA4007FAECC</string>
+											<string>40FE0F4412B8DBA4007FAECC</string>
+											<string>40FE0F7E12B8DE0C007FAECC</string>
+											<string>40FE0F7F12B8DE0C007FAECC</string>
+											<string>40FE0FC612B8E0AA007FAECC</string>
+											<string>40FE0FC712B8E0AA007FAECC</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -628,8 +626,6 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {911, 296}}</string>
-										<key>RubberWindowFrame</key>
-										<string>1 54 1227 723 0 0 1280 778 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXProjectFindModule</string>
@@ -667,7 +663,9 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {911, 181}}</string>
+										<string>{{10, 27}, {911, 296}}</string>
+										<key>RubberWindowFrame</key>
+										<string>1 54 1227 723 0 0 1280 778 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -874,7 +872,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>314104136.70538098</real>
+	<real>314106063.49980497</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -891,7 +889,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>40FE0F1212B8D6ED007FAECC</string>
 		<string>40FE0E2912B82C2B007FAECC</string>
 		<string>40FE0DF712B82A13007FAECC</string>
 		<string>40A9186A1291A18600BFCA83</string>
