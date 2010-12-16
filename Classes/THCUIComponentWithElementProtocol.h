@@ -17,6 +17,7 @@
 @property (nonatomic, assign) CGFloat y;
 @property (nonatomic, retain) NSString *text;
 @property (nonatomic, assign) BOOL selected;
+@property (nonatomic, readonly) NSString *type;
 
 - (Element *)saveComponentStateToElement;
 

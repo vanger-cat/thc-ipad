@@ -23,7 +23,6 @@ NSString * const kTypeTodo = @"todo";
 	THCUITodo *todo = [[THCUITodo alloc] initWithFrame:CGRectMake(0, 0, kTextComponentWidth, 0)];
 	[THCUIComponentsUtils setupLabel:todo.label];
 	
-	newElement.type = kTypeTodo;
 	todo.element = newElement;
 	
 	[aView addSubview:todo];
@@ -149,6 +148,10 @@ NSString * const kTypeTodo = @"todo";
 	self.element.isChecked = [NSNumber numberWithInt:self.isChecked];
 	[super saveComponentStateToElement];
 	return self.element;
+}
+
+- (NSString *)type {
+	return kTypeTodo;
 }
 
 - (void)dealloc {

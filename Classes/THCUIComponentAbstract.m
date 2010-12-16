@@ -36,6 +36,8 @@ const CGFloat kTextComponentHeightMax = 9999;
 	[newElement retain];
 	[element release];
 	element = newElement;
+	//???: is this necessary?
+	newElement.type = [self type];
 	
 	self.x = [newElement.x floatValue];
 	self.y = [newElement.y floatValue];
@@ -75,10 +77,17 @@ const CGFloat kTextComponentHeightMax = 9999;
 				format:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)];
 }
 
+- (NSString *)type {
+	[NSException raise:NSInternalInconsistencyException 
+				format:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)];
+	return 0;
+}
+
 - (Element *)saveComponentStateToElement {
 	self.element.text = [self text];
 	self.element.x = [NSNumber numberWithFloat:[self x]];
 	self.element.y = [NSNumber numberWithFloat:[self y]];
+	self.element.type = [self type];
 	[[ElementManager sharedInstance] save];
 	return self.element;
 }

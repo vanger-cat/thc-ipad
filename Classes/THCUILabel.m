@@ -39,7 +39,6 @@ const CGFloat kMinimalLabelHeight = 18;
 	THCUILabel *thcLabel = [[THCUILabel alloc] initWithFrame:CGRectMake([newElement.x intValue], [newElement.y intValue], kTextComponentWidth, 0)];
 	[THCUIComponentsUtils setupLabel:thcLabel.label];
 	
-	newElement.type = kTypeLabel;
 	thcLabel.element = newElement;
 	
 	UITapGestureRecognizer *convertToTextEditGesture = [self newGestureForConvertingToTextEdit];
@@ -138,6 +137,10 @@ const CGFloat kMinimalLabelHeight = 18;
 	else {
 		self.label.backgroundColor = [UIColor colorForTextNoteBackground];
 	}
+}
+
+- (NSString *)type {
+	return kTypeLabel;
 }
 
 - (void)dealloc {

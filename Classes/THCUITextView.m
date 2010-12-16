@@ -38,7 +38,7 @@ const CGFloat kTextAndLabelYDifference = 8;
 
 + (THCUITextView *)addTextViewToView:(UIView *)aView withElement:(id<ElementInterface>)element withDelegate:(id<UITextViewDelegate>)delegate {
 	THCUITextView *textViewWithElement = [[THCUITextView alloc] initWithFrame:CGRectMake([element.x intValue], [element.y intValue], kTextComponentWidth, 0)];
-	element.type = kTypeTextView;
+
 	textViewWithElement.element = element;
 	
 	[THCUIComponentsUtils setupTextView:textViewWithElement.textView andDelegate:delegate];
@@ -93,6 +93,10 @@ const CGFloat kTextAndLabelYDifference = 8;
 
 - (BOOL)hasText {
 	return ![self.text isEqualToString:@""];
+}
+
+- (NSString *)type {
+	return kTypeTextView;
 }
 
 - (void)dealloc {

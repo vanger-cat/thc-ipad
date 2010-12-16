@@ -18,7 +18,6 @@ NSString * const kTypeImage = @"image";
 
 + (THCUIImage *)addImageToView:(UIView *)view withElement:(id<ElementInterface>)element {
 	THCUIImage *thcImage = [[THCUIImage alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
-	element.type = kTypeImage;
 	thcImage.element = element;
 	
 	[view addSubview:thcImage];
@@ -78,6 +77,10 @@ NSString * const kTypeImage = @"image";
 	else {
 		self.image.alpha = 1;
 	}
+}
+
+- (NSString *)type {
+	return kTypeImage;
 }
 
 - (void)dealloc {
