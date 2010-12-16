@@ -16,12 +16,13 @@
 	
 }
 
-+ (void)initSharedInstanceWithContext:(NSManagedObjectContext *)context;
-+ (ElementManager *) sharedInstance;
++ (ElementManager *)initSharedInstanceWithContext:(NSManagedObjectContext *)context;
++ (ElementManager *)sharedInstance;
 
-- (Element *)newEmptyElement;
-- (Element *)savedElementWithText:(NSString *)text atPoint:(CGPoint)point;
-- (Element *)saveElement:(Element *)element withText:(NSString *)text atPoint:(CGPoint)point;
+- (id<ElementInterface>)newEmptyElement;
+- (id<ElementInterface>)savedElementWithText:(NSString *)text atPoint:(CGPoint)point;
+- (id<ElementInterface>)saveElement:(Element *)element withText:(NSString *)text atPoint:(CGPoint)point;
 - (NSMutableArray *)copyElementsArray;
+- (void)deleteElement:(id<ElementInterface>)element;
 
 @end

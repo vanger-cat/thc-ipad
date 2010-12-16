@@ -74,7 +74,7 @@ const CGFloat kTextAndLabelYDifference = 8;
 }
 
 - (NSString *)text {
-	return self.textView.text;
+	return [self.textView.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }	
 
 - (void)setText:(NSString *)newText {
@@ -89,6 +89,10 @@ const CGFloat kTextAndLabelYDifference = 8;
 	
 	self.frame = [THCUIComponentsUtils frameAroundRect:[THCUIComponentsUtils rectInSuperSuperViewOfView:self.textView] 
 											withBorder:kBorderWidth]; 
+}
+
+- (BOOL)hasText {
+	return ![self.text isEqualToString:@""];
 }
 
 - (void)dealloc {

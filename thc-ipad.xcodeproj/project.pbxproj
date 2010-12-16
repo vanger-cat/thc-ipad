@@ -16,7 +16,7 @@
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D801B30F44B63D00FB423F /* CoreData.framework */; };
 		40023D8112B65C2D000870CD /* ElementMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 40023D8012B65C2D000870CD /* ElementMock.m */; };
-		40023DC712B66001000870CD /* THCUILabelWithElementTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40023D7312B6583C000870CD /* THCUILabelWithElementTest.m */; };
+		40023DC712B66001000870CD /* THCUILabelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40023D7312B6583C000870CD /* THCUILabelTest.m */; };
 		40023DE212B660AC000870CD /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 40023DDC12B660AC000870CD /* Utils.m */; };
 		40023DE312B660AC000870CD /* THCFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 40023DDE12B660AC000870CD /* THCFonts.m */; };
 		40023DE412B660AC000870CD /* THCColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 40023DE012B660AC000870CD /* THCColors.m */; };
@@ -43,7 +43,7 @@
 		40C219951291797F00559770 /* ElementManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C219941291797F00559770 /* ElementManager.m */; };
 		40C219A112917CFB00559770 /* AbstractManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C219A012917CFB00559770 /* AbstractManager.m */; };
 		40D01BAB129C7BCC0027E31D /* THCUITodo.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D01BAA129C7BCC0027E31D /* THCUITodo.m */; };
-		40FE062A12B66BB5007FAECC /* THCUITextViewWithElementTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FE062912B66BB5007FAECC /* THCUITextViewWithElementTest.m */; };
+		40FE062A12B66BB5007FAECC /* THCUITextViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FE062912B66BB5007FAECC /* THCUITextViewTest.m */; };
 		40FE064312B67381007FAECC /* THCUIComponentsTestUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FE064212B67381007FAECC /* THCUIComponentsTestUtils.m */; };
 		40FE06C412B6AC09007FAECC /* RootViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FE06C312B6AC09007FAECC /* RootViewControllerTest.m */; };
 		40FE082812B75730007FAECC /* THCScrollViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FE082712B75730007FAECC /* THCScrollViewTest.m */; };
@@ -182,7 +182,7 @@
 		28D801B30F44B63D00FB423F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* thc_ipad_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thc_ipad_Prefix.pch; sourceTree = "<group>"; };
-		40023D7312B6583C000870CD /* THCUILabelWithElementTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCUILabelWithElementTest.m; sourceTree = "<group>"; };
+		40023D7312B6583C000870CD /* THCUILabelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCUILabelTest.m; sourceTree = "<group>"; };
 		40023D7F12B65C2D000870CD /* ElementMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElementMock.h; sourceTree = "<group>"; };
 		40023D8012B65C2D000870CD /* ElementMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElementMock.m; sourceTree = "<group>"; };
 		40023D8212B65C64000870CD /* ElementInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElementInterface.h; sourceTree = "<group>"; };
@@ -230,7 +230,7 @@
 		40C219A012917CFB00559770 /* AbstractManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractManager.m; sourceTree = "<group>"; };
 		40D01BA9129C7BCC0027E31D /* THCUITodo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THCUITodo.h; sourceTree = "<group>"; };
 		40D01BAA129C7BCC0027E31D /* THCUITodo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCUITodo.m; sourceTree = "<group>"; };
-		40FE062912B66BB5007FAECC /* THCUITextViewWithElementTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCUITextViewWithElementTest.m; sourceTree = "<group>"; };
+		40FE062912B66BB5007FAECC /* THCUITextViewTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCUITextViewTest.m; sourceTree = "<group>"; };
 		40FE064112B67381007FAECC /* THCUIComponentsTestUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THCUIComponentsTestUtils.h; sourceTree = "<group>"; };
 		40FE064212B67381007FAECC /* THCUIComponentsTestUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCUIComponentsTestUtils.m; sourceTree = "<group>"; };
 		40FE06C312B6AC09007FAECC /* RootViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewControllerTest.m; sourceTree = "<group>"; };
@@ -461,8 +461,8 @@
 				40FE0B7912B7B5CD007FAECC /* THCUIComponentsFactoryTest.m */,
 				40FE064112B67381007FAECC /* THCUIComponentsTestUtils.h */,
 				40FE064212B67381007FAECC /* THCUIComponentsTestUtils.m */,
-				40023D7312B6583C000870CD /* THCUILabelWithElementTest.m */,
-				40FE062912B66BB5007FAECC /* THCUITextViewWithElementTest.m */,
+				40023D7312B6583C000870CD /* THCUILabelTest.m */,
+				40FE062912B66BB5007FAECC /* THCUITextViewTest.m */,
 				40FE0CE112B7F648007FAECC /* THCUITodoTest.m */,
 				40FE094812B78D87007FAECC /* THCUIImageTest.m */,
 			);
@@ -978,11 +978,11 @@
 				9294B4FC12AEF4F300C6F2D5 /* DropboxController.m in Sources */,
 				92D8C1F912B40B4D00731B1C /* THCScrollView.m in Sources */,
 				40023D8112B65C2D000870CD /* ElementMock.m in Sources */,
-				40023DC712B66001000870CD /* THCUILabelWithElementTest.m in Sources */,
+				40023DC712B66001000870CD /* THCUILabelTest.m in Sources */,
 				40023DE212B660AC000870CD /* Utils.m in Sources */,
 				40023DE312B660AC000870CD /* THCFonts.m in Sources */,
 				40023DE412B660AC000870CD /* THCColors.m in Sources */,
-				40FE062A12B66BB5007FAECC /* THCUITextViewWithElementTest.m in Sources */,
+				40FE062A12B66BB5007FAECC /* THCUITextViewTest.m in Sources */,
 				40FE064312B67381007FAECC /* THCUIComponentsTestUtils.m in Sources */,
 				40FE06C412B6AC09007FAECC /* RootViewControllerTest.m in Sources */,
 				40FE082812B75730007FAECC /* THCScrollViewTest.m in Sources */,

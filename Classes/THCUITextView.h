@@ -25,4 +25,6 @@ extern const CGFloat kTextAndLabelYDifference;
 
 - (void)completeEditing;
 
+- (BOOL)hasText;
+
 @end

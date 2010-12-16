@@ -7,6 +7,7 @@
 //
 
 #import "GTMSenTestCase.h"
+#import "ElementManager.h"
 #import "ElementMock.h"
 #import "RootViewController.h"
 #import "THCUITextView.h"
@@ -160,6 +161,30 @@
 	[rootViewController showElements:array inView:fakeView];
 	
 	STAssertNoThrow([factoryMock verify], @"image element should be added as UIImage");
+}
+
+- (id)elementManagerMock {
+	return [OCMockObject mockForClass:[ElementManager class]];
+}
+
+- (id)textViewMock {
+	return [OCMockObject mockForClass:[THCUITextView class]];
+}
+
+- (void)testSubmittingOfEmptyTextViewDeleteElement {
+	id elementManagerMock = [self elementManagerMock];
+	[[elementManagerMock expect] deleteElement:fakeElement];	
+	rootViewController.elementManager = elementManagerMock;
+	
+	
+	id textViewMock = [self textViewMock];
+	[[[textViewMock expect] andReturn:fakeElement] element];
+	BOOL value = NO;
+	[[[textViewMock expect] andReturnValue:OCMOCK_VALUE(value)] hasText];
+	
+	[rootViewController createLabelIfTextViewIsNotEmpty:textViewMock];
+	
+	[elementManagerMock verify];
 }
 
 - (void)tearDown {

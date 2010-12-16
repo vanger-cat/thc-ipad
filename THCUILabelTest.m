@@ -11,13 +11,13 @@
 #import "ElementMock.h"
 #import "THCUIComponentsTestUtils.h"
 
-@interface THCUILabelWithElementTest : THCUIComponentsTestUtils {
+@interface THCUILabelTest : THCUIComponentsTestUtils {
 	ElementMock *mockElement;
 	THCUILabel *label;
 }
 @end
 
-@implementation THCUILabelWithElementTest
+@implementation THCUILabelTest
 
 - (void)setUp {
 	mockElement = [THCUIComponentsTestUtils newMockElement];

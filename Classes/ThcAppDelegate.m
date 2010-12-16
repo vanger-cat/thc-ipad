@@ -19,17 +19,17 @@
 #pragma mark -
 #pragma mark Application lifecycle
 
-- (void)initElementManagerWithContext:(NSManagedObjectContext *)context {
-	[ElementManager initSharedInstanceWithContext:context];
-}
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	// Create dropbox session
 	DBSession* dbSession = [[[DBSession alloc] initWithConsumerKey:@"vnn0ga73pr9twmu"
 													consumerSecret:@"j4283nn8geip623"] autorelease];
     [DBSession setSharedSession:dbSession];
 	
-	[self initElementManagerWithContext:[self managedObjectContext]];
+	rootViewController.elementManager = [ElementManager initSharedInstanceWithContext:[self managedObjectContext]];
+	THCUIComponentsFactory *componentsFactory = [THCUIComponentsFactory newFactoryWithTextViewDelegate:rootViewController];
+	rootViewController.componentsFactory = componentsFactory;
+	[componentsFactory release];
+
 	[self.window addSubview:rootViewController.view];
     [self.window makeKeyAndVisible];
 

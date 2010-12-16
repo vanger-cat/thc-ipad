@@ -13,16 +13,17 @@
 
 static ElementManager *sharedInstance;
 
-+ (void)initSharedInstanceWithContext:(NSManagedObjectContext *)context {
++ (ElementManager *)initSharedInstanceWithContext:(NSManagedObjectContext *)context {
 	sharedInstance = [ElementManager alloc];
 	sharedInstance.managedObjectContext = context;
+	return sharedInstance;
 }
 
-+ (ElementManager *) sharedInstance {
++ (ElementManager *)sharedInstance {
     return sharedInstance;
 }
 
-- (Element *)newEmptyElement {
+- (id<ElementInterface>)newEmptyElement {
 	Element * element = (Element *) [NSEntityDescription 
 													 insertNewObjectForEntityForName:kElementEntityName 
 													 inManagedObjectContext:self.managedObjectContext];
@@ -30,7 +31,7 @@ static ElementManager *sharedInstance;
 	return element;
 }
 
-- (Element *)saveElement:(Element *)element withText:(NSString *)text atPoint:(CGPoint)point {
+- (id<ElementInterface>)saveElement:(Element *)element withText:(NSString *)text atPoint:(CGPoint)point {
 	element.text = text;
 	element.x = [NSNumber numberWithInt:(int)point.x];
 	element.y = [NSNumber numberWithInt:(int)point.y];
@@ -39,7 +40,7 @@ static ElementManager *sharedInstance;
 	return element;
 }
 
-- (Element *)savedElementWithText:(NSString *)text atPoint:(CGPoint)point {
+- (id<ElementInterface>)savedElementWithText:(NSString *)text atPoint:(CGPoint)point {
 	Element *element = [self newEmptyElement];
 	[self saveElement:element withText:text atPoint:point];
 	[element release];
@@ -61,6 +62,10 @@ static ElementManager *sharedInstance;
 	[request release];
 	
 	return mutableFetchResults;
+}
+
+- (void)deleteElement:(id<ElementInterface>)element {
+	[self.managedObjectContext deleteObject:element];
 }
 
 @end

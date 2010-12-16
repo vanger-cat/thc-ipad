@@ -8,7 +8,6 @@
 
 #import "RootViewController.h"
 #import "Element.h"
-#import "ElementManager.h"
 #import "THCColors.h"
 #import "THCFonts.h"
 #import "THCUILabel.h"
@@ -23,14 +22,13 @@
 @synthesize currentTextViewWithElement;
 @synthesize dropboxController;
 @synthesize componentsFactory;
+@synthesize elementManager;
 
 #pragma mark View lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-	componentsFactory = [THCUIComponentsFactory newFactoryWithTextViewDelegate:self];
-	
 	UIGestureRecognizer *gestureToCreateTextView = [self newGestureToCreateTextView];
 	[self.scrollView addGestureRecognizer:gestureToCreateTextView];
 	[gestureToCreateTextView release];
@@ -42,7 +40,7 @@
 	self.scrollView.canCancelContentTouches = YES;
 	
 	CGRect center = CGRectMake(self.scrollView.contentSize.width / 2, self.scrollView.contentSize.height / 2, 1, 1);
-	[self showElements:[[ElementManager sharedInstance] copyElementsArray] 
+	[self showElements:[elementManager copyElementsArray] 
 				inView:self.scrollView.spaceView];
 	[self.scrollView scrollRectToVisible:center animated:NO];
 	
@@ -52,8 +50,8 @@
 
 	//TODO: delete
 	{
-		id<ElementInterface> element = [[ElementManager sharedInstance] savedElementWithText:@"vanger.JPG" 
-																					 atPoint:CGPointMake(100, 100)];
+		id<ElementInterface> element = [elementManager savedElementWithText:@"vanger.JPG" 
+																	atPoint:CGPointMake(100, 100)];
 		[THCUIImage addImageToView:self.scrollView.spaceView withElement:element];
 	}
 }
@@ -102,8 +100,8 @@
 - (void)createNewTextViewGesureRecognized:(UIGestureRecognizer *)gesture {
 	if (gesture.state == UIGestureRecognizerStateRecognized) {
 		CGPoint pointForTextView = [gesture locationInView:self.scrollView.spaceView];
-		id<ElementInterface> element = [[ElementManager sharedInstance] savedElementWithText:@"" 
-																					 atPoint:pointForTextView];
+		id<ElementInterface> element = [elementManager savedElementWithText:@"" 
+																	atPoint:pointForTextView];
 		
 		[self createTextViewAtPoint:pointForTextView atView:self.scrollView.spaceView withElement:element];
 	}
@@ -148,11 +146,20 @@
 - (void)textViewDidEndEditing:(UITextView *)textView {
 	THCUITextView *textViewWithElement = (THCUITextView *) textView.superview;
 	
-	if ([textView hasText]) {
-		[self createLabelInPlaceOfTextView:textViewWithElement];
-	}
+	[self createLabelIfTextViewIsNotEmpty:textViewWithElement];
 	
 	[textViewWithElement removeFromSuperview];
+}
+
+- (void)createLabelIfTextViewIsNotEmpty:(THCUITextView *)textViewWithElement {
+	if ([textViewWithElement hasText]) {
+		[self createLabelInPlaceOfTextView:textViewWithElement];
+		NSLog(@"Added label with text: '%@'", textViewWithElement.text);
+	} else {
+		[elementManager deleteElement:textViewWithElement.element];
+		NSLog(@"deleted empty element");
+	}
+
 }
 
 - (void)createLabelInPlaceOfTextView:(THCUITextView *)textViewWithElement {
