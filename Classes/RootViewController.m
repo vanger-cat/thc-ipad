@@ -53,6 +53,7 @@
 		id<ElementInterface> element = [elementManager savedElementWithText:@"vanger.JPG" 
 																	atPoint:CGPointMake(100, 100)];
 		[THCUIImage addImageToView:self.scrollView.spaceView withElement:element];
+		[elementManager save];
 	}
 }
 
