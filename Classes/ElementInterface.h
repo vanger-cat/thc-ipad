@@ -12,11 +12,11 @@
 @protocol ElementInterface <NSObject>
 
 @required
-@property (nonatomic, retain) NSString * type;
-@property (nonatomic, retain) NSNumber * x;
-@property (nonatomic, retain) NSNumber * y;
-@property (nonatomic, retain) NSString * text;
+@property (nonatomic, retain) NSString *type;
+@property (nonatomic, retain) NSNumber *x;
+@property (nonatomic, retain) NSNumber *y;
+@property (nonatomic, retain) NSString *text;
 
-@property (nonatomic, retain) NSNumber * isChecked;
+@property (nonatomic, retain) NSNumber *isChecked;
 
 @end
