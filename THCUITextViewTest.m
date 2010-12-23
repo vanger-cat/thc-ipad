@@ -23,7 +23,7 @@
 - (void)setUp {
 	mockElement = [THCUIComponentsTestUtils newMockElement];
 	fakeView = [UIView alloc];
-	textView = [THCUITextView addTextViewToView:fakeView
+	textView = [THCUITextView createInView:fakeView
 									withElement:mockElement 
 								   withDelegate:NULL];
 	[mockElement release];
@@ -34,7 +34,7 @@
 					   hasX:kFakeX 
 					   hasY:kFakeY 
 					hasText:kFakeText 
-				 isSelected:defaultIsSelectedState 
+				 isSelected:kDefaultIsSelectedState 
 				   contains:mockElement];
 }
 
@@ -52,7 +52,7 @@
 
 - (void)testHasTextReturnNoIfFieldEmpty {
 	mockElement.text = @"";
-	THCUITextView *emptyTextView = [THCUITextView addTextViewToView:fakeView
+	THCUITextView *emptyTextView = [THCUITextView createInView:fakeView
 														withElement:mockElement 
 													   withDelegate:NULL];
 	STAssertEquals([emptyTextView hasText], NO, @"just created text view should empty");

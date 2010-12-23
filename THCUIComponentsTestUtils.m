@@ -12,11 +12,12 @@
 const CGFloat kFakeX = 50;
 const CGFloat kFakeY = 50;
 NSString * const kFakeText = @"test string!";
-const BOOL defaultIsSelectedState = NO;
+const BOOL kDefaultIsSelectedState = NO;
 NSString * const kTypeTextViewForTests = @"textview";
 NSString * const kTypeLabelForTests = @"label";
 NSString * const kTypeTodoForTests = @"todo";
 NSString * const kTypeImageForTests = @"image";
+NSString * const kTypeLinkForTests = @"link";
 
 
 @implementation THCUIComponentsTestUtils
@@ -28,6 +29,10 @@ NSString * const kTypeImageForTests = @"image";
 	mockElement.text = kFakeText;
 	
 	return mockElement;
+}
+
++ (UIView *)newEmptyView {
+	return [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
 }
 
 - (void)assertUIComponent:(id<THCUIComponentWithElementProtocol>)component 

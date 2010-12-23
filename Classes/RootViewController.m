@@ -11,6 +11,7 @@
 #import "THCColors.h"
 #import "THCFonts.h"
 #import "THCUILabel.h"
+#import "THCUILink.h"
 #import "THCUIComponentsUtils.h"
 #import "Utils.h"
 #import "DropboxSDK.h"
@@ -52,7 +53,14 @@
 	{
 		id<ElementInterface> element = [elementManager savedElementWithText:@"vanger.JPG" 
 																	atPoint:CGPointMake(100, 100)];
-		[THCUIImage addImageToView:self.scrollView.spaceView withElement:element];
+		[THCUIImage createInView:self.scrollView.spaceView withElement:element];
+		[elementManager save];
+	}
+	//TODO: delete
+	{
+		id<ElementInterface> element = [elementManager savedElementWithText:@"http://ya.ru" 
+																	atPoint:CGPointMake(10, 10)];
+		[THCUILink createInView:self.scrollView.spaceView withElement:element withDelegate:self];
 		[elementManager save];
 	}
 }
@@ -109,7 +117,7 @@
 }
 	
 - (void)createTextViewAtPoint:(CGPoint)pointForTextView atView:(UIView *)view withElement:(id<ElementInterface>)element {
-	THCUITextView *textViewWithElement = [THCUITextView addTextViewToView:view
+	THCUITextView *textViewWithElement = [THCUITextView createInView:view
 															  withElement:element 
 															 withDelegate:self];
 	
@@ -169,7 +177,7 @@
 	[textViewWithElement saveComponentStateToElement];
 	id<ElementInterface> element = textViewWithElement.element;
 	
-	THCUILabel *labelWithElement = [THCUILabel addLabelToView:textViewWithElement.superview
+	THCUILabel *labelWithElement = [THCUILabel createInView:textViewWithElement.superview
 																	withElement:element 
 																   withDelegate:self];
 	

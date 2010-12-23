@@ -19,7 +19,7 @@ NSString * const kTypeTodo = @"todo";
 @synthesize bottomLayer;
 @synthesize textViewDelegate;
 
-+ (THCUITodo *)addTodoToView:(UIView *)aView withElement:(Element *)newElement withDelegate:(id<UITextViewDelegate>)delegate {
++ (THCUITodo *)createInView:(UIView *)aView withElement:(Element *)newElement withDelegate:(id<UITextViewDelegate>)delegate {
 	THCUITodo *todo = [[THCUITodo alloc] initWithFrame:CGRectMake(0, 0, kTextComponentWidth, 0)];
 	[THCUIComponentsUtils setupLabel:todo.label];
 	
@@ -49,7 +49,7 @@ NSString * const kTypeTodo = @"todo";
 	if (gesture.state == UIGestureRecognizerStateRecognized) {
 		THCUITodo *todo = (THCUITodo *)gesture.view;
 		
-		[THCUILabel addLabelToView:todo.superview
+		[THCUILabel createInView:todo.superview
 					   withElement:todo.element 
 					  withDelegate:todo.textViewDelegate];
 		

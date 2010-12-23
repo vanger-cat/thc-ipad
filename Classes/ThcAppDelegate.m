@@ -11,6 +11,12 @@
 #import "DropboxSDK.h"
 #import "ElementManager.h"
 
+#import "THCUILabel.h"
+#import "THCUITextView.h"
+#import "THCUITodo.h"
+#import "THCUIImage.h"
+#import "THCUILink.h"
+
 @implementation ThcAppDelegate
 
 @synthesize window;
@@ -19,6 +25,17 @@
 #pragma mark -
 #pragma mark Application lifecycle
 
+//TODO: test it
+- (THCUIComponentsFactory *)initComponentsFactorry {
+	THCUIComponentsFactory *componentsFactory = [THCUIComponentsFactory newFactoryWithTextViewDelegate:rootViewController];
+	[componentsFactory registerNewUIComponent:[THCUILink class] withType:kTypeLink];
+	[componentsFactory registerNewUIComponent:[THCUITextView class] withType:kTypeTextView];
+	[componentsFactory registerNewUIComponent:[THCUITodo class] withType:kTypeTodo];
+	[componentsFactory registerNewUIComponent:[THCUILabel class] withType:kTypeLabel];
+	[componentsFactory registerNewUIComponent:[THCUIImage class] withType:kTypeImage];
+	return componentsFactory;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	// Create dropbox session
 	DBSession* dbSession = [[[DBSession alloc] initWithConsumerKey:@"vnn0ga73pr9twmu"
@@ -26,10 +43,9 @@
     [DBSession setSharedSession:dbSession];
 	
 	rootViewController.elementManager = [ElementManager initSharedInstanceWithContext:[self managedObjectContext]];
-	THCUIComponentsFactory *componentsFactory = [THCUIComponentsFactory newFactoryWithTextViewDelegate:rootViewController];
+	THCUIComponentsFactory *componentsFactory = [self initComponentsFactorry];
 	rootViewController.componentsFactory = componentsFactory;
-	[componentsFactory release];
-
+	[componentsFactory release];	
 	[self.window addSubview:rootViewController.view];
     [self.window makeKeyAndVisible];
 

@@ -23,9 +23,12 @@ extern const CGFloat kMinimalLabelHeight;
 @property (nonatomic, retain) id<UITextViewDelegate> textViewDelegate;
 @property (nonatomic, retain) UILabel *label;
 
-+ (THCUILabel *)addLabelToView:(UIView *)aView withElement:(id<ElementInterface>)newElement withDelegate:(id<UITextViewDelegate>)delegate;
++ (THCUILabel *)createInView:(UIView *)aView withElement:(id<ElementInterface>)newElement withDelegate:(id<UITextViewDelegate>)delegate;
++ (THCUILabel *)addLabel:(THCUILabel *)label toView:(UIView *)aView withElement:(id<ElementInterface>)newElement withDelegate:(id<UITextViewDelegate>)delegate;
 
 + (UITapGestureRecognizer *)newGestureForConvertingToTextEdit;
 + (UITapGestureRecognizer *)newGestureForConvertingToTODO;
+
++ (CGRect)frameForLabelWithElement:(id<ElementInterface>)element;
 
 @end

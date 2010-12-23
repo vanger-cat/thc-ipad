@@ -61,7 +61,7 @@
 }
 
 - (void)testCreationOfLabelInPlaceOfTextViewWithNoElement {
-	THCUITextView *textViewWithElement = [THCUITextView addTextViewToView:fakeView 
+	THCUITextView *textViewWithElement = [THCUITextView createInView:fakeView 
 																				withElement:fakeElement 
 																			   withDelegate:NULL];
 	[rootViewController createLabelInPlaceOfTextView:textViewWithElement];
@@ -98,6 +98,11 @@
 - (void)testAmountOfShownElementsInSpace {
 	NSArray *array = [self arrayWithElementOfAllTypes];
 	rootViewController.componentsFactory = [THCUIComponentsFactory newFactoryWithTextViewDelegate:NULL];
+	[rootViewController.componentsFactory registerNewUIComponent:[THCUILabel class] withType:kTypeLabelForTests];
+	[rootViewController.componentsFactory registerNewUIComponent:[THCUITodo class] withType:kTypeTodoForTests];
+	[rootViewController.componentsFactory registerNewUIComponent:[THCUITextView class] withType:kTypeTextViewForTests];
+	[rootViewController.componentsFactory registerNewUIComponent:[THCUIImage class] withType:kTypeImageForTests];
+	
 	
 	[rootViewController showElements:array inView:fakeView];
 	

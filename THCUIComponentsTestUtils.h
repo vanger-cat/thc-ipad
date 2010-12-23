@@ -14,9 +14,10 @@
 extern const CGFloat kFakeX;
 extern const CGFloat kFakeY;
 extern NSString * const kFakeText;
-extern const BOOL defaultIsSelectedState;
+extern const BOOL kDefaultIsSelectedState;
 extern NSString * const kTypeTextViewForTests;
 extern NSString * const kTypeLabelForTests;
+extern NSString * const kTypeLinkForTests;
 extern NSString * const kTypeTodoForTests;
 extern NSString * const kTypeImageForTests;
 
@@ -24,6 +25,8 @@ extern NSString * const kTypeImageForTests;
 }
 
 + (id<ElementInterface>)newMockElement;
+
++ (UIView *)newEmptyView;
 
 - (void)assertUIComponent:(id<THCUIComponentWithElementProtocol>)component 
 					 hasX:(CGFloat)x 

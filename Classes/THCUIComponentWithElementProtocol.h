@@ -21,5 +21,4 @@
 
 - (Element *)saveComponentStateToElement;
 
-
 @end

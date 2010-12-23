@@ -20,23 +20,16 @@ const CGFloat kMinimalLabelHeight = 18;
 @synthesize textViewDelegate;
 @synthesize label;
 
-- (id)initWithFrame:(CGRect)frame {
-	CGRect viewFrame = [THCUIComponentsUtils frameAroundRect:frame withBorder:kBorderWidth];
-	
-	[super initWithFrame:viewFrame];
-	
-	CGRect labelFrame = CGRectMake(kBorderWidth, 
-								   kBorderWidth, 
-								   frame.size.width, 
-								   frame.size.height);
-	self.label = [[UILabel alloc] initWithFrame:labelFrame];
-	[self addSubview:self.label];
-	
-	return self;
++ (THCUILabel *)createInView:(UIView *)aView withElement:(id<ElementInterface>)newElement withDelegate:(id<UITextViewDelegate>)delegate {
+	THCUILabel *thcLabel = [[THCUILabel alloc] initWithFrame:[[self class] frameForLabelWithElement:newElement]];
+	return [self addLabel:thcLabel toView:aView withElement:newElement withDelegate:delegate];
 }
 
-+ (THCUILabel *)addLabelToView:(UIView *)aView withElement:(id<ElementInterface>)newElement withDelegate:(id<UITextViewDelegate>)delegate {
-	THCUILabel *thcLabel = [[THCUILabel alloc] initWithFrame:CGRectMake([newElement.x intValue], [newElement.y intValue], kTextComponentWidth, 0)];
++ (CGRect)frameForLabelWithElement:(id<ElementInterface>)element {
+	return CGRectMake([element.x intValue], [element.y intValue], kTextComponentWidth, 0);
+}
+
++ (THCUILabel *)addLabel:(THCUILabel *)thcLabel toView:(UIView *)aView withElement:(id<ElementInterface>)newElement withDelegate:(id<UITextViewDelegate>)delegate {
 	[THCUIComponentsUtils setupLabel:thcLabel.label];
 	
 	thcLabel.element = newElement;
@@ -58,6 +51,22 @@ const CGFloat kMinimalLabelHeight = 18;
 	return thcLabel;
 }
 
+
+- (id)initWithFrame:(CGRect)frame {
+	CGRect viewFrame = [THCUIComponentsUtils frameAroundRect:frame withBorder:kBorderWidth];
+	
+	[super initWithFrame:viewFrame];
+	
+	CGRect labelFrame = CGRectMake(kBorderWidth, 
+								   kBorderWidth, 
+								   frame.size.width, 
+								   frame.size.height);
+	self.label = [[UILabel alloc] initWithFrame:labelFrame];
+	[self addSubview:self.label];
+	
+	return self;
+}
+
 + (UIGestureRecognizer *)newGestureForConvertingToTextEdit {
 	UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(convertToTextEdit:)];
 	tap.numberOfTapsRequired = 2;
@@ -68,7 +77,7 @@ const CGFloat kMinimalLabelHeight = 18;
 	if (gesture.state == UIGestureRecognizerStateRecognized) {
 		THCUILabel *labelWithElement = (THCUILabel *)gesture.view;
 
-		[THCUITextView addTextViewToView:labelWithElement.superview 
+		[THCUITextView createInView:labelWithElement.superview 
 									  withElement:labelWithElement.element 
 									 withDelegate:labelWithElement.textViewDelegate];
 
@@ -87,7 +96,7 @@ const CGFloat kMinimalLabelHeight = 18;
 	if (gesture.state == UIGestureRecognizerStateRecognized) {
 		THCUILabel *labelWithElement = (THCUILabel *)gesture.view;
 				
-		[THCUITodo addTodoToView:labelWithElement.superview
+		[THCUITodo createInView:labelWithElement.superview
 						 withElement:labelWithElement.element 
 						withDelegate:labelWithElement.textViewDelegate];
 		

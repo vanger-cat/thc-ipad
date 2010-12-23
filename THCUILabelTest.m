@@ -22,7 +22,7 @@
 - (void)setUp {
 	mockElement = [THCUIComponentsTestUtils newMockElement];
 	UIView *view = [UIView alloc];
-	label = [THCUILabel addLabelToView:view
+	label = [THCUILabel createInView:view
 									withElement:mockElement
 								   withDelegate:NULL];
 	[view release];
@@ -34,7 +34,7 @@
 					   hasX:kFakeX 
 					   hasY:kFakeY 
 					hasText:kFakeText 
-				 isSelected:defaultIsSelectedState 
+				 isSelected:kDefaultIsSelectedState 
 				   contains:mockElement];
 }
 

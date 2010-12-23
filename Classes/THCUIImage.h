@@ -20,6 +20,6 @@ extern NSString * const kTypeImage;
 @property (nonatomic, retain) UIImageView *image;
 @property (nonatomic, retain) NSString *imageName;
 
-+ (THCUIImage *)addImageToView:(UIView *)view withElement:(id<ElementInterface>)element;
++ (THCUIImage *)createInView:(UIView *)view withElement:(id<ElementInterface>)element;
 
 @end

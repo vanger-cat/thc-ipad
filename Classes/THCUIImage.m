@@ -16,7 +16,7 @@ NSString * const kTypeImage = @"image";
 @synthesize image;
 @synthesize imageName;
 
-+ (THCUIImage *)addImageToView:(UIView *)view withElement:(id<ElementInterface>)element {
++ (THCUIImage *)createInView:(UIView *)view withElement:(id<ElementInterface>)element {
 	THCUIImage *thcImage = [[THCUIImage alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
 	thcImage.element = element;
 	

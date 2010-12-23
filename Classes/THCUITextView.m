@@ -21,22 +21,7 @@ const CGFloat kTextAndLabelYDifference = 8;
 
 @synthesize textView;
 
-- (id)initWithFrame:(CGRect)frame {
-	CGRect viewFrame = [THCUIComponentsUtils frameAroundRect:frame withBorder:kBorderWidth];
-	
-	[super initWithFrame:viewFrame];
-	
-	CGRect textViewFrame = CGRectMake(kBorderWidth, 
-									  kBorderWidth, 
-									  frame.size.width,
-									  frame.size.height);
-	self.textView = [[UITextView alloc] initWithFrame:textViewFrame];
-	[self addSubview:self.textView];
-	
-	return self;
-}
-
-+ (THCUITextView *)addTextViewToView:(UIView *)aView withElement:(id<ElementInterface>)element withDelegate:(id<UITextViewDelegate>)delegate {
++ (THCUITextView *)createInView:(UIView *)aView withElement:(id<ElementInterface>)element withDelegate:(id<UITextViewDelegate>)delegate {
 	THCUITextView *textViewWithElement = [[THCUITextView alloc] initWithFrame:CGRectMake([element.x intValue], [element.y intValue], kTextComponentWidth, 0)];
 
 	textViewWithElement.element = element;
@@ -51,6 +36,21 @@ const CGFloat kTextAndLabelYDifference = 8;
 	[textViewWithElement release];
 	
 	return textViewWithElement;
+}
+
+- (id)initWithFrame:(CGRect)frame {
+	CGRect viewFrame = [THCUIComponentsUtils frameAroundRect:frame withBorder:kBorderWidth];
+	
+	[super initWithFrame:viewFrame];
+	
+	CGRect textViewFrame = CGRectMake(kBorderWidth, 
+									  kBorderWidth, 
+									  frame.size.width,
+									  frame.size.height);
+	self.textView = [[UITextView alloc] initWithFrame:textViewFrame];
+	[self addSubview:self.textView];
+	
+	return self;
 }
 
 - (void)completeEditing {

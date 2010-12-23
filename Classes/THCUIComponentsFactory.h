@@ -13,12 +13,15 @@
 
 @interface THCUIComponentsFactory : NSObject {
 	id<UITextViewDelegate> textViewDelegate;
+	NSMutableDictionary *UIComponentsByNames;
 }
-
-+ (THCUIComponentsFactory *)newFactoryWithTextViewDelegate:(id<UITextViewDelegate>) textViewDelegate;
 
 @property (nonatomic, retain) id<UITextViewDelegate> textViewDelegate;
 
++ (THCUIComponentsFactory *)newFactoryWithTextViewDelegate:(id<UITextViewDelegate>) textViewDelegate;
+- (void)registerNewUIComponent:(id)component withType:(NSString *)type;
+
 - (id<THCUIComponentWithElementProtocol>)addComponentToView:(UIView *)view withElement:(id<ElementInterface>)element;
+- (THCUIComponentsFactory *)initWithTextViewDelegate:(id<UITextViewDelegate>) textViewDelegate;
 
 @end

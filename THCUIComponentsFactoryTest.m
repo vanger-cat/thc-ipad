@@ -10,9 +10,6 @@
 #import "GTMSenTestCase.h"
 #import "THCUIComponentAbstract.h"
 #import "THCUILabel.h"
-#import "THCUITextView.h"
-#import "THCUITodo.h"
-#import "THCUIImage.h"
 #import "THCUIComponentsFactory.h"
 #import "THCUIComponentsTestUtils.h"
 #import "ElementInterface.h"
@@ -43,30 +40,9 @@
 
 - (void)testCreationOfLabel {
 	mockElement.type = kTypeLabelForTests;
+	[factory registerNewUIComponent:[THCUILabel class] withType:kTypeLabelForTests];
 	id<THCUIComponentWithElementProtocol> component = [factory addComponentToView:fakeView withElement:mockElement];
 	STAssertTrue([component isMemberOfClass:[THCUILabel class]], @"should return THCLabelWithElement component");
-	
-	
-}
-
-- (void)testCreationOfTextView {
-	mockElement.type = kTypeTextViewForTests;
-	id<THCUIComponentWithElementProtocol> component = [factory addComponentToView:fakeView withElement:mockElement];
-	STAssertTrue([component isMemberOfClass:[THCUITextView class]], @"should return THCTextViewWithElement component");
-}
-
-- (void)testCreationOfTodo {
-	mockElement.type = kTypeTodoForTests;
-	id<THCUIComponentWithElementProtocol> component = [factory addComponentToView:fakeView withElement:mockElement];
-	STAssertTrue([component isMemberOfClass:[THCUITodo class]], @"should return THCUITodoView component");
-	
-	
-}
-
-- (void)testCreationOfImage {
-	mockElement.type = kTypeImageForTests;
-	id<THCUIComponentWithElementProtocol> component = [factory addComponentToView:fakeView withElement:mockElement];
-	STAssertTrue([component isMemberOfClass:[THCUIImage class]], @"should return THCUIImage component");
 }
 
 - (void)testCreationOfUnknownThrowException {

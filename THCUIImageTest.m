@@ -30,14 +30,14 @@ NSString * const kFakeImageName = @"vanger.JPG";
 }
 
 - (void)testAddingOfImageToView {
-	[THCUIImage addImageToView:fakeView withElement:elementMock];
+	[THCUIImage createInView:fakeView withElement:elementMock];
 	
 	NSUInteger expectedCount = 1;
 	STAssertEquals([fakeView.subviews count], expectedCount, @"image added incorrectly");
 }
 
 - (void)testComponentFieldInAddedImage {
-	THCUIImage *image = [THCUIImage addImageToView:fakeView withElement:elementMock];
+	THCUIImage *image = [THCUIImage createInView:fakeView withElement:elementMock];
 	
 	[self assertUIComponent:image 
 					   hasX:kFakeX
@@ -48,19 +48,19 @@ NSString * const kFakeImageName = @"vanger.JPG";
 }
 
 - (void)testImageNameInAddedComponent {
-	THCUIImage *image = [THCUIImage addImageToView:fakeView withElement:elementMock];
+	THCUIImage *image = [THCUIImage createInView:fakeView withElement:elementMock];
 	
 	STAssertEqualStrings(image.imageName, elementMock.text, @"image name setted incorrectly");
 }
 
 - (void)testTHCImageUIImageViewSizeSettedProperly {
-	THCUIImage *thcImage = [THCUIImage addImageToView:fakeView withElement:elementMock];
+	THCUIImage *thcImage = [THCUIImage createInView:fakeView withElement:elementMock];
 	
 	STAssertEquals(thcImage.image.frame.size, thcImage.image.image.size, @"UIImageView size incorrect setted incorrectly");
 }
 
 - (void)testTHCImageFrameSizeSettedProperly {
-	THCUIImage *thcImage = [THCUIImage addImageToView:fakeView withElement:elementMock];
+	THCUIImage *thcImage = [THCUIImage createInView:fakeView withElement:elementMock];
 	
 	STAssertEquals(thcImage.frame.size, 
 				   [THCUIComponentsUtils frameAroundRect:thcImage.image.frame withBorder:kBorderWidth].size, 
@@ -68,7 +68,7 @@ NSString * const kFakeImageName = @"vanger.JPG";
 }
 
 - (void)testElementTypeAfterCreation {
-	THCUIImage *image = [THCUIImage addImageToView:fakeView withElement:elementMock];
+	THCUIImage *image = [THCUIImage createInView:fakeView withElement:elementMock];
 	STAssertEqualStrings(image.element.type, kTypeImageForTests, @"type of element isn't set");
 }
 

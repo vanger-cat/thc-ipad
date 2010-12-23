@@ -23,6 +23,9 @@
 		40023DE512B660B9000870CD /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 40023DDC12B660AC000870CD /* Utils.m */; };
 		40023DE612B660BF000870CD /* THCFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 40023DDE12B660AC000870CD /* THCFonts.m */; };
 		40023DE712B660C2000870CD /* THCColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 40023DE012B660AC000870CD /* THCColors.m */; };
+		4027872F12C3F379002C00F0 /* THCUILink.m in Sources */ = {isa = PBXBuildFile; fileRef = 4027872E12C3F379002C00F0 /* THCUILink.m */; };
+		4027873012C3F379002C00F0 /* THCUILink.m in Sources */ = {isa = PBXBuildFile; fileRef = 4027872E12C3F379002C00F0 /* THCUILink.m */; };
+		4027874212C3FA8F002C00F0 /* THCUILinkTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4027874112C3FA8F002C00F0 /* THCUILinkTest.m */; };
 		402D370312ABAE1100010C4A /* AbstractManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 402D370212ABAE1100010C4A /* AbstractManagerTest.m */; };
 		402D371512ABAFD700010C4A /* THCUIComponentAbstract.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BB26B9129EB31700E0C916 /* THCUIComponentAbstract.m */; };
 		402D371612ABAFD900010C4A /* THCUIComponentsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 403107C812A8504500BECD2E /* THCUIComponentsUtils.m */; };
@@ -192,6 +195,9 @@
 		40023DDF12B660AC000870CD /* THCFonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THCFonts.h; sourceTree = "<group>"; };
 		40023DE012B660AC000870CD /* THCColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCColors.m; sourceTree = "<group>"; };
 		40023DE112B660AC000870CD /* THCColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THCColors.h; sourceTree = "<group>"; };
+		4027872D12C3F379002C00F0 /* THCUILink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THCUILink.h; sourceTree = "<group>"; };
+		4027872E12C3F379002C00F0 /* THCUILink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCUILink.m; sourceTree = "<group>"; };
+		4027874112C3FA8F002C00F0 /* THCUILinkTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCUILinkTest.m; sourceTree = "<group>"; };
 		402D370212ABAE1100010C4A /* AbstractManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbstractManagerTest.m; path = Classes/AbstractManagerTest.m; sourceTree = "<group>"; };
 		402D37D112ABB58E00010C4A /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
 		402D37D212ABB58E00010C4A /* GTMIPhoneUnitTestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMIPhoneUnitTestDelegate.h; sourceTree = "<group>"; };
@@ -465,6 +471,7 @@
 				40FE062912B66BB5007FAECC /* THCUITextViewTest.m */,
 				40FE0CE112B7F648007FAECC /* THCUITodoTest.m */,
 				40FE094812B78D87007FAECC /* THCUIImageTest.m */,
+				4027874112C3FA8F002C00F0 /* THCUILinkTest.m */,
 			);
 			name = "UIControllers with Element";
 			sourceTree = "<group>";
@@ -570,6 +577,8 @@
 				403107C812A8504500BECD2E /* THCUIComponentsUtils.m */,
 				92D8C1F712B40B4D00731B1C /* THCScrollView.h */,
 				92D8C1F812B40B4D00731B1C /* THCScrollView.m */,
+				4027872D12C3F379002C00F0 /* THCUILink.h */,
+				4027872E12C3F379002C00F0 /* THCUILink.m */,
 			);
 			name = "UIControllers with Element";
 			sourceTree = "<group>";
@@ -917,6 +926,7 @@
 				40023DE712B660C2000870CD /* THCColors.m in Sources */,
 				40FE0A5512B79DF5007FAECC /* THCUIImage.m in Sources */,
 				40FE0B8B12B7B844007FAECC /* THCUIComponentsFactory.m in Sources */,
+				4027873012C3F379002C00F0 /* THCUILink.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -991,6 +1001,8 @@
 				40FE0B7A12B7B5CD007FAECC /* THCUIComponentsFactoryTest.m in Sources */,
 				40FE0B8A12B7B844007FAECC /* THCUIComponentsFactory.m in Sources */,
 				40FE0CE212B7F648007FAECC /* THCUITodoTest.m in Sources */,
+				4027872F12C3F379002C00F0 /* THCUILink.m in Sources */,
+				4027874212C3FA8F002C00F0 /* THCUILinkTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

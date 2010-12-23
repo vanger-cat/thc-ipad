@@ -26,7 +26,7 @@ extern NSString * const kTypeTodo;
 @property (nonatomic, retain) UIView *bottomLayer;
 @property (nonatomic) BOOL isChecked;
 
-+ (THCUITodo *)addTodoToView:(UIView *)aView withElement:(Element *)newElement withDelegate:(id<UITextViewDelegate>)delegate;
++ (THCUITodo *)createInView:(UIView *)aView withElement:(Element *)newElement withDelegate:(id<UITextViewDelegate>)delegate;
 + (UIGestureRecognizer *)newGestureForConvertingToLabel;
 
 @end
