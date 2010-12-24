@@ -12,6 +12,7 @@
 const CGFloat kFakeX = 50;
 const CGFloat kFakeY = 50;
 NSString * const kFakeText = @"test string!";
+NSString * const kFakeType = @"fake type!";
 const BOOL kDefaultIsSelectedState = NO;
 NSString * const kTypeTextViewForTests = @"textview";
 NSString * const kTypeLabelForTests = @"label";
@@ -27,6 +28,7 @@ NSString * const kTypeLinkForTests = @"link";
 	mockElement.x = [NSNumber numberWithInt:kFakeX];
 	mockElement.y = [NSNumber numberWithInt:kFakeY];
 	mockElement.text = kFakeText;
+	mockElement.type = kFakeType;
 	
 	return mockElement;
 }

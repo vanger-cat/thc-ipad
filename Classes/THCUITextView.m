@@ -22,6 +22,7 @@ const CGFloat kTextAndLabelYDifference = 8;
 static id<UITextViewDelegate> defaultTextViewDelegate;
 
 @synthesize textView;
+@synthesize typeOfEditedComponent;
 
 + (void)setDefaultTextViewDelegate:(id<UITextViewDelegate>)newDelegate {
 	defaultTextViewDelegate = newDelegate;
@@ -30,6 +31,7 @@ static id<UITextViewDelegate> defaultTextViewDelegate;
 + (THCUITextView *)createInView:(UIView *)aView withElement:(id<ElementInterface>)element {
 	THCUITextView *textViewWithElement = [[THCUITextView alloc] initWithFrame:CGRectMake([element.x intValue], [element.y intValue], kTextComponentWidth, 0)];
 
+	textViewWithElement.typeOfEditedComponent = element.type;
 	textViewWithElement.element = element;
 	
 	[THCUIComponentsUtils setupTextView:textViewWithElement.textView andDelegate:defaultTextViewDelegate];

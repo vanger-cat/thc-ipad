@@ -17,9 +17,11 @@ extern const CGFloat kTextAndLabelYDifference;
 
 @interface THCUITextView : THCUIComponentAbstract {
 	UITextView *textView;
+	NSString *typeOfEditedComponent;
 }
 
 @property (nonatomic,retain) UITextView *textView;
+@property (nonatomic, retain) NSString *typeOfEditedComponent;
 
 + (void)setDefaultTextViewDelegate:(id<UITextViewDelegate>)newDelegate;
 + (THCUITextView *)createInView:(UIView *)aView withElement:(id<ElementInterface>)element;

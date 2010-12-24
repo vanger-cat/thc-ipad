@@ -161,7 +161,7 @@
 
 - (void)createComponentIfTextViewIsNotEmpty:(THCUITextView *)textViewWithElement {
 	if ([textViewWithElement hasText]) {
-		[self createLabelInPlaceOfTextView:textViewWithElement];
+		[self createComponentInPlaceOfTextView:textViewWithElement];
 		NSLog(@"Added label with text: '%@'", textViewWithElement.text);
 	} else {
 		[elementManager deleteElement:textViewWithElement.element];
@@ -170,7 +170,7 @@
 
 }
 
-- (void)createLabelInPlaceOfTextView:(THCUITextView *)textViewWithElement {
+- (void)createComponentInPlaceOfTextView:(THCUITextView *)textViewWithElement {
 	CGPoint pointForLabel = CGPointMake(textViewWithElement.x, textViewWithElement.y);
 	
 	[textViewWithElement saveComponentStateToElement];

@@ -182,9 +182,9 @@
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
-		activeExecutable = 40BE066B12903B99005C77B1 /* thc-ipad */;
-		activeSDKPreference = iphoneos4.2;
-		activeTarget = 1D6058900D05DD3D006BFB54 /* thc-ipad */;
+		activeExecutable = 4008D32C1298EF6600D2A10B /* thc-ipad-test */;
+		activeSDKPreference = iphonesimulator4.2;
+		activeTarget = 92B548291296ECB200072C8D /* thc-ipad-test */;
 		addToTargets = (
 			92B548291296ECB200072C8D /* thc-ipad-test */,
 		);
@@ -543,6 +543,11 @@
 			4021ED6012C48893008A2D3E = 4021ED6012C48893008A2D3E /* PBXTextBookmark */;
 			4021ED6312C488DB008A2D3E = 4021ED6312C488DB008A2D3E /* PBXTextBookmark */;
 			4021ED6412C488DB008A2D3E = 4021ED6412C488DB008A2D3E /* PBXTextBookmark */;
+			4021ED8D12C48B01008A2D3E /* PBXTextBookmark */ = 4021ED8D12C48B01008A2D3E /* PBXTextBookmark */;
+			4021ED8E12C48B01008A2D3E /* PBXTextBookmark */ = 4021ED8E12C48B01008A2D3E /* PBXTextBookmark */;
+			4021ED8F12C48B01008A2D3E /* PBXTextBookmark */ = 4021ED8F12C48B01008A2D3E /* PBXTextBookmark */;
+			4021ED9012C48B02008A2D3E /* PBXTextBookmark */ = 4021ED9012C48B02008A2D3E /* PBXTextBookmark */;
+			4021ED9112C48B02008A2D3E /* PBXTextBookmark */ = 4021ED9112C48B02008A2D3E /* PBXTextBookmark */;
 			4027872512C3F24E002C00F0 = 4027872512C3F24E002C00F0 /* PBXTextBookmark */;
 			4027872612C3F24E002C00F0 = 4027872612C3F24E002C00F0 /* PBXTextBookmark */;
 			4027872A12C3F350002C00F0 = 4027872A12C3F350002C00F0 /* PBXTextBookmark */;
@@ -937,6 +942,11 @@
 		name = UIView.h;
 		path = /Developer3.2.5/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIView.h;
 		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {901, 3822}}";
+			sepNavSelRange = "{3554, 71}";
+			sepNavVisRange = "{2831, 1261}";
+		};
 	};
 	4008D32C1298EF6600D2A10B /* thc-ipad-test */ = {
 		isa = PBXExecutable;
@@ -1182,7 +1192,7 @@
 		fRef = 40FE064212B67381007FAECC /* THCUIComponentsTestUtils.m */;
 		name = "THCUIComponentsTestUtils.m: 37";
 		rLen = 76;
-		rLoc = 973;
+		rLoc = 1048;
 		rType = 0;
 		vrLen = 729;
 		vrLoc = 828;
@@ -1202,7 +1212,7 @@
 		fRef = 40FE064112B67381007FAECC /* THCUIComponentsTestUtils.h */;
 		name = "THCUIComponentsTestUtils.h: 17";
 		rLen = 43;
-		rLoc = 342;
+		rLoc = 377;
 		rType = 0;
 		vrLen = 671;
 		vrLoc = 249;
@@ -1446,7 +1456,7 @@
 		fRef = 40FE064212B67381007FAECC /* THCUIComponentsTestUtils.m */;
 		name = "THCUIComponentsTestUtils.m: 38";
 		rLen = 76;
-		rLoc = 973;
+		rLoc = 1048;
 		rType = 0;
 		vrLen = 970;
 		vrLoc = 628;
@@ -1456,7 +1466,7 @@
 		fRef = 40FE064112B67381007FAECC /* THCUIComponentsTestUtils.h */;
 		name = "THCUIComponentsTestUtils.h: 20";
 		rLen = 35;
-		rLoc = 483;
+		rLoc = 518;
 		rType = 0;
 		vrLen = 828;
 		vrLoc = 136;
@@ -2100,8 +2110,8 @@
 	4021ECC112C47F9A008A2D3E /* ThcAppDelegateTest.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {850, 585}}";
-			sepNavSelRange = "{695, 0}";
-			sepNavVisRange = "{280, 884}";
+			sepNavSelRange = "{665, 60}";
+			sepNavVisRange = "{315, 849}";
 		};
 	};
 	4021ECE712C48330008A2D3E /* PBXTextBookmark */ = {
@@ -2226,7 +2236,7 @@
 		fRef = 40A918A21291A52C00BFCA83 /* THCUITextView.h */;
 		name = "THCUITextView.h: 25";
 		rLen = 0;
-		rLoc = 707;
+		rLoc = 804;
 		rType = 0;
 		vrLen = 759;
 		vrLoc = 0;
@@ -2266,7 +2276,7 @@
 		fRef = 40A918A31291A52C00BFCA83 /* THCUITextView.m */;
 		name = "THCUITextView.m: 38";
 		rLen = 0;
-		rLoc = 1123;
+		rLoc = 1158;
 		rType = 0;
 		vrLen = 961;
 		vrLoc = 287;
@@ -2316,7 +2326,7 @@
 		fRef = 40FE062912B66BB5007FAECC /* THCUITextViewTest.m */;
 		name = "THCUITextViewTest.m: 55";
 		rLen = 0;
-		rLoc = 1519;
+		rLoc = 1669;
 		rType = 0;
 		vrLen = 953;
 		vrLoc = 726;
@@ -2809,6 +2819,56 @@
 		vrLen = 943;
 		vrLoc = 121;
 	};
+	4021ED8D12C48B01008A2D3E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 92CFB278128D9DFB005CB1ED /* RootViewController.h */;
+		name = "RootViewController.h: 13";
+		rLen = 0;
+		rLoc = 238;
+		rType = 0;
+		vrLen = 986;
+		vrLoc = 0;
+	};
+	4021ED8E12C48B01008A2D3E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
+		name = "RootViewController.m: 63";
+		rLen = 0;
+		rLoc = 2037;
+		rType = 0;
+		vrLen = 937;
+		vrLoc = 1443;
+	};
+	4021ED8F12C48B01008A2D3E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
+		name = "RootViewController.m: 208";
+		rLen = 0;
+		rLoc = 6762;
+		rType = 0;
+		vrLen = 1049;
+		vrLoc = 4427;
+	};
+	4021ED9012C48B02008A2D3E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
+		name = "RootViewController.m: 208";
+		rLen = 0;
+		rLoc = 6762;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
+	};
+	4021ED9112C48B02008A2D3E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
+		name = "RootViewController.m: 208";
+		rLen = 0;
+		rLoc = 6762;
+		rType = 0;
+		vrLen = 1049;
+		vrLoc = 4427;
+	};
 	4027872512C3F24E002C00F0 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 40FE082712B75730007FAECC /* THCScrollViewTest.m */;
@@ -2859,8 +2919,8 @@
 	4027872E12C3F379002C00F0 /* THCUILink.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {915, 715}}";
-			sepNavSelRange = "{712, 11}";
-			sepNavVisRange = "{121, 943}";
+			sepNavSelRange = "{792, 17}";
+			sepNavVisRange = "{70, 995}";
 		};
 	};
 	4027873312C3F3E1002C00F0 /* PBXTextBookmark */ = {
@@ -2918,7 +2978,7 @@
 		fRef = 40A918A31291A52C00BFCA83 /* THCUITextView.m */;
 		name = "THCUITextView.m: 53";
 		rLen = 0;
-		rLoc = 1652;
+		rLoc = 1687;
 		rType = 0;
 		vrLen = 1094;
 		vrLoc = 420;
@@ -3353,16 +3413,16 @@
 	};
 	40A918A21291A52C00BFCA83 /* THCUITextView.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {850, 416}}";
-			sepNavSelRange = "{707, 0}";
-			sepNavVisRange = "{0, 759}";
+			sepNavIntBoundsRect = "{{0, 0}, {850, 442}}";
+			sepNavSelRange = "{641, 0}";
+			sepNavVisRange = "{32, 819}";
 		};
 	};
 	40A918A31291A52C00BFCA83 /* THCUITextView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1118, 1469}}";
-			sepNavSelRange = "{1123, 0}";
-			sepNavVisRange = "{287, 961}";
+			sepNavIntBoundsRect = "{{0, 0}, {1118, 1482}}";
+			sepNavSelRange = "{421, 30}";
+			sepNavVisRange = "{332, 951}";
 		};
 	};
 	40A918E21291AA2D00BFCA83 /* PBXTextBookmark */ = {
@@ -3668,7 +3728,7 @@
 		fRef = 40A918A21291A52C00BFCA83 /* THCUITextView.h */;
 		name = "THCUITextView.h: 20";
 		rLen = 0;
-		rLoc = 492;
+		rLoc = 526;
 		rType = 0;
 		vrLen = 656;
 		vrLoc = 32;
@@ -3745,7 +3805,7 @@
 		fRef = 40FE064212B67381007FAECC /* THCUIComponentsTestUtils.m */;
 		name = "THCUIComponentsTestUtils.m: 22";
 		rLen = 41;
-		rLoc = 587;
+		rLoc = 631;
 		rType = 0;
 		vrLen = 1111;
 		vrLoc = 342;
@@ -3755,7 +3815,7 @@
 		fRef = 40FE064112B67381007FAECC /* THCUIComponentsTestUtils.h */;
 		name = "THCUIComponentsTestUtils.h: 36";
 		rLen = 0;
-		rLoc = 969;
+		rLoc = 1004;
 		rType = 0;
 		vrLen = 851;
 		vrLoc = 47;
@@ -3825,7 +3885,7 @@
 		fRef = 40FE06C312B6AC09007FAECC /* RootViewControllerTest.m */;
 		name = "RootViewControllerTest.m: 184";
 		rLen = 0;
-		rLoc = 6070;
+		rLoc = 6074;
 		rType = 0;
 		vrLen = 737;
 		vrLoc = 5562;
@@ -3845,7 +3905,7 @@
 		fRef = 40A918A31291A52C00BFCA83 /* THCUITextView.m */;
 		name = "THCUITextView.m: 77";
 		rLen = 0;
-		rLoc = 2304;
+		rLoc = 2339;
 		rType = 0;
 		vrLen = 656;
 		vrLoc = 2007;
@@ -3855,9 +3915,9 @@
 		fRef = 40FE062912B66BB5007FAECC /* THCUITextViewTest.m */;
 		name = "THCUITextViewTest.m: 58";
 		rLen = 0;
-		rLoc = 1572;
+		rLoc = 1722;
 		rType = 0;
-		vrLen = 600;
+		vrLen = 535;
 		vrLoc = 1144;
 	};
 	40CFE87112BB74F20075AC77 /* PBXTextBookmark */ = {
@@ -3865,7 +3925,7 @@
 		fRef = 92CFB279128D9DFB005CB1ED /* RootViewController.m */;
 		name = "RootViewController.m: 161";
 		rLen = 0;
-		rLoc = 5459;
+		rLoc = 5249;
 		rType = 0;
 		vrLen = 400;
 		vrLoc = 4828;
@@ -3996,23 +4056,23 @@
 	};
 	40FE062912B66BB5007FAECC /* THCUITextViewTest.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {852, 832}}";
-			sepNavSelRange = "{1519, 0}";
-			sepNavVisRange = "{726, 953}";
+			sepNavIntBoundsRect = "{{0, 0}, {852, 884}}";
+			sepNavSelRange = "{1366, 0}";
+			sepNavVisRange = "{747, 1054}";
 		};
 	};
 	40FE064112B67381007FAECC /* THCUIComponentsTestUtils.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {850, 507}}";
-			sepNavSelRange = "{483, 35}";
-			sepNavVisRange = "{136, 828}";
+			sepNavIntBoundsRect = "{{0, 0}, {850, 520}}";
+			sepNavSelRange = "{518, 35}";
+			sepNavVisRange = "{136, 817}";
 		};
 	};
 	40FE064212B67381007FAECC /* THCUIComponentsTestUtils.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {850, 728}}";
-			sepNavSelRange = "{397, 48}";
-			sepNavVisRange = "{3, 872}";
+			sepNavIntBoundsRect = "{{0, 0}, {850, 780}}";
+			sepNavSelRange = "{673, 41}";
+			sepNavVisRange = "{0, 925}";
 			sepNavWindowFrame = "{{15, 0}, {1173, 778}}";
 		};
 	};
@@ -4217,7 +4277,7 @@
 		fRef = 40FE064112B67381007FAECC /* THCUIComponentsTestUtils.h */;
 		name = "THCUIComponentsTestUtils.h: 20";
 		rLen = 0;
-		rLoc = 659;
+		rLoc = 694;
 		rType = 0;
 		vrLen = 412;
 		vrLoc = 305;
@@ -4237,7 +4297,7 @@
 		fRef = 40FE064212B67381007FAECC /* THCUIComponentsTestUtils.m */;
 		name = "THCUIComponentsTestUtils.m: 34";
 		rLen = 69;
-		rLoc = 1207;
+		rLoc = 1282;
 		rType = 0;
 		vrLen = 628;
 		vrLoc = 623;
@@ -4701,16 +4761,16 @@
 	};
 	92CFB278128D9DFB005CB1ED /* RootViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {850, 611}}";
+			sepNavIntBoundsRect = "{{0, 0}, {850, 572}}";
 			sepNavSelRange = "{238, 0}";
-			sepNavVisRange = "{0, 453}";
+			sepNavVisRange = "{0, 986}";
 		};
 	};
 	92CFB279128D9DFB005CB1ED /* RootViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {850, 2756}}";
-			sepNavSelRange = "{2037, 0}";
-			sepNavVisRange = "{1443, 938}";
+			sepNavIntBoundsRect = "{{0, 0}, {908, 2600}}";
+			sepNavSelRange = "{5521, 13}";
+			sepNavVisRange = "{5235, 1098}";
 			sepNavWindowFrame = "{{15, 0}, {1173, 778}}";
 		};
 	};

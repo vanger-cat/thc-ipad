@@ -14,6 +14,7 @@
 extern const CGFloat kFakeX;
 extern const CGFloat kFakeY;
 extern NSString * const kFakeText;
+extern NSString * const kFakeType;
 extern const BOOL kDefaultIsSelectedState;
 extern NSString * const kTypeTextViewForTests;
 extern NSString * const kTypeLabelForTests;

@@ -49,6 +49,10 @@
 	STAssertEqualStrings(textView.element.type, kTypeTextViewForTests, @"type of element isn't set");
 }
 
+- (void)testEdititedElementTypeAfterCreation {
+	STAssertEqualStrings(textView.typeOfEditedComponent, kFakeType, @"edited element type isn't set");
+}
+
 - (void)testHasTextReturnNoIfFieldEmpty {
 	mockElement.text = @"";
 	THCUITextView *emptyTextView = [THCUITextView createInView:fakeView
