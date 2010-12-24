@@ -161,7 +161,7 @@
 
 - (void)createComponentIfTextViewIsNotEmpty:(THCUITextView *)textViewWithElement {
 	if ([textViewWithElement hasText]) {
-		[self createComponentInPlaceOfTextView:textViewWithElement];
+		[self createComponentFromTextView:textViewWithElement];
 		NSLog(@"Added label with text: '%@'", textViewWithElement.text);
 	} else {
 		[elementManager deleteElement:textViewWithElement.element];
@@ -170,17 +170,18 @@
 
 }
 
-- (void)createComponentInPlaceOfTextView:(THCUITextView *)textViewWithElement {
-	CGPoint pointForLabel = CGPointMake(textViewWithElement.x, textViewWithElement.y);
+- (void)createComponentFromTextView:(THCUITextView *)textViewWithElement {
+	CGPoint pointForComponent = CGPointMake(textViewWithElement.x, textViewWithElement.y);
 	
 	[textViewWithElement saveComponentStateToElement];
 	id<ElementInterface> element = textViewWithElement.element;
+	element.type = textViewWithElement.typeOfEditedComponent;
 	
-	THCUILabel *labelWithElement = [THCUILabel createInView:textViewWithElement.superview
-																	withElement:element];
-	
-	[THCScrollView changePositionWithAdjustmentByGridOfComponent:labelWithElement 
-														 toPoint:pointForLabel  
+	THCUIComponentAbstract *component = (THCUIComponentAbstract *)[self.componentsFactory addComponentToView:textViewWithElement.superview 
+																								 withElement:element];
+		
+	[THCScrollView changePositionWithAdjustmentByGridOfComponent:component
+														 toPoint:pointForComponent  
 														animated:YES];	
 }
 

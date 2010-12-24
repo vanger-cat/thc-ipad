@@ -35,6 +35,6 @@
 - (IBAction)showDropboxLoginController:(id)sender;
 
 - (void)createComponentIfTextViewIsNotEmpty:(THCUITextView *)textViewWithElement;
-- (void)createComponentInPlaceOfTextView:(THCUITextView *)textViewWithElement;
+- (void)createComponentFromTextView:(THCUITextView *)textViewWithElement;
 
 @end

@@ -6,6 +6,7 @@
 //  Copyright 2010 Magic Ink. All rights reserved.
 //
 
+#import <OCMock/OCMock.h>
 #import "GTMSenTestCase.h"
 #import "ElementManager.h"
 #import "ElementMock.h"
@@ -14,11 +15,10 @@
 #import "THCUILabel.h"
 #import "THCUIImage.h"
 #import "THCUITodo.h"
+#import "THCUILink.h"
 #import "THCUIComponentsTestUtils.h"
 #import "THCScrollView.h"
 
-
-#import <OCMock/OCMock.h>
 @interface RootViewControllerTest : THCUIComponentsTestUtils
 {
 	RootViewController *rootViewController;
@@ -61,19 +61,11 @@
 }
 
 - (void)testCreationOfLabelInPlaceOfTextViewWithNoElement {
-	THCUITextView *textViewWithElement = [THCUITextView createInView:fakeView 
-														 withElement:fakeElement];
-	[rootViewController createComponentInPlaceOfTextView:textViewWithElement];
-	
-	THCUILabel *label = (THCUILabel *)[fakeView.subviews objectAtIndex:0];
-	[self assertUIComponent:label 
-					   hasX:textViewWithElement.x 
-					   hasY:textViewWithElement.y 
-					hasText:textViewWithElement.text 
-				 isSelected:textViewWithElement.selected 
-				   contains:fakeElement];
+	STAssertTrue(NO, @"Continue implementation of this test");
+}
 
-	[fakeElement release];
+- (void)testCreationOfLinkInPlaceOfTextViewWithNoElement {
+	STAssertTrue(NO, @"Continue implementation of this test");
 }
 
 - (void)addElementWithType:(NSString *)type toArray:(NSMutableArray *)array {
@@ -192,6 +184,7 @@
 }
 
 - (void)tearDown {
+	[fakeElement release];
 	[rootViewController release];
 	[fakeView release];
 }
