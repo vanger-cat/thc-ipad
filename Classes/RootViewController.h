@@ -34,7 +34,7 @@
 - (void)createTextViewAtPoint:(CGPoint)pointForTextView atView:(UIView *)view withElement:(id<ElementInterface>)element;
 - (IBAction)showDropboxLoginController:(id)sender;
 
-- (void)createLabelIfTextViewIsNotEmpty:(THCUITextView *)textViewWithElement;
+- (void)createComponentIfTextViewIsNotEmpty:(THCUITextView *)textViewWithElement;
 - (void)createLabelInPlaceOfTextView:(THCUITextView *)textViewWithElement;
 
 @end

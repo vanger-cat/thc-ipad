@@ -186,7 +186,7 @@
 	BOOL value = NO;
 	[[[textViewMock expect] andReturnValue:OCMOCK_VALUE(value)] hasText];
 	
-	[rootViewController createLabelIfTextViewIsNotEmpty:textViewMock];
+	[rootViewController createComponentIfTextViewIsNotEmpty:textViewMock];
 	
 	[elementManagerMock verify];
 }

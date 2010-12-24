@@ -154,12 +154,12 @@
 - (void)textViewDidEndEditing:(UITextView *)textView {
 	THCUITextView *textViewWithElement = (THCUITextView *) textView.superview;
 	
-	[self createLabelIfTextViewIsNotEmpty:textViewWithElement];
+	[self createComponentIfTextViewIsNotEmpty:textViewWithElement];
 	
 	[textViewWithElement removeFromSuperview];
 }
 
-- (void)createLabelIfTextViewIsNotEmpty:(THCUITextView *)textViewWithElement {
+- (void)createComponentIfTextViewIsNotEmpty:(THCUITextView *)textViewWithElement {
 	if ([textViewWithElement hasText]) {
 		[self createLabelInPlaceOfTextView:textViewWithElement];
 		NSLog(@"Added label with text: '%@'", textViewWithElement.text);
