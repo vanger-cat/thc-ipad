@@ -23,8 +23,7 @@
 	mockElement = [THCUIComponentsTestUtils newMockElement];
 	UIView *view = [UIView alloc];
 	label = [THCUILabel createInView:view
-									withElement:mockElement
-								   withDelegate:NULL];
+									withElement:mockElement];
 	[view release];
 	[mockElement release];
 }

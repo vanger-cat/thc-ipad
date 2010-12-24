@@ -17,6 +17,6 @@ extern NSString * const kTypeLink;
 
 @property (nonatomic, retain) NSString *url;
 
-+ (THCUILink *)createInView:(UIView *)aView withElement:(id<ElementInterface>)newElement withDelegate:(id<UITextViewDelegate>)delegate;
++ (THCUILink *)createInView:(UIView *)aView withElement:(id<ElementInterface>)newElement;
 + (UIGestureRecognizer *)newGestureToOpenLink;
 @end

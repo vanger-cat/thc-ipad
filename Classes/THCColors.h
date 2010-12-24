@@ -11,8 +11,8 @@
 + (UIColor *)colorForEditedTextNoteBackground;
 + (UIColor *)colorForTextNoteBackground;
 
++ (UIColor *)colorForLinkTextColor;
 
 	//for test purposes
 + (UIColor *)colorForMarker;
-
 @end

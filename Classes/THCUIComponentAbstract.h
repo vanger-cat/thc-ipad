@@ -18,4 +18,6 @@ extern const CGFloat kTextComponentHeightMax;
 	BOOL selected;
 }
 
++ (THCUIComponentAbstract *)createInView:(UIView *)aView withElement:(id<ElementInterface>)newElement;
+
 @end

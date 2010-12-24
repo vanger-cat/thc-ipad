@@ -7,18 +7,23 @@
 //
 
 #import "THCUILink.h"
+#import "THCFonts.h"
+#import "THCColors.h"
 
 NSString * const kTypeLink = @"link";
 
 @implementation THCUILink
 
-+ (THCUILink *)createInView:(UIView *)aView withElement:(id<ElementInterface>)newElement withDelegate:(id<UITextViewDelegate>)delegate {
++ (THCUILink *)createInView:(UIView *)aView withElement:(id<ElementInterface>)newElement {
 	THCUILink *thcLink = [[THCUILink alloc] initWithFrame:[[self class] frameForLabelWithElement:newElement]];
-	[super addLabel:thcLink toView:aView withElement:newElement withDelegate:delegate];
+	[super addLabel:thcLink toView:aView withElement:newElement];
 	
 	UIGestureRecognizer *gestureToOpenLink = [THCUILink newGestureToOpenLink];
 	[thcLink addGestureRecognizer:gestureToOpenLink];
 	[gestureToOpenLink release];
+	
+	[thcLink.label setFont:[UIFont fontForLink]];
+	[thcLink.label setTextColor:[UIColor colorForLinkTextColor]];
 	
 	return thcLink;
 }

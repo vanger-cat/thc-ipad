@@ -60,7 +60,7 @@
 	{
 		id<ElementInterface> element = [elementManager savedElementWithText:@"http://ya.ru" 
 																	atPoint:CGPointMake(10, 10)];
-		[THCUILink createInView:self.scrollView.spaceView withElement:element withDelegate:self];
+		[THCUILink createInView:self.scrollView.spaceView withElement:element];
 		[elementManager save];
 	}
 }
@@ -118,8 +118,7 @@
 	
 - (void)createTextViewAtPoint:(CGPoint)pointForTextView atView:(UIView *)view withElement:(id<ElementInterface>)element {
 	THCUITextView *textViewWithElement = [THCUITextView createInView:view
-															  withElement:element 
-															 withDelegate:self];
+															  withElement:element];
 	
 	[THCScrollView changePositionWithAdjustmentByGridOfComponent:textViewWithElement 
 														 toPoint:pointForTextView 
@@ -178,8 +177,7 @@
 	id<ElementInterface> element = textViewWithElement.element;
 	
 	THCUILabel *labelWithElement = [THCUILabel createInView:textViewWithElement.superview
-																	withElement:element 
-																   withDelegate:self];
+																	withElement:element];
 	
 	[THCScrollView changePositionWithAdjustmentByGridOfComponent:labelWithElement 
 														 toPoint:pointForLabel  

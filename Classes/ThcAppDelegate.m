@@ -25,8 +25,7 @@
 #pragma mark -
 #pragma mark Application lifecycle
 
-//TODO: test it
-- (THCUIComponentsFactory *)initComponentsFactorry {
+- (THCUIComponentsFactory *)initComponentsFactory {
 	THCUIComponentsFactory *componentsFactory = [THCUIComponentsFactory newFactoryWithTextViewDelegate:rootViewController];
 	[componentsFactory registerNewUIComponent:[THCUILink class] withType:kTypeLink];
 	[componentsFactory registerNewUIComponent:[THCUITextView class] withType:kTypeTextView];
@@ -36,16 +35,34 @@
 	return componentsFactory;
 }
 
+- (void)injectComponentsFactory {
+	THCUIComponentsFactory *componentsFactory = [self initComponentsFactory];
+	rootViewController.componentsFactory = componentsFactory;
+}
+
+- (void)injectElementManager {
+	rootViewController.elementManager = [ElementManager initSharedInstanceWithContext:[self managedObjectContext]];
+}
+
+- (void)injectTextViewDelegate {
+	[THCUITextView setDefaultTextViewDelegate:rootViewController];
+}
+
+- (void)injectDependencies {
+	[self injectTextViewDelegate];
+	[self injectComponentsFactory];
+	[self injectElementManager];
+	
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	// Create dropbox session
 	DBSession* dbSession = [[[DBSession alloc] initWithConsumerKey:@"vnn0ga73pr9twmu"
 													consumerSecret:@"j4283nn8geip623"] autorelease];
     [DBSession setSharedSession:dbSession];
 	
-	rootViewController.elementManager = [ElementManager initSharedInstanceWithContext:[self managedObjectContext]];
-	THCUIComponentsFactory *componentsFactory = [self initComponentsFactorry];
-	rootViewController.componentsFactory = componentsFactory;
-	[componentsFactory release];	
+	[self injectDependencies];
+	
 	[self.window addSubview:rootViewController.view];
     [self.window makeKeyAndVisible];
 

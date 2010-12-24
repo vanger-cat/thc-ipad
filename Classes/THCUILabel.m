@@ -17,19 +17,18 @@ const CGFloat kMinimalLabelHeight = 18;
 
 @implementation THCUILabel
 
-@synthesize textViewDelegate;
 @synthesize label;
 
-+ (THCUILabel *)createInView:(UIView *)aView withElement:(id<ElementInterface>)newElement withDelegate:(id<UITextViewDelegate>)delegate {
++ (THCUILabel *)createInView:(UIView *)aView withElement:(id<ElementInterface>)newElement {
 	THCUILabel *thcLabel = [[THCUILabel alloc] initWithFrame:[[self class] frameForLabelWithElement:newElement]];
-	return [self addLabel:thcLabel toView:aView withElement:newElement withDelegate:delegate];
+	return [self addLabel:thcLabel toView:aView withElement:newElement];
 }
 
 + (CGRect)frameForLabelWithElement:(id<ElementInterface>)element {
 	return CGRectMake([element.x intValue], [element.y intValue], kTextComponentWidth, 0);
 }
 
-+ (THCUILabel *)addLabel:(THCUILabel *)thcLabel toView:(UIView *)aView withElement:(id<ElementInterface>)newElement withDelegate:(id<UITextViewDelegate>)delegate {
++ (THCUILabel *)addLabel:(THCUILabel *)thcLabel toView:(UIView *)aView withElement:(id<ElementInterface>)newElement {
 	[THCUIComponentsUtils setupLabel:thcLabel.label];
 	
 	thcLabel.element = newElement;
@@ -43,8 +42,6 @@ const CGFloat kMinimalLabelHeight = 18;
 	[convertToTODOGesture release];
 	
 	[aView addSubview:thcLabel];
-	
-	thcLabel.textViewDelegate = delegate;
 	
 	[thcLabel release];
 	
@@ -78,8 +75,7 @@ const CGFloat kMinimalLabelHeight = 18;
 		THCUILabel *labelWithElement = (THCUILabel *)gesture.view;
 
 		[THCUITextView createInView:labelWithElement.superview 
-									  withElement:labelWithElement.element 
-									 withDelegate:labelWithElement.textViewDelegate];
+									  withElement:labelWithElement.element];
 
 		[labelWithElement removeFromSuperview];
 	}
@@ -97,8 +93,7 @@ const CGFloat kMinimalLabelHeight = 18;
 		THCUILabel *labelWithElement = (THCUILabel *)gesture.view;
 				
 		[THCUITodo createInView:labelWithElement.superview
-						 withElement:labelWithElement.element 
-						withDelegate:labelWithElement.textViewDelegate];
+						 withElement:labelWithElement.element];
 		
 		[labelWithElement removeFromSuperview];
 	}
@@ -153,7 +148,6 @@ const CGFloat kMinimalLabelHeight = 18;
 }
 
 - (void)dealloc {
-	[self.textViewDelegate release];
 	[self.label release];
 	[super dealloc];
 }

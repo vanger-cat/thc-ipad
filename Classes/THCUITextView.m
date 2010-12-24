@@ -19,14 +19,20 @@ const CGFloat kTextAndLabelYDifference = 8;
 
 @implementation THCUITextView
 
+static id<UITextViewDelegate> defaultTextViewDelegate;
+
 @synthesize textView;
 
-+ (THCUITextView *)createInView:(UIView *)aView withElement:(id<ElementInterface>)element withDelegate:(id<UITextViewDelegate>)delegate {
++ (void)setDefaultTextViewDelegate:(id<UITextViewDelegate>)newDelegate {
+	defaultTextViewDelegate = newDelegate;
+}
+
++ (THCUITextView *)createInView:(UIView *)aView withElement:(id<ElementInterface>)element {
 	THCUITextView *textViewWithElement = [[THCUITextView alloc] initWithFrame:CGRectMake([element.x intValue], [element.y intValue], kTextComponentWidth, 0)];
 
 	textViewWithElement.element = element;
 	
-	[THCUIComponentsUtils setupTextView:textViewWithElement.textView andDelegate:delegate];
+	[THCUIComponentsUtils setupTextView:textViewWithElement.textView andDelegate:defaultTextViewDelegate];
 	textViewWithElement.text = element.text;
 
 	[aView addSubview:textViewWithElement];

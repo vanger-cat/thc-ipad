@@ -33,18 +33,8 @@
 - (id<THCUIComponentWithElementProtocol>)addComponentToView:(UIView *)view withElement:(id<ElementInterface>)element {
 	id componentClass = [UIComponentsByNames objectForKey:element.type];
 	if (componentClass) {
-		if ([componentClass respondsToSelector:@selector(createInView:withElement:)]) {
-			return [((THCUIComponentAbstract *) componentClass) createInView:view withElement:element];
-		} else {
-			return [((THCUIComponentAbstract *) componentClass) createInView:view 
-																 withElement:element 
-																withDelegate:self.textViewDelegate];
-		}
-		
-		//TODO: test it
-		NSLog(@"Can't find creation method for type '%@'", element.type);
-		[NSException raise:@"Can't find creation method" format:@"Can't find creation method for type '%@'", element.type];
-		return NULL;
+		//TODO: how to write type better - something like Class<THCUIComponentAbstract>? %)
+		return [((Class) componentClass) createInView:view withElement:element];
 	}
 		
 	NSLog(@"Unknown element.type '%@'", element.type);

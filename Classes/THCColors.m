@@ -18,6 +18,10 @@
 	return [UIColor clearColor];
 }
 
++ (UIColor *)colorForLinkTextColor {
+	return [UIColor colorWithRed:0 green:0 blue:255 alpha:1];
+}
+
 + (UIColor *)colorForMarker {
 	return [UIColor colorWithRed:255 green:0 blue:0 alpha:0.05];
 }

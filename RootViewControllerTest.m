@@ -62,8 +62,7 @@
 
 - (void)testCreationOfLabelInPlaceOfTextViewWithNoElement {
 	THCUITextView *textViewWithElement = [THCUITextView createInView:fakeView 
-																				withElement:fakeElement 
-																			   withDelegate:NULL];
+														 withElement:fakeElement];
 	[rootViewController createLabelInPlaceOfTextView:textViewWithElement];
 	
 	THCUILabel *label = (THCUILabel *)[fakeView.subviews objectAtIndex:0];

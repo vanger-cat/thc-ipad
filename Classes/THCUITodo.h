@@ -14,19 +14,17 @@
 extern NSString * const kTypeTodo;
 
 @interface THCUITodo : THCUIComponentAbstract {
-	id<UITextViewDelegate> textViewDelegate;
 	UISwitch *checkbox;
 	UILabel *label;
 	UIView *bottomLayer;
 }
 
-@property (nonatomic, retain) id<UITextViewDelegate> textViewDelegate;
 @property (nonatomic, retain) UISwitch *checkbox;
 @property (nonatomic, retain) UILabel *label;
 @property (nonatomic, retain) UIView *bottomLayer;
 @property (nonatomic) BOOL isChecked;
 
-+ (THCUITodo *)createInView:(UIView *)aView withElement:(Element *)newElement withDelegate:(id<UITextViewDelegate>)delegate;
++ (THCUITodo *)createInView:(UIView *)aView withElement:(Element *)newElement;
 + (UIGestureRecognizer *)newGestureForConvertingToLabel;
 
 @end

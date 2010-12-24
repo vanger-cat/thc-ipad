@@ -10,5 +10,5 @@
 @interface UIFont (THCFonts)
 
 + (UIFont *)fontForTextNote;
-
++ (UIFont *)fontForLink;
 @end

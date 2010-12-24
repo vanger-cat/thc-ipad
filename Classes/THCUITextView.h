@@ -21,7 +21,8 @@ extern const CGFloat kTextAndLabelYDifference;
 
 @property (nonatomic,retain) UITextView *textView;
 
-+ (THCUITextView *)createInView:(UIView *)aView withElement:(id<ElementInterface>)element withDelegate:(id<UITextViewDelegate>)delegate;
++ (void)setDefaultTextViewDelegate:(id<UITextViewDelegate>)newDelegate;
++ (THCUITextView *)createInView:(UIView *)aView withElement:(id<ElementInterface>)element;
 
 - (void)completeEditing;
 

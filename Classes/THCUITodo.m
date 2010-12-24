@@ -17,9 +17,8 @@ NSString * const kTypeTodo = @"todo";
 @synthesize checkbox;
 @synthesize label;
 @synthesize bottomLayer;
-@synthesize textViewDelegate;
 
-+ (THCUITodo *)createInView:(UIView *)aView withElement:(Element *)newElement withDelegate:(id<UITextViewDelegate>)delegate {
++ (THCUITodo *)createInView:(UIView *)aView withElement:(Element *)newElement {
 	THCUITodo *todo = [[THCUITodo alloc] initWithFrame:CGRectMake(0, 0, kTextComponentWidth, 0)];
 	[THCUIComponentsUtils setupLabel:todo.label];
 	
@@ -32,9 +31,7 @@ NSString * const kTypeTodo = @"todo";
 	[convertToLabelGesture release];
 	
 	[todo release];
-	
-	todo.textViewDelegate = delegate;
-	
+		
 	return todo;
 }
 
@@ -50,8 +47,7 @@ NSString * const kTypeTodo = @"todo";
 		THCUITodo *todo = (THCUITodo *)gesture.view;
 		
 		[THCUILabel createInView:todo.superview
-					   withElement:todo.element 
-					  withDelegate:todo.textViewDelegate];
+					   withElement:todo.element];
 		
 		[todo removeFromSuperview];
 	}
@@ -158,7 +154,6 @@ NSString * const kTypeTodo = @"todo";
 	[bottomLayer release];
 	[checkbox release];
 	[label release];
-	[textViewDelegate release];
 	[super dealloc];
 }
 

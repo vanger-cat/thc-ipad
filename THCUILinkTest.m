@@ -25,21 +25,21 @@
 }
 
 - (void)testCreatedLinkAddedToView {
-	[THCUILink createInView:fakeView withElement:fakeElement withDelegate:NULL];
+	[THCUILink createInView:fakeView withElement:fakeElement];
 	
 	NSUInteger expectedCount = 1;
 	STAssertEquals([[fakeView subviews] count], expectedCount, @"created component is not added necessary view");
 }
 
 - (void)testCreationInView {
-	[THCUILink createInView:fakeView withElement:fakeElement withDelegate:NULL];
+	[THCUILink createInView:fakeView withElement:fakeElement];
 	
 	id component = [[fakeView subviews] objectAtIndex:0];
 	STAssertTrue([component isMemberOfClass:[THCUILink class]], @"created component is not instance of THCUILink");
 }
 
 - (void)testCreatedLinkInititedWithElementProperly {
-	THCUILink *link = [THCUILink createInView:fakeView withElement:fakeElement withDelegate:NULL];
+	THCUILink *link = [THCUILink createInView:fakeView withElement:fakeElement];
 	[self assertUIComponent:link 
 					   hasX:kFakeX
 					   hasY:kFakeY
@@ -49,7 +49,7 @@
 }
 
 - (void)testCreatedLinkContainsRightLink {
-	THCUILink *link = [THCUILink createInView:fakeView withElement:fakeElement withDelegate:NULL];
+	THCUILink *link = [THCUILink createInView:fakeView withElement:fakeElement];
 	STAssertEqualStrings(link.url, fakeElement.text, @"url of the link should be equal to text of element");
 }
 
@@ -58,7 +58,7 @@
 }
 
 - (void)testElementTypeAfterCreation {
-	THCUILink *link = [THCUILink createInView:fakeView withElement:fakeElement withDelegate:NULL];
+	THCUILink *link = [THCUILink createInView:fakeView withElement:fakeElement];
 	STAssertEqualStrings(link.element.type, kTypeLinkForTests, @"type of element isn't set");
 }
 

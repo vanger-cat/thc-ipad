@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "THCUIComponentsFactory.h"
 
 @class RootViewController;
 
@@ -32,5 +33,7 @@
 
 - (NSString *)applicationDocumentsDirectory;
 
-@end
+- (THCUIComponentsFactory *)initComponentsFactory;
+- (void)injectDependencies;
 
+@end

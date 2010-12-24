@@ -16,15 +16,13 @@ extern NSString * const kTypeLabel;
 extern const CGFloat kMinimalLabelHeight;
 
 @interface THCUILabel : THCUIComponentAbstract {
-	id<UITextViewDelegate> textViewDelegate;
 	UILabel *label;
 }
 
-@property (nonatomic, retain) id<UITextViewDelegate> textViewDelegate;
 @property (nonatomic, retain) UILabel *label;
 
-+ (THCUILabel *)createInView:(UIView *)aView withElement:(id<ElementInterface>)newElement withDelegate:(id<UITextViewDelegate>)delegate;
-+ (THCUILabel *)addLabel:(THCUILabel *)label toView:(UIView *)aView withElement:(id<ElementInterface>)newElement withDelegate:(id<UITextViewDelegate>)delegate;
++ (THCUILabel *)createInView:(UIView *)aView withElement:(id<ElementInterface>)newElement;
++ (THCUILabel *)addLabel:(THCUILabel *)label toView:(UIView *)aView withElement:(id<ElementInterface>)newElement;
 
 + (UITapGestureRecognizer *)newGestureForConvertingToTextEdit;
 + (UITapGestureRecognizer *)newGestureForConvertingToTODO;

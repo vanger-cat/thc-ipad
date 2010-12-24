@@ -8,10 +8,16 @@
 
 #import "THCFonts.h"
 
+const int kFontSize = 14;
+
 @implementation UIFont (THCFonts)
 
 + (UIFont *)fontForTextNote {
-	return [UIFont systemFontOfSize:14];
+	return [UIFont systemFontOfSize:kFontSize];
+}
+
++ (UIFont *)fontForLink {
+	return [UIFont italicSystemFontOfSize:kFontSize];
 }
 
 @end

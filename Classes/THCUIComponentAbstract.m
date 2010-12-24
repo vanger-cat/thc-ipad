@@ -18,6 +18,12 @@ const CGFloat kTextComponentHeightMax = 9999;
 
 @synthesize element;
 
++ (THCUIComponentAbstract *)createInView:(UIView *)aView withElement:(id<ElementInterface>)newElement {
+	[NSException raise:NSInternalInconsistencyException 
+				format:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)];
+	return NULL;
+}
+
 - (id)initWithFrame:(CGRect)frame {
 	[super initWithFrame:frame];
 	self.backgroundColor = [UIColor colorForMarker];
