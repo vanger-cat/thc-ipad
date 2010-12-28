@@ -228,6 +228,10 @@
 		40A918A21291A52C00BFCA83 /* THCUITextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THCUITextView.h; sourceTree = "<group>"; };
 		40A918A31291A52C00BFCA83 /* THCUITextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCUITextView.m; sourceTree = "<group>"; };
 		40A91992129270D600BFCA83 /* THCUIComponentWithElementProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THCUIComponentWithElementProtocol.h; sourceTree = "<group>"; };
+		40AEB50C12CA575E0039B4A3 /* ComponentsModel.xcclassmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcclassmodel; path = ComponentsModel.xcclassmodel; sourceTree = "<group>"; };
+		40AEB50D12CA577F0039B4A3 /* Model.xcclassmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcclassmodel; path = Model.xcclassmodel; sourceTree = "<group>"; };
+		40AEB51012CA57DE0039B4A3 /* Controllers.xcclassmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcclassmodel; path = Controllers.xcclassmodel; sourceTree = "<group>"; };
+		40AEB51112CA5E290039B4A3 /* Full.xcclassmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcclassmodel; path = Full.xcclassmodel; sourceTree = "<group>"; };
 		40BB26B8129EB31700E0C916 /* THCUIComponentAbstract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THCUIComponentAbstract.h; sourceTree = "<group>"; };
 		40BB26B9129EB31700E0C916 /* THCUIComponentAbstract.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCUIComponentAbstract.m; sourceTree = "<group>"; };
 		40C219901291796900559770 /* Element.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Element.h; sourceTree = "<group>"; };
@@ -417,14 +421,14 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				402D36F412ABAC8200010C4A /* Tests */,
 				080E96DDFE201D6D7F000001 /* Classes */,
+				402D36F412ABAC8200010C4A /* Tests */,
+				40AEB50F12CA57C30039B4A3 /* UML */,
 				402D37CD12ABB58E00010C4A /* Libraries */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				92B5482C1296ECB200072C8D /* thc-ipad-test-Info.plist */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -441,6 +445,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				92B5482C1296ECB200072C8D /* thc-ipad-test-Info.plist */,
 				40FE094412B78D4A007FAECC /* vanger.JPG */,
 				9294B4E812AEF1D500C6F2D5 /* db_logo_button.png */,
 				28193054112F811F00ECF9B4 /* thc_ipad.xcdatamodeld */,
@@ -584,6 +589,17 @@
 				4027872E12C3F379002C00F0 /* THCUILink.m */,
 			);
 			name = "UIControllers with Element";
+			sourceTree = "<group>";
+		};
+		40AEB50F12CA57C30039B4A3 /* UML */ = {
+			isa = PBXGroup;
+			children = (
+				40AEB50D12CA577F0039B4A3 /* Model.xcclassmodel */,
+				40AEB50C12CA575E0039B4A3 /* ComponentsModel.xcclassmodel */,
+				40AEB51012CA57DE0039B4A3 /* Controllers.xcclassmodel */,
+				40AEB51112CA5E290039B4A3 /* Full.xcclassmodel */,
+			);
+			name = UML;
 			sourceTree = "<group>";
 		};
 		40C2198A1291779D00559770 /* Model */ = {
@@ -1044,6 +1060,81 @@
 			};
 			name = Release;
 		};
+		402970C212CA9D4800D484DA /* GCov_Build */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = thc_ipad_Prefix.pch;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				PREBINDING = NO;
+				PRODUCT_NAME = "thc-Debug";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Libraries/Headers";
+			};
+			name = GCov_Build;
+		};
+		402970C312CA9D4800D484DA /* GCov_Build */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = thc_ipad_Prefix.pch;
+				INFOPLIST_FILE = "thc_ipad-Info.plist";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "thc-Debug";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				USER_HEADER_SEARCH_PATHS = "${inherited}\nUSER_HEADER_SEARCH_PATHS = ${inherited}\n${inherited}";
+			};
+			name = GCov_Build;
+		};
+		402970C412CA9D4800D484DA /* GCov_Build */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = thc_ipad_Prefix.pch;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Libraries/Headers";
+				INFOPLIST_FILE = "thc-ipad-test-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Libraries\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-force_load",
+					"$(PROJECT_DIR)/Libraries/libOCMock.a",
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+					"-lgcov",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "thc-ipad-test";
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "${inherited}\nUSER_HEADER_SEARCH_PATHS = ${inherited}\n";
+			};
+			name = GCov_Build;
+		};
 		92B5482D1296ECB300072C8D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1146,6 +1237,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
+				402970C312CA9D4800D484DA /* GCov_Build */,
 				1D6058950D05DD3E006BFB54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1155,6 +1247,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92B5482D1296ECB300072C8D /* Debug */,
+				402970C412CA9D4800D484DA /* GCov_Build */,
 				92B5482E1296ECB300072C8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1164,6 +1257,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
+				402970C212CA9D4800D484DA /* GCov_Build */,
 				C01FCF5008A954540054247B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
