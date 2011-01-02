@@ -27,11 +27,6 @@
 	appDelegate = (ThcAppDelegate *)[[UIApplication sharedApplication] delegate];
 }
 
-- (void)testInitializationOfComponentsFactoryIsProper {
-//	THCUIComponentsFactory *factory = [appDelegate initComponentsFactory]
-	STAssertTrue(NO, @"Continue implementation of this test");
-}
-
 - (void)testInitializationOfTextViewIsProper {
 	id<ElementInterface> elementMock = [THCUIComponentsTestUtils newMockElement];
 	UIView *fakeView = [THCUIComponentsTestUtils newEmptyView];

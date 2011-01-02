@@ -60,14 +60,6 @@
 				   contains:fakeElement];
 }
 
-- (void)testCreationOfLabelInPlaceOfTextViewWithNoElement {
-	STAssertTrue(NO, @"Continue implementation of this test");
-}
-
-- (void)testCreationOfLinkInPlaceOfTextViewWithNoElement {
-	STAssertTrue(NO, @"Continue implementation of this test");
-}
-
 - (void)addElementWithType:(NSString *)type toArray:(NSMutableArray *)array {
 	id<ElementInterface> mockElement;
 	mockElement = [THCUIComponentsTestUtils newMockElement];
