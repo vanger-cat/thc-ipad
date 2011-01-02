@@ -9,10 +9,9 @@
 #import "THCUIComponentsFactory.h"
 #import "THCUIComponentAbstract.h"
 
-//TODO: test it!
 @implementation THCUIComponentsFactory 
 @synthesize textViewDelegate;
-//TODO: rename
+
 + (THCUIComponentsFactory *)newFactoryWithTextViewDelegate:(id<UITextViewDelegate>) textViewDelegate {
 	return [[THCUIComponentsFactory alloc] initWithTextViewDelegate:textViewDelegate];
 }
@@ -29,7 +28,6 @@
 	[UIComponentsByNames setObject:component forKey:type];
 }
 
-//TODO: reimplement this to remove warnings!
 - (id<THCUIComponentWithElementProtocol>)addComponentToView:(UIView *)view withElement:(id<ElementInterface>)element {
 	id componentClass = [UIComponentsByNames objectForKey:element.type];
 	NSLog(@"creating instance of %@ because of element.type = %@", componentClass, element.type);
