@@ -49,20 +49,20 @@
 	if (!dropboxController)
 		dropboxController = [[DropboxController alloc] init];
 
-	//TODO: delete
-	{
-		id<ElementInterface> element = [elementManager savedElementWithText:@"vanger.JPG" 
-																	atPoint:CGPointMake(100, 100)];
-		[THCUIImage createInView:self.scrollView.spaceView withElement:element];
-		[elementManager save];
-	}
-	//TODO: delete
-	{
-		id<ElementInterface> element = [elementManager savedElementWithText:@"http://ya.ru" 
-																	atPoint:CGPointMake(10, 10)];
-		[THCUILink createInView:self.scrollView.spaceView withElement:element];
-		[elementManager save];
-	}
+//	//TODO: delete
+//	{
+//		id<ElementInterface> element = [elementManager savedElementWithText:@"vanger.JPG" 
+//																	atPoint:CGPointMake(100, 100)];
+//		[THCUIImage createInView:self.scrollView.spaceView withElement:element];
+//		[elementManager save];
+//	}
+//	//TODO: delete
+//	{
+//		id<ElementInterface> element = [elementManager savedElementWithText:@"http://ya.ru" 
+//																	atPoint:CGPointMake(10, 10)];
+//		[THCUILink createInView:self.scrollView.spaceView withElement:element];
+//		[elementManager save];
+//	}
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
