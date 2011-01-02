@@ -14,8 +14,10 @@ NSString * const kTypeLink = @"link";
 
 @implementation THCUILink
 
+//???: why this problem here?
 + (THCUILink *)createInView:(UIView *)aView withElement:(id<ElementInterface>)newElement {
-	THCUILink *thcLink = [[THCUILink alloc] initWithFrame:[[self class] frameForLabelWithElement:newElement]];
+	CGRect newFrame = [[self class] frameForLabelWithElement:newElement];
+	THCUILink *thcLink = [[THCUILink alloc] initWithFrame:newFrame];
 	[super addLabel:thcLink toView:aView withElement:newElement];
 	
 	UIGestureRecognizer *gestureToOpenLink = [THCUILink newGestureToOpenLink];
@@ -24,7 +26,6 @@ NSString * const kTypeLink = @"link";
 	
 	[thcLink.label setFont:[UIFont fontForLink]];
 	[thcLink.label setTextColor:[UIColor colorForLinkTextColor]];
-	
 	return thcLink;
 }
 
