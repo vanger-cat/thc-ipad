@@ -18,6 +18,10 @@
 @property (nonatomic, retain) NSString *text;
 @property (nonatomic, assign) BOOL selected;
 @property (nonatomic, readonly) NSString *type;
+@property (nonatomic, retain) id<THCUIComponentWithElementProtocol> topElement;
+@property (nonatomic, retain) id<THCUIComponentWithElementProtocol> bottomElement;
+@property (nonatomic, retain) id<THCUIComponentWithElementProtocol> leftElement;
+@property (nonatomic, retain) id<THCUIComponentWithElementProtocol> rightElement;
 
 - (Element *)saveComponentStateToElement;
 

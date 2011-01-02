@@ -18,6 +18,11 @@ const CGFloat kTextComponentHeightMax = 9999;
 
 @synthesize element;
 
+@synthesize topElement;
+@synthesize bottomElement;
+@synthesize leftElement;
+@synthesize rightElement;
+
 + (THCUIComponentAbstract *)createInView:(UIView *)aView withElement:(id<ElementInterface>)newElement {
 	[NSException raise:NSInternalInconsistencyException 
 				format:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)];
