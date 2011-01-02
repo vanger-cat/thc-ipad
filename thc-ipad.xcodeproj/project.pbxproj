@@ -256,12 +256,6 @@
 		40FE0B8912B7B844007FAECC /* THCUIComponentsFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCUIComponentsFactory.m; sourceTree = "<group>"; };
 		40FE0CE112B7F648007FAECC /* THCUITodoTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCUITodoTest.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* thc_ipad-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "thc_ipad-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		927B74B7129163260083088C /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = "/Users/wolfenberg/Desktop/thc-ipad/Classes/Utils.h"; sourceTree = "<absolute>"; };
-		927B74B8129163260083088C /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utils.m; path = "/Users/wolfenberg/Desktop/thc-ipad/Classes/Utils.m"; sourceTree = "<absolute>"; };
-		9286582E12901AD90082DB64 /* THCColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THCColors.h; path = "/Users/wolfenberg/Desktop/thc-ipad/Classes/THCColors.h"; sourceTree = "<absolute>"; };
-		9286582F12901AD90082DB64 /* THCColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THCColors.m; path = "/Users/wolfenberg/Desktop/thc-ipad/Classes/THCColors.m"; sourceTree = "<absolute>"; };
-		9286587012901F420082DB64 /* THCFonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THCFonts.h; path = "/Users/wolfenberg/Desktop/thc-ipad/Classes/THCFonts.h"; sourceTree = "<absolute>"; };
-		9286587112901F420082DB64 /* THCFonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THCFonts.m; path = "/Users/wolfenberg/Desktop/thc-ipad/Classes/THCFonts.m"; sourceTree = "<absolute>"; };
 		9294B3FA12AEEDBE00C6F2D5 /* DBAccountInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBAccountInfo.h; sourceTree = "<group>"; };
 		9294B3FB12AEEDBE00C6F2D5 /* DBAccountInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBAccountInfo.m; sourceTree = "<group>"; };
 		9294B3FC12AEEDBE00C6F2D5 /* DBCreateAccountController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBCreateAccountController.h; sourceTree = "<group>"; };
@@ -399,12 +393,6 @@
 				92CFB27A128D9DFB005CB1ED /* RootViewController.xib */,
 				9294B4FA12AEF4F300C6F2D5 /* DropboxController.h */,
 				9294B4FB12AEF4F300C6F2D5 /* DropboxController.m */,
-				40023DDC12B660AC000870CD /* Utils.m */,
-				40023DDD12B660AC000870CD /* Utils.h */,
-				40023DDE12B660AC000870CD /* THCFonts.m */,
-				40023DDF12B660AC000870CD /* THCFonts.h */,
-				40023DE012B660AC000870CD /* THCColors.m */,
-				40023DE112B660AC000870CD /* THCColors.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -627,12 +615,12 @@
 		9285C6AF1291D2D0003F98D3 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				9286582E12901AD90082DB64 /* THCColors.h */,
-				9286582F12901AD90082DB64 /* THCColors.m */,
-				9286587012901F420082DB64 /* THCFonts.h */,
-				9286587112901F420082DB64 /* THCFonts.m */,
-				927B74B7129163260083088C /* Utils.h */,
-				927B74B8129163260083088C /* Utils.m */,
+				40023DDC12B660AC000870CD /* Utils.m */,
+				40023DDD12B660AC000870CD /* Utils.h */,
+				40023DDE12B660AC000870CD /* THCFonts.m */,
+				40023DDF12B660AC000870CD /* THCFonts.h */,
+				40023DE012B660AC000870CD /* THCColors.m */,
+				40023DE112B660AC000870CD /* THCColors.h */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
