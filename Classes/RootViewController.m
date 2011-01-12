@@ -112,6 +112,8 @@
 		id<ElementInterface> element = [elementManager savedElementWithText:@"" 
 																	atPoint:pointForTextView];
 		
+		element.type = kTypeLabel;
+		
 		[self createTextViewAtPoint:pointForTextView atView:self.scrollView.spaceView withElement:element];
 	}
 }

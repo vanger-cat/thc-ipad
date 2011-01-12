@@ -45,6 +45,8 @@ const CGFloat kSizeOfCell = 20;
 	
 	component.x = [self getCellCoordinateFromCoordinate:point.x];
 	component.y = [self getCellCoordinateFromCoordinate:point.y];
+	
+	[component connectIfPossibleWithComponents:component.superview.subviews withCellSize:kSizeOfCell];
 		
 	NSLog(@"to %f,%f", component.x, component.y);
 

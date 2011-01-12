@@ -107,8 +107,55 @@ const CGFloat kTextComponentHeightMax = 9999;
 	return selected;
 }
 
+- (CGFloat) width {
+	return self.frame.size.width - 2 * kBorderWidth;
+}
+
+- (CGFloat) height {
+	return self.frame.size.height - 2 * kBorderWidth;
+}
+
+
 - (void)setSelected:(BOOL)isSelected {
 	selected = isSelected;
+}
+
+- (void)connectIfPossibleWithComponent:(THCUIComponentAbstract *)component {
+	if (self == component) {
+		return;
+	}
+	BOOL isInsideByXAxis = self.x >= component.x && 
+							self.x <= (component.x + component.width);
+
+	isInsideByXAxis ? NSLog(@"YES") : NSLog(@"NO");
+	BOOL isInsideByYAxis = self.y >= component.y && 
+							self.y <= (component.y + component.height);
+	isInsideByYAxis ? NSLog(@"YES") : NSLog(@"NO");	
+	
+	if (isInsideByXAxis && isInsideByYAxis) {
+		self.topElement = component;
+		component.bottomElement = self;
+		NSLog(@"Connected!");
+	} else {
+		NSLog(@"Not Connected!");
+	}
+
+}
+
+- (void)connectIfPossibleWithComponents:(NSArray *)components withCellSize:(CGFloat)cellSize {
+	id component = nil;
+	NSLog(@"Started analization of connections");
+	self.topElement = nil;
+	for (component in components) {
+		if ([component isKindOfClass:[THCUIComponentAbstract class]]) {
+			[self connectIfPossibleWithComponent:component];
+		}
+	}
+	
+	if (self.topElement != nil) {
+		self.x = self.topElement.x;
+		self.y = self.topElement.y + self.topElement.height;
+	}
 }
 
 - (void)dealloc {

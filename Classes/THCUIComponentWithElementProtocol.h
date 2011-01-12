@@ -15,6 +15,8 @@
 @property (nonatomic, retain) id<ElementInterface> element;
 @property (nonatomic, assign) CGFloat x;
 @property (nonatomic, assign) CGFloat y;
+@property (nonatomic, readonly) CGFloat width;
+@property (nonatomic, readonly) CGFloat height;
 @property (nonatomic, retain) NSString *text;
 @property (nonatomic, assign) BOOL selected;
 @property (nonatomic, readonly) NSString *type;

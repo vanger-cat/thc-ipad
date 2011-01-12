@@ -16,8 +16,14 @@ extern const CGFloat kTextComponentHeightMax;
 @interface THCUIComponentAbstract : UIView <THCUIComponentWithElementProtocol> {
 	id<ElementInterface> element;
 	BOOL selected;
+
+	id<THCUIComponentWithElementProtocol> topElement;
+	id<THCUIComponentWithElementProtocol> bottomElement;
+	id<THCUIComponentWithElementProtocol> leftElement;
+	id<THCUIComponentWithElementProtocol> rightElement;
 }
 
 + (THCUIComponentAbstract *)createInView:(UIView *)aView withElement:(id<ElementInterface>)newElement;
+- (void)connectIfPossibleWithComponents:(NSArray *)components withCellSize:(CGFloat)cellSize;
 
 @end
