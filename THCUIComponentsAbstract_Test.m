@@ -43,7 +43,7 @@ const CGFloat kSizeOfCellForTest = 20;
 											   andHeight:100];
 }
 
-- (THCUIComponentAbstractFake *)newComponentCloseToTheLeft {
+- (THCUIComponentAbstractFake *)newComponentCloseToLeft {
 	CGFloat width = 100;
 	return [THCUIComponentAbstractFake newComponentWithX:testedComponent.x - width
 													andY:testedComponent.y
@@ -51,11 +51,25 @@ const CGFloat kSizeOfCellForTest = 20;
 											   andHeight:100];
 }
 
+- (THCUIComponentAbstractFake *)newComponentCloseToRight {
+	CGFloat width = 100;
+    
+    NSLog(@"testedComponent.width = %f", testedComponent.width);
+	return [THCUIComponentAbstractFake newComponentWithX:testedComponent.x + testedComponent.width
+													andY:testedComponent.y
+												andWidth:width 
+											   andHeight:100];
+}
+
+- (void)makeAllConnectionsBusyFor:(THCUIComponentAbstract *)component {
+    component.topElement = testedComponent;
+	component.leftElement = testedComponent;
+	component.rightElement = testedComponent;
+	component.bottomElement = testedComponent;
+}
+
 - (void)testThatConnectingWithNoComponentsSetsAllConnectionsToNil {
-	testedComponent.topElement = testedComponent;
-	testedComponent.leftElement = testedComponent;
-	testedComponent.rightElement = testedComponent;
-	testedComponent.bottomElement = testedComponent;
+	[self makeAllConnectionsBusyFor:testedComponent];
 	
 	[testedComponent connectIfPossibleWithComponents:components withCellSize:kSizeOfCellForTest];
 	
@@ -68,35 +82,33 @@ const CGFloat kSizeOfCellForTest = 20;
 	[self assertThatAllConnectionsIsNil:testedComponent];
 }
 
-- (void)testThatConnectingWithFarElementCauseNothing {
-	THCUIComponentAbstractFake *secondFake = [self newFarAwayComponent];
-	
-	[components addObject:secondFake];
+- (void)testShouldNotConnectWithFarElement {
+	THCUIComponentAbstractFake *farAwayComponent = [self newFarAwayComponent];
+    
+    [components addObject:farAwayComponent];
 	[testedComponent connectIfPossibleWithComponents:components withCellSize:kSizeOfCellForTest];
-	[secondFake release];
+//	[farAwayComponent release];
 	[self assertThatAllConnectionsIsNil:testedComponent];
 }
 
-- (void)testConnectingWithLeftSetsLeftElementOfTestedElement {
-	THCUIComponentAbstractFake *secondFake = [self newComponentCloseToTheLeft];
+//- (void)testConnectFromLeftSide {
+//	THCUIComponentAbstractFake *elementToAttach = [self newComponentCloseToTheLeft];
+//	
+//	[components addObject:elementToAttach];
+//	[testedComponent connectIfPossibleWithComponents:components withCellSize:kSizeOfCellForTest];
+//	[elementToAttach release];
+//	STAssertEquals(testedComponent.leftElement, elementToAttach, @"left component of tested component should be attached");
+//}
+//
+- (void)testConnectFromRightSide {
+    NSLog(@"%@", [testedComponent description]);
+	   
+	THCUIComponentAbstractFake *componentToAttach = [self newComponentCloseToRight];
 	
-	[components addObject:secondFake];
+	[components addObject:componentToAttach];
 	[testedComponent connectIfPossibleWithComponents:components withCellSize:kSizeOfCellForTest];
-	[secondFake release];
-	STAssertEquals(testedComponent.leftElement, secondFake, @"left component of tested component should be attached");
-}
-
-- (void)testConnectingWithLeftSetsRightElementOfLeftComponent {
-	THCUIComponentAbstractFake *secondFake = [self newComponentCloseToTheLeft];
-	
-	[components addObject:secondFake];
-	[testedComponent connectIfPossibleWithComponents:components withCellSize:kSizeOfCellForTest];
-	[secondFake release];
-	STAssertEquals(secondFake.rightElement, testedComponent, @"right component should of left component should be attached");
-}
-
-- (void)testSome {
-	
+	[componentToAttach release];
+	STAssertEquals(testedComponent.rightElement, componentToAttach, @"right component should of left component should be attached");
 }
 
 - (void)tearDown {

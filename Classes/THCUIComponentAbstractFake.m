@@ -20,4 +20,12 @@
 	return [[THCUIComponentAbstractFake alloc] initWithFrame:CGRectMake(x, y, width, height)];
 }
 
+- (CGFloat)x {
+    return self.frame.origin.x;
+}
+
+- (CGFloat)y {
+    return self.frame.origin.y;
+}
+
 @end

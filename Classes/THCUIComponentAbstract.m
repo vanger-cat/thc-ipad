@@ -120,35 +120,51 @@ const CGFloat kTextComponentHeightMax = 9999;
 	selected = isSelected;
 }
 
-- (void)connectIfPossibleWithComponent:(THCUIComponentAbstract *)component {
+- (BOOL)isMyLeftTopCornerIn:(THCUIComponentAbstract *)component {
+	BOOL isInsideByXAxis = self.x >= component.x && self.x <= (component.x + component.width);
+    
+    NSLog(@"Self: %f, %f", self.x, self.y);
+    NSLog(@"Comp: %f, %f", component.x, component.y);
+    
+    isInsideByXAxis ? NSLog(@"YES") : NSLog(@"NO");
+	BOOL isInsideByYAxis = self.y >= component.y && self.y <= (component.y + component.height);
+    isInsideByYAxis ? NSLog(@"YES") : NSLog(@"NO");	
+
+    return isInsideByXAxis && isInsideByYAxis;
+}
+
+- (BOOL)isConnectableFromRightTo:(THCUIComponentAbstract *)component {
+    return YES;
+}
+
+- (void)connectIfPossibleToComponent:(THCUIComponentAbstract *)component {
 	if (self == component) {
 		return;
 	}
-	BOOL isInsideByXAxis = self.x >= component.x && 
-							self.x <= (component.x + component.width);
-
-	isInsideByXAxis ? NSLog(@"YES") : NSLog(@"NO");
-	BOOL isInsideByYAxis = self.y >= component.y && 
-							self.y <= (component.y + component.height);
-	isInsideByYAxis ? NSLog(@"YES") : NSLog(@"NO");	
 	
-	if (isInsideByXAxis && isInsideByYAxis) {
+	if ([self isMyLeftTopCornerIn:component]) {
+        if ([self isConnectableFromRightTo:component]) {
+            self.leftElement = component;
+            component.rightElement = self;
+        }
 		self.topElement = component;
 		component.bottomElement = self;
 		NSLog(@"Connected!");
 	} else {
 		NSLog(@"Not Connected!");
 	}
-
 }
 
 - (void)connectIfPossibleWithComponents:(NSArray *)components withCellSize:(CGFloat)cellSize {
 	id component = nil;
 	NSLog(@"Started analization of connections");
 	self.topElement = nil;
+	self.leftElement = nil;
+	self.rightElement = nil;
+	self.bottomElement = nil;
 	for (component in components) {
 		if ([component isKindOfClass:[THCUIComponentAbstract class]]) {
-			[self connectIfPossibleWithComponent:component];
+			[self connectIfPossibleToComponent:component];
 		}
 	}
 	
