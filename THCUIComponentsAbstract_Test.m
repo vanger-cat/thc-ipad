@@ -26,7 +26,7 @@ const CGFloat kSizeOfCellForTest = 20;
 	testedComponent = [THCUIComponentAbstractFake newComponentWithX:0 
 															   andY:0 
 														   andWidth:kSizeOfCellForTest * 4 
-														  andHeight:kSizeOfCellForTest];
+														  andHeight:kSizeOfCellForTest * 3];
 }
 
 - (void)assertThatAllConnectionsIsNil:(THCUIComponentAbstractFake *)component {
@@ -105,10 +105,10 @@ const CGFloat kSizeOfCellForTest = 20;
 	   
 	THCUIComponentAbstractFake *componentToAttach = [self newComponentCloseToRight];
 	
-	[components addObject:componentToAttach];
-	[testedComponent connectIfPossibleWithComponents:components withCellSize:kSizeOfCellForTest];
+	[components addObject:testedComponent];
+	[componentToAttach connectIfPossibleWithComponents:components withCellSize:kSizeOfCellForTest];
 	[componentToAttach release];
-	STAssertEquals(testedComponent.rightElement, componentToAttach, @"right component should of left component should be attached");
+	STAssertEquals(testedComponent.rightElement, componentToAttach, @"right component should be attached");
 }
 
 - (void)tearDown {

@@ -121,13 +121,13 @@ const CGFloat kTextComponentHeightMax = 9999;
 }
 
 - (BOOL)isMyLeftTopCornerIn:(THCUIComponentAbstract *)component {
-	BOOL isInsideByXAxis = self.x >= component.x && self.x <= (component.x + component.width);
-    
     NSLog(@"Self: %f, %f", self.x, self.y);
-    NSLog(@"Comp: %f, %f", component.x, component.y);
+    NSLog(@"Comp: %f - %f, %f - %f", component.x, component.x + component.width, component.y, component.y + component.height);
     
+	BOOL isInsideByXAxis = self.x >= component.x && self.x <= (component.x + component.width);
     isInsideByXAxis ? NSLog(@"YES") : NSLog(@"NO");
-	BOOL isInsideByYAxis = self.y >= component.y && self.y <= (component.y + component.height);
+	
+    BOOL isInsideByYAxis = self.y >= component.y && self.y <= (component.y + component.height);
     isInsideByYAxis ? NSLog(@"YES") : NSLog(@"NO");	
 
     return isInsideByXAxis && isInsideByYAxis;
